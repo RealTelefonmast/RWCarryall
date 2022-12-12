@@ -108,8 +108,7 @@
     <graphicData>
       <texPath>Carryall/CarryallBasic</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(5,5)</drawSize>
-      <color>(162,164,149)</color>
+      <drawSize>(5.5,5.5)</drawSize>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
     <blockWind>false</blockWind>

@@ -24,9 +24,6 @@
 				<inspectorTabs>
 					<li>ITab_ContentsTransporter</li>
 				</inspectorTabs>
-				<placeWorkers>
-					<li>PlaceWorker_NotUnderRoof</li>
-				</placeWorkers>
 				<passability>PassThroughOnly</passability>
 				<castEdgeShadows>false</castEdgeShadows>
 				<designationCategory>Misc</designationCategory>
@@ -152,7 +149,9 @@ Cargo cap: 750kg</description>
 		<chanceToStartFire>0.5</chanceToStartFire>
       </li>
     </comps>
-
+	<placeWorkers>
+	  <li>PlaceWorker_NotUnderRoof</li>
+	</placeWorkers>
     <researchPrerequisites>
       <li>Research_Carryalls</li>
     </researchPrerequisites>
@@ -281,6 +280,7 @@ Cargo cap: 2,500kg</description>
       <turretBurstCooldownTime>4.8</turretBurstCooldownTime>
     </building>
     <placeWorkers>
+	  <li>PlaceWorker_NotUnderRoof</li>
       <li>PlaceWorker_TurretTop</li>
       <li>PlaceWorker_ShowTurretRadius</li>
     </placeWorkers>
@@ -295,10 +295,9 @@ Cargo cap: 2,500kg</description>
     <label>carryall turret gun</label>
     <description>A simple automatic gun made to be mounted on a turret.</description>
     <graphicData>
-      <texPath>Things/Building/Security/TurretMini_Top</texPath>
+      <texPath>Blank</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(1.2,1.2)</drawSize>
-	  <drawOffset>(0,0,0.75)</drawOffset>
+      <drawSize>(1,1)</drawSize>
     </graphicData>
     <statBases>
       <AccuracyTouch>0.87</AccuracyTouch>
@@ -316,7 +315,7 @@ Cargo cap: 2,500kg</description>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_MiniTurret</defaultProjectile>
         <warmupTime>0</warmupTime>
-        <range>28.9</range>
+        <range>18.9</range>
         <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
         <burstShotCount>2</burstShotCount>
         <soundCast>GunShotA</soundCast>
@@ -464,6 +463,7 @@ Cargo cap: 1,250kg</description>
       <turretBurstCooldownTime>4.5</turretBurstCooldownTime>
     </building>
     <placeWorkers>
+	  <li>PlaceWorker_NotUnderRoof</li>
       <li>PlaceWorker_TurretTop</li>
       <li>PlaceWorker_ShowTurretRadius</li>
     </placeWorkers>
@@ -478,10 +478,9 @@ Cargo cap: 1,250kg</description>
     <label>medium carryall turret gun</label>
     <description>A automatic minigun made to be mounted on a turret.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/WeaponRanged/Minigun</texPath>
+      <texPath>Blank</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(1.2,1.2)</drawSize>
-      <drawOffset>(0,0,0.75)</drawOffset>
+      <drawSize>(1,1)</drawSize>
     </graphicData>
     <statBases>
       <AccuracyTouch>0.25</AccuracyTouch>
@@ -499,7 +498,7 @@ Cargo cap: 1,250kg</description>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_MediumCarryallTurret</defaultProjectile>
         <warmupTime>4.5</warmupTime>
-        <range>30.9</range>
+        <range>20.9</range>
         <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
         <burstShotCount>25</burstShotCount>
         <soundCast>Shot_Minigun</soundCast>
