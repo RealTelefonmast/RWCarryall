@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ResearchProjectDef>
+    <tab>Main</tab>
+    <defName>Research_Carryalls</defName>
+    <label>Carryall</label>
+    <description>Basic research on VTOL aircrafts designed for intercontinental transportation. Unlocks the standard carryall.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+	  <li>Fabrication</li>
+    </prerequisites>
+	<researchViewX>15.00</researchViewX>
+	<researchViewY>1.5</researchViewY>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <tab>Main</tab>
+    <defName>Research_Carryall_GDI</defName>
+    <label>Ox Carryall</label>
+    <description>Unlocks the Ox carryall for mass transport.</description>
+    <baseCost>8000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+	  <li>Research_Carryalls</li>
+    </prerequisites>
+	<researchViewX>16</researchViewX>
+	<researchViewY>1.5</researchViewY>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+  </ResearchProjectDef>
+  
+   <ResearchProjectDef>
+    <tab>Main</tab>
+    <defName>Research_Carryall_Nod</defName>
+    <label>Vertigo Carryall</label>
+    <description>Unlocks the Vertigo carryall for assault operation.</description>
+    <baseCost>8000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+	  <li>Research_Carryalls</li>
+    </prerequisites>
+	<researchViewX>16</researchViewX>
+	<researchViewY>2.1</researchViewY>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>	
+  </ResearchProjectDef> 
+</Defs>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SRTSExpanded>SRTS 扩展</SRTSExpanded>
+  <SRTSDef>SRTS Def</SRTSDef>
+  <ResetDefault>初始化</ResetDefault>
+  <ResetDefaultTooltip>重置为默认值</ResetDefaultTooltip>
+  <ResetThisSRTS>仅初始化此</ResetThisSRTS>
+  <ResetAll>全部初始化</ResetAll>
+  <DefaultValues>默认值</DefaultValues>
+  <CustomValues>修改值</CustomValues>
+  <MainSettings>首选项</MainSettings>
+  <PassengerLimit>乘客人数</PassengerLimit>
+  <PassengerLimitTooltip>SRTS允许的最小和最大乘客</PassengerLimitTooltip>
+  <DisplayHomeItems>显示所有项目</DisplayHomeItems>
+  <DisplayHomeItemsTooltip>当加载SRTS而不是定居点地图时，在地图上显示所有项目。</DisplayHomeItemsTooltip>
+  <DefSettings>统计</DefSettings>
+  <DynamicWorldObjectSRTS>动态渲染</DynamicWorldObjectSRTS>
+  <DynamicWorldObjectSRTSTooltip>在世界地图上动态渲染穿梭纹理。</DynamicWorldObjectSRTSTooltip>
+  <ExpandBombPoints>扩大轰炸目标</ExpandBombPoints>
+  <ExpandBombPointsTooltip>沿目标航线扩展轰炸点，使其与航线对齐。</ExpandBombPointsTooltip>
+  <AllowedBombs>允许爆炸物(轰炸)</AllowedBombs>
+  <ChangeItemSRTS>修改</ChangeItemSRTS>
+  <SearchExplosive>添加项目</SearchExplosive>
+  <CurrentExplosives>允许使用的炸弹</CurrentExplosives>
+  <SRTSBoardingOptions>登机设置</SRTSBoardingOptions>
+  <AllowDownedSRTS>允许被击落的棋子</AllowDownedSRTS>
+  <AllowUnsecurePrisonerSRTS>允许未被拘禁的囚犯</AllowUnsecurePrisonerSRTS>
+  <AllowCapturablePawnSRTS>允许可捕获的棋子</AllowCapturablePawnSRTS>
+  <SOS2Compatibility>SOS2设置</SOS2Compatibility>
+  <SpaceFaring>宇宙移动</SpaceFaring>
+  <ShuttleBayLanding>穿梭机登陆</ShuttleBayLanding>
+  <NonSpaceFaringSRTS>{0} 无法到达轨道。</NonSpaceFaringSRTS>
+  <SRTSSettings>SRTS 设置</SRTSSettings>
+  <FlightSpeed>飞行速度（世界地图）</FlightSpeed>
+  <Instant>立即</Instant>
+  <FuelEfficiency>燃料效率</FuelEfficiency>
+  <FuelEfficiencySymbol>每格</FuelEfficiencySymbol>
+  <CargoCapacity>货物容量</CargoCapacity>
+  <MinPassengers>最少乘客</MinPassengers>
+  <MaxPassengers>最大乘客数</MaxPassengers>
+  <SRTSResearch>研究成本</SRTSResearch>
+  <SRTSResearchRequirements>需要研究</SRTSResearchRequirements>
+  <BombSettings>设置轰炸</BombSettings>
+  <BombSpeed>飞行速度（轰炸中）</BombSpeed>
+  <RadiusDrop>轰炸范围</RadiusDrop>
+  <BombCountSRTS>炸弹数量</BombCountSRTS>
+  <CarpetBombing>地毯式轰炸</CarpetBombing>
+  <PreciseBombing>精确轰炸</PreciseBombing>
+  <DistanceBetweenDrops>轰炸时的炸弹间隔</DistanceBetweenDrops>
+  <CellsEndValue> 칸</CellsEndValue>
+  <SingleDrop>单发投下</SingleDrop>
+  <ResearchSettings>研究</ResearchSettings>
+  <ResearchDef>{0} ResearchDef</ResearchDef>
+  <SearchResearch>Research Defs 添加</SearchResearch>
+  <AddItemSRTS>添加</AddItemSRTS>
+  <RemoveResearch>删除</RemoveResearch>
+  <RestartGameResearch>重新启动游戏以应用新的研究设置</RestartGameResearch>
+  <BoardSRTS>{0} 装载</BoardSRTS>
+  <JoinSRTSGroup>添加到SRTS发射组</JoinSRTSGroup>
+  <SRTSNoPilot>SRTS不能在没有飞行员的情况下发送。</SRTSNoPilot>
+  <NotEnoughPilots>飞行员的数量不足，无法发射。</NotEnoughPilots>
+  <TooManyPilots>有太多的定居者在乘坐。</TooManyPilots>
+  <BombRunStarted>轰炸开始了。</BombRunStarted>
+  <CannotBombMap>活动地图未加载，无法轰炸。</CannotBombMap>
+  <CommandAddFuelSRTS>{0}燃料供应</CommandAddFuelSRTS>
+  <CommandAddFuelDescSRTS>向SRTS普及随身携带的燃料。</CommandAddFuelDescSRTS>
+  <AddFuelSRTSCaravan>向 {0} 添加了 {1} 燃料。</AddFuelSRTSCaravan>
+  <NoFuelSRTSCaravan>没有可用的燃料。</NoFuelSRTSCaravan>
+  <CommandLaunchOrbit>脱离轨道</CommandLaunchOrbit>
+  <CommandLaunchOrbitDesc>轨道发射位置</CommandLaunchOrbitDesc>
+  <BombTarget>轰炸目标</BombTarget>
+  <BombTargetDesc>指定要在其他地图上轰炸的目标。</BombTargetDesc>
+</LanguageData>

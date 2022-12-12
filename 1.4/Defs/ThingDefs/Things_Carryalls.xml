@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<Defs>
+
+
+
+<ThingDef ParentName="ShuttleSkyfallerBase">
+    <defName>Carryall_standard_Incoming</defName>
+    <label>standard carryall (incoming)</label>
+	<thingClass>SRTS.SRTSIncoming</thingClass>
+    <graphicData>
+      <texPath>Carryall/CarryallBasic</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>(5.5,5.5)</drawSize>
+    </graphicData>	
+    <skyfaller>
+      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
+      <shadowSize>(5,3)</shadowSize>
+      <motesPerCell>1</motesPerCell>	
+      <anticipationSound>Shuttle_Landing</anticipationSound>
+      <anticipationSoundTicks>250</anticipationSoundTicks>
+      <ticksToImpactRange>200~250</ticksToImpactRange>
+      <angleCurve>
+        <points>
+          <li>(0,-60)</li>
+          <li>(1,-90)</li>
+        </points>
+      </angleCurve>
+      <rotationCurve>
+        <points>
+          <li>(-90,-120)</li>
+          <li>(-90.5,-95)</li>
+          <li>(-90.9,-95)</li>
+          <li>(-90.95,-90)</li>
+        </points>
+      </rotationCurve>
+      <zPositionCurve>
+        <points>
+          <li>(0.95,2.5)</li>
+          <li>(1,0)</li>
+        </points>
+      </zPositionCurve>
+      <speedCurve>
+        <points>
+          <li>(0.6,0.6)</li>
+          <li>(0.95,0.1)</li>
+        </points>
+      </speedCurve>
+    </skyfaller>
+  </ThingDef>
+
+  <ThingDef ParentName="ShuttleSkyfallerBase">
+    <defName>Carryall_standard_Leaving</defName>
+    <label>standard carryall (leaving)</label>	
+	<thingClass>SRTS.SRTSLeaving</thingClass>
+    <graphicData>
+      <texPath>Carryall/CarryallBasic</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>(5.5,5.5)</drawSize>
+    </graphicData>
+    <skyfaller>
+      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
+      <shadowSize>(5,3)</shadowSize>
+      <motesPerCell>1</motesPerCell>	
+      <reversed>true</reversed>
+      <anticipationSound>Shuttle_Leaving</anticipationSound>
+      <anticipationSoundTicks>-10</anticipationSoundTicks>
+      <ticksToImpactRange>-40~-15</ticksToImpactRange>
+      <moteSpawnTime>0.05</moteSpawnTime>
+      <angleCurve>
+        <points>
+          <li>(0,90)</li>
+          <li>(1,70)</li>
+        </points>
+      </angleCurve>
+      <rotationCurve>
+        <points>
+          <li>(90,90)</li>
+          <li>(90.15,100)</li>
+          <li>(90.5,85)</li>
+        </points>
+      </rotationCurve>
+      <zPositionCurve>
+        <points>
+          <li>(0,0)</li>
+          <li>(0.08,2)</li>
+        </points>
+      </zPositionCurve>
+      <speedCurve>
+        <points>
+          <li>(0,0.2)</li>
+          <li>(0.4,0.7)</li>
+        </points>
+      </speedCurve>
+    </skyfaller>
+  </ThingDef>
+ 
+  <ThingDef>
+    <defName>Carryall_standard_Active</defName>
+    <label>standard carryall (active)</label>
+    <category>Item</category>
+    <thingClass>ActiveDropPod</thingClass>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Carryall/CarryallBasic</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(5,5)</drawSize>
+      <color>(162,164,149)</color>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <blockWind>false</blockWind>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>600</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <selectable>true</selectable>
+  </ThingDef>
+  
+
+	
+  
+<ThingDef ParentName="ShuttleSkyfallerBase">
+    <defName>Carryall_GDI_Incoming</defName>
+    <label>ox carryall (incoming)</label>
+	<thingClass>SRTS.SRTSIncoming</thingClass>
+    <graphicData>
+      <texPath>Carryall/CarryallGDI</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>(6,6)</drawSize>
+    </graphicData>	
+    <skyfaller>
+      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
+      <shadowSize>(5.5,3.5)</shadowSize>
+      <motesPerCell>1</motesPerCell>	
+      <anticipationSound>Shuttle_Landing</anticipationSound>
+      <anticipationSoundTicks>250</anticipationSoundTicks>
+      <ticksToImpactRange>200~250</ticksToImpactRange>
+      <angleCurve>
+        <points>
+          <li>(0,-60)</li>
+          <li>(1,-90)</li>
+        </points>
+      </angleCurve>
+      <rotationCurve>
+        <points>
+          <li>(-90,-120)</li>
+          <li>(-90.5,-95)</li>
+          <li>(-90.9,-95)</li>
+          <li>(-90.95,-90)</li>
+        </points>
+      </rotationCurve>
+      <zPositionCurve>
+        <points>
+          <li>(0.95,2.5)</li>
+          <li>(1,0)</li>
+        </points>
+      </zPositionCurve>
+      <speedCurve>
+        <points>
+          <li>(0.6,0.6)</li>
+          <li>(0.95,0.1)</li>
+        </points>
+      </speedCurve>
+    </skyfaller>
+  </ThingDef>
+
+  <ThingDef ParentName="ShuttleSkyfallerBase">
+    <defName>Carryall_GDI_Leaving</defName>
+    <label>ox carryall (leaving)</label>	
+	<thingClass>SRTS.SRTSLeaving</thingClass>
+    <graphicData>
+      <texPath>Carryall/CarryallGDI</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>(6,6)</drawSize>
+    </graphicData>	
+    <skyfaller>
+      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
+      <shadowSize>(5.5,3.5)</shadowSize>
+      <motesPerCell>1</motesPerCell>	
+      <reversed>true</reversed>
+      <anticipationSound>Shuttle_Leaving</anticipationSound>
+      <anticipationSoundTicks>-10</anticipationSoundTicks>
+      <ticksToImpactRange>-40~-15</ticksToImpactRange>
+      <moteSpawnTime>0.05</moteSpawnTime>
+      <angleCurve>
+        <points>
+          <li>(0,90)</li>
+          <li>(1,70)</li>
+        </points>
+      </angleCurve>
+      <rotationCurve>
+        <points>
+          <li>(90,90)</li>
+          <li>(90.15,100)</li>
+          <li>(90.5,85)</li>
+        </points>
+      </rotationCurve>
+      <zPositionCurve>
+        <points>
+          <li>(0,0)</li>
+          <li>(0.08,2)</li>
+        </points>
+      </zPositionCurve>
+      <speedCurve>
+        <points>
+          <li>(0,0.2)</li>
+          <li>(0.4,0.7)</li>
+        </points>
+      </speedCurve>
+    </skyfaller>
+  </ThingDef>
+ 
+  <ThingDef>
+    <defName>Carryall_GDI_Active</defName>
+    <label>ox carryall (active)</label>
+    <category>Item</category>
+    <thingClass>ActiveDropPod</thingClass>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Carryall/CarryallGDI</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(6,6)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <blockWind>false</blockWind>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>800</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <selectable>true</selectable>
+  </ThingDef>  
+
+
+
+
+<ThingDef ParentName="ShuttleSkyfallerBase">
+    <defName>Carryall_Nod_Incoming</defName>
+    <label>vertigo carryall (incoming)</label>
+	<thingClass>SRTS.SRTSIncoming</thingClass>
+    <graphicData>
+      <texPath>Carryall/CarryallNod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>(6,6)</drawSize>
+    </graphicData>	
+    <skyfaller>
+      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
+      <shadowSize>(5.5,3.5)</shadowSize>
+      <motesPerCell>1</motesPerCell>	
+      <anticipationSound>Shuttle_Landing</anticipationSound>
+      <anticipationSoundTicks>250</anticipationSoundTicks>
+      <ticksToImpactRange>200~250</ticksToImpactRange>
+      <angleCurve>
+        <points>
+          <li>(0,-60)</li>
+          <li>(1,-90)</li>
+        </points>
+      </angleCurve>
+      <rotationCurve>
+        <points>
+          <li>(-90,-120)</li>
+          <li>(-90.5,-95)</li>
+          <li>(-90.9,-95)</li>
+          <li>(-90.95,-90)</li>
+        </points>
+      </rotationCurve>
+      <zPositionCurve>
+        <points>
+          <li>(0.95,2.5)</li>
+          <li>(1,0)</li>
+        </points>
+      </zPositionCurve>
+      <speedCurve>
+        <points>
+          <li>(0.6,0.6)</li>
+          <li>(0.95,0.1)</li>
+        </points>
+      </speedCurve>
+    </skyfaller>
+  </ThingDef>
+
+  <ThingDef ParentName="ShuttleSkyfallerBase">
+    <defName>Carryall_Nod_Leaving</defName>
+    <label>vertigo carryall (leaving)</label>	
+	<thingClass>SRTS.SRTSLeaving</thingClass>
+    <graphicData>
+      <texPath>Carryall/CarryallNod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>(6,6)</drawSize>
+    </graphicData>	
+    <skyfaller>
+      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
+      <shadowSize>(5.5,3.5)</shadowSize>
+      <motesPerCell>1</motesPerCell>	
+      <reversed>true</reversed>
+      <anticipationSound>Shuttle_Leaving</anticipationSound>
+      <anticipationSoundTicks>-10</anticipationSoundTicks>
+      <ticksToImpactRange>-40~-15</ticksToImpactRange>
+      <moteSpawnTime>0.05</moteSpawnTime>
+      <angleCurve>
+        <points>
+          <li>(0,90)</li>
+          <li>(1,70)</li>
+        </points>
+      </angleCurve>
+      <rotationCurve>
+        <points>
+          <li>(90,90)</li>
+          <li>(90.15,100)</li>
+          <li>(90.5,85)</li>
+        </points>
+      </rotationCurve>
+      <zPositionCurve>
+        <points>
+          <li>(0,0)</li>
+          <li>(0.08,2)</li>
+        </points>
+      </zPositionCurve>
+      <speedCurve>
+        <points>
+          <li>(0,0.2)</li>
+          <li>(0.4,0.7)</li>
+        </points>
+      </speedCurve>
+    </skyfaller>
+  </ThingDef>
+ 
+  <ThingDef>
+    <defName>Carryall_Nod_Active</defName>
+    <label>vertigo carryall (active)</label>
+    <category>Item</category>
+    <thingClass>ActiveDropPod</thingClass>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Carryall/CarryallNod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(6,6)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <blockWind>false</blockWind>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <Flammability>0.4</Flammability>
+    </statBases>
+    <selectable>true</selectable>
+  </ThingDef> 
+
+
+</Defs>
+

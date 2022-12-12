@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+			<WorldObjectDef>
+				<defName>TravelingSRTS</defName>
+				<label>Flying Caravan</label>
+				<description>Caravan in flight.</description>
+				<worldObjectClass>SRTS.TravelingSRTS</worldObjectClass>
+				<texture>Carryall_Icon</texture>
+				<useDynamicDrawer>true</useDynamicDrawer>
+				<expandingIcon>true</expandingIcon>
+				<expandingIconTexture>Carryall_Icon</expandingIconTexture>
+				<expandingIconPriority>30</expandingIconPriority>
+				<expandMore>false</expandMore>
+				<allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>
+			</WorldObjectDef>
+  
+</Defs>
