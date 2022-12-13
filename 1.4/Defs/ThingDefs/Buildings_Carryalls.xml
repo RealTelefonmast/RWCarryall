@@ -15,7 +15,7 @@
 					<SellPriceFactor>0.70</SellPriceFactor>
 				</statBases>
 				<tickerType>Normal</tickerType>
-				<altitudeLayer>BuildingOnTop</altitudeLayer>
+				<altitudeLayer>Skyfaller</altitudeLayer>
 				<stealable>false</stealable>
 				<inspectorTabs>
 					<li>ITab_ContentsTransporter</li>
@@ -57,6 +57,7 @@ Cargo cap: 750kg</description>
 	
     <graphicData>
       <texPath>Carryall/CarryallBasic</texPath>
+	  <shaderType>CutoutFlying</shaderType>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(4.2,4.2)</drawSize>
       <shadowData>
@@ -182,6 +183,7 @@ Cargo cap: 2,500kg</description>
 	
     <graphicData>
       <texPath>Carryall/CarryallGDI</texPath>
+	  <shaderType>CutoutFlying</shaderType>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(6,6)</drawSize>
       <shadowData>
@@ -291,9 +293,10 @@ Cargo cap: 2,500kg</description>
     <label>carryall turret gun</label>
     <description>A simple automatic gun made to be mounted on a turret.</description>
     <graphicData>
-      <texPath>Blank</texPath>
+      <texPath>Misc/DirectionArrow</texPath><!--Things/Building/Security/TurretMini_Top-->
+	  <shaderType>TransparentPostLight</shaderType>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(1,1)</drawSize>
+      <drawSize>(2,2)</drawSize>
     </graphicData>
     <statBases>
       <AccuracyTouch>0.87</AccuracyTouch>
@@ -366,6 +369,7 @@ Cargo cap: 1,250kg</description>
     <graphicData>
       <texPath>Carryall/CarryallNod</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutFlying</shaderType>
       <drawSize>(5.5,5.5)</drawSize>
       <shadowData>
         <volume>(4.1, 1.0, 1.8)</volume>
@@ -446,6 +450,13 @@ Cargo cap: 1,250kg</description>
 		<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
 		<chanceToStartFire>0.5</chanceToStartFire>
       </li>
+      <li Class="SRTS.CompProperties_BombsAway">
+        <numberBombs>20</numberBombs>
+        <precisionBombingNumBombs>10</precisionBombingNumBombs>
+        <radiusOfDrop>5</radiusOfDrop>
+        <speed>1</speed>
+        <distanceBetweenDrops>2</distanceBetweenDrops>
+      </li>
     </comps>
 
     <building>
@@ -460,7 +471,6 @@ Cargo cap: 1,250kg</description>
     </building>
     <placeWorkers>
 	  <li>PlaceWorker_NotUnderRoof</li>
-      <li>PlaceWorker_TurretTop</li>
       <li>PlaceWorker_ShowTurretRadius</li>
     </placeWorkers>
     <researchPrerequisites>
@@ -474,9 +484,9 @@ Cargo cap: 1,250kg</description>
     <label>medium carryall turret gun</label>
     <description>A automatic minigun made to be mounted on a turret.</description>
     <graphicData>
-      <texPath>Blank</texPath>
+      <texPath>Misc/DirectionArrow</texPath><!--Things/Building/Security/TurretAutocannon_Top-->
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(1,1)</drawSize>
+      <drawSize>(2,2)</drawSize>
     </graphicData>
     <statBases>
       <AccuracyTouch>0.25</AccuracyTouch>

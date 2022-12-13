@@ -17,7 +17,7 @@
   <DynamicWorldObjectSRTS>유동적인 세계 이미지들</DynamicWorldObjectSRTS>
   <DynamicWorldObjectSRTSTooltip>SRTS 텍스처와 회전 모두에 맞게 SRTS 텍스처를 월드 맵에 동적으로 그립니다.</DynamicWorldObjectSRTSTooltip>
   <ExpandBombPoints>폭격 대상 확장</ExpandBombPoints>
-  <ExpandBombPointsTooltip>타겟팅 라인을 따라 폭격 지점을 확장하여 라인 전체에 맞춥니 다.</ExpandBombPointsTooltip>
+  <ExpandBombPointsTooltip>타겟팅 라인을 따라 폭격 지점을 확장하여 라인 전체에 맞춥니다.</ExpandBombPointsTooltip>
   <AllowedBombs>폭발음 허용(폭격)</AllowedBombs>
   <ChangeItemSRTS>수정</ChangeItemSRTS>
   <SearchExplosive>항목 추가</SearchExplosive>
@@ -56,15 +56,15 @@
   <RemoveResearch>제거</RemoveResearch>
   <RestartGameResearch>새로운 연구 설정 적용을 위해 게임을 재시작합니다</RestartGameResearch>
   <BoardSRTS>{0} 적재</BoardSRTS>
-  <JoinSRTSGroup>SRTS 발사 그룹에 추가</JoinSRTSGroup>
-  <SRTSNoPilot>SRTS는 조종사 없이는 보낼 수 없습니다.</SRTSNoPilot>
-  <NotEnoughPilots>발사하기 위한 조종사의 숫자가 부족합니다.</NotEnoughPilots>
-  <TooManyPilots>너무 많은 정착민들이 타고 있습니다.</TooManyPilots>
+  <JoinSRTSGroup>발사 그룹에 추가</JoinSRTSGroup>
+  <SRTSNoPilot>조종사 없이는 출발할 수 없습니다.</SRTSNoPilot>
+  <NotEnoughPilots>출발에 빌요한 조종사의 숫자가 부족합니다.</NotEnoughPilots>
+  <TooManyPilots>너무 많은 인원이 탑승했습니다.</TooManyPilots>
   <BombRunStarted>폭격이 시작되었습니다.</BombRunStarted>
-  <CannotBombMap>활성화된 지도가 로드되지 않아서 폭격할 수 없습니다.</CannotBombMap>
+  <CannotBombMap>지도가 로드되지 않아서 폭격할 수 없습니다.</CannotBombMap>
   <CommandAddFuelSRTS>{0}에 연료 보급</CommandAddFuelSRTS>
-  <CommandAddFuelDescSRTS>소지품의 연료를 SRTS에 보급합니다.</CommandAddFuelDescSRTS>
-  <AddFuelSRTSCaravan>{0}의 연료를 {1}에 추가했습니다.</AddFuelSRTSCaravan>
+  <CommandAddFuelDescSRTS>적재된 연료를 기체에 보급합니다.</CommandAddFuelDescSRTS>
+  <AddFuelSRTSCaravan>{0} 연료를 {1}에 보급했습니다.</AddFuelSRTSCaravan>
   <NoFuelSRTSCaravan>사용 가능한 연료가 없습니다.</NoFuelSRTSCaravan>
   <CommandLaunchOrbit>궤도 이탈</CommandLaunchOrbit>
   <CommandLaunchOrbitDesc>궤도에서 발사할 위치</CommandLaunchOrbitDesc>
