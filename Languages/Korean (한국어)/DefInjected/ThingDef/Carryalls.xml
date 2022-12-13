@@ -15,7 +15,7 @@
 
 
   <Carryall_GDI.label>옥스 캐리올</Carryall_GDI.label>
-  <Carryall_GDI.description>희귀한 캐리올 모델로, 먼 옛날 칠면조 비슷한 것을 숭배하던 이들이 사용했다고 합니다. 대량 운송에 최적화되어 화물 적재량이 매우 우수하지만 객실은 비좁습니다.\n\n옥스 캐리올에는 소형 포탑이 장착되어 있습니다. 이것은 전투에 도움이 되지만 많은 연료를 소모합니다. 집으로 돌아가려면 충분한 연료가 필요하다는 것을 항상 기억하세요.\n\n최대 정원: 4명\n비행 속도: 4\n연료 용량: 800L\n연료 효율: 타일당 2L\n왕복 가능 범위: 200타일\n적재 용량: 2,500kg</Carryall_GDI.description>
+  <Carryall_GDI.description>희귀한 캐리올 모델로, 먼 옛날 칠면조 비슷한 것을 숭배하던 이들이 사용했다고 합니다. 대량 운송에 최적화되어 화물 적재량이 매우 우수하지만 객실은 비좁습니다.\n\n옥스 캐리올에는 소형 포탑이 장착되어 있습니다. 이것은 전투에 도움이 되지만 많은 연료를 소모합니다. 집으로 돌아가려면 충분한 연료가 필요하다는 것을 항상 기억하세요.\n\n최대 정원: 4명\n비행 속도: 4\n연료 용량: 900L\n연료 효율: 타일당 3L\n왕복 가능 범위: 150타일\n적재 용량: 2,500kg</Carryall_GDI.description>
   
   <Gun_MiniCarryallTurret.label>캐리올 포탑</Gun_MiniCarryallTurret.label>
   <Gun_MiniCarryallTurret.description>포탑에 장착할 수 있도록 만들어진 자율 무장입니다.</Gun_MiniCarryallTurret.description>

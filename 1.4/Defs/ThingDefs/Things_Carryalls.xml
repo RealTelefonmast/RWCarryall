@@ -13,7 +13,7 @@
       <texPath>Carryall/CarryallBasic</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutFlying</shaderType>
-      <drawSize>(5.5,5.5)</drawSize>
+      <drawSize>(4.2,4.2)</drawSize>
     </graphicData>	
     <skyfaller>
       <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
@@ -59,7 +59,7 @@
       <texPath>Carryall/CarryallBasic</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutFlying</shaderType>
-      <drawSize>(5.5,5.5)</drawSize>
+      <drawSize>(4.2,4.2)</drawSize>
     </graphicData>
     <skyfaller>
       <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
@@ -108,7 +108,7 @@
     <graphicData>
       <texPath>Carryall/CarryallBasic</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(5.5,5.5)</drawSize>
+      <drawSize>(4.2,4.2)</drawSize>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
     <blockWind>false</blockWind>
@@ -178,7 +178,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutFlying</shaderType>
       <drawSize>(6,6)</drawSize>
-    </graphicData>	
+    </graphicData>
     <skyfaller>
       <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
       <shadowSize>(5.5,3.5)</shadowSize>
@@ -249,7 +249,7 @@
       <texPath>Carryall/CarryallNod</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutFlying</shaderType>
-      <drawSize>(6,6)</drawSize>
+      <drawSize>(5.5,5.5)</drawSize>
     </graphicData>	
     <skyfaller>
       <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
@@ -295,7 +295,7 @@
       <texPath>Carryall/CarryallNod</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutFlying</shaderType>
-      <drawSize>(6,6)</drawSize>
+      <drawSize>(5.5,5.5)</drawSize>
     </graphicData>	
     <skyfaller>
       <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
@@ -344,7 +344,7 @@
     <graphicData>
       <texPath>Carryall/CarryallNod</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(6,6)</drawSize>
+      <drawSize>(5.5,5.5)</drawSize>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
     <blockWind>false</blockWind>
