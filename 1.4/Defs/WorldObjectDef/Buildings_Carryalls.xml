@@ -3,8 +3,8 @@
 <Defs>
 			<WorldObjectDef>
 				<defName>TravelingSRTS</defName>
-				<label>Flying Caravan</label>
-				<description>Caravan in flight.</description>
+				<label>Carryall</label>
+				<description>Carryall in flight.</description>
 				<worldObjectClass>SRTS.TravelingSRTS</worldObjectClass>
 				<texture>Carryall_Icon</texture>
 				<useDynamicDrawer>true</useDynamicDrawer>

@@ -5,4 +5,11 @@
 		<xpath>Defs/DesignationCategoryDef[defName="Ship"]/researchPrerequisites</xpath>
     </Operation>
 	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/DesignationCategoryDef[defName="Ship"]</xpath>
+		<value>
+			<researchPrerequisites><li>Fabrication</li></researchPrerequisites>
+		</value>
+	</Operation>
+	
 </Patch>

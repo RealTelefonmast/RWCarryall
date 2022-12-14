@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <TravelingSRTS.label>비행 중인 상단</TravelingSRTS.label>
-  <TravelingSRTS.description>상단이 비행하고 있습니다.</TravelingSRTS.description>
+  <TravelingSRTS.label>캐리올</TravelingSRTS.label>
+  <TravelingSRTS.description>비행 중인 캐리올입니다.</TravelingSRTS.description>
 
 </LanguageData>

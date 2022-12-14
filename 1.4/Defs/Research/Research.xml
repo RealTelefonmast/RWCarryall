@@ -29,6 +29,7 @@
     <techLevel>Spacer</techLevel>
     <prerequisites>
 	  <li>Research_Carryalls</li>
+	  <li>AdvancedFabrication</li>
     </prerequisites>
 	<researchViewX>16</researchViewX>
 	<researchViewY>1.5</researchViewY>
@@ -47,6 +48,7 @@
     <techLevel>Spacer</techLevel>
     <prerequisites>
 	  <li>Research_Carryalls</li>
+	  <li>AdvancedFabrication</li>
     </prerequisites>
 	<researchViewX>16</researchViewX>
 	<researchViewY>2.1</researchViewY>
