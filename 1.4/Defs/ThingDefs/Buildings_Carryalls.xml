@@ -22,12 +22,12 @@
 				</inspectorTabs>
 				<passability>PassThroughOnly</passability>
 				<castEdgeShadows>false</castEdgeShadows>
-				<designationCategory>Misc</designationCategory>
+				<designationCategory>Ship</designationCategory>
 				<killedLeavings>
 					<ChunkSlagSteel>12</ChunkSlagSteel>
 				</killedLeavings>
 				<comps />
-				<uiIconScale>1.0</uiIconScale> 
+				<uiIconScale>1.1</uiIconScale> 
 			</ThingDef>
 	
 
@@ -61,8 +61,8 @@ Cargo cap: 750kg</description>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(4.2,4.2)</drawSize>
       <shadowData>
-        <volume>(4.1, 1.0, 1.8)</volume>
-        <offset>(0, 0, -0.1)</offset>
+        <volume>(3.3, 1.0, 1.35)</volume>
+        <offset>(0, 0, -0.2)</offset>
       </shadowData>
     </graphicData>
 	
@@ -152,7 +152,7 @@ Cargo cap: 750kg</description>
     <researchPrerequisites>
       <li>Research_Carryalls</li>
     </researchPrerequisites>
-    <constructionSkillPrerequisite>10</constructionSkillPrerequisite> 
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
   </ThingDef>
   
 <ThingDef ParentName="CarryallBase">
@@ -187,8 +187,8 @@ Cargo cap: 2,500kg</description>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(6,6)</drawSize>
       <shadowData>
-        <volume>(4.1, 1.0, 1.8)</volume>
-        <offset>(0, 0, -0.1)</offset>
+        <volume>(4.1, 1.0, 1.7)</volume>
+        <offset>(0, 0, -0.2)</offset>
       </shadowData>
     </graphicData>
 	
@@ -296,7 +296,7 @@ Cargo cap: 2,500kg</description>
       <texPath>Misc/DirectionArrow</texPath><!--Things/Building/Security/TurretMini_Top-->
 	  <shaderType>TransparentPostLight</shaderType>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(2,2)</drawSize>
+      <drawSize>(1.5,1.5)</drawSize>
     </graphicData>
     <statBases>
       <AccuracyTouch>0.87</AccuracyTouch>
@@ -372,8 +372,8 @@ Cargo cap: 1,250kg</description>
 	  <shaderType>CutoutFlying</shaderType>
       <drawSize>(5.5,5.5)</drawSize>
       <shadowData>
-        <volume>(4.1, 1.0, 1.8)</volume>
-        <offset>(0, 0, -0.1)</offset>
+        <volume>(4.1, 1.0, 1.5)</volume>
+        <offset>(0, 0, -0.2)</offset>
       </shadowData>
     </graphicData>
 	
@@ -486,7 +486,7 @@ Cargo cap: 1,250kg</description>
     <graphicData>
       <texPath>Misc/DirectionArrow</texPath><!--Things/Building/Security/TurretAutocannon_Top-->
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(2,2)</drawSize>
+      <drawSize>(1.5,1.5)</drawSize>
     </graphicData>
     <statBases>
       <AccuracyTouch>0.25</AccuracyTouch>

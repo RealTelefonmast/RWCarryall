@@ -100,7 +100,7 @@
  
   <ThingDef>
     <defName>Carryall_standard_Active</defName>
-    <label>standard carryall (active)</label>
+    <label>standard carryall</label>
     <category>Item</category>
     <thingClass>ActiveDropPod</thingClass>
     <scatterableOnMapGen>false</scatterableOnMapGen>
@@ -110,11 +110,11 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(4.2,4.2)</drawSize>
     </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>Skyfaller</altitudeLayer>
     <blockWind>false</blockWind>
     <useHitPoints>true</useHitPoints>
     <statBases>
-      <MaxHitPoints>600</MaxHitPoints>
+      <MaxHitPoints>550</MaxHitPoints>
       <Flammability>0.5</Flammability>
     </statBases>
     <selectable>true</selectable>
@@ -218,7 +218,7 @@
  
   <ThingDef>
     <defName>Carryall_GDI_Active</defName>
-    <label>ox carryall (active)</label>
+    <label>ox carryall</label>
     <category>Item</category>
     <thingClass>ActiveDropPod</thingClass>
     <scatterableOnMapGen>false</scatterableOnMapGen>
@@ -228,11 +228,11 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(6,6)</drawSize>
     </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>Skyfaller</altitudeLayer>
     <blockWind>false</blockWind>
     <useHitPoints>true</useHitPoints>
     <statBases>
-      <MaxHitPoints>800</MaxHitPoints>
+      <MaxHitPoints>750</MaxHitPoints>
       <Flammability>0.5</Flammability>
     </statBases>
     <selectable>true</selectable>
@@ -336,7 +336,7 @@
  
   <ThingDef>
     <defName>Carryall_Nod_Active</defName>
-    <label>vertigo carryall (active)</label>
+    <label>vertigo carryall</label>
     <category>Item</category>
     <thingClass>ActiveDropPod</thingClass>
     <scatterableOnMapGen>false</scatterableOnMapGen>
@@ -346,11 +346,11 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(5.5,5.5)</drawSize>
     </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>Skyfaller</altitudeLayer>
     <blockWind>false</blockWind>
     <useHitPoints>true</useHitPoints>
     <statBases>
-      <MaxHitPoints>1000</MaxHitPoints>
+      <MaxHitPoints>800</MaxHitPoints>
       <Flammability>0.4</Flammability>
     </statBases>
     <selectable>true</selectable>
