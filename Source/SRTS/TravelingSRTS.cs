@@ -11,6 +11,13 @@ namespace SRTS
 {
     public class TravelingSRTS : TravelingTransportPods
     {
+        public Thing flyingThing;
+        private Material material;
+        private const float ExpandingResize = 35f;
+        private const float TransitionTakeoff = 0.015f;
+        private float transitionSize = 0f;
+        Vector3 directionFacing;
+        
         private Material SRTSMaterial
         {
             get
@@ -30,11 +37,17 @@ namespace SRTS
             }
         }
 
+        public override void SpawnSetup()
+        {
+            base.SpawnSetup();
+        }
+
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_References.Look(ref flyingThing, "flyingThing");
         }
+        
         public override void Draw()
         {
             if(!SRTSMod.mod.settings.dynamicWorldDrawingSRTS)
@@ -71,17 +84,5 @@ namespace SRTS
             Vector3 tileLocation = Find.WorldGrid.GetTileCenter(this.destinationTile).normalized;
             directionFacing = (this.DrawPos - tileLocation).normalized;
         }
-
-        public Thing flyingThing;
-
-        private Material material;
-
-        private const float ExpandingResize = 35f;
-
-        private const float TransitionTakeoff = 0.015f;
-
-        private float transitionSize = 0f;
-
-        Vector3 directionFacing;
     }
 }

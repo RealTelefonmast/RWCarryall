@@ -9,11 +9,10 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9c84a414-98d2-46f9-8469-4ebf0b48c014}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>SRTS</AssemblyName>
+    <AssemblyName>NephsCarryalls</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <ApplicationVersion>1.0.0.0</ApplicationVersion>
     <FileAlignment>512</FileAlignment>
-    <RootNamespace>SRTS</RootNamespace>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>

@@ -10,10 +10,30 @@ using SPExtended;
 
 namespace SRTS
 {
-    internal enum SettingsCategory { Settings, Stats, Research }
-    public enum StatName { massCapacity, minPassengers, maxPassengers, flightSpeed, numberBombs, radiusDrop, bombingSpeed, distanceBetweenDrops, researchPoints, fuelPerTile, precisionBombingNumBombs
-        , spaceFaring, shuttleBayLanding}
+    internal enum SettingsCategory
+    {
+        Settings,
+        Stats,
+        Research
+    }
 
+    public enum StatName
+    {
+        massCapacity,
+        minPassengers,
+        maxPassengers,
+        flightSpeed,
+        numberBombs,
+        radiusDrop,
+        bombingSpeed,
+        distanceBetweenDrops,
+        researchPoints,
+        fuelPerTile,
+        precisionBombingNumBombs,
+        spaceFaring,
+        shuttleBayLanding
+    }
+    
     public class SRTS_ModSettings : ModSettings
     {
         public Dictionary<string, SRTS_DefProperties> defProperties = new Dictionary<string, SRTS_DefProperties>();

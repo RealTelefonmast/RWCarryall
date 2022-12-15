@@ -13,6 +13,7 @@ namespace SRTS
     public enum BombingType { carpet, precise, missile }
     public class CompBombFlyer : ThingComp
     {
+        public BombingType bombType;
         public Building SRTS_Launcher => this.parent as Building;
         public CompLaunchableSRTS CompLauncher => SRTS_Launcher.GetComp<CompLaunchableSRTS>();
         public CompProperties_BombsAway Props => (CompProperties_BombsAway)this.props;
@@ -213,7 +214,7 @@ namespace SRTS
             activeDropPod.Contents = new ActiveDropPodInfo();
             activeDropPod.Contents.innerContainer.TryAddRangeOrTransfer((IEnumerable<Thing>)directlyHeldThings, true, true);
 
-            SRTSLeaving srtsLeaving = (SRTSLeaving)SkyfallerMaker.MakeSkyfaller(ThingDef.Named(parent.def.defName + "_Leaving"), (Thing)activeDropPod);
+            SRTSLeaving srtsLeaving = (SRTSLeaving)SkyfallerMaker.MakeSkyfaller(SkyfallerLeavingDefByRot(), (Thing)activeDropPod);
             srtsLeaving.rotation = CompLauncher.FuelingPortSource.Rotation;
             srtsLeaving.groupID = groupID;
             srtsLeaving.destinationTile = destTile;
@@ -226,6 +227,17 @@ namespace SRTS
             CameraJumper.TryHideWorld();
         }
 
-        public BombingType bombType;
+        private ThingDef SkyfallerLeavingDefByRot()
+        {
+            if (parent.Rotation == Rot4.East)
+            {
+                return Props.eastSkyfaller;
+            }
+            else if (parent.Rotation == Rot4.West)
+            {
+                return Props.westSkyfaller;
+            }
+            return Props.eastSkyfaller;
+        }
     }
 }

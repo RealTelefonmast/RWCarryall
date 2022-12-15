@@ -9,6 +9,9 @@ namespace SRTS
             this.compClass = typeof (CompLaunchableSRTS);
         }
 
+        public ThingDef eastSkyfaller;
+        public ThingDef westSkyfaller;
+        
         public float travelSpeed = 25f;
         public int minPassengers = 1;
         public int maxPassengers = 2;

@@ -12,6 +12,9 @@ namespace SRTS
         {
             this.compClass = typeof(CompBombFlyer);
         }
+        
+        public ThingDef eastSkyfaller;
+        public ThingDef westSkyfaller;
 
         public int numberBombs = 3;
         public int precisionBombingNumBombs = 1;

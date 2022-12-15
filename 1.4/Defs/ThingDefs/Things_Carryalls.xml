@@ -95,6 +95,53 @@
       </speedCurve>
     </skyfaller>
   </ThingDef>
+  
+    <ThingDef ParentName="ShuttleSkyfallerBase">
+    <defName>Carryall_standard_R_Leaving</defName>
+    <label>standard carryall (leaving)</label>	
+	<thingClass>SRTS.SRTSLeaving</thingClass>
+    <graphicData>
+      <texPath>Carryall/CarryallBasic_R</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>(4.2,4.2)</drawSize>
+    </graphicData>
+    <skyfaller>
+      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
+      <shadowSize>(4,2)</shadowSize>
+      <motesPerCell>1</motesPerCell>	
+      <reversed>true</reversed>
+      <anticipationSound>Shuttle_Leaving</anticipationSound>
+      <anticipationSoundTicks>-10</anticipationSoundTicks>
+      <ticksToImpactRange>-40~-15</ticksToImpactRange>
+      <moteSpawnTime>0.05</moteSpawnTime>
+      <angleCurve>
+        <points>
+          <li>(0,-90)</li>
+          <li>(1,-70)</li>
+        </points>
+      </angleCurve>
+      <rotationCurve>
+        <points>
+          <li>(90,90)</li>
+          <li>(90.15,80)</li>
+          <li>(90.5,95)</li>
+        </points>
+      </rotationCurve>
+      <zPositionCurve>
+        <points>
+          <li>(0,0)</li>
+          <li>(0.08,2)</li>
+        </points>
+      </zPositionCurve>
+      <speedCurve>
+        <points>
+          <li>(0,0.2)</li>
+          <li>(0.4,0.7)</li>
+        </points>
+      </speedCurve>
+    </skyfaller>
+  </ThingDef>
  
   <ThingDef>
     <defName>Carryall_standard_Active</defName>
@@ -159,53 +206,6 @@
         <points>
           <li>(0.6,0.6)</li>
           <li>(0.95,0.1)</li>
-        </points>
-      </speedCurve>
-    </skyfaller>
-  </ThingDef>
-
-  <ThingDef ParentName="ShuttleSkyfallerBase">
-    <defName>Carryall_standard_R_Leaving</defName>
-    <label>standard carryall (leaving)</label>	
-	<thingClass>SRTS.SRTSLeaving</thingClass>
-    <graphicData>
-      <texPath>Carryall/CarryallBasic_R</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutFlying</shaderType>
-      <drawSize>(4.2,4.2)</drawSize>
-    </graphicData>
-    <skyfaller>
-      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(4,2)</shadowSize>
-      <motesPerCell>1</motesPerCell>	
-      <reversed>true</reversed>
-      <anticipationSound>Shuttle_Leaving</anticipationSound>
-      <anticipationSoundTicks>-10</anticipationSoundTicks>
-      <ticksToImpactRange>-40~-15</ticksToImpactRange>
-      <moteSpawnTime>0.05</moteSpawnTime>
-      <angleCurve>
-        <points>
-          <li>(0,-90)</li>
-          <li>(1,-70)</li>
-        </points>
-      </angleCurve>
-      <rotationCurve>
-        <points>
-          <li>(90,90)</li>
-          <li>(90.15,80)</li>
-          <li>(90.5,95)</li>
-        </points>
-      </rotationCurve>
-      <zPositionCurve>
-        <points>
-          <li>(0,0)</li>
-          <li>(0.08,2)</li>
-        </points>
-      </zPositionCurve>
-      <speedCurve>
-        <points>
-          <li>(0,0.2)</li>
-          <li>(0.4,0.7)</li>
         </points>
       </speedCurve>
     </skyfaller>

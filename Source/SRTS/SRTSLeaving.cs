@@ -88,7 +88,7 @@ namespace SRTS
                 Lord lord = TransporterUtility.FindLord(this.groupID, this.Map);
                 if (lord != null)
                     this.Map.lordManager.RemoveLord(lord);
-                TravelingSRTS travelingTransportPods = (TravelingSRTS)WorldObjectMaker.MakeWorldObject(DefDatabase<WorldObjectDef>.GetNamed("TravelingSRTS", true));
+                TravelingSRTS travelingTransportPods = (TravelingSRTS)WorldObjectMaker.MakeWorldObject(StaticDefOf.TravelingSRTS_Carryall);
                 travelingTransportPods.Tile = this.Map.Tile;
                 travelingTransportPods.SetFaction(Faction.OfPlayer);
                 travelingTransportPods.destinationTile = this.destinationTile;

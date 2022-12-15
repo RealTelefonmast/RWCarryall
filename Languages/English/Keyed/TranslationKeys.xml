@@ -1,10 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <LanguageData>
+
   <!-- Labels and Titles -->
   <SRTSExpanded>SRTS Expanded</SRTSExpanded>
   <SRTSDef>SRTS Def</SRTSDef>
 
+ <CA_Rotate>Rotate</CA_Rotate>
+ <CA_AddToCarryall>Select Cargo</CA_AddToCarryall>
+ 
   <!-- Settings -->
   <ResetDefault>Reset</ResetDefault>
   <ResetDefaultTooltip>Reset to Default Values</ResetDefaultTooltip>

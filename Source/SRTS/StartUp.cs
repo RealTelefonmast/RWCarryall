@@ -9,6 +9,7 @@ using Verse;
 using UnityEngine;
 using RimWorld;
 using RimWorld.Planet;
+using Verse.Sound;
 using OpCodes = System.Reflection.Emit.OpCodes;
 
 namespace SRTS
@@ -892,5 +893,47 @@ namespace SRTS
       }
       return true;
     }
+    
+    
+    //
+    /*
+    [HarmonyPatch(typeof(ActiveDropPod), "PodOpen")]
+    public static class ActiveDropPodPatch
+    {
+      private static bool Prefix(ActiveDropPod __instance)
+      {
+        Log.Message($"Pod Arrived: {__instance.def} | {__instance.ParentHolder} |{__instance.holdingOwner.Owner as Thing}");
+        if (__instance is ActiveCarryall)
+        {
+          Log.Message($"Pod is active carryall...");
+          
+          Map map = __instance.Map;
+          if (__instance.Contents.despawnPodBeforeSpawningThing)
+          {
+            __instance.DeSpawn(DestroyMode.Vanish);
+          }
+          
+          for (int i = __instance.Contents.innerContainer.Count - 1; i >= 0; i--)
+          {
+            Thing thing = __instance.Contents.innerContainer[i];
+            if (thing is Pawn pawn)
+            {
+              if (__instance.Contents.innerContainer.TryDrop(pawn, ThingPlaceMode.Near, out var result))
+              {
+                Log.Message($"Dropped result: {result}");
+              }
+            }
+          }
+          if (__instance.def.soundOpen != null)
+          {
+            __instance.def.soundOpen.PlayOneShot(new TargetInfo(__instance.Position, map, false));
+          }
+
+          return false;
+        }
+        return true;
+      }
+    }
+    */
   }
 }

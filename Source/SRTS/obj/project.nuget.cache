@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "WRJ2ulGrE2ak3g2TjWbpv5PuxCDZ2dD1+g4rOykOBVLQxabRaByciARo1rreJHY0WG0Gh9oXf/b/BcLuHmOHqg==",
+  "success": true,
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\RWCarryall\\Source\\SRTS\\SRTS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\maxim\\.nuget\\packages\\lib.harmony\\2.2.2\\lib.harmony.2.2.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -21,80 +21,20 @@ namespace SRTS
         public float BaseFuelPerTile => SRTSMod.GetStatFor<float>(this.parent.def.defName, StatName.fuelPerTile);
 
         public CompProperties_LaunchableSRTS SRTSProps => (CompProperties_LaunchableSRTS)this.props;
-	    public Building FuelingPortSource
-	    {
-	          get
-	          {
-		            return (Building) this.parent;
-	          }
-	    }
+	    public Building FuelingPortSource => (Building)parent;
+	    public bool ConnectedToFuelingPort => FuelingPortSource != null;
+	    public bool FuelingPortSourceHasAnyFuel => this.ConnectedToFuelingPort && this.FuelingPortSource.GetComp<CompRefuelable>().HasFuel;
+	    public bool LoadingInProgressOrReadyToLaunch => this.Transporter.LoadingInProgressOrReadyToLaunch;
 
-	    public bool ConnectedToFuelingPort
-	    {
-	          get
-	          {
-		            return this.FuelingPortSource != null;
-	          }
-	    }
+	    public bool AnythingLeftToLoad => this.Transporter.AnythingLeftToLoad;
 
-	    public bool FuelingPortSourceHasAnyFuel
-	    {
-	          get
-	          {
-		            return this.ConnectedToFuelingPort && this.FuelingPortSource.GetComp<CompRefuelable>().HasFuel;
-	          }
-	    }
+	    public Thing FirstThingLeftToLoad => this.Transporter.FirstThingLeftToLoad;
 
-	    public bool LoadingInProgressOrReadyToLaunch
-	    {
-	          get
-	          {
-		            return this.Transporter.LoadingInProgressOrReadyToLaunch;
-	          }
-	    }
+	    public List<CompTransporter> TransportersInGroup => new (){parent.TryGetComp<CompTransporter>()};
 
-	    public bool AnythingLeftToLoad
-	    {
-	          get
-	          {
-		            return this.Transporter.AnythingLeftToLoad;
-	          }
-	    }
+	    public bool AnyInGroupHasAnythingLeftToLoad => this.Transporter.AnyInGroupHasAnythingLeftToLoad;
 
-	    public Thing FirstThingLeftToLoad
-	    {
-	          get
-	          {
-		            return this.Transporter.FirstThingLeftToLoad;
-	          }
-	    }
-
-	    public List<CompTransporter> TransportersInGroup
-	    {
-	          get
-	          {
-		            return new List<CompTransporter>()
-		            {
-		                this.parent.TryGetComp<CompTransporter>()
-		            };
-	          }
-	    }
-
-	    public bool AnyInGroupHasAnythingLeftToLoad
-	    {
-	          get
-	          {
-		            return this.Transporter.AnyInGroupHasAnythingLeftToLoad;
-	          }
-	    }
-
-	    public Thing FirstThingLeftToLoadInGroup
-	    {
-	          get
-	          {
-		            return this.Transporter.FirstThingLeftToLoadInGroup;
-	          }
-	    }
+	    public Thing FirstThingLeftToLoadInGroup => this.Transporter.FirstThingLeftToLoadInGroup;
 
 	    public bool AnyInGroupIsUnderRoof
 	    {
@@ -130,21 +70,9 @@ namespace SRTS
 	          }
 	    }
 
-	    public bool AllInGroupConnectedToFuelingPort
-	    {
-	          get
-	          {
-		            return true;
-	          }
-	    }
+	    public bool AllInGroupConnectedToFuelingPort => true;
 
-	    public bool AllFuelingPortSourcesInGroupHaveAnyFuel
-	    {
-	          get
-	          {
-		            return true;
-	          }
-	    }
+	    public bool AllFuelingPortSourcesInGroupHaveAnyFuel => true;
 
 	    private float FuelInLeastFueledFuelingPortSource
 	    {
@@ -207,11 +135,28 @@ namespace SRTS
 	          }
 	    }
 
+	    public override void PostSpawnSetup(bool respawningAfterLoad)
+	    {
+		    base.PostSpawnSetup(respawningAfterLoad);
+		    if (parent.Rotation == Rot4.North)
+		    {
+			    parent.Rotation = Rot4.East;
+		    }
+		    if (parent.Rotation == Rot4.South)
+		    {
+			    parent.Rotation = Rot4.West;
+		    }
+	    }
+
 	    public void AddThingsToSRTS(Thing thing)
 	    {
 		    thingsInsideShip.Add(thing);
 	    }
 
+	    private Designator_AddToCarryall designator;
+
+	    private Designator_AddToCarryall Designator => designator ??= new Designator_AddToCarryall(this);
+	    
 	    public override IEnumerable<Gizmo> CompGetGizmosExtra()
 	    {
 	        foreach (Gizmo gizmo in base.CompGetGizmosExtra())
@@ -220,6 +165,20 @@ namespace SRTS
 		        yield return g;
 		        g = null;
 	        }
+
+	        yield return new Command_Action()
+	        {
+				defaultLabel = "CA_Rotate".Translate(),
+				icon = ContentFinder<Texture2D>.Get("Misc/Rotate"),
+				action = delegate
+				{
+					parent.Rotation = parent.Rotation.Opposite;
+					parent.Map.mapDrawer.MapMeshDirty(parent.Position, MapMeshFlag.Buildings | MapMeshFlag.Things);
+				}
+	        };
+
+	        yield return Designator;
+	        
 	        if (this.LoadingInProgressOrReadyToLaunch)
 	        {
 		        Command_Action launch = new Command_Action();
@@ -521,7 +480,7 @@ namespace SRTS
 		                  activeDropPod.Contents.innerContainer.TryAddRangeOrTransfer((IEnumerable<Thing>) directlyHeldThings, true, true);
 
 		                  // Neceros Edit
-		                  SRTSLeaving srtsLeaving = (SRTSLeaving) SkyfallerMaker.MakeSkyfaller(ThingDef.Named(parent.def.defName + "_Leaving"), (Thing) activeDropPod);
+		                  SRTSLeaving srtsLeaving = (SRTSLeaving) SkyfallerMaker.MakeSkyfaller(SkyfallerLeavingDefByRot(), activeDropPod);
 		                  srtsLeaving.rotation = this.FuelingPortSource.Rotation;
 		                  srtsLeaving.groupID = groupId;
 		                  srtsLeaving.destinationTile = destinationTile;
@@ -559,7 +518,7 @@ namespace SRTS
 		                  /*Add caravan items to SRTS - SmashPhil */
 		                  foreach(Pawn p in directlyHeldThings.InnerListForReading)
 		                  {
-			                p.inventory.innerContainer.InnerListForReading.ForEach(x => AddThingsToSRTS(x));
+			                p.inventory.innerContainer.InnerListForReading.ForEach(AddThingsToSRTS);
 			                p.inventory.innerContainer.Clear();
 		                  }
 
@@ -579,7 +538,7 @@ namespace SRTS
 		                  cafr.RemoveAllPawns();
 		                  if(!cafr.Destroyed)
 			                    cafr.Destroy();
-		                  TravelingSRTS travelingTransportPods = (TravelingSRTS) WorldObjectMaker.MakeWorldObject(DefDatabase<WorldObjectDef>.GetNamed("TravelingSRTS", true));
+		                  TravelingSRTS travelingTransportPods = (TravelingSRTS) WorldObjectMaker.MakeWorldObject(StaticDefOf.TravelingSRTS_Carryall);
 		                  travelingTransportPods.Tile = cafr.Tile;
 		                  travelingTransportPods.SetFaction(Faction.OfPlayer);
 		                  travelingTransportPods.destinationTile = destinationTile;
@@ -594,6 +553,20 @@ namespace SRTS
 	          }
 	    }
 
+	    private ThingDef SkyfallerLeavingDefByRot()
+	    {
+		    if (parent.Rotation == Rot4.East)
+		    {
+			    return SRTSProps.eastSkyfaller;
+		    }
+		    else if (parent.Rotation == Rot4.West)
+		    {
+			    return SRTSProps.westSkyfaller;
+		    }
+
+		    return SRTSProps.eastSkyfaller;
+	    }
+	    
 	    public void Notify_FuelingPortSourceDeSpawned()
 	    {
 	          if (!this.Transporter.CancelLoad())

@@ -196,7 +196,7 @@ namespace SRTS
             activeDropPod.Contents = new ActiveDropPodInfo();
             activeDropPod.Contents.innerContainer.TryAddRangeOrTransfer((IEnumerable<Thing>)((ActiveDropPod)innerContainer.First()).Contents.innerContainer, true, true);
 
-            TravelingSRTS travelingTransportPods = (TravelingSRTS)WorldObjectMaker.MakeWorldObject(DefDatabase<WorldObjectDef>.GetNamed("TravelingSRTS", true));
+            TravelingSRTS travelingTransportPods = (TravelingSRTS)WorldObjectMaker.MakeWorldObject(StaticDefOf.TravelingSRTS_Carryall);
             travelingTransportPods.Tile = this.Map.Tile;
             travelingTransportPods.SetFaction(Faction.OfPlayer);
             travelingTransportPods.destinationTile = this.originalMap.Tile;

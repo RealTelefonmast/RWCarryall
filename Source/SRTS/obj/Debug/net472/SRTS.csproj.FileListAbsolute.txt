@@ -1,0 +1,8 @@
+D:\Steam\steamapps\common\RimWorld\Mods\SRTSExpanded_1.4\v1.4\Assemblies\NephsCarryalls.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RWCarryall\Source\SRTS\obj\Debug\net472\SRTS.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RWCarryall\Source\SRTS\obj\Debug\net472\SRTS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RWCarryall\Source\SRTS\obj\Debug\net472\SRTS.AssemblyInfoInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RWCarryall\Source\SRTS\obj\Debug\net472\SRTS.AssemblyInfo.cs
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RWCarryall\Source\SRTS\obj\Debug\net472\SRTS.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RWCarryall\Source\SRTS\obj\Debug\net472\SRTS.csproj.CopyComplete
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\RWCarryall\Source\SRTS\obj\Debug\net472\NephsCarryalls.dll
