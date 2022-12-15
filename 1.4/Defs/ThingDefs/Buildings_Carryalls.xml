@@ -113,6 +113,8 @@ Direction: ▶</description>
 		  <li Class="SRTS.CompProperties_LaunchableSRTS">
 			<westSkyfaller>Carryall_standard_R_Leaving</westSkyfaller>
 			<eastSkyfaller>Carryall_standard_Leaving</eastSkyfaller>
+			<eastSkyfallerIncoming>Carryall_standard_Incoming</eastSkyfallerIncoming>
+			<westSkyfallerIncoming>Carryall_standard_R_Incoming</westSkyfallerIncoming>
 			<travelSpeed>5</travelSpeed>
 			<fuelPerTile>1.5</fuelPerTile>
 			<minPassengers>1</minPassengers>
@@ -239,6 +241,8 @@ Direction: ▶</description>
       <li Class="SRTS.CompProperties_LaunchableSRTS">
 		<westSkyfaller>Carryall_GDI_R_Leaving</westSkyfaller>
 		<eastSkyfaller>Carryall_GDI_Leaving</eastSkyfaller>
+		<eastSkyfallerIncoming>Carryall_GDI_Incoming</eastSkyfallerIncoming>
+		<westSkyfallerIncoming>Carryall_GDI_R_Incoming</westSkyfallerIncoming>
         <travelSpeed>4</travelSpeed>
         <fuelPerTile>3</fuelPerTile>
         <minPassengers>1</minPassengers>
@@ -428,6 +432,8 @@ Direction: ▶</description>
       <li Class="SRTS.CompProperties_LaunchableSRTS">
 		<westSkyfaller>Carryall_Nod_R_Leaving</westSkyfaller>
 		<eastSkyfaller>Carryall_Nod_Leaving</eastSkyfaller>
+		<eastSkyfallerIncoming>Carryall_Nod_Incoming</eastSkyfallerIncoming>
+		<westSkyfallerIncoming>Carryall_Nod_R_Incoming</westSkyfallerIncoming>
         <travelSpeed>8</travelSpeed>
         <fuelPerTile>3</fuelPerTile>
         <minPassengers>1</minPassengers>

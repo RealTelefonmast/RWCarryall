@@ -146,6 +146,9 @@ namespace SRTS
 		    {
 			    parent.Rotation = Rot4.West;
 		    }
+		    
+		    //
+		    parent.Map.mapDrawer.MapMeshDirty(parent.Position, MapMeshFlag.Buildings | MapMeshFlag.Things);
 	    }
 
 	    public void AddThingsToSRTS(Thing thing)

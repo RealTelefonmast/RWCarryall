@@ -12,6 +12,10 @@ namespace SRTS
         public ThingDef eastSkyfaller;
         public ThingDef westSkyfaller;
         
+        public ThingDef eastSkyfallerIncoming;
+        public ThingDef westSkyfallerIncoming;
+        
+        
         public float travelSpeed = 25f;
         public int minPassengers = 1;
         public int maxPassengers = 2;

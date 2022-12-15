@@ -20,7 +20,7 @@ namespace SRTS
                     activeDropPod.Contents = info;
                     
                     EnsureInBoundsSRTS(ref c, info.innerContainer[index].def, map);
-                    SRTSIncoming incomingSRTS = (SRTSIncoming)SkyfallerMaker.SpawnSkyfaller(ThingDef.Named(shipType + "_Incoming"), (Thing)activeDropPod, c, map);
+                    SRTSIncoming incomingSRTS = (SRTSIncoming)SkyfallerMaker.SpawnSkyfaller(SkyfallerIncomingDefByRot(info.innerContainer[index].TryGetComp<CompLaunchableSRTS>()), (Thing)activeDropPod, c, map);
                     incomingSRTS.SRTSRotation = ship.Rotation;
                     return false;
                 }
@@ -29,11 +29,25 @@ namespace SRTS
                     ThingDef td = DefDatabase<ThingDef>.GetNamed(info.innerContainer[index].def.defName.Split('_')[0]);
                     ActiveDropPod activeDropPod = (ActiveDropPod)ThingMaker.MakeThing(info.innerContainer[index].def, null);
                     activeDropPod.Contents = info;
-                    SRTSIncoming incomingSRTS = (SRTSIncoming)SkyfallerMaker.SpawnSkyfaller(ThingDef.Named(td.defName + "_Incoming"), activeDropPod, c, map);
+                    SRTSIncoming incomingSRTS = (SRTSIncoming)SkyfallerMaker.SpawnSkyfaller(SkyfallerIncomingDefByRot(info.innerContainer[index].TryGetComp<CompLaunchableSRTS>()), activeDropPod, c, map);
                     return false;
                 }
             }
             return true;
+        }
+        
+        private static ThingDef SkyfallerIncomingDefByRot(CompLaunchableSRTS comp)
+        {
+            if (comp.parent.Rotation == Rot4.East)
+            {
+                return comp.SRTSProps.eastSkyfallerIncoming;
+            }
+            else if (comp.parent.Rotation == Rot4.West)
+            {
+                return comp.SRTSProps.westSkyfallerIncoming;
+            }
+
+            return comp.SRTSProps.eastSkyfaller;
         }
 
         private static void EnsureInBoundsSRTS(ref IntVec3 c, ThingDef shipDef, Map map)
