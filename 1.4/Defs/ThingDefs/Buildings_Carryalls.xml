@@ -293,7 +293,7 @@ Maximum distance: 300 tiles</description>
 	  <ai_combatDangerous>true</ai_combatDangerous>
 	  <combatPower>200</combatPower>
       <turretGunDef>Gun_MiniCarryallTurret</turretGunDef>
-      <turretBurstCooldownTime>4.8</turretBurstCooldownTime>
+      <turretBurstCooldownTime>3.8</turretBurstCooldownTime>
     </building>
     <placeWorkers>
 	  <li>PlaceWorker_NotUnderRoof</li>
@@ -317,11 +317,11 @@ Maximum distance: 300 tiles</description>
       <drawSize>(1.5,1.5)</drawSize>
     </graphicData>
     <statBases>
-      <AccuracyTouch>0.87</AccuracyTouch>
-      <AccuracyShort>0.80</AccuracyShort>
-      <AccuracyMedium>0.65</AccuracyMedium>
-      <AccuracyLong>0.34</AccuracyLong>
-      <RangedWeapon_Cooldown>4.8</RangedWeapon_Cooldown>
+      <AccuracyTouch>0.82</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.60</AccuracyMedium>
+      <AccuracyLong>0.35</AccuracyLong>
+      <RangedWeapon_Cooldown>3.8</RangedWeapon_Cooldown>
       <DeteriorationRate>0</DeteriorationRate>
       <Mass>5</Mass>
       <Flammability>0</Flammability>
@@ -330,7 +330,7 @@ Maximum distance: 300 tiles</description>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_MiniTurret</defaultProjectile>
+        <defaultProjectile>Bullet_MiniCarryallTurret</defaultProjectile>
         <warmupTime>0</warmupTime>
         <range>18.9</range>
         <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
@@ -347,12 +347,12 @@ Maximum distance: 300 tiles</description>
     <defName>Bullet_MiniCarryallTurret</defName>
     <label>bullet</label>
     <graphicData>
-      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <texPath>Misc/Bullet_Base_GDI</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>12</damageAmountBase>
+      <damageAmountBase>14</damageAmountBase>
       <speed>70</speed>
     </projectile>
   </ThingDef>
@@ -484,7 +484,7 @@ Maximum distance: 200 tiles</description>
 	  <ai_combatDangerous>true</ai_combatDangerous>
 	  <combatPower>300</combatPower>
       <turretGunDef>Gun_MediumCarryallTurret</turretGunDef>
-      <turretBurstCooldownTime>4.5</turretBurstCooldownTime>
+      <turretBurstCooldownTime>5</turretBurstCooldownTime>
     </building>
     <placeWorkers>
 	  <li>PlaceWorker_NotUnderRoof</li>
@@ -510,7 +510,7 @@ Maximum distance: 200 tiles</description>
       <AccuracyShort>0.35</AccuracyShort>
       <AccuracyMedium>0.35</AccuracyMedium>
       <AccuracyLong>0.28</AccuracyLong>
-      <RangedWeapon_Cooldown>4.8</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
       <DeteriorationRate>0</DeteriorationRate>
       <Mass>5</Mass>
       <Flammability>0</Flammability>
@@ -536,7 +536,7 @@ Maximum distance: 200 tiles</description>
     <defName>Bullet_MediumCarryallTurret</defName>
     <label>bullet</label>
     <graphicData>
-      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <texPath>Misc/Bullet_Base_Nod</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
