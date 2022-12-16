@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <WorldObjectDef>
+    <defName>TravelingShuttle</defName>
+    <label>shuttle</label>
+    <description>A shuttle in flight.</description>
+    <worldObjectClass>TravelingTransportPods</worldObjectClass>
+    <texture>World/WorldObjects/Caravan</texture>
+    <useDynamicDrawer>true</useDynamicDrawer>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>World/WorldObjects/Expanding/TravelingShuttle</expandingIconTexture>
+    <expandingIconPriority>60</expandingIconPriority>
+    <expandMore>true</expandMore>
+    <expandingIconColor>(162,164,149)</expandingIconColor>
+    <expandingIconDrawSize>1.6</expandingIconDrawSize>
+    <allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>
+    <rotateGraphicWhenTraveling>true</rotateGraphicWhenTraveling>
+  </WorldObjectDef>
+
+</Defs>
