@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
+
+ <CA_Rotate>방향 전환</CA_Rotate>
+ <CA_AddToCarryall>적재물 선택</CA_AddToCarryall>
+
   <SRTSExpanded>SRTS 확장</SRTSExpanded>
   <SRTSDef>SRTS Def</SRTSDef>
   <ResetDefault>초기화</ResetDefault>

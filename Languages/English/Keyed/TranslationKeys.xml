@@ -2,12 +2,14 @@
 
 <LanguageData>
 
+ <CA_Rotate>Rotate</CA_Rotate>
+ <CA_AddToCarryall>Select Cargo</CA_AddToCarryall>
+
+
   <!-- Labels and Titles -->
   <SRTSExpanded>SRTS Expanded</SRTSExpanded>
   <SRTSDef>SRTS Def</SRTSDef>
 
- <CA_Rotate>Rotate</CA_Rotate>
- <CA_AddToCarryall>Select Cargo</CA_AddToCarryall>
  
   <!-- Settings -->
   <ResetDefault>Reset</ResetDefault>

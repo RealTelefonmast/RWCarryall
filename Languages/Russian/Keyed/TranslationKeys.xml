@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
+  <CA_Rotate>Rotate</CA_Rotate>
+ <CA_AddToCarryall>Select Cargo</CA_AddToCarryall>
+
   <!-- Labels and Titles -->
   <SRTSExpanded>SRTS Expanded</SRTSExpanded>
   <SRTSDef>SRTS Def</SRTSDef>

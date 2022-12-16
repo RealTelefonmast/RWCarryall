@@ -11,17 +11,17 @@
 
 
   <Carryall_standard.label>표준 캐리올</Carryall_standard.label>
-  <Carryall_standard.description>성간 제국에서 사용되는 표준 셔틀의 열화 복제 모델입니다. 우주 항행 기능은 빠져 있지만 정착지를 고립에서 완전히 해방시키는 데는 충분한 성능입니다.\n\n좌석: 5\n속도: 5\n적재 용량: 550kg\n\n연료 용량: 300\n연료 효율: 타일당 1.5L\n왕복 가능 범위: 100타일\n\n배치 방향: ▶</Carryall_standard.description>
+  <Carryall_standard.description>성간 제국에서 사용되는 표준 셔틀의 열화 복제 모델입니다. 우주 항행 기능은 빠져 있지만 정착지를 고립에서 완전히 해방시키는 데는 충분한 성능입니다.\n\n좌석: 5\n속도: 5\n적재 용량: 550kg\n\n연료 용량: 300\n연료 효율: 타일당 1.5L\n왕복 가능 범위: 100타일</Carryall_standard.description>
   
-  <Carryall_standard_R.label>표준 캐리올</Carryall_standard_R.label>
-  <Carryall_standard_R.description>성간 제국에서 사용되는 표준 셔틀의 열화 복제 모델입니다. 우주 항행 기능은 빠져 있지만 정착지를 고립에서 완전히 해방시키는 데는 충분한 성능입니다.\n\n좌석: 5\n속도: 5\n적재 용량: 550kg\n\n연료 용량: 300\n연료 효율: 타일당 1.5L\n왕복 가능 범위: 100타일\n\n배치 방향: ◀</Carryall_standard_R.description>
+  <Carryall_standard_R.label>삭제될 캐리올</Carryall_standard_R.label>
+  <Carryall_standard_R.description>임시 객체이며, 코드 최적화로 인해 다음 패치에서 게임에서 완전히 제거됩니다. 새 캐리올을 만들어 주세요.\n\n좌석: 5\n속도: 5\n적재 용량: 550kg\n\n연료 용량: 300\n연료 효율: 타일당 1.5L\n왕복 가능 범위: 100타일</Carryall_standard_R.description>
 
 
   <Carryall_GDI.label>옥스 캐리올</Carryall_GDI.label>
-  <Carryall_GDI.description>희귀한 캐리올 모델로, 먼 옛날 칠면조 비슷한 것을 숭배하던 이들이 사용했다고 합니다. 대량 운송에 최적화되어 화물 적재량이 매우 우수하지만 객실은 비좁습니다.\n\n옥스 캐리올에는 소형 포탑이 장착되어 있습니다. 이것은 전투에 도움이 되지만 많은 연료를 소모합니다. 집으로 돌아가려면 충분한 연료가 필요하다는 것을 항상 기억하세요.\n\n좌석: 4\n속도: 4\n적재 용량: 1,800kg\n\n연료 용량: 900\n연료 효율: 타일당 3L\n왕복 가능 범위: 150타일\n\n배치 방향: ▶</Carryall_GDI.description>
+  <Carryall_GDI.description>희귀한 캐리올 모델로, 먼 옛날 칠면조 비슷한 것을 숭배하던 이들이 사용했다고 합니다. 대량 운송에 최적화되어 화물 적재량이 매우 우수하지만 객실은 비좁습니다.\n\n옥스 캐리올에는 소형 포탑이 장착되어 있습니다. 이것은 전투에 도움이 되지만 많은 연료를 소모합니다. 집으로 돌아가려면 충분한 연료가 필요하다는 것을 항상 기억하세요.\n\n좌석: 4\n속도: 4\n적재 용량: 1,800kg\n\n연료 용량: 900\n연료 효율: 타일당 3L\n왕복 가능 범위: 150타일</Carryall_GDI.description>
   
-  <Carryall_GDI_R.label>옥스 캐리올</Carryall_GDI_R.label>
-  <Carryall_GDI_R.description>희귀한 캐리올 모델로, 먼 옛날 칠면조 비슷한 것을 숭배하던 이들이 사용했다고 합니다. 대량 운송에 최적화되어 화물 적재량이 매우 우수하지만 객실은 비좁습니다.\n\n옥스 캐리올에는 소형 포탑이 장착되어 있습니다. 이것은 전투에 도움이 되지만 많은 연료를 소모합니다. 집으로 돌아가려면 충분한 연료가 필요하다는 것을 항상 기억하세요.\n\n좌석: 4\n속도: 4\n적재 용량: 1,800kg\n\n연료 용량: 900\n연료 효율: 타일당 3L\n왕복 가능 범위: 150타일\n\n배치 방향: ◀</Carryall_GDI_R.description>
+  <Carryall_GDI_R.label>삭제될 캐리올</Carryall_GDI_R.label>
+  <Carryall_GDI_R.description>임시 객체이며, 코드 최적화로 인해 다음 패치에서 게임에서 완전히 제거됩니다. 새 캐리올을 만들어 주세요.\n\n좌석: 4\n속도: 4\n적재 용량: 1,800kg\n\n연료 용량: 900\n연료 효율: 타일당 3L\n왕복 가능 범위: 150타일</Carryall_GDI_R.description>
   
   <Gun_MiniCarryallTurret.label>캐리올 포탑</Gun_MiniCarryallTurret.label>
   <Gun_MiniCarryallTurret.description>포탑에 장착할 수 있도록 만들어진 자율 무장입니다.</Gun_MiniCarryallTurret.description>
@@ -30,10 +30,10 @@
 
 
   <Carryall_Nod.label>버티고 캐리올</Carryall_Nod.label>
-  <Carryall_Nod.description>희귀한 캐리올 모델로, 먼 옛날 벌레 비슷한 것을 숭배하던 이들이 사용했다고 합니다. 강습 작전에 최적화되어 많은 인원을 빠르고 멀리 수송할 수 있지만 화물 용량은 작습니다.\n\n버티고 캐리올에는 미니건 포탑이 장착되어 있습니다. 이것은 전투에 큰 도움이 되지만 많은 연료를 소모합니다. 집으로 돌아가려면 충분한 연료가 필요하다는 것을 항상 기억하세요.\n\n좌석: 10\n속도: 8\n적재 용량: 900kg\n\n연료 용량: 600\n연료 효율: 타일당 3L\n왕복 가능 범위: 100타일\n\n배치 방향: ▶</Carryall_Nod.description>
+  <Carryall_Nod.description>희귀한 캐리올 모델로, 먼 옛날 벌레 비슷한 것을 숭배하던 이들이 사용했다고 합니다. 강습 작전에 최적화되어 많은 인원을 빠르고 멀리 수송할 수 있지만 화물 용량은 작습니다.\n\n버티고 캐리올에는 미니건 포탑이 장착되어 있습니다. 이것은 전투에 큰 도움이 되지만 많은 연료를 소모합니다. 집으로 돌아가려면 충분한 연료가 필요하다는 것을 항상 기억하세요.\n\n좌석: 10\n속도: 8\n적재 용량: 900kg\n\n연료 용량: 600\n연료 효율: 타일당 3L\n왕복 가능 범위: 100타일</Carryall_Nod.description>
   
-  <Carryall_Nod_R.label>버티고 캐리올</Carryall_Nod_R.label>
-  <Carryall_Nod_R.description>희귀한 캐리올 모델로, 먼 옛날 벌레 비슷한 것을 숭배하던 이들이 사용했다고 합니다. 강습 작전에 최적화되어 많은 인원을 빠르고 멀리 수송할 수 있지만 화물 용량은 작습니다.\n\n버티고 캐리올에는 미니건 포탑이 장착되어 있습니다. 이것은 전투에 큰 도움이 되지만 많은 연료를 소모합니다. 집으로 돌아가려면 충분한 연료가 필요하다는 것을 항상 기억하세요.\n\n좌석: 10\n속도: 8\n적재 용량: 900kg\n\n연료 용량: 600\n연료 효율: 타일당 3L\n왕복 가능 범위: 100타일\n\n배치 방향: ◀</Carryall_Nod_R.description>
+  <Carryall_Nod_R.label>삭제될 캐리올</Carryall_Nod_R.label>
+  <Carryall_Nod_R.description>임시 객체이며, 코드 최적화로 인해 다음 패치에서 게임에서 완전히 제거됩니다. 새 캐리올을 만들어 주세요.\n\n좌석: 10\n속도: 8\n적재 용량: 900kg\n\n연료 용량: 600\n연료 효율: 타일당 3L\n왕복 가능 범위: 100타일</Carryall_Nod_R.description>
   
   <Gun_MediumCarryallTurret.label>캐리올 기관포탑</Gun_MediumCarryallTurret.label>
   <Gun_MediumCarryallTurret.description>포탑에 장착할 수 있도록 만들어진 자율 무장입니다.</Gun_MediumCarryallTurret.description>
