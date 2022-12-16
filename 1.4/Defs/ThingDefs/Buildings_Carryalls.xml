@@ -55,7 +55,7 @@ Maximum distance: 200 tiles</description>
 		<canOverlapZones>true</canOverlapZones>
 		<preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
 		<repairEffect>Repair</repairEffect>
-		<forceDebugSpawnable>false</forceDebugSpawnable>
+		<forceDebugSpawnable>true</forceDebugSpawnable>
 		<minifiedDef />
 		
 		<graphicData>
@@ -573,7 +573,7 @@ Maximum distance: 200 tiles</description>
 		<canOverlapZones>true</canOverlapZones>
 		<preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
 		<repairEffect>Repair</repairEffect>
-		<forceDebugSpawnable>false</forceDebugSpawnable>
+		<forceDebugSpawnable>true</forceDebugSpawnable>
 		<minifiedDef />
 		<designationCategory />
 		
