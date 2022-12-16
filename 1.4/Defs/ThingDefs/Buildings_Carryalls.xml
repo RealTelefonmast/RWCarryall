@@ -65,8 +65,8 @@ Maximum distance: 200 tiles</description>
 		  <drawSize>(4.2,4.2)</drawSize>
 		  <drawRotated>false</drawRotated>
 		  <shadowData>
-			<volume>(1, 3.3, 1.35)</volume>
-			<offset>(0, 0, -0.2)</offset>
+			<volume>(1.2, 1.2, 2.2)</volume><!--width, vertical, height-->
+			<offset>(0, 0, 0.2)</offset>
 		  </shadowData>
 		</graphicData>
 		
@@ -201,8 +201,8 @@ Maximum distance: 300 tiles</description>
       <drawSize>(6,6)</drawSize>
 	  <drawRotated>false</drawRotated>
       <shadowData>
-        <volume>(1, 4.1, 1.7)</volume>
-        <offset>(0, 0, -0.2)</offset>
+        <volume>(1.6, 1.35, 3.9)</volume>
+        <offset>(0, 0, 0.2)</offset>
       </shadowData>
     </graphicData>
 	
@@ -392,8 +392,8 @@ Maximum distance: 200 tiles</description>
       <drawSize>(5.5,5.5)</drawSize>
 	  <drawRotated>false</drawRotated>
       <shadowData>
-        <volume>(1, 4.1, 1.5)</volume>
-        <offset>(0, 0, -0.2)</offset>
+        <volume>(1.3, 1.2, 3.7)</volume>
+        <offset>(0, 0, 0.1)</offset>
       </shadowData>
     </graphicData>
 	

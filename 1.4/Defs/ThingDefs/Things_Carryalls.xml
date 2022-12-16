@@ -10,7 +10,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutFlying</shaderType>
       <drawSize>(4.2,4.2)</drawSize>
-    </graphicData>	
+    </graphicData>
     <skyfaller>
       <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
       <shadowSize>(4,2)</shadowSize>
