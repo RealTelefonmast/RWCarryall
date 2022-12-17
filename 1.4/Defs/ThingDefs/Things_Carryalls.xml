@@ -24,26 +24,28 @@
       <angleCurve>
         <points>
           <li>(0,90)</li>
-          <li>(1,70)</li>
+		  <li>(1,80)</li>
+		  <li>(2,70)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
-          <li>(90,90)</li>
-          <li>(90.15,100)</li>
-          <li>(90.5,85)</li>
+          <li>(0,90)</li>
+		  <li>(0.1,95)</li>
+		  <li>(1,95)</li>
         </points>
       </rotationCurve>
       <zPositionCurve>
         <points>
           <li>(0,0)</li>
-          <li>(0.08,2)</li>
+          <li>(0.1,4)</li>
         </points>
       </zPositionCurve>
       <speedCurve>
         <points>
-          <li>(0,0.2)</li>
-          <li>(0.4,0.7)</li>
+          <li>(0,0)</li>
+		  <li>(0.1,0.001)</li>
+          <li>(0.4,0.5)</li>
         </points>
       </speedCurve>
     </skyfaller>
@@ -69,28 +71,29 @@
       <ticksToImpactRange>200~250</ticksToImpactRange>
       <angleCurve>
         <points>
-          <li>(0,-60)</li>
+          <li>(0,-70)</li>
           <li>(1,-90)</li>
+		  <li>(2,-90)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
-          <li>(-90,-120)</li>
-          <li>(-90.5,-95)</li>
-          <li>(-90.9,-95)</li>
-          <li>(-90.95,-90)</li>
+		  <li>(0,-95)</li>
+          <li>(0.9,-90)</li>
+          <li>(1,-90)</li>
         </points>
       </rotationCurve>
       <zPositionCurve>
         <points>
-          <li>(0.95,2.5)</li>
+          <li>(0.9,4)</li>
           <li>(1,0)</li>
         </points>
       </zPositionCurve>
       <speedCurve>
         <points>
-          <li>(0.6,0.6)</li>
-          <li>(0.95,0.1)</li>
+          <li>(0.6,0.5)</li>
+          <li>(0.9,0.01)</li>
+		  <li>(1,0.005)</li>
         </points>
       </speedCurve>
       <!--<explosionRadius>4</explosionRadius>
@@ -145,26 +148,28 @@
       <angleCurve>
         <points>
           <li>(0,-90)</li>
-          <li>(1,-70)</li>
+		  <li>(1,-80)</li>
+		  <li>(2,-70)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
-          <li>(90,90)</li>
-          <li>(90.15,80)</li>
-          <li>(90.5,95)</li>
+          <li>(0,90)</li>
+		  <li>(0.1,85)</li>
+		  <li>(1,85)</li>
         </points>
       </rotationCurve>
       <zPositionCurve>
         <points>
           <li>(0,0)</li>
-          <li>(0.08,2)</li>
+          <li>(0.1,4)</li>
         </points>
       </zPositionCurve>
       <speedCurve>
         <points>
-          <li>(0,0.2)</li>
-          <li>(0.4,0.7)</li>
+          <li>(0,0)</li>
+		  <li>(0.1,0.001)</li>
+          <li>(0.4,0.5)</li>
         </points>
       </speedCurve>
     </skyfaller>
@@ -190,28 +195,29 @@
       <ticksToImpactRange>200~250</ticksToImpactRange>
       <angleCurve>
         <points>
-          <li>(0,60)</li>
+          <li>(0,70)</li>
           <li>(1,90)</li>
+		  <li>(2,90)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
-          <li>(-90,-60)</li>
-          <li>(-90.5,-85)</li>
-          <li>(-90.9,-85)</li>
-          <li>(-90.95,-90)</li>
+		  <li>(0,-85)</li>
+          <li>(0.9,-90)</li>
+          <li>(1,-90)</li>
         </points>
-	  </rotationCurve>
+      </rotationCurve>
       <zPositionCurve>
         <points>
-          <li>(0.95,2.5)</li>
+          <li>(0.9,4)</li>
           <li>(1,0)</li>
         </points>
       </zPositionCurve>
       <speedCurve>
         <points>
-          <li>(0.6,0.6)</li>
-          <li>(0.95,0.1)</li>
+          <li>(0.6,0.5)</li>
+          <li>(0.9,0.01)</li>
+		  <li>(1,0.005)</li>
         </points>
       </speedCurve>
     </skyfaller>
@@ -263,26 +269,28 @@
       <angleCurve>
         <points>
           <li>(0,90)</li>
-          <li>(1,70)</li>
+		  <li>(1,80)</li>
+		  <li>(2,70)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
-          <li>(90,90)</li>
-          <li>(90.15,100)</li>
-          <li>(90.5,85)</li>
+          <li>(0,90)</li>
+		  <li>(0.1,95)</li>
+		  <li>(1,95)</li>
         </points>
       </rotationCurve>
       <zPositionCurve>
         <points>
           <li>(0,0)</li>
-          <li>(0.08,2)</li>
+          <li>(0.1,4)</li>
         </points>
       </zPositionCurve>
       <speedCurve>
         <points>
-          <li>(0,0.2)</li>
-          <li>(0.4,0.7)</li>
+          <li>(0,0)</li>
+		  <li>(0.1,0.001)</li>
+          <li>(0.4,0.5)</li>
         </points>
       </speedCurve>
     </skyfaller>
@@ -308,28 +316,29 @@
       <ticksToImpactRange>200~250</ticksToImpactRange>
       <angleCurve>
         <points>
-          <li>(0,-60)</li>
+          <li>(0,-70)</li>
           <li>(1,-90)</li>
+		  <li>(2,-90)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
-          <li>(-90,-120)</li>
-          <li>(-90.5,-95)</li>
-          <li>(-90.9,-95)</li>
-          <li>(-90.95,-90)</li>
+		  <li>(0,-95)</li>
+          <li>(0.9,-90)</li>
+          <li>(1,-90)</li>
         </points>
       </rotationCurve>
       <zPositionCurve>
         <points>
-          <li>(0.95,2.5)</li>
+          <li>(0.9,4)</li>
           <li>(1,0)</li>
         </points>
       </zPositionCurve>
       <speedCurve>
         <points>
-          <li>(0.6,0.6)</li>
-          <li>(0.95,0.1)</li>
+          <li>(0.6,0.5)</li>
+          <li>(0.9,0.01)</li>
+		  <li>(1,0.005)</li>
         </points>
       </speedCurve>
     </skyfaller>
@@ -381,26 +390,28 @@
       <angleCurve>
         <points>
           <li>(0,-90)</li>
-          <li>(1,-70)</li>
+		  <li>(1,-80)</li>
+		  <li>(2,-70)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
-          <li>(90,90)</li>
-          <li>(90.15,80)</li>
-          <li>(90.5,95)</li>
+          <li>(0,90)</li>
+		  <li>(0.1,85)</li>
+		  <li>(1,85)</li>
         </points>
       </rotationCurve>
       <zPositionCurve>
         <points>
           <li>(0,0)</li>
-          <li>(0.08,2)</li>
+          <li>(0.1,4)</li>
         </points>
       </zPositionCurve>
       <speedCurve>
         <points>
-          <li>(0,0.2)</li>
-          <li>(0.4,0.7)</li>
+          <li>(0,0)</li>
+		  <li>(0.1,0.001)</li>
+          <li>(0.4,0.5)</li>
         </points>
       </speedCurve>
     </skyfaller>
@@ -426,28 +437,29 @@
       <ticksToImpactRange>200~250</ticksToImpactRange>
       <angleCurve>
         <points>
-          <li>(0,60)</li>
+          <li>(0,70)</li>
           <li>(1,90)</li>
+		  <li>(2,90)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
-          <li>(-90,-60)</li>
-          <li>(-90.5,-85)</li>
-          <li>(-90.9,-85)</li>
-          <li>(-90.95,-90)</li>
+		  <li>(0,-85)</li>
+          <li>(0.9,-90)</li>
+          <li>(1,-90)</li>
         </points>
-	  </rotationCurve>
+      </rotationCurve>
       <zPositionCurve>
         <points>
-          <li>(0.95,2.5)</li>
+          <li>(0.9,4)</li>
           <li>(1,0)</li>
         </points>
       </zPositionCurve>
       <speedCurve>
         <points>
-          <li>(0.6,0.6)</li>
-          <li>(0.95,0.1)</li>
+          <li>(0.6,0.5)</li>
+          <li>(0.9,0.01)</li>
+		  <li>(1,0.005)</li>
         </points>
       </speedCurve>
     </skyfaller>
@@ -500,26 +512,28 @@
       <angleCurve>
         <points>
           <li>(0,90)</li>
-          <li>(1,70)</li>
+		  <li>(1,80)</li>
+		  <li>(2,70)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
-          <li>(90,90)</li>
-          <li>(90.15,100)</li>
-          <li>(90.5,85)</li>
+          <li>(0,90)</li>
+		  <li>(0.1,95)</li>
+		  <li>(1,95)</li>
         </points>
       </rotationCurve>
       <zPositionCurve>
         <points>
           <li>(0,0)</li>
-          <li>(0.08,2)</li>
+          <li>(0.1,4)</li>
         </points>
       </zPositionCurve>
       <speedCurve>
         <points>
-          <li>(0,0.2)</li>
-          <li>(0.4,0.7)</li>
+          <li>(0,0)</li>
+		  <li>(0.1,0.001)</li>
+          <li>(0.4,0.5)</li>
         </points>
       </speedCurve>
     </skyfaller>
@@ -545,28 +559,29 @@
       <ticksToImpactRange>200~250</ticksToImpactRange>
       <angleCurve>
         <points>
-          <li>(0,-60)</li>
+          <li>(0,-70)</li>
           <li>(1,-90)</li>
+		  <li>(2,-90)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
-          <li>(-90,-120)</li>
-          <li>(-90.5,-95)</li>
-          <li>(-90.9,-95)</li>
-          <li>(-90.95,-90)</li>
+		  <li>(0,-95)</li>
+          <li>(0.9,-90)</li>
+          <li>(1,-90)</li>
         </points>
       </rotationCurve>
       <zPositionCurve>
         <points>
-          <li>(0.95,2.5)</li>
+          <li>(0.9,4)</li>
           <li>(1,0)</li>
         </points>
       </zPositionCurve>
       <speedCurve>
         <points>
-          <li>(0.6,0.6)</li>
-          <li>(0.95,0.1)</li>
+          <li>(0.6,0.5)</li>
+          <li>(0.9,0.01)</li>
+		  <li>(1,0.005)</li>
         </points>
       </speedCurve>
     </skyfaller>
@@ -614,26 +629,28 @@
       <angleCurve>
         <points>
           <li>(0,-90)</li>
-          <li>(1,-70)</li>
+		  <li>(1,-80)</li>
+		  <li>(2,-70)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
-          <li>(90,90)</li>
-          <li>(90.15,80)</li>
-          <li>(90.5,95)</li>
+          <li>(0,90)</li>
+		  <li>(0.1,85)</li>
+		  <li>(1,85)</li>
         </points>
       </rotationCurve>
       <zPositionCurve>
         <points>
           <li>(0,0)</li>
-          <li>(0.08,2)</li>
+          <li>(0.1,4)</li>
         </points>
       </zPositionCurve>
       <speedCurve>
         <points>
-          <li>(0,0.2)</li>
-          <li>(0.4,0.7)</li>
+          <li>(0,0)</li>
+		  <li>(0.1,0.001)</li>
+          <li>(0.4,0.5)</li>
         </points>
       </speedCurve>
     </skyfaller>
@@ -659,28 +676,29 @@
       <ticksToImpactRange>200~250</ticksToImpactRange>
       <angleCurve>
         <points>
-          <li>(0,60)</li>
+          <li>(0,70)</li>
           <li>(1,90)</li>
+		  <li>(2,90)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
-          <li>(-90,-60)</li>
-          <li>(-90.5,-85)</li>
-          <li>(-90.9,-85)</li>
-          <li>(-90.95,-90)</li>
+		  <li>(0,-85)</li>
+          <li>(0.9,-90)</li>
+          <li>(1,-90)</li>
         </points>
-	  </rotationCurve>
+      </rotationCurve>
       <zPositionCurve>
         <points>
-          <li>(0.95,2.5)</li>
+          <li>(0.9,4)</li>
           <li>(1,0)</li>
         </points>
       </zPositionCurve>
       <speedCurve>
         <points>
-          <li>(0.6,0.6)</li>
-          <li>(0.95,0.1)</li>
+          <li>(0.6,0.5)</li>
+          <li>(0.9,0.01)</li>
+		  <li>(1,0.005)</li>
         </points>
       </speedCurve>
     </skyfaller>
