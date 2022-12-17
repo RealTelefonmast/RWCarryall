@@ -11,6 +11,7 @@ namespace SRTS
 {
     public class TravelingSRTS : TravelingTransportPods
     {
+        //
         public Thing flyingThing;
         private Material material;
         private const float ExpandingResize = 35f;
@@ -42,11 +43,6 @@ namespace SRTS
             }
         }
 
-        public override void SpawnSetup()
-        {
-            base.SpawnSetup();
-        }
-
         public override void ExposeData()
         {
             base.ExposeData();
@@ -55,6 +51,18 @@ namespace SRTS
         
         public override void Draw()
         {
+            var pos = DrawPos;
+            var normalized = pos.normalized;
+            var size = Find.WorldGrid.averageTileSize * 0.7f;
+
+            Quaternion q = Quaternion.LookRotation(Vector3.Cross(normalized, Vector3.up), normalized) * Quaternion.Euler(0, Direction.AngleFlat(), 0);
+            Vector3 s = new Vector3(size, 1f, size);
+            Matrix4x4 matrix = default(Matrix4x4);
+            matrix.SetTRS(pos + normalized * 0.015f, q, s);
+            Graphics.DrawMesh(MeshPool.plane10, matrix, Material, WorldCameraManager.WorldLayer);
+            
+            return;
+            /*
             if(!SRTSMod.mod.settings.dynamicWorldDrawingSRTS)
             {
                 base.Draw();
@@ -86,6 +94,7 @@ namespace SRTS
                 
                 Graphics.DrawMesh(mesh, matrix, SRTSMaterial, WorldCameraManager.WorldLayer);
             }
+            */
         }
 
         public Vector3 Direction => (DrawPos - Find.WorldGrid.GetTileCenter(this.destinationTile)).normalized;
