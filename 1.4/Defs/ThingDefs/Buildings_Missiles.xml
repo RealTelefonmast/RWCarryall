@@ -59,6 +59,7 @@ Maximum distance: 200 tiles</description>
 		<preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
 		<repairEffect>Repair</repairEffect>
 		<forceDebugSpawnable>true</forceDebugSpawnable>
+		<uiIconPath>Things/Building/Linked/PowerConduit_MenuIcon</uiIconPath>
 		
 		<graphicData>
 		  <texPath>Missile/MissileBasic</texPath>

@@ -24,14 +24,15 @@
       <angleCurve>
         <points>
           <li>(0,90)</li>
-		  <li>(1,80)</li>
-		  <li>(2,70)</li>
+		  <li>(0.5,85)</li>
+		  <li>(1,75)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
           <li>(0,90)</li>
-		  <li>(0.1,95)</li>
+		  <li>(0.1,90)</li>
+		  <li>(0.2,95)</li>
 		  <li>(1,95)</li>
         </points>
       </rotationCurve>
@@ -71,9 +72,8 @@
       <ticksToImpactRange>200~250</ticksToImpactRange>
       <angleCurve>
         <points>
-          <li>(0,-70)</li>
-          <li>(1,-90)</li>
-		  <li>(2,-90)</li>
+          <li>(0,-75)</li>
+		  <li>(1,-90)</li>
         </points>
       </angleCurve>
       <rotationCurve>
@@ -148,14 +148,15 @@
       <angleCurve>
         <points>
           <li>(0,-90)</li>
-		  <li>(1,-80)</li>
-		  <li>(2,-70)</li>
+		  <li>(0.5,-85)</li>
+		  <li>(1,-75)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
           <li>(0,90)</li>
-		  <li>(0.1,85)</li>
+		  <li>(0.1,90)</li>
+		  <li>(0.2,85)</li>
 		  <li>(1,85)</li>
         </points>
       </rotationCurve>
@@ -195,9 +196,8 @@
       <ticksToImpactRange>200~250</ticksToImpactRange>
       <angleCurve>
         <points>
-          <li>(0,70)</li>
-          <li>(1,90)</li>
-		  <li>(2,90)</li>
+          <li>(0,75)</li>
+		  <li>(1,90)</li>
         </points>
       </angleCurve>
       <rotationCurve>
@@ -269,14 +269,15 @@
       <angleCurve>
         <points>
           <li>(0,90)</li>
-		  <li>(1,80)</li>
-		  <li>(2,70)</li>
+		  <li>(0.5,85)</li>
+		  <li>(1,75)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
           <li>(0,90)</li>
-		  <li>(0.1,95)</li>
+		  <li>(0.1,90)</li>
+		  <li>(0.2,95)</li>
 		  <li>(1,95)</li>
         </points>
       </rotationCurve>
@@ -316,9 +317,8 @@
       <ticksToImpactRange>200~250</ticksToImpactRange>
       <angleCurve>
         <points>
-          <li>(0,-70)</li>
-          <li>(1,-90)</li>
-		  <li>(2,-90)</li>
+          <li>(0,-75)</li>
+		  <li>(1,-90)</li>
         </points>
       </angleCurve>
       <rotationCurve>
@@ -390,14 +390,15 @@
       <angleCurve>
         <points>
           <li>(0,-90)</li>
-		  <li>(1,-80)</li>
-		  <li>(2,-70)</li>
+		  <li>(0.5,-85)</li>
+		  <li>(1,-75)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
           <li>(0,90)</li>
-		  <li>(0.1,85)</li>
+		  <li>(0.1,90)</li>
+		  <li>(0.2,85)</li>
 		  <li>(1,85)</li>
         </points>
       </rotationCurve>
@@ -437,9 +438,8 @@
       <ticksToImpactRange>200~250</ticksToImpactRange>
       <angleCurve>
         <points>
-          <li>(0,70)</li>
-          <li>(1,90)</li>
-		  <li>(2,90)</li>
+          <li>(0,75)</li>
+		  <li>(1,90)</li>
         </points>
       </angleCurve>
       <rotationCurve>
@@ -512,14 +512,15 @@
       <angleCurve>
         <points>
           <li>(0,90)</li>
-		  <li>(1,80)</li>
-		  <li>(2,70)</li>
+		  <li>(0.5,85)</li>
+		  <li>(1,75)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
           <li>(0,90)</li>
-		  <li>(0.1,95)</li>
+		  <li>(0.1,90)</li>
+		  <li>(0.2,95)</li>
 		  <li>(1,95)</li>
         </points>
       </rotationCurve>
@@ -559,9 +560,8 @@
       <ticksToImpactRange>200~250</ticksToImpactRange>
       <angleCurve>
         <points>
-          <li>(0,-70)</li>
-          <li>(1,-90)</li>
-		  <li>(2,-90)</li>
+          <li>(0,-75)</li>
+		  <li>(1,-90)</li>
         </points>
       </angleCurve>
       <rotationCurve>
@@ -629,14 +629,15 @@
       <angleCurve>
         <points>
           <li>(0,-90)</li>
-		  <li>(1,-80)</li>
-		  <li>(2,-70)</li>
+		  <li>(0.5,-85)</li>
+		  <li>(1,-75)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
           <li>(0,90)</li>
-		  <li>(0.1,85)</li>
+		  <li>(0.1,90)</li>
+		  <li>(0.2,85)</li>
 		  <li>(1,85)</li>
         </points>
       </rotationCurve>
@@ -676,9 +677,8 @@
       <ticksToImpactRange>200~250</ticksToImpactRange>
       <angleCurve>
         <points>
-          <li>(0,70)</li>
-          <li>(1,90)</li>
-		  <li>(2,90)</li>
+          <li>(0,75)</li>
+		  <li>(1,90)</li>
         </points>
       </angleCurve>
       <rotationCurve>

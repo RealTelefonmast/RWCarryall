@@ -29,7 +29,7 @@
 		</killedLeavings>
 		<comps />
 		<holdsRoof>true</holdsRoof>
-		<uiIconScale>1.1</uiIconScale> 
+		<uiIconScale>1.2</uiIconScale> 
 	</ThingDef>
 	
 
@@ -57,6 +57,7 @@ Maximum distance: 200 tiles</description>
 		<repairEffect>Repair</repairEffect>
 		<forceDebugSpawnable>true</forceDebugSpawnable>
 		<minifiedDef />
+		<uiIconPath>Carryall/CarryallBasic</uiIconPath>
 		
 		<graphicData>
 		  <texPath>Carryall/CarryallBasic</texPath>
@@ -109,8 +110,8 @@ Maximum distance: 200 tiles</description>
 			</li>
 		
 			<li Class="SRTS.CompProperties_LaunchableSRTS">
-				<westSkyfaller>Carryall_standard_R_Leaving</westSkyfaller>
 				<eastSkyfaller>Carryall_standard_Leaving</eastSkyfaller>
+				<westSkyfaller>Carryall_standard_R_Leaving</westSkyfaller>
 				<eastSkyfallerIncoming>Carryall_standard_Incoming</eastSkyfallerIncoming>
 				<westSkyfallerIncoming>Carryall_standard_R_Incoming</westSkyfallerIncoming>
 				<eastSkyfallerActive>Carryall_standard_Active</eastSkyfallerActive>
@@ -119,8 +120,6 @@ Maximum distance: 200 tiles</description>
 				<fuelPerTile>1.5</fuelPerTile>
 				<minPassengers>1</minPassengers>
 				<maxPassengers>5</maxPassengers>
-				<spaceFaring>false</spaceFaring>
-				<shuttleBayLanding>true</shuttleBayLanding>
 			</li>
 		  
 		  <li Class="CompProperties_Refuelable">
@@ -194,6 +193,7 @@ Maximum distance: 300 tiles</description>
     <repairEffect>ConstructMetal</repairEffect>
     <forceDebugSpawnable>true</forceDebugSpawnable>
 	<minifiedDef />
+	<uiIconPath>Carryall/CarryallGDI</uiIconPath>
 	
     <graphicData>
       <texPath>Carryall/CarryallGDI</texPath>
@@ -222,7 +222,7 @@ Maximum distance: 300 tiles</description>
       <Steel>2500</Steel>
       <Plasteel>300</Plasteel>
 	  <Gold>150</Gold>
-      <ComponentIndustrial>25</ComponentIndustrial>
+      <ComponentIndustrial>30</ComponentIndustrial>
       <ComponentSpacer>8</ComponentSpacer>
     </costList>
 	
@@ -236,8 +236,8 @@ Maximum distance: 300 tiles</description>
       </li>
 	  
       <li Class="SRTS.CompProperties_LaunchableSRTS">
+	    <eastSkyfaller>Carryall_GDI_Leaving</eastSkyfaller>
 		<westSkyfaller>Carryall_GDI_R_Leaving</westSkyfaller>
-		<eastSkyfaller>Carryall_GDI_Leaving</eastSkyfaller>
 		<eastSkyfallerIncoming>Carryall_GDI_Incoming</eastSkyfallerIncoming>
 		<westSkyfallerIncoming>Carryall_GDI_R_Incoming</westSkyfallerIncoming>
 		<eastSkyfallerActive>Carryall_GDI_Active</eastSkyfallerActive>
@@ -246,8 +246,6 @@ Maximum distance: 300 tiles</description>
         <fuelPerTile>3</fuelPerTile>
         <minPassengers>1</minPassengers>
         <maxPassengers>4</maxPassengers>
-        <spaceFaring>false</spaceFaring>
-        <shuttleBayLanding>true</shuttleBayLanding>
       </li>
 	  
       <li Class="CompProperties_Refuelable"> 
@@ -333,7 +331,7 @@ Maximum distance: 300 tiles</description>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_MiniCarryallTurret</defaultProjectile>
         <warmupTime>0</warmupTime>
-        <range>18.9</range>
+        <range>22.9</range>
         <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
         <burstShotCount>2</burstShotCount>
         <soundCast>GunShotA</soundCast>
@@ -386,6 +384,7 @@ Maximum distance: 200 tiles</description>
     <repairEffect>ConstructMetal</repairEffect>
     <forceDebugSpawnable>true</forceDebugSpawnable>
 	<minifiedDef />
+	<uiIconPath>Carryall/CarryallNod</uiIconPath>
 
     <graphicData>
       <texPath>Carryall/CarryallNod</texPath>
@@ -428,8 +427,8 @@ Maximum distance: 200 tiles</description>
       </li>
 	  
       <li Class="SRTS.CompProperties_LaunchableSRTS">
-		<westSkyfaller>Carryall_Nod_R_Leaving</westSkyfaller>
 		<eastSkyfaller>Carryall_Nod_Leaving</eastSkyfaller>
+		<westSkyfaller>Carryall_Nod_R_Leaving</westSkyfaller>
 		<eastSkyfallerIncoming>Carryall_Nod_Incoming</eastSkyfallerIncoming>
 		<westSkyfallerIncoming>Carryall_Nod_R_Incoming</westSkyfallerIncoming>
 		<eastSkyfallerActive>Carryall_Nod_Active</eastSkyfallerActive>
@@ -438,8 +437,6 @@ Maximum distance: 200 tiles</description>
         <fuelPerTile>3</fuelPerTile>
         <minPassengers>1</minPassengers>
         <maxPassengers>10</maxPassengers>
-        <spaceFaring>false</spaceFaring>
-        <shuttleBayLanding>true</shuttleBayLanding>
       </li>
 	  
       <li Class="CompProperties_Refuelable"> 
@@ -525,7 +522,7 @@ Maximum distance: 200 tiles</description>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_MediumCarryallTurret</defaultProjectile>
         <warmupTime>4.5</warmupTime>
-        <range>20.9</range>
+        <range>24.9</range>
         <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
         <burstShotCount>25</burstShotCount>
         <soundCast>Shot_Minigun</soundCast>
