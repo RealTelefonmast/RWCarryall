@@ -478,7 +478,7 @@ namespace SRTS
 		                  directlyHeldThings.TryAddOrTransfer(thing, true);
 
 		                  // Neceros Edit
-		                  ActiveDropPod activeDropPod = (ActiveDropPod) ThingMaker.MakeThing(ThingDef.Named(parent.def.defName + "_Active"), null);
+		                  ActiveDropPod activeDropPod = (ActiveDropPod) ThingMaker.MakeThing(SRTSStatic.SkyfallerActiveDefByRot(this), null);
 		                  activeDropPod.Contents = new ActiveDropPodInfo();
 		                  activeDropPod.Contents.innerContainer.TryAddRangeOrTransfer((IEnumerable<Thing>) directlyHeldThings, true, true);
 
@@ -532,7 +532,7 @@ namespace SRTS
 			                    thingOwner.TryAddOrTransfer(thing, false);
 
 		                  // Neceros Edit
-		                  ActiveDropPod activeDropPod = (ActiveDropPod) ThingMaker.MakeThing(ThingDef.Named(parent.def.defName + "_Active"), (ThingDef) null);
+		                  ActiveDropPod activeDropPod = (ActiveDropPod) ThingMaker.MakeThing(SRTSStatic.SkyfallerActiveDefByRot(this), (ThingDef) null);
 		                  activeDropPod.Contents = new ActiveDropPodInfo();
 		                  activeDropPod.Contents.innerContainer.TryAddRangeOrTransfer((IEnumerable<Thing>) thingOwner, true, true);
 		                  activeDropPod.Contents.innerContainer.TryAddRangeOrTransfer((IEnumerable<Thing>) thingsInsideShip, true, true);

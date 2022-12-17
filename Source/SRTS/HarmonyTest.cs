@@ -12,11 +12,11 @@ namespace SRTS
         {
             for (int index = 0; index < info.innerContainer.Count; index++)
             {
-                if (info.innerContainer[index].TryGetComp<CompLaunchableSRTS>() != null)
+                var comp = info.innerContainer[index].TryGetComp<CompLaunchableSRTS>();
+                if (comp != null)
                 {
                     Thing ship = info.innerContainer[index];
-                    string shipType = ship.def.defName;
-                    ActiveDropPod activeDropPod = (ActiveDropPod)ThingMaker.MakeThing(ThingDef.Named(shipType + "_Active"), (ThingDef)null);
+                    ActiveDropPod activeDropPod = (ActiveDropPod)ThingMaker.MakeThing(SRTSStatic.SkyfallerActiveDefByRot(comp), (ThingDef)null);
                     activeDropPod.Contents = info;
                     
                     EnsureInBoundsSRTS(ref c, info.innerContainer[index].def, map);

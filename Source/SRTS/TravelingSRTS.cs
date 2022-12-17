@@ -16,14 +16,19 @@ namespace SRTS
         private const float ExpandingResize = 35f;
         private const float TransitionTakeoff = 0.015f;
         private float transitionSize = 0f;
-        Vector3 directionFacing;
-        
+
         private Material SRTSMaterial
         {
             get
             {
-                if(flyingThing is null)
+                if (flyingThing is null)
                     return this.Material;
+                
+                if(flyingThing.Rotation == Rot4.West)
+                    return flyingThing.Graphic.MatEast;
+                if(flyingThing.Rotation == Rot4.East)
+                    return flyingThing.Graphic.MatWest;
+                
                 if(material is null)
                 {
                     string texPath = flyingThing.def.graphicData.texPath;
@@ -58,31 +63,31 @@ namespace SRTS
             
             if (!this.HiddenBehindTerrainNow())
             {
-
                 float averageTileSize = Find.WorldGrid.averageTileSize;
                 float transitionPct = ExpandableWorldObjectsUtility.TransitionPct;
             
                 if(transitionSize < 1)
                     transitionSize += TransitionTakeoff * (int)Find.TickManager.CurTimeSpeed;
                 float drawPct = (1 + (transitionPct * Find.WorldCameraDriver.AltitudePercent * ExpandingResize)) * transitionSize;
-                if(directionFacing == default)
-                    InitializeFacing();
-                
+
                 Vector3 normalized = this.DrawPos.normalized;
-                Quaternion quat = Quaternion.LookRotation(Vector3.Cross(normalized, directionFacing), normalized) * Quaternion.Euler(0f, 0f, 0f);
-                Vector3 s = new Vector3(averageTileSize * 0.7f * drawPct, 5f, averageTileSize * 0.7f * drawPct);
+                //var rotation = flyingThing.Rotation == Rot4.West ? Quaternion.Euler(0f, 180f, 0f) : Quaternion.Euler(0f, 180f, 0f);
+                Quaternion quat = Quaternion.LookRotation(Vector3.Cross(normalized, Direction), normalized);// * rotation;
                 
+                Vector3 s = new Vector3(averageTileSize * 0.7f * drawPct, 5f, averageTileSize * 0.7f * drawPct);
                 Matrix4x4 matrix = default;
-                matrix.SetTRS(this.DrawPos + normalized * 0.015f, quat, s);
-                int layer = WorldCameraManager.WorldLayer;
-                Graphics.DrawMesh(MeshPool.plane10, matrix, this.SRTSMaterial, layer);
+                matrix.SetTRS(this.DrawPos + normalized * 0.015f, quat, s); //Direction.ToAngleFlat().ToQuat()
+
+                Mesh mesh = MeshPool.plane10;
+                if ((flyingThing.Rotation == Rot4.West && flyingThing.Graphic.WestFlipped) || (flyingThing.Rotation == Rot4.East && flyingThing.Graphic.EastFlipped))
+                {
+                    mesh = MeshPool.GridPlaneFlip(s);
+                }
+                
+                Graphics.DrawMesh(mesh, matrix, SRTSMaterial, WorldCameraManager.WorldLayer);
             }
         }
 
-        private void InitializeFacing()
-        {
-            Vector3 tileLocation = Find.WorldGrid.GetTileCenter(this.destinationTile).normalized;
-            directionFacing = (this.DrawPos - tileLocation).normalized;
-        }
+        public Vector3 Direction => (DrawPos - Find.WorldGrid.GetTileCenter(this.destinationTile)).normalized;
     }
 }

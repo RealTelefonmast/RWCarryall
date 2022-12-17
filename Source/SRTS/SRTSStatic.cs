@@ -11,6 +11,20 @@ namespace SRTS
 {
   public static class SRTSStatic
   {
+    public static ThingDef SkyfallerActiveDefByRot(CompLaunchableSRTS comp)
+    {
+      if (comp.parent.Rotation == Rot4.East)
+      {
+        return comp.SRTSProps.eastSkyfallerActive;
+      }
+      else if (comp.parent.Rotation == Rot4.West)
+      {
+        return comp.SRTSProps.westSkyfallerActive;
+      }
+
+      return comp.SRTSProps.eastSkyfaller;
+    }
+    
     public static IEnumerable<FloatMenuOption> getFM(
       WorldObject wobj,
       IEnumerable<IThingHolder> ih,

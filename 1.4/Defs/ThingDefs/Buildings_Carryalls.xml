@@ -89,11 +89,11 @@ Maximum distance: 200 tiles</description>
 		</costList>
 		
 		<building>
-		  <claimable>false</claimable>
-		  <soundAmbient>ShuttleIdle_Ambience</soundAmbient>
-		  <destroySound>BuildingDestroyed_Metal_Big</destroySound>
-		  <expandHomeArea>false</expandHomeArea>
-		  <ai_combatDangerous>true</ai_combatDangerous>
+			<claimable>false</claimable>
+			<soundAmbient>ShuttleIdle_Ambience</soundAmbient>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+			<expandHomeArea>false</expandHomeArea>
+			<ai_combatDangerous>true</ai_combatDangerous>
 		</building>
 
 		<comps>
@@ -107,20 +107,21 @@ Maximum distance: 200 tiles</description>
 				<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
 				<pawnExitSound>Shuttle_PawnExit</pawnExitSound>
 			</li>
-		  
 		
-		  <li Class="SRTS.CompProperties_LaunchableSRTS">
-			<westSkyfaller>Carryall_standard_R_Leaving</westSkyfaller>
-			<eastSkyfaller>Carryall_standard_Leaving</eastSkyfaller>
-			<eastSkyfallerIncoming>Carryall_standard_Incoming</eastSkyfallerIncoming>
-			<westSkyfallerIncoming>Carryall_standard_R_Incoming</westSkyfallerIncoming>
-			<travelSpeed>5</travelSpeed>
-			<fuelPerTile>1.5</fuelPerTile>
-			<minPassengers>1</minPassengers>
-			<maxPassengers>5</maxPassengers>
-			<spaceFaring>false</spaceFaring>
-			<shuttleBayLanding>true</shuttleBayLanding>
-		  </li>
+			<li Class="SRTS.CompProperties_LaunchableSRTS">
+				<westSkyfaller>Carryall_standard_R_Leaving</westSkyfaller>
+				<eastSkyfaller>Carryall_standard_Leaving</eastSkyfaller>
+				<eastSkyfallerIncoming>Carryall_standard_Incoming</eastSkyfallerIncoming>
+				<westSkyfallerIncoming>Carryall_standard_R_Incoming</westSkyfallerIncoming>
+				<eastSkyfallerActive>Carryall_standard_Active</eastSkyfallerActive>
+				<westSkyfallerActive>Carryall_standard_R_Active</westSkyfallerActive>
+				<travelSpeed>5</travelSpeed>
+				<fuelPerTile>1.5</fuelPerTile>
+				<minPassengers>1</minPassengers>
+				<maxPassengers>5</maxPassengers>
+				<spaceFaring>false</spaceFaring>
+				<shuttleBayLanding>true</shuttleBayLanding>
+			</li>
 		  
 		  <li Class="CompProperties_Refuelable">
 			<fuelCapacity>300</fuelCapacity>
@@ -206,7 +207,7 @@ Maximum distance: 300 tiles</description>
       </shadowData>
     </graphicData>
 	
-    <size>(3,5)</size>
+    <size>(3,3)</size>
 	
     <statBases>
       <MaxHitPoints>800</MaxHitPoints>
@@ -239,6 +240,8 @@ Maximum distance: 300 tiles</description>
 		<eastSkyfaller>Carryall_GDI_Leaving</eastSkyfaller>
 		<eastSkyfallerIncoming>Carryall_GDI_Incoming</eastSkyfallerIncoming>
 		<westSkyfallerIncoming>Carryall_GDI_R_Incoming</westSkyfallerIncoming>
+		<eastSkyfallerActive>Carryall_GDI_Active</eastSkyfallerActive>
+		<westSkyfallerActive>Carryall_GDI_R_Active</westSkyfallerActive>
         <travelSpeed>4</travelSpeed>
         <fuelPerTile>3</fuelPerTile>
         <minPassengers>1</minPassengers>
@@ -396,7 +399,7 @@ Maximum distance: 200 tiles</description>
       </shadowData>
     </graphicData>
 	
-    <size>(3,5)</size>
+    <size>(3,3)</size>
 	
     <statBases>
       <MaxHitPoints>900</MaxHitPoints>
@@ -429,6 +432,8 @@ Maximum distance: 200 tiles</description>
 		<eastSkyfaller>Carryall_Nod_Leaving</eastSkyfaller>
 		<eastSkyfallerIncoming>Carryall_Nod_Incoming</eastSkyfallerIncoming>
 		<westSkyfallerIncoming>Carryall_Nod_R_Incoming</westSkyfallerIncoming>
+		<eastSkyfallerActive>Carryall_Nod_Active</eastSkyfallerActive>
+		<westSkyfallerActive>Carryall_Nod_R_Active</westSkyfallerActive>
         <travelSpeed>8</travelSpeed>
         <fuelPerTile>3</fuelPerTile>
         <minPassengers>1</minPassengers>
