@@ -70,10 +70,10 @@ Maximum distance: 200 tiles</description>
 		  </shadowData>
 		</graphicData>
 		
-		<size>(3,5)</size>
+		<size>(3,3)</size>
 		
 		<statBases>
-		  <MaxHitPoints>550</MaxHitPoints>
+		  <MaxHitPoints>600</MaxHitPoints>
 		  <WorkToBuild>60000</WorkToBuild>
 		  <Flammability>0.5</Flammability>
 		  <Mass>1200</Mass>
@@ -81,10 +81,10 @@ Maximum distance: 200 tiles</description>
 		</statBases>
 		
 		<costList>
-		  <Steel>1500</Steel>
+		  <Steel>1200</Steel>
 		  <Plasteel>250</Plasteel>
-		  <Uranium>50</Uranium>
-		  <ComponentIndustrial>16</ComponentIndustrial>
+		  <Gold>50</Gold>
+		  <ComponentIndustrial>15</ComponentIndustrial>
 		  <ComponentSpacer>4</ComponentSpacer>
 		</costList>
 		
@@ -209,7 +209,7 @@ Maximum distance: 300 tiles</description>
     <size>(3,5)</size>
 	
     <statBases>
-      <MaxHitPoints>750</MaxHitPoints>
+      <MaxHitPoints>800</MaxHitPoints>
       <WorkToBuild>90000</WorkToBuild>
       <Flammability>0.5</Flammability>
       <Mass>3600</Mass>
@@ -220,17 +220,16 @@ Maximum distance: 300 tiles</description>
     <costList>
       <Steel>2500</Steel>
       <Plasteel>300</Plasteel>
-      <Uranium>100</Uranium>
-	  <Gold>25</Gold>
+	  <Gold>150</Gold>
       <ComponentIndustrial>25</ComponentIndustrial>
-      <ComponentSpacer>10</ComponentSpacer>
+      <ComponentSpacer>8</ComponentSpacer>
     </costList>
 	
 	<comps>
 	  
       <li Class="CompProperties_Transporter">
         <restEffectiveness>0.8</restEffectiveness>
-        <massCapacity>2000</massCapacity>		
+        <massCapacity>1800</massCapacity>		
         <pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
         <pawnExitSound>Shuttle_PawnExit</pawnExitSound>		
       </li>
@@ -249,7 +248,7 @@ Maximum distance: 300 tiles</description>
       </li>
 	  
       <li Class="CompProperties_Refuelable"> 
-        <fuelCapacity>1800</fuelCapacity>
+        <fuelCapacity>900</fuelCapacity>
         <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
         <initialConfigurableTargetFuelLevel>0</initialConfigurableTargetFuelLevel>
         <fuelFilter>
@@ -312,15 +311,14 @@ Maximum distance: 300 tiles</description>
     <description>A simple automatic gun made to be mounted on a turret.</description>
     <graphicData>
       <texPath>Misc/DirectionArrow</texPath><!--Things/Building/Security/TurretMini_Top-->
-	  <shaderType>TransparentPostLight</shaderType>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(1.5,1.5)</drawSize>
+      <drawSize>(1,1)</drawSize>
     </graphicData>
     <statBases>
-      <AccuracyTouch>0.82</AccuracyTouch>
-      <AccuracyShort>0.75</AccuracyShort>
-      <AccuracyMedium>0.60</AccuracyMedium>
-      <AccuracyLong>0.35</AccuracyLong>
+      <AccuracyTouch>0.7</AccuracyTouch>
+      <AccuracyShort>0.6</AccuracyShort>
+      <AccuracyMedium>0.5</AccuracyMedium>
+      <AccuracyLong>0.4</AccuracyLong>
       <RangedWeapon_Cooldown>3.8</RangedWeapon_Cooldown>
       <DeteriorationRate>0</DeteriorationRate>
       <Mass>5</Mass>
@@ -337,7 +335,7 @@ Maximum distance: 300 tiles</description>
         <burstShotCount>2</burstShotCount>
         <soundCast>GunShotA</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
+        <muzzleFlashScale>10</muzzleFlashScale>
         <consumeFuelPerShot>2</consumeFuelPerShot>
       </li>
     </verbs>
@@ -349,6 +347,7 @@ Maximum distance: 300 tiles</description>
     <graphicData>
       <texPath>Misc/Bullet_Base_GDI</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(1.2,1.2)</drawSize>
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
@@ -400,7 +399,7 @@ Maximum distance: 200 tiles</description>
     <size>(3,5)</size>
 	
     <statBases>
-      <MaxHitPoints>800</MaxHitPoints>
+      <MaxHitPoints>900</MaxHitPoints>
       <WorkToBuild>90000</WorkToBuild>
       <Flammability>0.4</Flammability>
       <Mass>1800</Mass>
@@ -503,13 +502,13 @@ Maximum distance: 200 tiles</description>
     <graphicData>
       <texPath>Misc/DirectionArrow</texPath><!--Things/Building/Security/TurretAutocannon_Top-->
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(1.5,1.5)</drawSize>
+      <drawSize>(1,1)</drawSize>
     </graphicData>
     <statBases>
-      <AccuracyTouch>0.25</AccuracyTouch>
+      <AccuracyTouch>0.3</AccuracyTouch>
       <AccuracyShort>0.35</AccuracyShort>
       <AccuracyMedium>0.35</AccuracyMedium>
-      <AccuracyLong>0.28</AccuracyLong>
+      <AccuracyLong>0.25</AccuracyLong>
       <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
       <DeteriorationRate>0</DeteriorationRate>
       <Mass>5</Mass>
@@ -526,7 +525,7 @@ Maximum distance: 200 tiles</description>
         <burstShotCount>25</burstShotCount>
         <soundCast>Shot_Minigun</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
+        <muzzleFlashScale>10</muzzleFlashScale>
         <consumeFuelPerShot>0.5</consumeFuelPerShot>
       </li>
     </verbs>
@@ -538,6 +537,7 @@ Maximum distance: 200 tiles</description>
     <graphicData>
       <texPath>Misc/Bullet_Base_Nod</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(1.2,1.2)</drawSize>
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
@@ -547,418 +547,4 @@ Maximum distance: 200 tiles</description>
   </ThingDef>
 
 
-
-
-  <!-- to be delete -->
-
-	<ThingDef ParentName="CarryallBase">
-		<defName>Carryall_standard_R</defName>
-		<label>standard carryall (to be deleted)</label>
-		<description>A temporary object and will be removed in the next patch due for improving code. Please build a new carryall.
-
-Seat: 5
-Speed: 5
-Cargo capacity: 550kg
-
-Fuel capacity: 300
-Fuel efficiency: 1.5 per tile
-Maximum distance: 200 tiles</description>
-
-		<altitudeLayer>Building</altitudeLayer>
-		<fillPercent>0.75</fillPercent>
-		<pathCost>75</pathCost>
-		<blockWind>false</blockWind>
-		<rotatable>true</rotatable>
-		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-		<canOverlapZones>true</canOverlapZones>
-		<preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
-		<repairEffect>Repair</repairEffect>
-		<forceDebugSpawnable>true</forceDebugSpawnable>
-		<minifiedDef />
-		<designationCategory />
-		
-		<graphicData>
-		  <texPath>Carryall/CarryallBasic_R</texPath>
-		  <shaderType>CutoutFlying</shaderType>
-		  <graphicClass>Graphic_Single</graphicClass>
-		  <drawSize>(4.2,4.2)</drawSize>
-		  <drawRotated>false</drawRotated>
-		  <shadowData>
-			<volume>(1, 3.3, 1.35)</volume>
-			<offset>(0, 0, -0.2)</offset>
-		  </shadowData>
-		</graphicData>
-		
-		<size>(3,5)</size>
-		
-		<statBases>
-		  <MaxHitPoints>550</MaxHitPoints>
-		  <WorkToBuild>60000</WorkToBuild>
-		  <Flammability>0.5</Flammability>
-		  <Mass>1200</Mass>
-		  <Beauty>25</Beauty>
-		</statBases>
-		
-		<costList>
-		  <Steel>1500</Steel>
-		  <Plasteel>250</Plasteel>
-		  <Uranium>50</Uranium>
-		  <ComponentIndustrial>16</ComponentIndustrial>
-		  <ComponentSpacer>4</ComponentSpacer>
-		</costList>
-		
-		<building>
-		  <claimable>false</claimable>
-		  <soundAmbient>ShuttleIdle_Ambience</soundAmbient>
-		  <destroySound>BuildingDestroyed_Metal_Big</destroySound>
-		  <expandHomeArea>false</expandHomeArea>
-		  <ai_combatDangerous>true</ai_combatDangerous>
-		</building>
-
-		<comps>
-		  
-			<li Class="CompProperties_Transporter">
-				<restEffectiveness>0.8</restEffectiveness>
-				<massCapacity>550</massCapacity>	
-				<max1PerGroup>false</max1PerGroup>
-				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
-				<showOverallStats>false</showOverallStats>
-				<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
-				<pawnExitSound>Shuttle_PawnExit</pawnExitSound>
-			</li>
-		  
-		
-		  <li Class="SRTS.CompProperties_LaunchableSRTS">
-			<westSkyfaller>Carryall_standard_R_Leaving</westSkyfaller>
-			<eastSkyfaller>Carryall_standard_Leaving</eastSkyfaller>
-			<eastSkyfallerIncoming>Carryall_standard_Incoming</eastSkyfallerIncoming>
-			<westSkyfallerIncoming>Carryall_standard_R_Incoming</westSkyfallerIncoming>
-			<travelSpeed>5</travelSpeed>
-			<fuelPerTile>1.5</fuelPerTile>
-			<minPassengers>1</minPassengers>
-			<maxPassengers>5</maxPassengers>
-			<spaceFaring>false</spaceFaring>
-			<shuttleBayLanding>true</shuttleBayLanding>
-		  </li>
-		  
-		  <li Class="CompProperties_Refuelable">
-			<fuelCapacity>300</fuelCapacity>
-			<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-			<initialConfigurableTargetFuelLevel>0</initialConfigurableTargetFuelLevel>
-			<fuelFilter>
-			  <thingDefs>
-				<li>Chemfuel</li>
-			  </thingDefs>
-			</fuelFilter>
-			<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-			<initialFuelPercent>0.0</initialFuelPercent>
-			<autoRefuelPercent>0.9</autoRefuelPercent>
-			<showFuelGizmo>true</showFuelGizmo>
-			<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
-			<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
-		  </li>
-		  
-		  <li Class="CompProperties_Breakdownable" />
-		  
-		  <li Class="CompProperties_Flickable" />
-		  
-			<!--<li Class="CompProperties_Glower">
-				<glowRadius>9</glowRadius>
-				<glowColor>(120,120,120,0)</glowColor>
-			</li>-->
-			
-		  <li Class="CompProperties_Explosive">
-			<wickTicks>240</wickTicks>
-			<damageAmountBase>160</damageAmountBase>
-			<explosiveRadius>5.9</explosiveRadius>
-			<explosiveDamageType>Flame</explosiveDamageType>
-			<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
-			<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
-			<chanceToStartFire>0.5</chanceToStartFire>
-		  </li>
-		</comps>
-		<placeWorkers>
-		  <li>PlaceWorker_NotUnderRoof</li>
-		</placeWorkers>
-		<researchPrerequisites>
-		  <li>Research_Carryalls</li>
-		</researchPrerequisites>
-		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
-	</ThingDef>
-	
-<ThingDef ParentName="CarryallBase">
-    <defName>Carryall_GDI_R</defName>
-    <label>ox carryall (to be deleted)</label> 
-    <description>A temporary object and will be removed in the next patch due for improving code. Please build a new carryall.
-
-Seat: 4
-Speed: 4
-Cargo capacity: 1,800kg
-
-Fuel capacity: 900
-Fuel efficiency: 3 per tile
-Maximum distance: 300 tiles</description>
-
-	<thingClass>Building_TurretGun</thingClass>
-	<altitudeLayer>Building</altitudeLayer>
-	<pathCost>75</pathCost>
-    <blockWind>false</blockWind>
-    <rotatable>false</rotatable>
-    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-    <canOverlapZones>true</canOverlapZones>
-    <preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
-    <repairEffect>ConstructMetal</repairEffect>
-    <forceDebugSpawnable>true</forceDebugSpawnable>
-	<minifiedDef />
-	<designationCategory />
-	
-    <graphicData>
-      <texPath>Carryall/CarryallGDI_R</texPath>
-	  <shaderType>CutoutFlying</shaderType>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(6,6)</drawSize>
-	  <drawRotated>false</drawRotated>
-      <shadowData>
-        <volume>(1, 4.1, 1.7)</volume>
-        <offset>(0, 0, -0.2)</offset>
-      </shadowData>
-    </graphicData>
-	
-    <size>(3,5)</size>
-	
-    <statBases>
-      <MaxHitPoints>750</MaxHitPoints>
-      <WorkToBuild>90000</WorkToBuild>
-      <Flammability>0.5</Flammability>
-      <Mass>3600</Mass>
-      <Beauty>50</Beauty>
-      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret> <!-- like level 8 human shooter -->
-    </statBases>
-	
-    <costList>
-      <Steel>2500</Steel>
-      <Plasteel>300</Plasteel>
-      <Uranium>100</Uranium>
-	  <Gold>25</Gold>
-      <ComponentIndustrial>25</ComponentIndustrial>
-      <ComponentSpacer>10</ComponentSpacer>
-    </costList>
-	
-	<comps>
-	  
-      <li Class="CompProperties_Transporter">
-        <restEffectiveness>0.8</restEffectiveness>
-        <massCapacity>2000</massCapacity>		
-        <pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
-        <pawnExitSound>Shuttle_PawnExit</pawnExitSound>		
-      </li>
-	  
-      <li Class="SRTS.CompProperties_LaunchableSRTS">
-		<westSkyfaller>Carryall_GDI_R_Leaving</westSkyfaller>
-		<eastSkyfaller>Carryall_GDI_Leaving</eastSkyfaller>
-		<eastSkyfallerIncoming>Carryall_GDI_Incoming</eastSkyfallerIncoming>
-		<westSkyfallerIncoming>Carryall_GDI_R_Incoming</westSkyfallerIncoming>
-        <travelSpeed>4</travelSpeed>
-        <fuelPerTile>3</fuelPerTile>
-        <minPassengers>1</minPassengers>
-        <maxPassengers>4</maxPassengers>
-        <spaceFaring>false</spaceFaring>
-        <shuttleBayLanding>true</shuttleBayLanding>
-      </li>
-	  
-      <li Class="CompProperties_Refuelable"> 
-        <fuelCapacity>1800</fuelCapacity>
-        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-        <initialConfigurableTargetFuelLevel>0</initialConfigurableTargetFuelLevel>
-        <fuelFilter>
-          <thingDefs>
-            <li>Chemfuel</li>
-          </thingDefs>
-        </fuelFilter>
-        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-        <initialFuelPercent>0.0</initialFuelPercent>
-        <autoRefuelPercent>0.9</autoRefuelPercent>
-        <showFuelGizmo>true</showFuelGizmo>
-        <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
-        <drawFuelGaugeInMap>false</drawFuelGaugeInMap>
-      </li>
-	  
-      <li Class="CompProperties_Breakdownable" />
-	  
-      <li Class="CompProperties_Flickable" />
-
-		<!--<li Class="CompProperties_Glower">
-			<glowRadius>9</glowRadius>
-			<glowColor>(140,130,115,0)</glowColor>
-		</li>-->
-		
-      <li Class="CompProperties_Explosive">
-        <wickTicks>240</wickTicks>
-		<damageAmountBase>240</damageAmountBase>
-        <explosiveRadius>6.9</explosiveRadius>
-        <explosiveDamageType>Flame</explosiveDamageType>
-        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
-		<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
-		<chanceToStartFire>0.5</chanceToStartFire>
-      </li>
-	</comps>
-
-    <building>
-      <claimable>false</claimable>
-      <soundAmbient>SpacedroneIdle_Ambience</soundAmbient>
-      <destroySound>BuildingDestroyed_Metal_Big</destroySound>
-	  <expandHomeArea>false</expandHomeArea>
-	  <ai_combatDangerous>true</ai_combatDangerous>
-	  <combatPower>200</combatPower>
-      <turretGunDef>Gun_MiniCarryallTurret</turretGunDef>
-      <turretBurstCooldownTime>4.8</turretBurstCooldownTime>
-    </building>
-    <placeWorkers>
-	  <li>PlaceWorker_NotUnderRoof</li>
-      <li>PlaceWorker_TurretTop</li>
-      <li>PlaceWorker_ShowTurretRadius</li>
-    </placeWorkers>
-    <researchPrerequisites>
-      <li>Research_Carryall_GDI</li>
-    </researchPrerequisites>	
-    <constructionSkillPrerequisite>14</constructionSkillPrerequisite>
-  </ThingDef>
-  
-<ThingDef ParentName="CarryallBase">
-    <defName>Carryall_Nod_R</defName>
-    <label>vertigo carryall (to be deleted)</label> 
-    <description>A temporary object and will be removed in the next patch due for improving code. Please build a new carryall.
-
-Seat: 10
-Speed: 8
-Cargo capacity: 900kg
-
-Fuel capacity: 600
-Fuel efficiency: 3 per tile
-Maximum distance: 200 tiles</description>
-
-	<thingClass>Building_TurretGun</thingClass>
-	<altitudeLayer>Building</altitudeLayer>
-	<pathCost>75</pathCost>
-    <blockWind>false</blockWind>
-    <rotatable>false</rotatable>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <canOverlapZones>true</canOverlapZones>
-    <preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
-    <repairEffect>ConstructMetal</repairEffect>
-    <forceDebugSpawnable>true</forceDebugSpawnable>
-	<minifiedDef />
-	<designationCategory />
-
-    <graphicData>
-      <texPath>Carryall/CarryallNod_R</texPath>
-	  <shaderType>CutoutFlying</shaderType>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(5.5,5.5)</drawSize>
-	  <drawRotated>false</drawRotated>
-      <shadowData>
-        <volume>(1, 4.1, 1.5)</volume>
-        <offset>(0, 0, -0.2)</offset>
-      </shadowData>
-    </graphicData>
-	
-    <size>(3,5)</size>
-	
-    <statBases>
-      <MaxHitPoints>800</MaxHitPoints>
-      <WorkToBuild>90000</WorkToBuild>
-      <Flammability>0.4</Flammability>
-      <Mass>1800</Mass>
-      <Beauty>100</Beauty>
-      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret> <!-- like level 8 human shooter -->
-    </statBases>
-	
-    <costList>
-      <Steel>1750</Steel>
-      <Plasteel>500</Plasteel>
-      <Uranium>250</Uranium>
-      <ComponentIndustrial>15</ComponentIndustrial>
-      <ComponentSpacer>12</ComponentSpacer>
-    </costList>
-	
-	<comps>
-	  
-      <li Class="CompProperties_Transporter">
-        <restEffectiveness>0.8</restEffectiveness>
-        <massCapacity>900</massCapacity>
-        <pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
-        <pawnExitSound>Shuttle_PawnExit</pawnExitSound>		
-      </li>
-	  
-      <li Class="SRTS.CompProperties_LaunchableSRTS">
-		<westSkyfaller>Carryall_Nod_R_Leaving</westSkyfaller>
-		<eastSkyfaller>Carryall_Nod_Leaving</eastSkyfaller>
-		<eastSkyfallerIncoming>Carryall_Nod_Incoming</eastSkyfallerIncoming>
-		<westSkyfallerIncoming>Carryall_Nod_R_Incoming</westSkyfallerIncoming>
-        <travelSpeed>8</travelSpeed>
-        <fuelPerTile>3</fuelPerTile>
-        <minPassengers>1</minPassengers>
-        <maxPassengers>10</maxPassengers>
-        <spaceFaring>false</spaceFaring>
-        <shuttleBayLanding>true</shuttleBayLanding>
-      </li>
-	  
-      <li Class="CompProperties_Refuelable"> 
-        <fuelCapacity>600</fuelCapacity>
-        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-        <initialConfigurableTargetFuelLevel>0</initialConfigurableTargetFuelLevel>
-        <fuelFilter>
-          <thingDefs>
-            <li>Chemfuel</li>
-          </thingDefs>
-        </fuelFilter>
-		<fuelConsumptionRate>3</fuelConsumptionRate>
-        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-        <initialFuelPercent>0.0</initialFuelPercent>
-        <autoRefuelPercent>0.9</autoRefuelPercent>
-        <showFuelGizmo>true</showFuelGizmo>
-        <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
-        <drawFuelGaugeInMap>false</drawFuelGaugeInMap>
-      </li>
-	  
-      <li Class="CompProperties_Breakdownable" />
-	  
-      <li Class="CompProperties_Flickable" />
-	  
-		<!--<li Class="CompProperties_Glower">
-			<glowRadius>9</glowRadius>
-			<glowColor>(150,40,40,0)</glowColor>
-		</li>-->
-		
-      <li Class="CompProperties_Explosive">
-        <wickTicks>240</wickTicks>
-		<damageAmountBase>200</damageAmountBase>
-        <explosiveRadius>6.9</explosiveRadius>
-        <explosiveDamageType>Flame</explosiveDamageType>
-        <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
-		<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
-		<chanceToStartFire>0.5</chanceToStartFire>
-      </li>
-    </comps>
-
-    <building>
-      <claimable>false</claimable>
-      <soundAmbient>SpacedroneIdle_Ambience</soundAmbient>
-      <destroySound>BuildingDestroyed_Metal_Big</destroySound>
-	  <expandHomeArea>false</expandHomeArea>
-	  <ai_combatDangerous>true</ai_combatDangerous>
-	  <combatPower>300</combatPower>
-      <turretGunDef>Gun_MediumCarryallTurret</turretGunDef>
-      <turretBurstCooldownTime>4.5</turretBurstCooldownTime>
-    </building>
-    <placeWorkers>
-	  <li>PlaceWorker_NotUnderRoof</li>
-      <li>PlaceWorker_ShowTurretRadius</li>
-    </placeWorkers>
-    <researchPrerequisites>
-      <li>Research_Carryall_Nod</li>
-    </researchPrerequisites>
-    <constructionSkillPrerequisite>14</constructionSkillPrerequisite>
-  </ThingDef>
-  
 </Defs>

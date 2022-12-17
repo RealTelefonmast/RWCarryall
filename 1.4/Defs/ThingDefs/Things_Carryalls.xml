@@ -586,11 +586,7 @@
     </graphicData>
     <altitudeLayer>Skyfaller</altitudeLayer>
     <blockWind>false</blockWind>
-    <useHitPoints>true</useHitPoints>
-    <statBases>
-      <MaxHitPoints>800</MaxHitPoints>
-      <Flammability>0.4</Flammability>
-    </statBases>
+    <useHitPoints>false</useHitPoints>
     <selectable>true</selectable>
   </ThingDef>
   
