@@ -37,6 +37,16 @@ public class Designator_AddToCarryall : Designator
     
     public override AcceptanceReport CanDesignateThing(Thing t)
     {
+        Pawn pawn = t as Pawn;
+        if (pawn != null)
+        {
+            if (pawn.IsColonist) return true;
+            if (pawn.def.race.Animal && pawn.Faction == Faction.OfPlayer && !pawn.InAggroMentalState)
+            {
+                return true;
+            }
+        }
+
         if (t.def.category != ThingCategory.Item)
         {
             return false;

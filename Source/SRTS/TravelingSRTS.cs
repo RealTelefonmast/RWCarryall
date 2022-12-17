@@ -69,7 +69,7 @@ namespace SRTS
                     InitializeFacing();
                 
                 Vector3 normalized = this.DrawPos.normalized;
-                Quaternion quat = Quaternion.LookRotation(Vector3.Cross(normalized, directionFacing), normalized) * Quaternion.Euler(0f, 90f, 0f);
+                Quaternion quat = Quaternion.LookRotation(Vector3.Cross(normalized, directionFacing), normalized) * Quaternion.Euler(0f, 0f, 0f);
                 Vector3 s = new Vector3(averageTileSize * 0.7f * drawPct, 5f, averageTileSize * 0.7f * drawPct);
                 
                 Matrix4x4 matrix = default;

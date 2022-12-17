@@ -158,7 +158,7 @@ namespace SRTS
 
 	    private Designator_AddToCarryall designator;
 
-	    private Designator_AddToCarryall Designator => designator ??= new Designator_AddToCarryall(this);
+	    private Designator_AddToCarryall AddToCarryallDesignator => designator ??= new Designator_AddToCarryall(this);
 	    
 	    public override IEnumerable<Gizmo> CompGetGizmosExtra()
 	    {
@@ -169,6 +169,8 @@ namespace SRTS
 		        g = null;
 	        }
 
+	        yield return AddToCarryallDesignator;
+	        
 	        yield return new Command_Action()
 	        {
 				defaultLabel = "CA_Rotate".Translate(),
@@ -180,8 +182,6 @@ namespace SRTS
 				}
 	        };
 
-	        yield return Designator;
-	        
 	        if (this.LoadingInProgressOrReadyToLaunch)
 	        {
 		        Command_Action launch = new Command_Action();
