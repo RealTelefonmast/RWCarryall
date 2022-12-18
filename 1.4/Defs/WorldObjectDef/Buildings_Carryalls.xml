@@ -8,9 +8,9 @@
 		<description>A carryall in flight.</description>
 		<worldObjectClass>SRTS.TravelingSRTS</worldObjectClass>
 		<texture>Carryall_Icon</texture>
+		<expandingIconTexture>Carryall_Icon</expandingIconTexture>
 		<useDynamicDrawer>true</useDynamicDrawer>
 		<expandingIcon>true</expandingIcon>
-		<expandingIconTexture>Carryall_Icon</expandingIconTexture>
 		<expandingIconPriority>30</expandingIconPriority>
 		<expandMore>true</expandMore>
 		<allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>

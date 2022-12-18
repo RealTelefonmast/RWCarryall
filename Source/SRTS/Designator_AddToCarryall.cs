@@ -40,6 +40,7 @@ public class Designator_AddToCarryall : Designator
         Pawn pawn = t as Pawn;
         if (pawn != null)
         {
+            if (pawn.health?.Downed ?? false) return true;
             if (pawn.IsColonist) return true;
             if (pawn.def.race.Animal && pawn.Faction == Faction.OfPlayer && !pawn.InAggroMentalState)
             {
@@ -60,9 +61,9 @@ public class Designator_AddToCarryall : Designator
         List<Thing> thingList = c.GetThingList(base.Map);
         for (int i = 0; i < thingList.Count; i++)
         {
-            if (this.CanDesignateThing(thingList[i]).Accepted)
+            if (CanDesignateThing(thingList[i]).Accepted)
             {
-                this.DesignateThing(thingList[i]);
+                DesignateThing(thingList[i]);
             }
         }
     }
