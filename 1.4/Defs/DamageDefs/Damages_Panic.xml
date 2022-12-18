@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef>
+    <defName>Crush_Carryall</defName>
+    <label>Panic</label>
+    <workerClass>DamageWorker_Stun</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been stunned to death.</deathMessage>
+    <defaultDamage>50</defaultDamage>
+    <explosionSnowMeltAmount>10</explosionSnowMeltAmount>
+    <explosionCellFleck>Smoke</explosionCellFleck>
+	<explosionColorCenter>(1, 1, 1, 0)</explosionColorCenter>
+    <explosionColorEdge>(1, 1, 1, 0.01)</explosionColorEdge>
+    <explosionInteriorFleck></explosionInteriorFleck>
+    <soundExplosion>GunTail_Heavy</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+  </DamageDef>
+  
+</Defs>

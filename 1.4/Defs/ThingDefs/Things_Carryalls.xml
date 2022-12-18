@@ -14,7 +14,7 @@
     </graphicData>
     <skyfaller>
       <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(4,2)</shadowSize>
+      <shadowSize>(3,1.5)</shadowSize>
       <motesPerCell>1</motesPerCell>	
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
@@ -65,7 +65,7 @@
     </graphicData>
     <skyfaller>
       <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(4,2)</shadowSize>
+      <shadowSize>(3,1.5)</shadowSize>
       <motesPerCell>1</motesPerCell>
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
@@ -96,8 +96,10 @@
 		  <li>(1,0)</li>
         </points>
       </speedCurve>
-      <!--<explosionRadius>4</explosionRadius>
-      <explosionDamage>Bomb</explosionDamage>-->
+	  <!--
+      <explosionRadius>2.9</explosionRadius>
+      <explosionDamage>Crush_Carryall</explosionDamage>
+	  <cameraShake>0</cameraShake>-->
     </skyfaller>
   </ThingDef>
   
@@ -138,7 +140,7 @@
     </graphicData>
     <skyfaller>
       <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(4,2)</shadowSize>
+      <shadowSize>(3,1.5)</shadowSize>
       <motesPerCell>1</motesPerCell>	
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
@@ -189,7 +191,7 @@
     </graphicData>
     <skyfaller>
       <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(4,2)</shadowSize>
+      <shadowSize>(3,1.5)</shadowSize>
       <motesPerCell>1</motesPerCell>
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>

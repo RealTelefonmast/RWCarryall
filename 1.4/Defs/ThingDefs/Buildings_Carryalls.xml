@@ -29,7 +29,13 @@
 		</killedLeavings>
 		<comps />
 		<holdsRoof>true</holdsRoof>
-		<uiIconScale>1.2</uiIconScale> 
+		<uiIconScale>1.2</uiIconScale>
+		<damageMultipliers>
+			<li>
+				<damageDef>Crush_Carryall</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+		</damageMultipliers>
 	</ThingDef>
 	
 
