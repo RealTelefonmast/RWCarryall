@@ -96,10 +96,9 @@
 		  <li>(1,0)</li>
         </points>
       </speedCurve>
-	  <!--
-      <explosionRadius>2.9</explosionRadius>
-      <explosionDamage>Crush_Carryall</explosionDamage>
-	  <cameraShake>0</cameraShake>-->
+      <explosionRadius>0.025</explosionRadius>
+      <explosionDamage>Lands_Carryall</explosionDamage>
+	  <explosionDamageFactor>1</explosionDamageFactor>
     </skyfaller>
   </ThingDef>
   
@@ -222,6 +221,9 @@
 		  <li>(1,0)</li>
         </points>
       </speedCurve>
+      <explosionRadius>0.025</explosionRadius>
+      <explosionDamage>Lands_Carryall</explosionDamage>
+	  <explosionDamageFactor>1</explosionDamageFactor>
     </skyfaller>
   </ThingDef>
  
@@ -261,7 +263,7 @@
     </graphicData>
     <skyfaller>
       <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(5.5,3.5)</shadowSize>
+      <shadowSize>(4,2)</shadowSize>
       <motesPerCell>1</motesPerCell>	
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
@@ -312,7 +314,7 @@
     </graphicData>	
     <skyfaller>
       <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(5.5,3.5)</shadowSize>
+      <shadowSize>(4,2)</shadowSize>
       <motesPerCell>1</motesPerCell>	
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
@@ -343,6 +345,9 @@
 		  <li>(1,0)</li>
         </points>
       </speedCurve>
+      <explosionRadius>0.025</explosionRadius>
+      <explosionDamage>Lands_Carryall</explosionDamage>
+	  <explosionDamageFactor>1.5</explosionDamageFactor>
     </skyfaller>
   </ThingDef>
 	
@@ -382,7 +387,7 @@
     </graphicData>
     <skyfaller>
       <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(5.5,3.5)</shadowSize>
+      <shadowSize>(4,2)</shadowSize>
       <motesPerCell>1</motesPerCell>	
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
@@ -430,10 +435,10 @@
       <shaderType>CutoutFlying</shaderType>
       <drawSize>(6,6)</drawSize>
 	  <color>(255,255,255)</color>
-    </graphicData>	
+    </graphicData>
     <skyfaller>
       <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(5.5,3.5)</shadowSize>
+      <shadowSize>(4,2)</shadowSize>
       <motesPerCell>1</motesPerCell>	
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
@@ -464,6 +469,9 @@
 		  <li>(1,0)</li>
         </points>
       </speedCurve>
+      <explosionRadius>0.025</explosionRadius>
+      <explosionDamage>Lands_Carryall</explosionDamage>
+	  <explosionDamageFactor>1.5</explosionDamageFactor>
     </skyfaller>
   </ThingDef>
 
@@ -504,7 +512,7 @@
     </graphicData>	
     <skyfaller>
       <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(5.5,3.5)</shadowSize>
+      <shadowSize>(3.5,1.8)</shadowSize>
       <motesPerCell>1</motesPerCell>	
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
@@ -555,7 +563,7 @@
     </graphicData>	
     <skyfaller>
       <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(5.5,3.5)</shadowSize>
+      <shadowSize>(3.5,1.8)</shadowSize>
       <motesPerCell>1</motesPerCell>	
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
@@ -586,6 +594,9 @@
 		  <li>(1,0)</li>
         </points>
       </speedCurve>
+      <explosionRadius>0.025</explosionRadius>
+      <explosionDamage>Lands_Carryall</explosionDamage>
+	  <explosionDamageFactor>1.2</explosionDamageFactor>
     </skyfaller>
   </ThingDef>
  
@@ -621,7 +632,7 @@
     </graphicData>	
     <skyfaller>
       <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(5.5,3.5)</shadowSize>
+      <shadowSize>(3.5,1.8)</shadowSize>
       <motesPerCell>1</motesPerCell>	
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
@@ -657,7 +668,7 @@
         </points>
       </speedCurve>
     </skyfaller>
-  </ThingDef>  
+  </ThingDef> 
   
 <ThingDef ParentName="ShuttleSkyfallerBase">
     <defName>Carryall_Nod_R_Incoming</defName>
@@ -672,7 +683,7 @@
     </graphicData>	
     <skyfaller>
       <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(5.5,3.5)</shadowSize>
+      <shadowSize>(3.5,1.8)</shadowSize>
       <motesPerCell>1</motesPerCell>	
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
@@ -703,6 +714,9 @@
 		  <li>(1,0)</li>
         </points>
       </speedCurve>
+      <explosionRadius>0.025</explosionRadius>
+      <explosionDamage>Lands_Carryall</explosionDamage>
+	  <explosionDamageFactor>1.2</explosionDamageFactor>
     </skyfaller>
   </ThingDef>
  

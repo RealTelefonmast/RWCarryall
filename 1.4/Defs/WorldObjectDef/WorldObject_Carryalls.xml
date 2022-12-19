@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<WorldObjectDef>
+		<defName>TravelingSRTS_Carryall</defName>
+		<label>carryall</label>
+		<description>A carryall in flight.</description>
+		<worldObjectClass>SRTS.TravelingSRTS</worldObjectClass>
+		<texture>Misc/Carryall_Icon</texture>
+		<expandingIconTexture>Misc/Carryall_Icon</expandingIconTexture>
+		<useDynamicDrawer>true</useDynamicDrawer>
+		<expandingIcon>true</expandingIcon>
+		<expandingIconPriority>30</expandingIconPriority>
+		<expandMore>true</expandMore>
+		<allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>
+		<rotateGraphicWhenTraveling>true</rotateGraphicWhenTraveling>
+	</WorldObjectDef>
+  
+</Defs>

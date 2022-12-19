@@ -1,20 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <DamageDef>
-    <defName>Crush_Carryall</defName>
-    <label>Panic</label>
-    <workerClass>DamageWorker_Stun</workerClass>
+  <DamageDef ParentName="Bomb">
+    <defName>Lands_Carryall</defName>
+    <label>crush</label>
+	<deathMessage>{0} has has been crushed by a carryall to death.</deathMessage>
     <externalViolence>true</externalViolence>
-    <deathMessage>{0} has been stunned to death.</deathMessage>
+	<armorCategory>Blunt</armorCategory>
     <defaultDamage>50</defaultDamage>
+	<defaultStoppingPower>2</defaultStoppingPower>
+	<defaultArmorPenetration>0.8</defaultArmorPenetration>
     <explosionSnowMeltAmount>10</explosionSnowMeltAmount>
-    <explosionCellFleck>Smoke</explosionCellFleck>
-	<explosionColorCenter>(1, 1, 1, 0)</explosionColorCenter>
-    <explosionColorEdge>(1, 1, 1, 0.01)</explosionColorEdge>
-    <explosionInteriorFleck></explosionInteriorFleck>
+    <explosionCellFleck>Smoke_Carryall</explosionCellFleck>
+	<explosionColorCenter>(0.9, 0.9, 0.9, 0.15)</explosionColorCenter>
+    <explosionColorEdge>(0.9, 0.9, 0.9, 0.15)</explosionColorEdge>
+    <explosionInteriorFleck>Smoke_Interior_Carryall</explosionInteriorFleck>
     <soundExplosion>GunTail_Heavy</soundExplosion>
-    <combatLogRules>Damage_Bomb</combatLogRules>
   </DamageDef>
-  
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>Smoke_Carryall</defName>
+    <graphicData>
+      <texPath>Misc/CarryallGas</texPath>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.5</fadeInTime>
+    <solidTime>3</solidTime>
+    <fadeOutTime>8</fadeOutTime>
+    <growthRate>0.004</growthRate>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>Smoke_Interior_Carryall</defName>
+    <graphicData>
+      <texPath>Misc/CarryallGas</texPath>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>1</fadeInTime>
+    <solidTime>2</solidTime>
+    <fadeOutTime>6</fadeOutTime>
+    <growthRate>0.002</growthRate>
+  </FleckDef>
+
 </Defs>

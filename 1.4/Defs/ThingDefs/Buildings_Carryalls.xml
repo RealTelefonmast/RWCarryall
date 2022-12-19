@@ -32,7 +32,7 @@
 		<uiIconScale>1.2</uiIconScale>
 		<damageMultipliers>
 			<li>
-				<damageDef>Crush_Carryall</damageDef>
+				<damageDef>Lands_Carryall</damageDef>
 				<multiplier>0</multiplier>
 			</li>
 		</damageMultipliers>
@@ -175,7 +175,7 @@ Maximum distance: 200 tiles</description>
 
 <ThingDef ParentName="CarryallBase">
     <defName>Carryall_GDI</defName>
-    <label>ox carryall</label> 
+    <label>ox carryall</label>
     <description>A rare model of the carryall used by the ancients who worshiped a turkey-like symbol. Optimized for mass transportation, with large storage capacity, but the cabin may get cramped.
 
 Ox carryall is equipped with a small turret. This is helpful in battle, but consumes a lot of fuel. Always remember that you need enough fuel to get back home.
@@ -221,7 +221,7 @@ Maximum distance: 300 tiles</description>
       <Flammability>0.5</Flammability>
       <Mass>3600</Mass>
       <Beauty>50</Beauty>
-      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret> <!-- like level 8 human shooter -->
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret><!-- like level 8 human shooter -->
     </statBases>
 	
     <costList>
@@ -254,7 +254,7 @@ Maximum distance: 300 tiles</description>
         <maxPassengers>4</maxPassengers>
       </li>
 	  
-      <li Class="CompProperties_Refuelable"> 
+      <li Class="CompProperties_Refuelable">
         <fuelCapacity>900</fuelCapacity>
         <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
         <initialConfigurableTargetFuelLevel>0</initialConfigurableTargetFuelLevel>
@@ -317,7 +317,7 @@ Maximum distance: 300 tiles</description>
     <label>carryall turret gun</label>
     <description>A simple automatic gun made to be mounted on a turret.</description>
     <graphicData>
-      <texPath>Misc/DirectionArrow</texPath><!--Things/Building/Security/TurretMini_Top-->
+      <texPath>Misc/Blank</texPath><!--Things/Building/Security/TurretMini_Top-->
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(1,1)</drawSize>
     </graphicData>
@@ -366,7 +366,7 @@ Maximum distance: 300 tiles</description>
 
 <ThingDef ParentName="CarryallBase">
     <defName>Carryall_Nod</defName>
-    <label>vertigo carryall</label> 
+    <label>vertigo carryall</label>
     <description>A rare model of  the carryall used by the ancients who worshiped an insect-like symbol. It was optimized for assault operations, can transport large numbers of people quickly and far, but at the cost of storage capacity.
 	
 Vertigo carryall is equipped with a minigun turret. This is helpful in battle, but consumes a lot of fuel. Always remember that you need enough fuel to get back home.
@@ -412,7 +412,7 @@ Maximum distance: 200 tiles</description>
       <Flammability>0.4</Flammability>
       <Mass>1800</Mass>
       <Beauty>100</Beauty>
-      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret> <!-- like level 8 human shooter -->
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret><!-- like level 8 human shooter -->
     </statBases>
 	
     <costList>
@@ -445,7 +445,7 @@ Maximum distance: 200 tiles</description>
         <maxPassengers>10</maxPassengers>
       </li>
 	  
-      <li Class="CompProperties_Refuelable"> 
+      <li Class="CompProperties_Refuelable">
         <fuelCapacity>600</fuelCapacity>
         <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
         <initialConfigurableTargetFuelLevel>0</initialConfigurableTargetFuelLevel>
@@ -508,7 +508,7 @@ Maximum distance: 200 tiles</description>
     <label>medium carryall turret gun</label>
     <description>A automatic minigun made to be mounted on a turret.</description>
     <graphicData>
-      <texPath>Misc/DirectionArrow</texPath><!--Things/Building/Security/TurretAutocannon_Top-->
+      <texPath>Misc/Blank</texPath><!--Things/Building/Security/TurretAutocannon_Top-->
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(1,1)</drawSize>
     </graphicData>
@@ -551,6 +551,9 @@ Maximum distance: 200 tiles</description>
       <damageDef>Bullet</damageDef>
       <damageAmountBase>10</damageAmountBase>
       <speed>70</speed>
+	  <!--<arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>0.6</shadowSize>
+      <screenShakeFactor>0.5</screenShakeFactor>-->
     </projectile>
   </ThingDef>
 
