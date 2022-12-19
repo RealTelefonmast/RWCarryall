@@ -138,7 +138,7 @@ Maximum distance: 200 tiles</description>
 			  </thingDefs>
 			</fuelFilter>
 			<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-			<initialFuelPercent>0.0</initialFuelPercent>
+			<initialFuelPercent>0.3</initialFuelPercent>
 			<autoRefuelPercent>0.9</autoRefuelPercent>
 			<showFuelGizmo>true</showFuelGizmo>
 			<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
@@ -264,7 +264,7 @@ Maximum distance: 300 tiles</description>
           </thingDefs>
         </fuelFilter>
         <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-        <initialFuelPercent>0.0</initialFuelPercent>
+        <initialFuelPercent>0.3</initialFuelPercent>
         <autoRefuelPercent>0.9</autoRefuelPercent>
         <showFuelGizmo>true</showFuelGizmo>
         <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
@@ -456,7 +456,7 @@ Maximum distance: 200 tiles</description>
         </fuelFilter>
 		<fuelConsumptionRate>3</fuelConsumptionRate>
         <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-        <initialFuelPercent>0.0</initialFuelPercent>
+        <initialFuelPercent>0.3</initialFuelPercent>
         <autoRefuelPercent>0.9</autoRefuelPercent>
         <showFuelGizmo>true</showFuelGizmo>
         <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
