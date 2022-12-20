@@ -15,7 +15,7 @@
 	<explosionColorCenter>(0.9, 0.9, 0.9, 0.15)</explosionColorCenter>
     <explosionColorEdge>(0.9, 0.9, 0.9, 0.15)</explosionColorEdge>
     <explosionInteriorFleck>Smoke_Interior_Carryall</explosionInteriorFleck>
-    <soundExplosion>GunTail_Heavy</soundExplosion>
+    <soundExplosion>DropPod_Leaving</soundExplosion>
   </DamageDef>
 
   <FleckDef ParentName="FleckBase_Thrown">
