@@ -271,7 +271,8 @@ namespace SRTS
 	        }
 
 	        sb.AppendLine("ReadyForLaunch".Translate());
-	        sb.AppendLine("CA_Storage".Translate($"{CollectionsMassCalculator.MassUsage(this.Transporter.innerContainer.ToList(), IgnorePawnsInventoryMode.IgnoreIfAssignedToUnload, true)}/{Transporter.MassCapacity}"));
+	        var val = CollectionsMassCalculator.MassUsage(this.Transporter.innerContainer.ToList(), IgnorePawnsInventoryMode.IgnoreIfAssignedToUnload, true);
+	        sb.AppendLine("CA_Storage".Translate($"{Math.Round(val, 1)}/{Transporter.MassCapacity}"));
 	        return sb.ToString().TrimEndNewlines();
         }
 
