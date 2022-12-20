@@ -83,7 +83,7 @@ Maximum distance: 200 tiles</description>
 		  <MaxHitPoints>600</MaxHitPoints>
 		  <WorkToBuild>60000</WorkToBuild>
 		  <Flammability>0.5</Flammability>
-		  <Mass>1200</Mass>
+		  <Mass>0</Mass>
 		  <Beauty>25</Beauty>
 		</statBases>
 		
@@ -219,7 +219,7 @@ Maximum distance: 300 tiles</description>
       <MaxHitPoints>800</MaxHitPoints>
       <WorkToBuild>90000</WorkToBuild>
       <Flammability>0.5</Flammability>
-      <Mass>3600</Mass>
+      <Mass>0</Mass>
       <Beauty>50</Beauty>
       <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret><!-- like level 8 human shooter -->
     </statBases>
@@ -328,7 +328,7 @@ Maximum distance: 300 tiles</description>
       <AccuracyLong>0.4</AccuracyLong>
       <RangedWeapon_Cooldown>3.8</RangedWeapon_Cooldown>
       <DeteriorationRate>0</DeteriorationRate>
-      <Mass>5</Mass>
+      <Mass>0</Mass>
       <Flammability>0</Flammability>
     </statBases>
     <verbs>
@@ -410,7 +410,7 @@ Maximum distance: 200 tiles</description>
       <MaxHitPoints>900</MaxHitPoints>
       <WorkToBuild>90000</WorkToBuild>
       <Flammability>0.4</Flammability>
-      <Mass>1800</Mass>
+      <Mass>0</Mass>
       <Beauty>100</Beauty>
       <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret><!-- like level 8 human shooter -->
     </statBases>
@@ -519,7 +519,7 @@ Maximum distance: 200 tiles</description>
       <AccuracyLong>0.25</AccuracyLong>
       <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
       <DeteriorationRate>0</DeteriorationRate>
-      <Mass>5</Mass>
+      <Mass>0</Mass>
       <Flammability>0</Flammability>
     </statBases>
     <verbs>
