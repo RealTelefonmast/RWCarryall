@@ -2,6 +2,7 @@
 
 <LanguageData>
 
+ <CA_Storage>Cargo Capacity: {0}</CA_Storage>
  <CA_Rotate>Rotate</CA_Rotate>
  <CA_AddToCarryall>Select Cargo</CA_AddToCarryall>
 

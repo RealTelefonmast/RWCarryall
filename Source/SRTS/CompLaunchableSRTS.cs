@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using UnityEngine;
 using Verse;
 using Verse.AI;
@@ -247,19 +248,34 @@ namespace SRTS
         }
 
         public override string CompInspectStringExtra()
-	    {
-	          if (!this.LoadingInProgressOrReadyToLaunch)
-		            return (string) null;
-	          if (!this.AllInGroupConnectedToFuelingPort)
-		            return "NotReadyForLaunch".Translate() + ": " + "NotAllInGroupConnectedToFuelingPort".Translate() + ".";
-	          if (!this.AllFuelingPortSourcesInGroupHaveAnyFuel)
-		            return "NotReadyForLaunch".Translate() + ": " + "NotAllFuelingPortSourcesInGroupHaveAnyFuel".Translate() + ".";
-	          if (this.AnyInGroupHasAnythingLeftToLoad)
-		            return "NotReadyForLaunch".Translate() + ": " + "TransportPodInGroupHasSomethingLeftToLoad".Translate() + ".";
-	          return "ReadyForLaunch".Translate();
-	    }
+        {
+	        StringBuilder sb = new StringBuilder();
+	        if (!this.LoadingInProgressOrReadyToLaunch) { }
 
-	    private void StartChoosingDestination()
+	        if (!this.AllInGroupConnectedToFuelingPort)
+	        {
+		        sb.AppendLine("NotReadyForLaunch".Translate() + ": " +
+		                      "NotAllInGroupConnectedToFuelingPort".Translate() + ".");
+	        }
+
+	        if (!this.AllFuelingPortSourcesInGroupHaveAnyFuel)
+	        {
+		        sb.AppendLine("NotReadyForLaunch".Translate() + ": " +
+		                      "NotAllFuelingPortSourcesInGroupHaveAnyFuel".Translate() + ".");
+	        }
+
+	        if (this.AnyInGroupHasAnythingLeftToLoad)
+	        {
+		        sb.AppendLine("NotReadyForLaunch".Translate() + ": " +
+		                      "TransportPodInGroupHasSomethingLeftToLoad".Translate() + ".");
+	        }
+
+	        sb.AppendLine("ReadyForLaunch".Translate());
+	        sb.AppendLine("CA_Storage".Translate(Transporter.Props.massCapacity));
+	        return sb.ToString().TrimEndNewlines();
+        }
+
+        private void StartChoosingDestination()
 	    {
 	        CameraJumper.TryJump(CameraJumper.GetWorldTarget(parent));
 	        Find.WorldSelector.ClearSelection();
@@ -475,10 +491,12 @@ namespace SRTS
 		                  comp2.GetType().GetField("fuel", BindingFlags.Instance | BindingFlags.NonPublic).SetValue((object) comp2, (object) fuelingPortSource.TryGetComp<CompRefuelable>().Fuel);
 		                  comp2.TargetFuelLevel = fuelingPortSource.TryGetComp<CompRefuelable>().TargetFuelLevel;
 		                  thing.stackCount = 1;
+		                  thing.HitPoints = parent.HitPoints;
 		                  directlyHeldThings.TryAddOrTransfer(thing, true);
 
 		                  // Neceros Edit
 		                  ActiveDropPod activeDropPod = (ActiveDropPod) ThingMaker.MakeThing(SRTSStatic.SkyfallerActiveDefByRot(this), null);
+		                  activeDropPod.HitPoints = parent.HitPoints;
 		                  activeDropPod.Contents = new ActiveDropPodInfo();
 		                  activeDropPod.Contents.innerContainer.TryAddRangeOrTransfer((IEnumerable<Thing>) directlyHeldThings, true, true);
 
