@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <CA_Rotate>Rotate</CA_Rotate>
+ <CA_Storage>Cargo Stored: {0}</CA_Storage>
+ <CA_Rotate>Rotate</CA_Rotate>
  <CA_AddToCarryall>Select Cargo</CA_AddToCarryall>
 
   <!-- Labels and Titles -->

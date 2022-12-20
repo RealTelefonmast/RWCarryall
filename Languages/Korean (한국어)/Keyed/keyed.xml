@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
+ <CA_Storage>적재 중량: {0}</CA_Storage>
  <CA_Rotate>방향 전환</CA_Rotate>
- <CA_AddToCarryall>적재물 선택</CA_AddToCarryall>
+ <CA_AddToCarryall>적재 대상 선택</CA_AddToCarryall>
 
   <SRTSExpanded>SRTS 확장</SRTSExpanded>
   <SRTSDef>SRTS Def</SRTSDef>
