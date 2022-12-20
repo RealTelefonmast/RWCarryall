@@ -251,19 +251,19 @@ namespace SRTS
         {
 	        StringBuilder sb = new StringBuilder();
 	        if (!this.LoadingInProgressOrReadyToLaunch) { }
-
+	        else
 	        if (!this.AllInGroupConnectedToFuelingPort)
 	        {
 		        sb.AppendLine("NotReadyForLaunch".Translate() + ": " +
 		                      "NotAllInGroupConnectedToFuelingPort".Translate() + ".");
 	        }
-
+			else
 	        if (!this.AllFuelingPortSourcesInGroupHaveAnyFuel)
 	        {
 		        sb.AppendLine("NotReadyForLaunch".Translate() + ": " +
 		                      "NotAllFuelingPortSourcesInGroupHaveAnyFuel".Translate() + ".");
 	        }
-
+			else
 	        if (this.AnyInGroupHasAnythingLeftToLoad)
 	        {
 		        sb.AppendLine("NotReadyForLaunch".Translate() + ": " +
@@ -271,7 +271,7 @@ namespace SRTS
 	        }
 
 	        sb.AppendLine("ReadyForLaunch".Translate());
-	        sb.AppendLine("CA_Storage".Translate(Transporter.Props.massCapacity));
+	        sb.AppendLine("CA_Storage".Translate($"{CollectionsMassCalculator.MassUsage(this.Transporter.innerContainer.ToList(), IgnorePawnsInventoryMode.IgnoreIfAssignedToUnload, true)}/{Transporter.MassCapacity}"));
 	        return sb.ToString().TrimEndNewlines();
         }
 
