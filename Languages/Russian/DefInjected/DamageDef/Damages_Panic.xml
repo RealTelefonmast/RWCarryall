@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<LanguageData>
-
-  <Crush_Carryall.label>паника</Crush_Carryall.label>
-  <Crush_Carryall.deathMessage>{0} {0_gender ? умер : умерла : умерло} от шока.</Crush_Carryall.deathMessage>
-
-
-</LanguageData>
