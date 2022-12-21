@@ -18,6 +18,7 @@ namespace SRTS
         public ThingDef eastSkyfallerActive;
         public ThingDef westSkyfallerActive;
 
+        public bool needsConfirmation;
         
         public float travelSpeed = 25f;
         public int minPassengers = 1;

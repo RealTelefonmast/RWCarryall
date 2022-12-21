@@ -122,6 +122,7 @@ Maximum distance: 200 tiles</description>
 				<westSkyfallerIncoming>Carryall_standard_R_Incoming</westSkyfallerIncoming>
 				<eastSkyfallerActive>Carryall_standard_Active</eastSkyfallerActive>
 				<westSkyfallerActive>Carryall_standard_R_Active</westSkyfallerActive>
+				<needsConfirmation>false</needsConfirmation>
 				<travelSpeed>5</travelSpeed>
 				<fuelPerTile>1.5</fuelPerTile>
 				<minPassengers>1</minPassengers>

@@ -160,6 +160,48 @@ namespace SRTS
 	    private Designator_AddToCarryall designator;
 
 	    private Designator_AddToCarryall AddToCarryallDesignator => designator ??= new Designator_AddToCarryall(this);
+
+	    private void TryLaunch()
+	    {
+		    if (SRTSProps.needsConfirmation)
+		    { 
+			    Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation("CA_ConfirmationScreen".Translate(), DoLaunchAction));
+		    }
+		    else
+		    {
+			    DoLaunchAction();
+		    }
+	    }
+
+	    private void DoLaunchAction()
+	    {
+		    int num = 0;
+		    foreach(Thing t in this.Transporter.innerContainer)
+		    {
+			    if(t is Pawn && (t as Pawn).IsColonist)
+			    {
+				    num++;
+			    }
+		    }
+		    if(SRTSMod.mod.settings.passengerLimits)
+		    {
+			    if (num < SRTSMod.GetStatFor<int>(this.parent.def.defName, StatName.minPassengers))
+			    {
+				    Messages.Message("NotEnoughPilots".Translate(), MessageTypeDefOf.RejectInput, false);
+				    return;
+			    }
+			    else if (num > SRTSMod.GetStatFor<int>(this.parent.def.defName, StatName.maxPassengers))
+			    {
+				    Messages.Message("TooManyPilots".Translate(), MessageTypeDefOf.RejectInput, false);
+				    return;
+			    }
+		    }
+
+		    if (this.AnyInGroupHasAnythingLeftToLoad)
+			    Find.WindowStack.Add((Window) Dialog_MessageBox.CreateConfirmation("ConfirmSendNotCompletelyLoadedPods".Translate(this.FirstThingLeftToLoadInGroup.LabelCapNoCount), StartChoosingDestination));
+		    else
+			    this.StartChoosingDestination();
+	    }
 	    
 	    public override IEnumerable<Gizmo> CompGetGizmosExtra()
 	    {
@@ -184,41 +226,12 @@ namespace SRTS
 	        };
 
 	        if (this.LoadingInProgressOrReadyToLaunch)
-	        {
-		        Command_Action launch = new Command_Action();
+	        { Command_Action launch = new Command_Action();
 		        launch.defaultLabel = "CommandLaunchGroup".Translate();
 		        launch.defaultDesc = "CommandLaunchGroupDesc".Translate();
 		        launch.icon = LaunchCommandTex;
 		        launch.alsoClickIfOtherInGroupClicked = false;
-		        launch.action = (Action) (() =>
-		        {
-			        int num = 0;
-			        foreach(Thing t in this.Transporter.innerContainer)
-			        {
-				        if(t is Pawn && (t as Pawn).IsColonist)
-				        {
-					        num++;
-				        }
-			        }
-			        if(SRTSMod.mod.settings.passengerLimits)
-			        {
-				        if (num < SRTSMod.GetStatFor<int>(this.parent.def.defName, StatName.minPassengers))
-				        {
-					        Messages.Message("NotEnoughPilots".Translate(), MessageTypeDefOf.RejectInput, false);
-					        return;
-				        }
-				        else if (num > SRTSMod.GetStatFor<int>(this.parent.def.defName, StatName.maxPassengers))
-				        {
-					        Messages.Message("TooManyPilots".Translate(), MessageTypeDefOf.RejectInput, false);
-					        return;
-				        }
-			        }
-
-		            if (this.AnyInGroupHasAnythingLeftToLoad)
-			            Find.WindowStack.Add((Window) Dialog_MessageBox.CreateConfirmation("ConfirmSendNotCompletelyLoadedPods".Translate(this.FirstThingLeftToLoadInGroup.LabelCapNoCount), StartChoosingDestination));
-		            else
-			            this.StartChoosingDestination();
-		        });
+		        launch.action = (Action) (TryLaunch);
 		        if (!this.AllInGroupConnectedToFuelingPort)
 		            launch.Disable("CommandLaunchGroupFailNotConnectedToFuelingPort".Translate());
 		        else if (!this.AllFuelingPortSourcesInGroupHaveAnyFuel)

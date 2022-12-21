@@ -2,11 +2,12 @@
 
 <LanguageData>
 
- <CA_Storage>Cargo Stored: {0}</CA_Storage>
- <CA_Rotate>Rotate</CA_Rotate>
- <CA_AddToCarryall>Select Cargo</CA_AddToCarryall>
+	 <CA_Storage>Cargo Stored: {0}</CA_Storage>
+	 <CA_Rotate>Rotate</CA_Rotate>
+	 <CA_AddToCarryall>Select Cargo</CA_AddToCarryall>
 
-
+	<CA_ConfirmationScreen>Are you ready to launch?</CA_ConfirmationScreen>
+	
   <!-- Labels and Titles -->
   <SRTSExpanded>SRTS Expanded</SRTSExpanded>
   <SRTSDef>SRTS Def</SRTSDef>
