@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Research_Carryalls.label>стандартный транспорт</Research_Carryalls.label>
+  <Research_Carryalls.description>Фундаментальные исследования летательных аппаратов вертикального взлета и посадки, предназначенных для межконтинентальных перевозок. Дает возможность создавать стандартный транспорт.</Research_Carryalls.description>
+
+  <Research_Carryall_GDI.label>грузовой транспорт</Research_Carryall_GDI.label>
+  <Research_Carryall_GDI.description>Дает возможность создавать грузовой транспорт типа "Вол" для массовой перевозки грузов.</Research_Carryall_GDI.description>
+
+  <Research_Carryall_Nod.label>десантный транспорт</Research_Carryall_Nod.label>
+  <Research_Carryall_Nod.description>Дает возможность создавать десантный транспорт типа "Вертиго" для десантно-штурмовых операций.</Research_Carryall_Nod.description>
+
+
+</LanguageData>

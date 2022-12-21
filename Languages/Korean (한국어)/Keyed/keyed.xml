@@ -4,6 +4,8 @@
  <CA_Storage>적재 중량: {0}</CA_Storage>
  <CA_Rotate>방향 전환</CA_Rotate>
  <CA_AddToCarryall>적재 대상 선택</CA_AddToCarryall>
+ <CA_ConfirmationScreen>정말 출발하시겠습니까?
+일단 비행이 시작되면 목적지에 도달할 때까지 멈출 수 없습니다.</CA_ConfirmationScreen>
 
   <SRTSExpanded>SRTS 확장</SRTSExpanded>
   <SRTSDef>SRTS Def</SRTSDef>

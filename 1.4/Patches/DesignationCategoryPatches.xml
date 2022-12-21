@@ -8,7 +8,7 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/DesignationCategoryDef[defName="Ship"]</xpath>
 		<value>
-			<researchPrerequisites><li>Fabrication</li></researchPrerequisites>
+			<researchPrerequisites><li>MicroelectronicsBasics</li></researchPrerequisites>
 		</value>
 	</Operation>
 	

@@ -2,6 +2,260 @@
 <Defs>
 
   <ThingDef ParentName="ShuttleSkyfallerBase">
+    <defName>Airship_Kirov_Leaving</defName>
+    <label>kirov airship (leaving)</label>	
+	<thingClass>SRTS.SRTSLeaving</thingClass>
+    <graphicData>
+      <texPath>Carryall/AirshipKirov</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>(6,6)</drawSize>
+	  <color>(255,255,255)</color>
+    </graphicData>
+    <skyfaller>
+      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
+      <shadowSize>(4,2)</shadowSize>
+      <motesPerCell>1</motesPerCell>
+      <reversed>true</reversed>
+      <anticipationSound>Shuttle_Leaving</anticipationSound>
+      <anticipationSoundTicks>-20</anticipationSoundTicks>
+      <ticksToImpactRange>-30~-15</ticksToImpactRange>
+      <moteSpawnTime>0.05</moteSpawnTime>
+      <angleCurve>
+        <points>
+          <li>(0,90)</li>
+		  <li>(0.2,90)</li>
+		  <li>(1,50)</li>
+        </points>
+      </angleCurve>
+      <rotationCurve>
+        <points>
+          <li>(0,90)</li>
+		  <li>(0.95,90)</li>
+		  <li>(0.5,85)</li>
+		  <li>(1,85)</li>
+        </points>
+      </rotationCurve>
+      <zPositionCurve>
+        <points>
+          <li>(0,0)</li>
+          <li>(0.2,2)</li>
+        </points>
+      </zPositionCurve>
+      <speedCurve>
+        <points>
+          <li>(0,0)</li>
+		  <li>(0.2,0.003)</li>
+		  <li>(1,0.25)</li>
+        </points>
+      </speedCurve>
+	  <speed>0.5</speed>
+    </skyfaller>
+  </ThingDef>
+
+<ThingDef ParentName="ShuttleSkyfallerBase">
+    <defName>Airship_Kirov_Incoming</defName>
+    <label>kirov airship (incoming)</label>
+	<thingClass>SRTS.SRTSIncoming</thingClass>
+    <graphicData>
+      <texPath>Carryall/AirshipKirov</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>(6,6)</drawSize>
+	  <color>(255,255,255)</color>
+    </graphicData>
+    <skyfaller>
+      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
+      <shadowSize>(4,2)</shadowSize>
+      <motesPerCell>1</motesPerCell>
+      <anticipationSound>Shuttle_Landing</anticipationSound>
+      <anticipationSoundTicks>250</anticipationSoundTicks>
+      <ticksToImpactRange>900~950</ticksToImpactRange>
+      <angleCurve>
+        <points>
+          <li>(0,-40)</li>
+		  <li>(1,-90)</li>
+        </points>
+      </angleCurve>
+      <rotationCurve>
+        <points>
+		  <li>(0,-85)</li>
+		  <li>(0.5,-85)</li>
+		  <li>(0.95,-90)</li>
+          <li>(1,-90)</li>
+        </points>
+      </rotationCurve>
+      <zPositionCurve>
+        <points>
+          <li>(0.8,2)</li>
+          <li>(1,0)</li>
+        </points>
+      </zPositionCurve>
+      <speedCurve>
+        <points>
+		  <li>(0,0.25)</li>
+		  <li>(1,0)</li>
+        </points>
+      </speedCurve>
+	  <speed>0.5</speed>
+      <explosionRadius>0.025</explosionRadius>
+      <explosionDamage>Lands_Carryall</explosionDamage>
+	  <explosionDamageFactor>0.5</explosionDamageFactor>
+    </skyfaller>
+  </ThingDef>
+  
+  <ThingDef>
+    <defName>Airship_Kirov_Active</defName>
+    <label>kirov airship</label>
+    <category>Item</category>
+    <thingClass>ActiveDropPod</thingClass>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Carryall/AirshipKirov</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(6,6)</drawSize>
+    </graphicData>
+    <altitudeLayer>Skyfaller</altitudeLayer>
+    <blockWind>false</blockWind>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>600</MaxHitPoints>
+      <Flammability>1.2</Flammability>
+    </statBases>
+    <selectable>true</selectable>
+  </ThingDef>
+
+
+  
+    <ThingDef ParentName="ShuttleSkyfallerBase">
+    <defName>Airship_Kirov_R_Leaving</defName>
+    <label>kirov airship (leaving)</label>	
+	<thingClass>SRTS.SRTSLeaving</thingClass>
+    <graphicData>
+      <texPath>Carryall/AirshipKirov_R</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>(6,6)</drawSize>
+	  <color>(255,255,255)</color>
+    </graphicData>
+    <skyfaller>
+      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
+      <shadowSize>(4,2)</shadowSize>
+      <motesPerCell>1</motesPerCell>	
+      <reversed>true</reversed>
+      <anticipationSound>Shuttle_Leaving</anticipationSound>
+      <anticipationSoundTicks>-20</anticipationSoundTicks>
+      <ticksToImpactRange>-30~-15</ticksToImpactRange>
+      <moteSpawnTime>0.05</moteSpawnTime>
+      <angleCurve>
+        <points>
+          <li>(0,-90)</li>
+		  <li>(0.2,-90)</li>
+		  <li>(1,-50)</li>
+        </points>
+      </angleCurve>
+      <rotationCurve>
+        <points>
+          <li>(0,90)</li>
+		  <li>(0.95,90)</li>
+		  <li>(0.5,95)</li>
+		  <li>(1,95)</li>
+        </points>
+      </rotationCurve>
+      <zPositionCurve>
+        <points>
+          <li>(0,0)</li>
+          <li>(0.2,2)</li>
+        </points>
+      </zPositionCurve>
+      <speedCurve>
+        <points>
+          <li>(0,0)</li>
+		  <li>(0.2,0.003)</li>
+		  <li>(1,0.25)</li>
+        </points>
+      </speedCurve>
+	  <speed>0.5</speed>
+    </skyfaller>
+  </ThingDef>
+  
+<ThingDef ParentName="ShuttleSkyfallerBase">
+    <defName>Airship_Kirov_R_Incoming</defName>
+    <label>kirov airship (incoming)</label>
+	<thingClass>SRTS.SRTSIncoming</thingClass>
+    <graphicData>
+      <texPath>Carryall/AirshipKirov_R</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>(6,6)</drawSize>
+	  <color>(255,255,255)</color>
+    </graphicData>
+    <skyfaller>
+      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
+      <shadowSize>(4,2)</shadowSize>
+      <motesPerCell>1</motesPerCell>
+      <anticipationSound>Shuttle_Landing</anticipationSound>
+      <anticipationSoundTicks>250</anticipationSoundTicks>
+      <ticksToImpactRange>900~950</ticksToImpactRange>
+      <angleCurve>
+        <points>
+          <li>(0,40)</li>
+		  <li>(1,90)</li>
+        </points>
+      </angleCurve>
+      <rotationCurve>
+        <points>
+		  <li>(0,-95)</li>
+		  <li>(0.5,-95)</li>
+		  <li>(0.95,-90)</li>
+          <li>(1,-90)</li>
+        </points>
+      </rotationCurve>
+      <zPositionCurve>
+        <points>
+          <li>(0.8,2)</li>
+          <li>(1,0)</li>
+        </points>
+      </zPositionCurve>
+      <speedCurve>
+        <points>
+		  <li>(0,0.25)</li>
+		  <li>(1,0)</li>
+        </points>
+      </speedCurve>
+	  <speed>0.5</speed>
+      <explosionRadius>0.025</explosionRadius>
+      <explosionDamage>Lands_Carryall</explosionDamage>
+	  <explosionDamageFactor>0.5</explosionDamageFactor>
+    </skyfaller>
+  </ThingDef>
+ 
+  <ThingDef>
+    <defName>Airship_Kirov_R_Active</defName>
+    <label>kirov airship</label>
+    <category>Item</category>
+    <thingClass>ActiveDropPod</thingClass>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Carryall/AirshipKirov_R</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(6,6)</drawSize>
+    </graphicData>
+    <altitudeLayer>Skyfaller</altitudeLayer>
+    <blockWind>false</blockWind>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>600</MaxHitPoints>
+      <Flammability>1.2</Flammability>
+    </statBases>
+    <selectable>true</selectable>
+  </ThingDef>
+  
+  
+
+  <ThingDef ParentName="ShuttleSkyfallerBase">
     <defName>Carryall_standard_Leaving</defName>
     <label>standard carryall (leaving)</label>	
 	<thingClass>SRTS.SRTSLeaving</thingClass>
@@ -18,8 +272,8 @@
       <motesPerCell>1</motesPerCell>	
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
-      <anticipationSoundTicks>-10</anticipationSoundTicks>
-      <ticksToImpactRange>-40~-15</ticksToImpactRange>
+      <anticipationSoundTicks>-20</anticipationSoundTicks>
+      <ticksToImpactRange>-30~-15</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
@@ -69,7 +323,7 @@
       <motesPerCell>1</motesPerCell>
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
-      <ticksToImpactRange>200~250</ticksToImpactRange>
+      <ticksToImpactRange>550~600</ticksToImpactRange>
       <angleCurve>
         <points>
           <li>(0,-75)</li>
@@ -118,7 +372,7 @@
     <blockWind>false</blockWind>
     <useHitPoints>true</useHitPoints>
     <statBases>
-      <MaxHitPoints>550</MaxHitPoints>
+      <MaxHitPoints>600</MaxHitPoints>
       <Flammability>0.5</Flammability>
     </statBases>
     <selectable>true</selectable>
@@ -143,8 +397,8 @@
       <motesPerCell>1</motesPerCell>	
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
-      <anticipationSoundTicks>-10</anticipationSoundTicks>
-      <ticksToImpactRange>-40~-15</ticksToImpactRange>
+      <anticipationSoundTicks>-20</anticipationSoundTicks>
+      <ticksToImpactRange>-30~-15</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
@@ -194,7 +448,7 @@
       <motesPerCell>1</motesPerCell>
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
-      <ticksToImpactRange>200~250</ticksToImpactRange>
+      <ticksToImpactRange>550~600</ticksToImpactRange>
       <angleCurve>
         <points>
           <li>(0,75)</li>
@@ -243,7 +497,7 @@
     <blockWind>false</blockWind>
     <useHitPoints>true</useHitPoints>
     <statBases>
-      <MaxHitPoints>550</MaxHitPoints>
+      <MaxHitPoints>600</MaxHitPoints>
       <Flammability>0.5</Flammability>
     </statBases>
     <selectable>true</selectable>
@@ -267,8 +521,8 @@
       <motesPerCell>1</motesPerCell>	
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
-      <anticipationSoundTicks>-10</anticipationSoundTicks>
-      <ticksToImpactRange>-40~-15</ticksToImpactRange>
+      <anticipationSoundTicks>-20</anticipationSoundTicks>
+      <ticksToImpactRange>-30~-15</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
@@ -318,7 +572,7 @@
       <motesPerCell>1</motesPerCell>	
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
-      <ticksToImpactRange>200~250</ticksToImpactRange>
+      <ticksToImpactRange>550~600</ticksToImpactRange>
       <angleCurve>
         <points>
           <li>(0,-75)</li>
@@ -391,8 +645,8 @@
       <motesPerCell>1</motesPerCell>	
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
-      <anticipationSoundTicks>-10</anticipationSoundTicks>
-      <ticksToImpactRange>-40~-15</ticksToImpactRange>
+      <anticipationSoundTicks>-20</anticipationSoundTicks>
+      <ticksToImpactRange>-30~-15</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
@@ -442,7 +696,7 @@
       <motesPerCell>1</motesPerCell>	
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
-      <ticksToImpactRange>200~250</ticksToImpactRange>
+      <ticksToImpactRange>550~600</ticksToImpactRange>
       <angleCurve>
         <points>
           <li>(0,75)</li>
@@ -516,8 +770,8 @@
       <motesPerCell>1</motesPerCell>	
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
-      <anticipationSoundTicks>-10</anticipationSoundTicks>
-      <ticksToImpactRange>-40~-15</ticksToImpactRange>
+      <anticipationSoundTicks>-20</anticipationSoundTicks>
+      <ticksToImpactRange>-30~-15</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
@@ -567,7 +821,7 @@
       <motesPerCell>1</motesPerCell>	
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
-      <ticksToImpactRange>200~250</ticksToImpactRange>
+      <ticksToImpactRange>550~600</ticksToImpactRange>
       <angleCurve>
         <points>
           <li>(0,-83)</li>
@@ -614,7 +868,11 @@
     </graphicData>
     <altitudeLayer>Skyfaller</altitudeLayer>
     <blockWind>false</blockWind>
-    <useHitPoints>false</useHitPoints>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>800</MaxHitPoints>
+      <Flammability>0.4</Flammability>
+    </statBases>
     <selectable>true</selectable>
   </ThingDef>
   
@@ -636,8 +894,8 @@
       <motesPerCell>1</motesPerCell>	
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
-      <anticipationSoundTicks>-10</anticipationSoundTicks>
-      <ticksToImpactRange>-40~-15</ticksToImpactRange>
+      <anticipationSoundTicks>-20</anticipationSoundTicks>
+      <ticksToImpactRange>-30~-15</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
@@ -687,7 +945,7 @@
       <motesPerCell>1</motesPerCell>	
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
-      <ticksToImpactRange>200~250</ticksToImpactRange>
+      <ticksToImpactRange>550~600</ticksToImpactRange>
       <angleCurve>
         <points>
           <li>(0,85)</li>

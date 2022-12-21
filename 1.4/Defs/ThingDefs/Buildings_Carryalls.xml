@@ -5,6 +5,7 @@
 	<ThingDef Name="CarryallBase" ParentName="BuildingBase" Abstract="True">
 		<category>Building</category>
 		<thingClass>Building</thingClass>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		<selectable>true</selectable>
 		<drawerType>MapMeshAndRealTime</drawerType>
@@ -13,10 +14,9 @@
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
 		<statBases>
-			<SellPriceFactor>0.70</SellPriceFactor>
+			<SellPriceFactor>0.6</SellPriceFactor>
 		</statBases>
 		<tickerType>Normal</tickerType>
-		<altitudeLayer>Skyfaller</altitudeLayer>
 		<stealable>false</stealable>
 		<inspectorTabs>
 			<li>ITab_ContentsTransporter</li>
@@ -27,7 +27,6 @@
 		<killedLeavings>
 			<ChunkSlagSteel>12</ChunkSlagSteel>
 		</killedLeavings>
-		<comps />
 		<holdsRoof>true</holdsRoof>
 		<uiIconScale>1.2</uiIconScale>
 		<damageMultipliers>
@@ -37,7 +36,137 @@
 			</li>
 		</damageMultipliers>
 	</ThingDef>
-	
+
+	<ThingDef ParentName="CarryallBase">
+		<defName>Airship_Kirov</defName>
+		<label>kirov airship</label>
+		<description>An airship model with scary nose art, used by the ancients who liked to paint everything red. It's just slightly faster than walking speed, but unaffected by terrain so can easily cross sea and mountains. 
+		
+		The weapon is not ready due to incomplete blueprints. but if it burns, will cause a huge explosion.
+
+Seat: 8
+Speed: 1
+Cargo capacity: 1400kg
+
+Fuel capacity: 100
+Fuel efficiency: 0.5 per tile</description>
+
+		<fillPercent>0.95</fillPercent>
+		<pathCost>75</pathCost>
+		<blockWind>false</blockWind>
+		<rotatable>true</rotatable>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<canOverlapZones>true</canOverlapZones>
+		<preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+		<repairEffect>ConstructMetal</repairEffect>
+		<forceDebugSpawnable>true</forceDebugSpawnable>
+		<minifiedDef />
+		<uiIconPath>Carryall/AirshipKirov</uiIconPath>
+		
+		<graphicData>
+		  <texPath>Carryall/AirshipKirov</texPath>
+		  <shaderType>CutoutFlying</shaderType>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(6,6)</drawSize>
+		  <drawRotated>false</drawRotated>
+		  <shadowData>
+			<volume>(2, 2, 4)</volume><!--width, vertical, height-->
+			<offset>(0, 0, 0.2)</offset>
+		  </shadowData>
+		</graphicData>
+		
+		<size>(3,3)</size>
+		
+		<statBases>
+		  <MaxHitPoints>2000</MaxHitPoints>
+		  <WorkToBuild>30000</WorkToBuild>
+		  <Flammability>4</Flammability>
+		  <Mass>1</Mass>
+		  <Beauty>10</Beauty>
+		</statBases>
+		
+		<costList>
+		  <Cloth>750</Cloth>
+		  <Steel>750</Steel>
+		  <ComponentIndustrial>12</ComponentIndustrial>
+		</costList>
+
+		<building>
+			<claimable>false</claimable>
+			<soundAmbient>ShuttleIdle_Ambience</soundAmbient>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+			<expandHomeArea>false</expandHomeArea>
+			<ai_combatDangerous>true</ai_combatDangerous>
+		</building>
+
+		<comps>
+		  
+			<li Class="CompProperties_Transporter">
+				<restEffectiveness>0.7</restEffectiveness>
+				<massCapacity>1400</massCapacity>
+				<max1PerGroup>false</max1PerGroup>
+				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
+				<showOverallStats>false</showOverallStats>
+				<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
+				<pawnExitSound>Shuttle_PawnExit</pawnExitSound>
+			</li>
+		
+			<li Class="SRTS.CompProperties_LaunchableSRTS">
+				<eastSkyfaller>Airship_Kirov_Leaving</eastSkyfaller>
+				<westSkyfaller>Airship_Kirov_R_Leaving</westSkyfaller>
+				<eastSkyfallerIncoming>Airship_Kirov_Incoming</eastSkyfallerIncoming>
+				<westSkyfallerIncoming>Airship_Kirov_R_Incoming</westSkyfallerIncoming>
+				<eastSkyfallerActive>Airship_Kirov_Active</eastSkyfallerActive>
+				<westSkyfallerActive>Airship_Kirov_R_Active</westSkyfallerActive>
+				<needsConfirmation>true</needsConfirmation>
+				<travelSpeed>1</travelSpeed>
+				<fuelPerTile>0.5</fuelPerTile>
+				<minPassengers>1</minPassengers>
+				<maxPassengers>8</maxPassengers>
+			</li>
+		  
+		  <li Class="CompProperties_Refuelable">
+			<fuelCapacity>100</fuelCapacity>
+			<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+			<initialConfigurableTargetFuelLevel>0.3</initialConfigurableTargetFuelLevel>
+			<fuelFilter>
+			  <thingDefs>
+				<li>Chemfuel</li>
+			  </thingDefs>
+			</fuelFilter>
+			<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+			<initialFuelPercent>0</initialFuelPercent>
+			<autoRefuelPercent>0.9</autoRefuelPercent>
+			<showFuelGizmo>true</showFuelGizmo>
+			<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+			<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+		  </li>
+		  
+		  <li Class="CompProperties_Breakdownable" />
+		  
+		  <li Class="CompProperties_Flickable" />
+		  
+			<!--<li Class="CompProperties_Glower">
+				<glowRadius>9</glowRadius>
+				<glowColor>(120,120,120,0)</glowColor>
+			</li>-->
+			
+		  <li Class="CompProperties_Explosive">
+			<wickTicks>240</wickTicks>
+			<damageAmountBase>400</damageAmountBase>
+			<explosiveRadius>9.9</explosiveRadius>
+			<explosiveDamageType>Flame</explosiveDamageType>
+			<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+			<chanceToStartFire>0.5</chanceToStartFire>
+		  </li>
+		</comps>
+		<researchPrerequisites>
+		  <li>MicroelectronicsBasics</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+	</ThingDef>
+
 
 	<ThingDef ParentName="CarryallBase">
 		<defName>Carryall_standard</defName>
@@ -45,14 +174,12 @@
 		<description>A minor replica model of the standard space shuttle from the stellar empire, but with no orbital navigation capabilities. It can completely free your settlement from isolation.
 
 Seat: 5
-Speed: 5
+Speed: 4
 Cargo capacity: 550kg
 
-Fuel capacity: 300
-Fuel efficiency: 1.5 per tile
-Maximum distance: 200 tiles</description>
+Fuel capacity: 200
+Fuel efficiency: 1.5 per tile</description>
 
-		<altitudeLayer>Building</altitudeLayer>
 		<fillPercent>0.75</fillPercent>
 		<pathCost>75</pathCost>
 		<blockWind>false</blockWind>
@@ -83,12 +210,12 @@ Maximum distance: 200 tiles</description>
 		  <MaxHitPoints>600</MaxHitPoints>
 		  <WorkToBuild>60000</WorkToBuild>
 		  <Flammability>0.5</Flammability>
-		  <Mass>0</Mass>
+		  <Mass>1</Mass>
 		  <Beauty>25</Beauty>
 		</statBases>
 		
 		<costList>
-		  <Steel>1200</Steel>
+		  <Steel>1000</Steel>
 		  <Plasteel>250</Plasteel>
 		  <Gold>50</Gold>
 		  <ComponentIndustrial>15</ComponentIndustrial>
@@ -123,23 +250,23 @@ Maximum distance: 200 tiles</description>
 				<eastSkyfallerActive>Carryall_standard_Active</eastSkyfallerActive>
 				<westSkyfallerActive>Carryall_standard_R_Active</westSkyfallerActive>
 				<needsConfirmation>false</needsConfirmation>
-				<travelSpeed>5</travelSpeed>
+				<travelSpeed>4</travelSpeed>
 				<fuelPerTile>1.5</fuelPerTile>
 				<minPassengers>1</minPassengers>
 				<maxPassengers>5</maxPassengers>
 			</li>
 		  
 		  <li Class="CompProperties_Refuelable">
-			<fuelCapacity>300</fuelCapacity>
+			<fuelCapacity>150</fuelCapacity>
 			<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-			<initialConfigurableTargetFuelLevel>0</initialConfigurableTargetFuelLevel>
+			<initialConfigurableTargetFuelLevel>0.3</initialConfigurableTargetFuelLevel>
 			<fuelFilter>
 			  <thingDefs>
 				<li>Chemfuel</li>
 			  </thingDefs>
 			</fuelFilter>
 			<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-			<initialFuelPercent>0.3</initialFuelPercent>
+			<initialFuelPercent>0</initialFuelPercent>
 			<autoRefuelPercent>0.9</autoRefuelPercent>
 			<showFuelGizmo>true</showFuelGizmo>
 			<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
@@ -157,7 +284,7 @@ Maximum distance: 200 tiles</description>
 			
 		  <li Class="CompProperties_Explosive">
 			<wickTicks>240</wickTicks>
-			<damageAmountBase>160</damageAmountBase>
+			<damageAmountBase>120</damageAmountBase>
 			<explosiveRadius>5.9</explosiveRadius>
 			<explosiveDamageType>Flame</explosiveDamageType>
 			<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
@@ -165,9 +292,6 @@ Maximum distance: 200 tiles</description>
 			<chanceToStartFire>0.5</chanceToStartFire>
 		  </li>
 		</comps>
-		<placeWorkers>
-		  <li>PlaceWorker_NotUnderRoof</li>
-		</placeWorkers>
 		<researchPrerequisites>
 		  <li>Research_Carryalls</li>
 		</researchPrerequisites>
@@ -182,15 +306,13 @@ Maximum distance: 200 tiles</description>
 Ox carryall is equipped with a small turret. This is helpful in battle, but consumes a lot of fuel. Always remember that you need enough fuel to get back home.
 
 Seat: 4
-Speed: 4
+Speed: 3.5
 Cargo capacity: 1,800kg
 
-Fuel capacity: 900
-Fuel efficiency: 3 per tile
-Maximum distance: 300 tiles</description>
+Fuel capacity: 600
+Fuel efficiency: 3 per tile</description>
 
 	<thingClass>Building_TurretGun</thingClass>
-	<altitudeLayer>Building</altitudeLayer>
 	<pathCost>75</pathCost>
     <blockWind>false</blockWind>
     <rotatable>false</rotatable>
@@ -220,13 +342,13 @@ Maximum distance: 300 tiles</description>
       <MaxHitPoints>800</MaxHitPoints>
       <WorkToBuild>90000</WorkToBuild>
       <Flammability>0.5</Flammability>
-      <Mass>0</Mass>
+      <Mass>1</Mass>
       <Beauty>50</Beauty>
       <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret><!-- like level 8 human shooter -->
     </statBases>
 	
     <costList>
-      <Steel>2500</Steel>
+      <Steel>2000</Steel>
       <Plasteel>300</Plasteel>
 	  <Gold>150</Gold>
       <ComponentIndustrial>30</ComponentIndustrial>
@@ -249,23 +371,24 @@ Maximum distance: 300 tiles</description>
 		<westSkyfallerIncoming>Carryall_GDI_R_Incoming</westSkyfallerIncoming>
 		<eastSkyfallerActive>Carryall_GDI_Active</eastSkyfallerActive>
 		<westSkyfallerActive>Carryall_GDI_R_Active</westSkyfallerActive>
-        <travelSpeed>4</travelSpeed>
+		<needsConfirmation>false</needsConfirmation>
+        <travelSpeed>3.5</travelSpeed>
         <fuelPerTile>3</fuelPerTile>
         <minPassengers>1</minPassengers>
         <maxPassengers>4</maxPassengers>
       </li>
 	  
       <li Class="CompProperties_Refuelable">
-        <fuelCapacity>900</fuelCapacity>
+        <fuelCapacity>600</fuelCapacity>
         <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-        <initialConfigurableTargetFuelLevel>0</initialConfigurableTargetFuelLevel>
+        <initialConfigurableTargetFuelLevel>0.3</initialConfigurableTargetFuelLevel>
         <fuelFilter>
           <thingDefs>
             <li>Chemfuel</li>
           </thingDefs>
         </fuelFilter>
         <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-        <initialFuelPercent>0.3</initialFuelPercent>
+        <initialFuelPercent>0</initialFuelPercent>
         <autoRefuelPercent>0.9</autoRefuelPercent>
         <showFuelGizmo>true</showFuelGizmo>
         <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
@@ -283,7 +406,7 @@ Maximum distance: 300 tiles</description>
 		
       <li Class="CompProperties_Explosive">
         <wickTicks>240</wickTicks>
-		<damageAmountBase>240</damageAmountBase>
+		<damageAmountBase>200</damageAmountBase>
         <explosiveRadius>6.9</explosiveRadius>
         <explosiveDamageType>Flame</explosiveDamageType>
         <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
@@ -303,8 +426,6 @@ Maximum distance: 300 tiles</description>
       <turretBurstCooldownTime>3.8</turretBurstCooldownTime>
     </building>
     <placeWorkers>
-	  <li>PlaceWorker_NotUnderRoof</li>
-      <li>PlaceWorker_TurretTop</li>
       <li>PlaceWorker_ShowTurretRadius</li>
     </placeWorkers>
     <researchPrerequisites>
@@ -329,7 +450,7 @@ Maximum distance: 300 tiles</description>
       <AccuracyLong>0.4</AccuracyLong>
       <RangedWeapon_Cooldown>3.8</RangedWeapon_Cooldown>
       <DeteriorationRate>0</DeteriorationRate>
-      <Mass>0</Mass>
+      <Mass>1</Mass>
       <Flammability>0</Flammability>
     </statBases>
     <verbs>
@@ -373,15 +494,13 @@ Maximum distance: 300 tiles</description>
 Vertigo carryall is equipped with a minigun turret. This is helpful in battle, but consumes a lot of fuel. Always remember that you need enough fuel to get back home.
 
 Seat: 10
-Speed: 8
+Speed: 5
 Cargo capacity: 900kg
 
-Fuel capacity: 600
-Fuel efficiency: 3 per tile
-Maximum distance: 200 tiles</description>
+Fuel capacity: 450
+Fuel efficiency: 3 per tile</description>
 
 	<thingClass>Building_TurretGun</thingClass>
-	<altitudeLayer>Building</altitudeLayer>
 	<pathCost>75</pathCost>
     <blockWind>false</blockWind>
     <rotatable>false</rotatable>
@@ -411,13 +530,13 @@ Maximum distance: 200 tiles</description>
       <MaxHitPoints>900</MaxHitPoints>
       <WorkToBuild>90000</WorkToBuild>
       <Flammability>0.4</Flammability>
-      <Mass>0</Mass>
+      <Mass>1</Mass>
       <Beauty>100</Beauty>
       <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret><!-- like level 8 human shooter -->
     </statBases>
 	
     <costList>
-      <Steel>1750</Steel>
+      <Steel>1500</Steel>
       <Plasteel>500</Plasteel>
       <Uranium>250</Uranium>
       <ComponentIndustrial>15</ComponentIndustrial>
@@ -440,6 +559,7 @@ Maximum distance: 200 tiles</description>
 		<westSkyfallerIncoming>Carryall_Nod_R_Incoming</westSkyfallerIncoming>
 		<eastSkyfallerActive>Carryall_Nod_Active</eastSkyfallerActive>
 		<westSkyfallerActive>Carryall_Nod_R_Active</westSkyfallerActive>
+		<needsConfirmation>false</needsConfirmation>
         <travelSpeed>8</travelSpeed>
         <fuelPerTile>3</fuelPerTile>
         <minPassengers>1</minPassengers>
@@ -447,9 +567,9 @@ Maximum distance: 200 tiles</description>
       </li>
 	  
       <li Class="CompProperties_Refuelable">
-        <fuelCapacity>600</fuelCapacity>
+        <fuelCapacity>450</fuelCapacity>
         <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-        <initialConfigurableTargetFuelLevel>0</initialConfigurableTargetFuelLevel>
+        <initialConfigurableTargetFuelLevel>0.3</initialConfigurableTargetFuelLevel>
         <fuelFilter>
           <thingDefs>
             <li>Chemfuel</li>
@@ -457,7 +577,7 @@ Maximum distance: 200 tiles</description>
         </fuelFilter>
 		<fuelConsumptionRate>3</fuelConsumptionRate>
         <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-        <initialFuelPercent>0.3</initialFuelPercent>
+        <initialFuelPercent>0</initialFuelPercent>
         <autoRefuelPercent>0.9</autoRefuelPercent>
         <showFuelGizmo>true</showFuelGizmo>
         <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
@@ -475,7 +595,7 @@ Maximum distance: 200 tiles</description>
 		
       <li Class="CompProperties_Explosive">
         <wickTicks>240</wickTicks>
-		<damageAmountBase>200</damageAmountBase>
+		<damageAmountBase>150</damageAmountBase>
         <explosiveRadius>6.9</explosiveRadius>
         <explosiveDamageType>Flame</explosiveDamageType>
         <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
@@ -495,7 +615,6 @@ Maximum distance: 200 tiles</description>
       <turretBurstCooldownTime>5</turretBurstCooldownTime>
     </building>
     <placeWorkers>
-	  <li>PlaceWorker_NotUnderRoof</li>
       <li>PlaceWorker_ShowTurretRadius</li>
     </placeWorkers>
     <researchPrerequisites>
@@ -520,7 +639,7 @@ Maximum distance: 200 tiles</description>
       <AccuracyLong>0.25</AccuracyLong>
       <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
       <DeteriorationRate>0</DeteriorationRate>
-      <Mass>0</Mass>
+      <Mass>1</Mass>
       <Flammability>0</Flammability>
     </statBases>
     <verbs>
