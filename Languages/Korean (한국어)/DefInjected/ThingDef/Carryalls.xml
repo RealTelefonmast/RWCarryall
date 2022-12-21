@@ -12,7 +12,7 @@
 
  
   <Airship_Kirov.label>키로프 비행선</Airship_Kirov.label>
-  <Airship_Kirov.description>무서운 얼굴 무늬가 그려진 비행선으로, 먼 옛날 모든 것에 붉은 칠을 하던 이들이 사용했다고 합니다. 걷는 속도보다 약간 빠른 정도지만 지형의 영향을 받지 않아 바다와 산을 쉽게 건널 수 있습니다.\n\n불완전한 설계도 탓에 무장은 구현할 수 없었습니다. 하지만 불타면 어마어마한 폭발을 일으킬 것입니다.\n\n좌석: 8\n속도: 1\n적재 용량: 1400kg\n\n연료 용량: 100\n연료 효율: 타일당 0.5L</Airship_Kirov.description>
+  <Airship_Kirov.description>무서운 얼굴 무늬가 그려진 비행선으로, 먼 옛날 모든 것에 붉은 칠을 하던 이들이 사용했다고 합니다. 걷는 것보다 약간 빨리 이동하는 정도이지만 지형의 영향을 받지 않아 바다와 산을 쉽게 건널 수 있습니다.\n\n불완전한 설계도 탓에 무장은 구현할 수 없었습니다. 하지만 불타면 어마어마한 폭발을 일으킬 것입니다.\n\n좌석: 8\n속도: 1\n적재 용량: 1400kg\n\n연료 용량: 100\n연료 효율: 타일당 0.5L</Airship_Kirov.description>
 
 
   <Carryall_standard.label>표준 캐리올</Carryall_standard.label>
