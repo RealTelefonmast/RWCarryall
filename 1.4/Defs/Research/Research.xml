@@ -12,6 +12,9 @@
     <prerequisites>
 	  <li>Fabrication</li>
     </prerequisites>
+    <hiddenPrerequisites>
+      <li>TransportPod</li>
+    </hiddenPrerequisites>
 	<researchViewX>15.00</researchViewX>
 	<researchViewY>1.5</researchViewY>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
@@ -29,8 +32,10 @@
     <techLevel>Spacer</techLevel>
     <prerequisites>
 	  <li>Research_Carryalls</li>
-	  <li>AdvancedFabrication</li>
     </prerequisites>
+    <hiddenPrerequisites>
+      <li>AdvancedFabrication</li>
+    </hiddenPrerequisites>
 	<researchViewX>16</researchViewX>
 	<researchViewY>1.5</researchViewY>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
@@ -48,8 +53,10 @@
     <techLevel>Spacer</techLevel>
     <prerequisites>
 	  <li>Research_Carryalls</li>
-	  <li>AdvancedFabrication</li>
     </prerequisites>
+    <hiddenPrerequisites>
+      <li>AdvancedFabrication</li>
+    </hiddenPrerequisites>
 	<researchViewX>16</researchViewX>
 	<researchViewY>2.1</researchViewY>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>

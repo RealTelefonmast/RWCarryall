@@ -39,17 +39,17 @@
 
 	<ThingDef ParentName="CarryallBase">
 		<defName>Airship_Kirov</defName>
-		<label>kirov airship</label>
-		<description>An airship model with scary nose art, used by the ancients who liked to paint everything red. It's just slightly faster than walking speed, but unaffected by terrain so can easily cross sea and mountains. 
+		<label>kirov carryall</label>
+		<description>An retro carryall model used by the ancients who liked to paint everything red. It's just slightly faster than walking speed, but unaffected by terrain so can easily cross sea and mountains.
 
-The weapon is not ready due to incomplete blueprints. but if it burns, will cause a huge explosion.
+Its original bomb rack is not ready due to lost technology, but still easy to the explode. Beware the fire.
 
 Seat: 8
-Speed: 1
+Speed: 1.2
 Cargo capacity: 1400kg
 
-Fuel capacity: 100
-Fuel efficiency: 0.5 per tile</description>
+Fuel capacity: 150
+Fuel efficiency: 1 per tile</description>
 
 		<fillPercent>0.95</fillPercent>
 		<pathCost>75</pathCost>
@@ -70,15 +70,15 @@ Fuel efficiency: 0.5 per tile</description>
 		  <drawSize>(6,6)</drawSize>
 		  <drawRotated>false</drawRotated>
 		  <shadowData>
-			<volume>(2, 2, 4)</volume><!--width, vertical, height-->
-			<offset>(0, 0, 0.2)</offset>
+			<volume>(2.1, 2.1, 4.2)</volume><!--width, vertical, height-->
+			<offset>(0, 0, -0.2)</offset>
 		  </shadowData>
 		</graphicData>
 		
 		<size>(3,3)</size>
 		
 		<statBases>
-		  <MaxHitPoints>2000</MaxHitPoints>
+		  <MaxHitPoints>1200</MaxHitPoints>
 		  <WorkToBuild>30000</WorkToBuild>
 		  <Flammability>4</Flammability>
 		  <Mass>1</Mass>
@@ -119,14 +119,14 @@ Fuel efficiency: 0.5 per tile</description>
 				<eastSkyfallerActive>Airship_Kirov_Active</eastSkyfallerActive>
 				<westSkyfallerActive>Airship_Kirov_R_Active</westSkyfallerActive>
 				<needsConfirmation>false</needsConfirmation>
-				<travelSpeed>1</travelSpeed>
-				<fuelPerTile>0.5</fuelPerTile>
+				<travelSpeed>1.2</travelSpeed>
+				<fuelPerTile>1</fuelPerTile>
 				<minPassengers>1</minPassengers>
 				<maxPassengers>8</maxPassengers>
 			</li>
 		  
 		  <li Class="CompProperties_Refuelable">
-			<fuelCapacity>100</fuelCapacity>
+			<fuelCapacity>150</fuelCapacity>
 			<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
 			<initialConfigurableTargetFuelLevel>0.3</initialConfigurableTargetFuelLevel>
 			<fuelFilter>
@@ -150,21 +150,24 @@ Fuel efficiency: 0.5 per tile</description>
 				<glowRadius>9</glowRadius>
 				<glowColor>(120,120,120,0)</glowColor>
 			</li>-->
-			
+
 		  <li Class="CompProperties_Explosive">
 			<wickTicks>240</wickTicks>
 			<damageAmountBase>400</damageAmountBase>
-			<explosiveRadius>9.9</explosiveRadius>
+			<explosiveRadius>10.9</explosiveRadius>
 			<explosiveDamageType>Flame</explosiveDamageType>
 			<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
 			<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
-			<chanceToStartFire>0.5</chanceToStartFire>
+			<chanceToStartFire>0.9</chanceToStartFire>
+			<startWickHitPointsPercent>0.5</startWickHitPointsPercent>
+			<explosionEffect>GiantExplosion</explosionEffect>
 		  </li>
 		</comps>
 		<researchPrerequisites>
-		  <li>MicroelectronicsBasics</li>
+		  <li>TransportPod</li>
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<specialDisplayRadius>10.9</specialDisplayRadius>
 	</ThingDef>
 
 
@@ -285,11 +288,12 @@ Fuel efficiency: 1.5 per tile</description>
 		  <li Class="CompProperties_Explosive">
 			<wickTicks>240</wickTicks>
 			<damageAmountBase>120</damageAmountBase>
-			<explosiveRadius>5.9</explosiveRadius>
+			<explosiveRadius>3.9</explosiveRadius>
 			<explosiveDamageType>Flame</explosiveDamageType>
 			<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
 			<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
 			<chanceToStartFire>0.5</chanceToStartFire>
+			<startWickHitPointsPercent>0.2</startWickHitPointsPercent>
 		  </li>
 		</comps>
 		<researchPrerequisites>
@@ -406,12 +410,13 @@ Fuel efficiency: 3 per tile</description>
 		
       <li Class="CompProperties_Explosive">
         <wickTicks>240</wickTicks>
-		<damageAmountBase>200</damageAmountBase>
-        <explosiveRadius>6.9</explosiveRadius>
+		<damageAmountBase>180</damageAmountBase>
+        <explosiveRadius>5.9</explosiveRadius>
         <explosiveDamageType>Flame</explosiveDamageType>
         <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
 		<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
 		<chanceToStartFire>0.5</chanceToStartFire>
+		<startWickHitPointsPercent>0.2</startWickHitPointsPercent>
       </li>
 	</comps>
 
@@ -596,11 +601,12 @@ Fuel efficiency: 3 per tile</description>
       <li Class="CompProperties_Explosive">
         <wickTicks>240</wickTicks>
 		<damageAmountBase>150</damageAmountBase>
-        <explosiveRadius>6.9</explosiveRadius>
+        <explosiveRadius>4.9</explosiveRadius>
         <explosiveDamageType>Flame</explosiveDamageType>
         <requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
 		<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
-		<chanceToStartFire>0.5</chanceToStartFire>
+		<chanceToStartFire>0.4</chanceToStartFire>
+		<startWickHitPointsPercent>0.2</startWickHitPointsPercent>
       </li>
     </comps>
 
