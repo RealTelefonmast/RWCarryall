@@ -70,11 +70,14 @@
     <defName>Research_Airships</defName>
     <label>airship</label>
     <description>Basic research on airship designed for mass transportation. Unlocks the kirov airship.</description>
-    <baseCost>5000</baseCost>
+    <baseCost>4000</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
 	  <li>GasOperation</li>
     </prerequisites>
+    <hiddenPrerequisites>
+      <li>BiofuelRefining</li>
+    </hiddenPrerequisites>
     <researchViewX>10</researchViewX>
     <researchViewY>4.1</researchViewY>
   </ResearchProjectDef>

@@ -1,25 +1,34 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="ShuttleSkyfallerBase">
+	<ThingDef Name="CarryallSkyfallerBase" ParentName="SkyfallerBase" Abstract="True">
+		<size>(3,3)</size>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutFlying</shaderType>
+		</graphicData>
+		<skyfaller>
+			<movementType>Decelerate</movementType>
+			<shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
+			<motesPerCell>1</motesPerCell>
+		</skyfaller>
+	</ThingDef>
+
+
+  <ThingDef ParentName="CarryallSkyfallerBase">
     <defName>Airship_Kirov_Leaving</defName>
     <label>kirov airship (leaving)</label>	
 	<thingClass>SRTS.SRTSLeaving</thingClass>
     <graphicData>
       <texPath>Carryall/AirshipKirov</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutFlying</shaderType>
       <drawSize>(6,6)</drawSize>
-	  <color>(255,255,255)</color>
     </graphicData>
     <skyfaller>
-      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
       <shadowSize>(4,2)</shadowSize>
-      <motesPerCell>1</motesPerCell>
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
-      <ticksToImpactRange>-30~-15</ticksToImpactRange>
+      <ticksToImpactRange>-20</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
@@ -53,24 +62,19 @@
     </skyfaller>
   </ThingDef>
 
-<ThingDef ParentName="ShuttleSkyfallerBase">
+<ThingDef ParentName="CarryallSkyfallerBase">
     <defName>Airship_Kirov_Incoming</defName>
     <label>kirov airship (incoming)</label>
 	<thingClass>SRTS.SRTSIncoming</thingClass>
     <graphicData>
       <texPath>Carryall/AirshipKirov</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutFlying</shaderType>
       <drawSize>(6,6)</drawSize>
-	  <color>(255,255,255)</color>
     </graphicData>
     <skyfaller>
-      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(4,2)</shadowSize>
-      <motesPerCell>1</motesPerCell>
+      <shadowSize>(4,2)</shadowSize>      
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
-      <ticksToImpactRange>900~950</ticksToImpactRange>
+      <ticksToImpactRange>950</ticksToImpactRange>
       <angleCurve>
         <points>
           <li>(0,-40)</li>
@@ -128,25 +132,20 @@
 
 
   
-    <ThingDef ParentName="ShuttleSkyfallerBase">
+    <ThingDef ParentName="CarryallSkyfallerBase">
     <defName>Airship_Kirov_R_Leaving</defName>
     <label>kirov airship (leaving)</label>	
 	<thingClass>SRTS.SRTSLeaving</thingClass>
     <graphicData>
       <texPath>Carryall/AirshipKirov_R</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutFlying</shaderType>
       <drawSize>(6,6)</drawSize>
-	  <color>(255,255,255)</color>
     </graphicData>
-    <skyfaller>
-      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(4,2)</shadowSize>
-      <motesPerCell>1</motesPerCell>	
+    <skyfaller>      
+      <shadowSize>(4,2)</shadowSize>      	
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
-      <ticksToImpactRange>-30~-15</ticksToImpactRange>
+      <ticksToImpactRange>-20</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
@@ -180,24 +179,19 @@
     </skyfaller>
   </ThingDef>
   
-<ThingDef ParentName="ShuttleSkyfallerBase">
+<ThingDef ParentName="CarryallSkyfallerBase">
     <defName>Airship_Kirov_R_Incoming</defName>
     <label>kirov airship (incoming)</label>
 	<thingClass>SRTS.SRTSIncoming</thingClass>
     <graphicData>
       <texPath>Carryall/AirshipKirov_R</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutFlying</shaderType>
       <drawSize>(6,6)</drawSize>
-	  <color>(255,255,255)</color>
     </graphicData>
-    <skyfaller>
-      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(4,2)</shadowSize>
-      <motesPerCell>1</motesPerCell>
+    <skyfaller>      
+      <shadowSize>(4,2)</shadowSize>      
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
-      <ticksToImpactRange>900~950</ticksToImpactRange>
+      <ticksToImpactRange>950</ticksToImpactRange>
       <angleCurve>
         <points>
           <li>(0,40)</li>
@@ -255,25 +249,20 @@
   
   
 
-  <ThingDef ParentName="ShuttleSkyfallerBase">
+  <ThingDef ParentName="CarryallSkyfallerBase">
     <defName>Carryall_standard_Leaving</defName>
     <label>standard carryall (leaving)</label>	
 	<thingClass>SRTS.SRTSLeaving</thingClass>
     <graphicData>
       <texPath>Carryall/CarryallBasic</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutFlying</shaderType>
       <drawSize>(4.2,4.2)</drawSize>
-	  <color>(255,255,255)</color>
     </graphicData>
-    <skyfaller>
-      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(3,1.5)</shadowSize>
-      <motesPerCell>1</motesPerCell>	
+    <skyfaller>      
+      <shadowSize>(3,1.5)</shadowSize>      	
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
-      <ticksToImpactRange>-30~-15</ticksToImpactRange>
+      <ticksToImpactRange>-20</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
@@ -306,24 +295,19 @@
     </skyfaller>
   </ThingDef>
 
-<ThingDef ParentName="ShuttleSkyfallerBase">
+<ThingDef ParentName="CarryallSkyfallerBase">
     <defName>Carryall_standard_Incoming</defName>
     <label>standard carryall (incoming)</label>
 	<thingClass>SRTS.SRTSIncoming</thingClass>
     <graphicData>
       <texPath>Carryall/CarryallBasic</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutFlying</shaderType>
       <drawSize>(4.2,4.2)</drawSize>
-	  <color>(255,255,255)</color>
     </graphicData>
-    <skyfaller>
-      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(3,1.5)</shadowSize>
-      <motesPerCell>1</motesPerCell>
+    <skyfaller>      
+      <shadowSize>(3,1.5)</shadowSize>      
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
-      <ticksToImpactRange>550~600</ticksToImpactRange>
+      <ticksToImpactRange>600</ticksToImpactRange>
       <angleCurve>
         <points>
           <li>(0,-75)</li>
@@ -380,25 +364,20 @@
 
 
   
-    <ThingDef ParentName="ShuttleSkyfallerBase">
+    <ThingDef ParentName="CarryallSkyfallerBase">
     <defName>Carryall_standard_R_Leaving</defName>
     <label>standard carryall (leaving)</label>	
 	<thingClass>SRTS.SRTSLeaving</thingClass>
     <graphicData>
       <texPath>Carryall/CarryallBasic_R</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutFlying</shaderType>
       <drawSize>(4.2,4.2)</drawSize>
-	  <color>(255,255,255)</color>
     </graphicData>
-    <skyfaller>
-      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(3,1.5)</shadowSize>
-      <motesPerCell>1</motesPerCell>	
+    <skyfaller>      
+      <shadowSize>(3,1.5)</shadowSize>      	
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
-      <ticksToImpactRange>-30~-15</ticksToImpactRange>
+      <ticksToImpactRange>-20</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
@@ -431,24 +410,19 @@
     </skyfaller>
   </ThingDef>
   
-<ThingDef ParentName="ShuttleSkyfallerBase">
+<ThingDef ParentName="CarryallSkyfallerBase">
     <defName>Carryall_standard_R_Incoming</defName>
     <label>standard carryall (incoming)</label>
 	<thingClass>SRTS.SRTSIncoming</thingClass>
     <graphicData>
       <texPath>Carryall/CarryallBasic_R</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutFlying</shaderType>
       <drawSize>(4.2,4.2)</drawSize>
-	  <color>(255,255,255)</color>
     </graphicData>
-    <skyfaller>
-      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(3,1.5)</shadowSize>
-      <motesPerCell>1</motesPerCell>
+    <skyfaller>      
+      <shadowSize>(3,1.5)</shadowSize>      
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
-      <ticksToImpactRange>550~600</ticksToImpactRange>
+      <ticksToImpactRange>600</ticksToImpactRange>
       <angleCurve>
         <points>
           <li>(0,75)</li>
@@ -504,25 +478,20 @@
   </ThingDef>
 
 
-  <ThingDef ParentName="ShuttleSkyfallerBase">
+  <ThingDef ParentName="CarryallSkyfallerBase">
     <defName>Carryall_GDI_Leaving</defName>
     <label>ox carryall (leaving)</label>	
 	<thingClass>SRTS.SRTSLeaving</thingClass>
     <graphicData>
       <texPath>Carryall/CarryallGDI</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutFlying</shaderType>
       <drawSize>(6,6)</drawSize>
-	  <color>(255,255,255)</color>
     </graphicData>
-    <skyfaller>
-      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(4,2)</shadowSize>
-      <motesPerCell>1</motesPerCell>	
+    <skyfaller>      
+      <shadowSize>(4,2)</shadowSize>      	
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
-      <ticksToImpactRange>-30~-15</ticksToImpactRange>
+      <ticksToImpactRange>-20</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
@@ -555,24 +524,19 @@
     </skyfaller>
   </ThingDef>
   
-<ThingDef ParentName="ShuttleSkyfallerBase">
+<ThingDef ParentName="CarryallSkyfallerBase">
     <defName>Carryall_GDI_Incoming</defName>
     <label>ox carryall (incoming)</label>
 	<thingClass>SRTS.SRTSIncoming</thingClass>
     <graphicData>
       <texPath>Carryall/CarryallGDI</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutFlying</shaderType>
       <drawSize>(6,6)</drawSize>
-	  <color>(255,255,255)</color>
     </graphicData>	
-    <skyfaller>
-      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(4,2)</shadowSize>
-      <motesPerCell>1</motesPerCell>	
+    <skyfaller>      
+      <shadowSize>(4,2)</shadowSize>      	
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
-      <ticksToImpactRange>550~600</ticksToImpactRange>
+      <ticksToImpactRange>600</ticksToImpactRange>
       <angleCurve>
         <points>
           <li>(0,-75)</li>
@@ -628,25 +592,20 @@
   </ThingDef>
 
 
-  <ThingDef ParentName="ShuttleSkyfallerBase">
+  <ThingDef ParentName="CarryallSkyfallerBase">
     <defName>Carryall_GDI_R_Leaving</defName>
     <label>ox carryall (leaving)</label>	
 	<thingClass>SRTS.SRTSLeaving</thingClass>
     <graphicData>
       <texPath>Carryall/CarryallGDI_R</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutFlying</shaderType>
       <drawSize>(6,6)</drawSize>
-	  <color>(255,255,255)</color>
     </graphicData>
-    <skyfaller>
-      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(4,2)</shadowSize>
-      <motesPerCell>1</motesPerCell>	
+    <skyfaller>      
+      <shadowSize>(4,2)</shadowSize>      	
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
-      <ticksToImpactRange>-30~-15</ticksToImpactRange>
+      <ticksToImpactRange>-20</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
@@ -679,24 +638,19 @@
     </skyfaller>
   </ThingDef>
 
-<ThingDef ParentName="ShuttleSkyfallerBase">
+<ThingDef ParentName="CarryallSkyfallerBase">
     <defName>Carryall_GDI_R_Incoming</defName>
     <label>ox carryall (incoming)</label>
 	<thingClass>SRTS.SRTSIncoming</thingClass>
     <graphicData>
       <texPath>Carryall/CarryallGDI_R</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutFlying</shaderType>
       <drawSize>(6,6)</drawSize>
-	  <color>(255,255,255)</color>
     </graphicData>
-    <skyfaller>
-      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(4,2)</shadowSize>
-      <motesPerCell>1</motesPerCell>	
+    <skyfaller>      
+      <shadowSize>(4,2)</shadowSize>      	
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
-      <ticksToImpactRange>550~600</ticksToImpactRange>
+      <ticksToImpactRange>600</ticksToImpactRange>
       <angleCurve>
         <points>
           <li>(0,75)</li>
@@ -753,25 +707,20 @@
 
 
 
-  <ThingDef ParentName="ShuttleSkyfallerBase">
+  <ThingDef ParentName="CarryallSkyfallerBase">
     <defName>Carryall_Nod_Leaving</defName>
     <label>vertigo carryall (leaving)</label>	
 	<thingClass>SRTS.SRTSLeaving</thingClass>
     <graphicData>
       <texPath>Carryall/CarryallNod</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutFlying</shaderType>
       <drawSize>(5.5,5.5)</drawSize>
-	  <color>(255,255,255)</color>
     </graphicData>	
-    <skyfaller>
-      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(3.5,1.8)</shadowSize>
-      <motesPerCell>1</motesPerCell>	
+    <skyfaller>      
+      <shadowSize>(3.5,1.8)</shadowSize>      	
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
-      <ticksToImpactRange>-30~-15</ticksToImpactRange>
+      <ticksToImpactRange>-20</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
@@ -804,24 +753,19 @@
     </skyfaller>
   </ThingDef>
 
-<ThingDef ParentName="ShuttleSkyfallerBase">
+<ThingDef ParentName="CarryallSkyfallerBase">
     <defName>Carryall_Nod_Incoming</defName>
     <label>vertigo carryall (incoming)</label>
 	<thingClass>SRTS.SRTSIncoming</thingClass>
     <graphicData>
       <texPath>Carryall/CarryallNod</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutFlying</shaderType>
       <drawSize>(5.5,5.5)</drawSize>
-	  <color>(255,255,255)</color>
     </graphicData>	
-    <skyfaller>
-      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(3.5,1.8)</shadowSize>
-      <motesPerCell>1</motesPerCell>	
+    <skyfaller>      
+      <shadowSize>(3.5,1.8)</shadowSize>      	
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
-      <ticksToImpactRange>550~600</ticksToImpactRange>
+      <ticksToImpactRange>600</ticksToImpactRange>
       <angleCurve>
         <points>
           <li>(0,-83)</li>
@@ -877,25 +821,20 @@
   </ThingDef>
   
 
-  <ThingDef ParentName="ShuttleSkyfallerBase">
+  <ThingDef ParentName="CarryallSkyfallerBase">
     <defName>Carryall_Nod_R_Leaving</defName>
     <label>vertigo carryall (leaving)</label>	
 	<thingClass>SRTS.SRTSLeaving</thingClass>
     <graphicData>
       <texPath>Carryall/CarryallNod_R</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutFlying</shaderType>
       <drawSize>(5.5,5.5)</drawSize>
-	  <color>(255,255,255)</color>
     </graphicData>	
-    <skyfaller>
-      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(3.5,1.8)</shadowSize>
-      <motesPerCell>1</motesPerCell>	
+    <skyfaller>      
+      <shadowSize>(3.5,1.8)</shadowSize>      	
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
-      <ticksToImpactRange>-30~-15</ticksToImpactRange>
+      <ticksToImpactRange>-20</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
@@ -928,24 +867,19 @@
     </skyfaller>
   </ThingDef> 
   
-<ThingDef ParentName="ShuttleSkyfallerBase">
+<ThingDef ParentName="CarryallSkyfallerBase">
     <defName>Carryall_Nod_R_Incoming</defName>
     <label>vertigo carryall (incoming)</label>
 	<thingClass>SRTS.SRTSIncoming</thingClass>
     <graphicData>
       <texPath>Carryall/CarryallNod_R</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutFlying</shaderType>
       <drawSize>(5.5,5.5)</drawSize>
-	  <color>(255,255,255)</color>
     </graphicData>	
-    <skyfaller>
-      <shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
-      <shadowSize>(3.5,1.8)</shadowSize>
-      <motesPerCell>1</motesPerCell>	
+    <skyfaller>      
+      <shadowSize>(3.5,1.8)</shadowSize>      	
       <anticipationSound>Shuttle_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
-      <ticksToImpactRange>550~600</ticksToImpactRange>
+      <ticksToImpactRange>600</ticksToImpactRange>
       <angleCurve>
         <points>
           <li>(0,85)</li>

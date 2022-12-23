@@ -285,6 +285,7 @@ Fuel efficiency: 3 per tile</description>
 			<turretBurstCooldownTime>3.8</turretBurstCooldownTime>
 		</building>
 		<placeWorkers>
+			<li>PlaceWorker_TurretTop</li>
 			<li>PlaceWorker_ShowTurretRadius</li>
 		</placeWorkers>
 		<researchPrerequisites>
@@ -467,6 +468,7 @@ Fuel efficiency: 3 per tile</description>
 			<turretBurstCooldownTime>5</turretBurstCooldownTime>
 		</building>
 		<placeWorkers>
+			<li>PlaceWorker_TurretTop</li>
 			<li>PlaceWorker_ShowTurretRadius</li>
 		</placeWorkers>
 		<researchPrerequisites>
@@ -577,7 +579,7 @@ Fuel efficiency: 1 per tile</description>
 			<Mass>1</Mass>
 			<Beauty>10</Beauty>
 			<ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
-		</statBases>		
+		</statBases>
 		<costList>
 			<Cloth>750</Cloth>
 			<Steel>750</Steel>
@@ -652,8 +654,8 @@ Fuel efficiency: 1 per tile</description>
 			<turretGunDef>Gun_KirovTurret</turretGunDef>
 			<turretBurstCooldownTime>6</turretBurstCooldownTime>
 		</building>
-
 		<placeWorkers>
+			<li>PlaceWorker_TurretTop</li>
 			<li>PlaceWorker_ShowTurretRadius</li>
 		</placeWorkers>
 		<researchPrerequisites>
@@ -673,18 +675,18 @@ Fuel efficiency: 1 per tile</description>
 			<drawSize>(1,1)</drawSize>
 		</graphicData>
 		<statBases>
-			<AccuracyTouch>1</AccuracyTouch>
-			<AccuracyShort>1</AccuracyShort>
-			<AccuracyMedium>1</AccuracyMedium>
-			<AccuracyLong>1</AccuracyLong>
-			<RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
+			<AccuracyTouch>0.8</AccuracyTouch>
+			<AccuracyShort>0.8</AccuracyShort>
+			<AccuracyMedium>0.8</AccuracyMedium>
+			<AccuracyLong>0.8</AccuracyLong>
+			<RangedWeapon_Cooldown>6</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>1</Mass>
 			<Flammability>0</Flammability>
 		</statBases>
 		<verbs>
 			<li>
-				<verbClass>Verb_LaunchProjectile</verbClass>
+				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_KirovTurret</defaultProjectile>
 				<warmupTime>6</warmupTime>
@@ -693,7 +695,7 @@ Fuel efficiency: 1 per tile</description>
 				<soundCast>DropPod_Leaving</soundCast>
 				<soundCastTail>GunTail_Light</soundCastTail>
 				<muzzleFlashScale>5</muzzleFlashScale>
-				<consumeFuelPerShot>2</consumeFuelPerShot>
+				<consumeFuelPerShot>3</consumeFuelPerShot>
 			</li>
 		</verbs>
 	</ThingDef>
