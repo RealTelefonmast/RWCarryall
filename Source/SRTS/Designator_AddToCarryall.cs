@@ -43,6 +43,7 @@ public class Designator_AddToCarryall : Designator
         {
             if (pawn.health?.Downed ?? false) return true;
             if (pawn.IsColonist) return true;
+            if (pawn.IsColonyMechPlayerControlled) return true;
             if (pawn.def.race.Animal && pawn.Faction == Faction.OfPlayer && !pawn.InAggroMentalState)
             {
                 return true;
