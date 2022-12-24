@@ -3,6 +3,7 @@
 
  <CA_Storage>적재 중량: {0}</CA_Storage>
  <CA_Rotate>방향 전환</CA_Rotate>
+ <CA_RotateDesc>캐리올의 방향을 반대편으로 돌립니다.</CA_RotateDesc>
  <CA_AddToCarryall>적재 대상 선택</CA_AddToCarryall>
 
  <CA_SelfDestruct>불꽃놀이</CA_SelfDestruct>

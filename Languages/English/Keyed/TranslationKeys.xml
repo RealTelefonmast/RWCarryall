@@ -4,6 +4,7 @@
 
  <CA_Storage>Cargo weight: {0}</CA_Storage>
  <CA_Rotate>Rotate</CA_Rotate>
+ <CA_RotateDesc>Rotate the carryall in the opposite direction.</CA_RotateDesc>
  <CA_AddToCarryall>Select cargo</CA_AddToCarryall>
  <CA_SelfDestruct>Fireworks</CA_SelfDestruct>
  <CA_SelfDestructDesc>Sets the machine on fire to cause an unctontrolled self-destruct sequence. If the airship is damaged will explode right away. but if not, can be canceled by turning off the fire.\n\nBrace for explosion!</CA_SelfDestructDesc>
