@@ -75,11 +75,24 @@ public class Designator_AddToCarryall : Designator
         if(!launchable.Transporter.LoadingInProgressOrReadyToLaunch)
             TransporterUtility.InitiateLoading(new List<CompTransporter>() {launchable.Transporter});
 
-        var curMass = launchable?.Transporter?.leftToLoad?.Sum(tf => tf.CountToTransfer * tf.ThingDef.BaseMass);
-        var extraMass = launchable?.Transporter?.innerContainer?.Sum(t => t.def.BaseMass);
+        var leftLoadList = launchable.Transporter.leftToLoad;
+        var innerContainerList = launchable.Transporter.innerContainer;
+        float currentMass = 0;
+        float extraMass = 0;
+        if (!leftLoadList.NullOrEmpty())
+        {
+            currentMass = CollectionsMassCalculator.MassUsage(launchable?.Transporter?.leftToLoad?.SelectMany(t => t.things).ToList(), IgnorePawnsInventoryMode.IgnoreIfAssignedToUnload, true);
 
-        Log.Message($"CurMass: {curMass} + {extraMass} + {t.def.BaseMass} = ({curMass + extraMass + t.def.BaseMass}/{launchable?.Transporter?.MassCapacity})");
-        if ((curMass + extraMass + t.def.BaseMass) > launchable?.Transporter?.MassCapacity)
+        }
+        if (!innerContainerList.NullOrEmpty())
+        {
+            extraMass = CollectionsMassCalculator.MassUsage(launchable?.Transporter?.innerContainer?.ToList(), IgnorePawnsInventoryMode.IgnoreIfAssignedToUnload, true);
+
+        } 
+        //launchable?.Transporter?.innerContainer?.Sum(t => t.def.BaseMass);
+
+        //Log.Message($"CurMass: {currentMass} + {extraMass} + {t.def.BaseMass} = ({currentMass + extraMass + t.def.BaseMass}/{launchable?.Transporter?.MassCapacity})");
+        if ((currentMass + extraMass + t.def.BaseMass) > launchable?.Transporter?.MassCapacity)
         {
             Messages.Message("TooBigTransportersMassUsage".Translate(), MessageTypeDefOf.RejectInput, false);
             return;
