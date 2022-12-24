@@ -15,8 +15,8 @@ Once the flight starts, cannot be stopped.</CA_ConfirmationScreen>
 	<!-- for SRTS code-->
 
   <!-- Labels and Titles -->
-  <SRTSExpanded>SRTS Expanded</SRTSExpanded>
-  <SRTSDef>SRTS Def</SRTSDef>
+  <SRTSExpanded>Carryalls</SRTSExpanded>
+  <SRTSDef>Carryalls Def</SRTSDef>
 
  
   <!-- Settings -->
@@ -31,14 +31,14 @@ Once the flight starts, cannot be stopped.</CA_ConfirmationScreen>
   <MainSettings>Main Settings</MainSettings>
 
   <PassengerLimit>Passenger Limits</PassengerLimit>
-  <PassengerLimitTooltip>Enforce minimum and maximum passengers allowed on SRTS</PassengerLimitTooltip>
+  <PassengerLimitTooltip>Enforce minimum and maximum passengers allowed on Carryalls</PassengerLimitTooltip>
   <DisplayHomeItems>Display All Items</DisplayHomeItems>
-  <DisplayHomeItemsTooltip>Display all items on the map when loading SRTS and not on home map.</DisplayHomeItemsTooltip>
+  <DisplayHomeItemsTooltip>Display all items on the map when loading Carryalls and not on home map.</DisplayHomeItemsTooltip>
   <DefSettings>Stats</DefSettings>
   <DynamicWorldObjectSRTS>Dynamic World Textures</DynamicWorldObjectSRTS>
-  <DynamicWorldObjectSRTSTooltip>Dynamically draw SRTS textures on the world map to match both SRTS texture and rotation</DynamicWorldObjectSRTSTooltip>
+  <DynamicWorldObjectSRTSTooltip>Dynamically draw Carryalls textures on the world map to match both Carryalls texture and rotation</DynamicWorldObjectSRTSTooltip>
   <ExpandBombPoints>Expand Bomb Targets</ExpandBombPoints>
-  <ExpandBombPointsTooltip>Expand the bombing points along the targeting line to fit across the line.</ExpandBombPointsTooltip>
+  <ExpandBombPointsTooltip>This feature is unavailable.</ExpandBombPointsTooltip>
   <AllowedBombs>Allowed Explosives (Bomb Runs)</AllowedBombs>
   <ChangeItemSRTS>Edit</ChangeItemSRTS>
   <SearchExplosive>Add Item</SearchExplosive>
@@ -53,8 +53,8 @@ Once the flight starts, cannot be stopped.</CA_ConfirmationScreen>
   <ShuttleBayLanding>Shuttle Bay Landing</ShuttleBayLanding>
   <NonSpaceFaringSRTS>{0} is unable to reach orbit</NonSpaceFaringSRTS>
 
-  <SRTSSettings>SRTS Settings</SRTSSettings>
-  <FlightSpeed>Flight Speed (World Map)</FlightSpeed>
+  <SRTSSettings>Carryalls Settings</SRTSSettings>
+  <FlightSpeed>Flight Speed</FlightSpeed>
   <Instant>Instant</Instant>
   <FuelEfficiency>Fuel Cost</FuelEfficiency>
   <FuelEfficiencySymbol> per Tile</FuelEfficiencySymbol>
@@ -86,7 +86,7 @@ Once the flight starts, cannot be stopped.</CA_ConfirmationScreen>
   <JoinSRTSGroup>Join SRTS Boarding Group</JoinSRTSGroup>
 
   <!-- Messages -->
-  <SRTSNoPilot>Cannot send SRTS without a Pilot.</SRTSNoPilot>
+  <SRTSNoPilot>Cannot send Carryall without a Pilot.</SRTSNoPilot>
   <NotEnoughPilots>Not enough pilots to launch</NotEnoughPilots>
   <TooManyPilots>Too many colonists to launch</TooManyPilots>
   <BombRunStarted>Bomb run has begun.</BombRunStarted>
