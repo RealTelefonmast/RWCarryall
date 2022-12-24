@@ -3,11 +3,11 @@
 
  <CA_Storage>적재 중량: {0}</CA_Storage>
  <CA_Rotate>방향 전환</CA_Rotate>
- <CA_RotateDesc>캐리올이 반대쪽을 바라보게 합니다.</CA_RotateDesc>
+ <CA_RotateDesc>캐리올이 반대쪽 방향을 바라보게 합니다.</CA_RotateDesc>
  <CA_AddToCarryall>적재 대상 선택</CA_AddToCarryall>
 
  <CA_SelfDestruct>불꽃놀이</CA_SelfDestruct>
- <CA_SelfDestructDesc>비행선에 불씨를 붙여 폭발을 유도합니다. 비행선이 60% 이상 손상된 상태라면 곧바로 폭발하겠지만, 그렇지 않다면 불을 꺼서 취소할 수도 있습니다.\n\n대폭발에 대비하세요!</CA_SelfDestructDesc>
+ <CA_SelfDestructDesc>비행선에 불씨를 붙여 폭발을 유도합니다. 비행선이 60% 이상 손상된 상태라면 곧바로 폭발하겠지만, 그렇지 않다면 불을 꺼서 취소할 수 있습니다.\n\n대폭발에 대비하세요!</CA_SelfDestructDesc>
 
  <CA_ConfirmationScreen>정말 출발하시겠습니까?
 일단 비행이 시작되면 목적지에 도달할 때까지 멈출 수 없습니다.</CA_ConfirmationScreen>
