@@ -21,14 +21,14 @@
   <ResetAll>전부 초기화</ResetAll>
   <DefaultValues>기본 값</DefaultValues>
   <CustomValues>수정된 값</CustomValues>
-  <MainSettings>기본 설정</MainSettings>
+  <MainSettings>주요 설정</MainSettings>
   <PassengerLimit>좌석 수</PassengerLimit>
-  <PassengerLimitTooltip>캐리올의 최소/최대 좌석</PassengerLimitTooltip>
+  <PassengerLimitTooltip>캐리올의 최소/최대 좌석 기능을 활성화합니다.</PassengerLimitTooltip>
   <DisplayHomeItems>모든 항목 표시</DisplayHomeItems>
   <DisplayHomeItemsTooltip>지도에 존재하는 모든 항목을 표시합니다.</DisplayHomeItemsTooltip>
-  <DefSettings>캐리올 성능 조절</DefSettings>
+  <DefSettings>캐리올 성능 조정</DefSettings>
   <DynamicWorldObjectSRTS>동적 이미지 처리</DynamicWorldObjectSRTS>
-  <DynamicWorldObjectSRTSTooltip>월드 맵의 텍스처를 동적으로 움직이도록 처리합니다.</DynamicWorldObjectSRTSTooltip>
+  <DynamicWorldObjectSRTSTooltip>세계 지도에 표시되는 이미지가 동적으로 움직이도록 처리합니다.</DynamicWorldObjectSRTSTooltip>
   <ExpandBombPoints>폭격</ExpandBombPoints>
   <ExpandBombPointsTooltip>이 기능은 작동하지 않습니다.</ExpandBombPointsTooltip>
   <AllowedBombs>폭격 허용</AllowedBombs>
@@ -76,8 +76,8 @@
   <BombRunStarted>폭격이 시작되었습니다.</BombRunStarted>
   <CannotBombMap>지도가 로드되지 않아서 폭격할 수 없습니다.</CannotBombMap>
   <CommandAddFuelSRTS>{0}에 연료 보급</CommandAddFuelSRTS>
-  <CommandAddFuelDescSRTS>적재된 연료를 기체에 보급합니다.</CommandAddFuelDescSRTS>
-  <AddFuelSRTSCaravan>{0} 연료를 {1}에 보급했습니다.</AddFuelSRTSCaravan>
+  <CommandAddFuelDescSRTS>화물칸에 적재된 연료를 기체에 보급합니다.</CommandAddFuelDescSRTS>
+  <AddFuelSRTSCaravan>{1}에 {0} 연료를 보급했습니다.</AddFuelSRTSCaravan>
   <NoFuelSRTSCaravan>사용 가능한 연료가 없습니다.</NoFuelSRTSCaravan>
   <CommandLaunchOrbit>궤도 이탈</CommandLaunchOrbit>
   <CommandLaunchOrbitDesc>궤도에서 발사할 위치</CommandLaunchOrbitDesc>
