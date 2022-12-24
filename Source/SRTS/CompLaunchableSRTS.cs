@@ -217,6 +217,7 @@ namespace SRTS
 	        yield return new Command_Action()
 	        {
 				defaultLabel = "CA_Rotate".Translate(),
+				defaultDesc = "CA_RotateDesc".Translate(),
 				icon = ContentFinder<Texture2D>.Get("Misc/Rotate"),
 				action = delegate
 				{
