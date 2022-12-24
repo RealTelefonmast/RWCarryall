@@ -238,7 +238,8 @@ namespace SRTS
 				        if (exp != null)
 				        {
 					        FleckMaker.ThrowMicroSparks(parent.DrawPos, parent.Map);
-					        parent.TryAttachFire(1);
+					        FireUtility.TryStartFireIn(parent.Position, parent.Map, 2);
+					        parent.TryAttachFire(100);
 				        }
 			        }
 		        };

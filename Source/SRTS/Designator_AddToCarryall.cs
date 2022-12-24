@@ -82,6 +82,7 @@ public class Designator_AddToCarryall : Designator
         }
 
         var curMass = launchable?.Transporter?.leftToLoad?.Sum(tf => tf.things?.Sum(t => t.def.BaseMass));
+        curMass += launchable?.Transporter?.innerContainer?.Sum(t => t.def.BaseMass);
         if (curMass + t.def.BaseMass > launchable?.Transporter?.MassCapacity)
         {
             Messages.Message("TooBigTransportersMassUsage".Translate(), MessageTypeDefOf.RejectInput, false);
