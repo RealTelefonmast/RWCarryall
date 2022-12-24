@@ -11,9 +11,6 @@
  <CA_ConfirmationScreen>Are you ready to launch?
 Once the flight starts, cannot be stopped.</CA_ConfirmationScreen>
 
- <CA_ConfirmationScreenSD>This will set the carryall on fire!\nAre you sure?</CA_ConfirmationScreenSD>
-
-
   <!-- Labels and Titles -->
   <SRTSExpanded>SRTS Expanded</SRTSExpanded>
   <SRTSDef>SRTS Def</SRTSDef>

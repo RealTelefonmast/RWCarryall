@@ -237,14 +237,8 @@ namespace SRTS
 				        var exp = parent.TryGetComp<CompExplosive>();
 				        if (exp != null)
 				        {
-					        Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation(
-						        "CA_ConfirmationScreenSD".Translate(),
-						        delegate
-						        {
-							        FleckMaker.ThrowMicroSparks(parent.DrawPos, parent.Map);
-							        parent.TryAttachFire(1);
-							        //exp.StartWick();
-						        }));
+					        FleckMaker.ThrowMicroSparks(parent.DrawPos, parent.Map);
+					        parent.TryAttachFire(1);
 				        }
 			        }
 		        };
