@@ -108,7 +108,7 @@ Fuel efficiency: 1.5 per tile</description>
 				<massCapacity>550</massCapacity>	
 				<max1PerGroup>false</max1PerGroup>
 				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
-				<showOverallStats>false</showOverallStats>
+				<showOverallStats>true</showOverallStats>
 				<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
 				<pawnExitSound>Shuttle_PawnExit</pawnExitSound>
 			</li>		
@@ -592,7 +592,7 @@ Fuel efficiency: 1 per tile</description>
 				<massCapacity>1400</massCapacity>
 				<max1PerGroup>false</max1PerGroup>
 				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
-				<showOverallStats>false</showOverallStats>
+				<showOverallStats>true</showOverallStats>
 				<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
 				<pawnExitSound>Shuttle_PawnExit</pawnExitSound>
 			</li>		
