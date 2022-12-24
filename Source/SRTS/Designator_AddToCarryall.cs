@@ -75,20 +75,22 @@ public class Designator_AddToCarryall : Designator
         if(!launchable.Transporter.LoadingInProgressOrReadyToLaunch)
             TransporterUtility.InitiateLoading(new List<CompTransporter>() {launchable.Transporter});
 
-        var fobiddable = t.TryGetComp<CompForbiddable>();
-        if (fobiddable is {Forbidden: true})
-        {
-            fobiddable.Forbidden = false;
-        }
+        var curMass = launchable?.Transporter?.leftToLoad?.Sum(tf => tf.CountToTransfer * tf.ThingDef.BaseMass);
+        var extraMass = launchable?.Transporter?.innerContainer?.Sum(t => t.def.BaseMass);
 
-        var curMass = launchable?.Transporter?.leftToLoad?.Sum(tf => tf.things?.Sum(t => t.def.BaseMass));
-        curMass += launchable?.Transporter?.innerContainer?.Sum(t => t.def.BaseMass);
-        if (curMass + t.def.BaseMass > launchable?.Transporter?.MassCapacity)
+        Log.Message($"CurMass: {curMass} + {extraMass} + {t.def.BaseMass} = ({curMass + extraMass + t.def.BaseMass}/{launchable?.Transporter?.MassCapacity})");
+        if ((curMass + extraMass + t.def.BaseMass) > launchable?.Transporter?.MassCapacity)
         {
             Messages.Message("TooBigTransportersMassUsage".Translate(), MessageTypeDefOf.RejectInput, false);
             return;
         }
 
+        var fobiddable = t.TryGetComp<CompForbiddable>();
+        if (fobiddable is {Forbidden: true})
+        {
+            fobiddable.Forbidden = false;
+        }
+        
         launchable.Transporter.AddToTheToLoadList(new TransferableOneWay()
         {
             things = new List<Thing>(){t}
