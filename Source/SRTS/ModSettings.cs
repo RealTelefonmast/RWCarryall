@@ -67,7 +67,7 @@ namespace SRTS
             Scribe_Values.Look(ref allowCapturablePawns, "allowCapturablePawns", true);
 
             Scribe_Collections.Look<string, SRTS_DefProperties>(ref defProperties, "defProperties", LookMode.Value, LookMode.Deep);
-            Scribe_Collections.Look<string>(ref allowedBombs, "allowedBombs", LookMode.Value);
+            //Scribe_Collections.Look<string>(ref allowedBombs, "allowedBombs", LookMode.Value);
             Scribe_Collections.Look<string>(ref disallowedBombs, "disallowedBombs", LookMode.Value);
 
             Scribe_Values.Look(ref CEPreviouslyInitialized, "CEPreviouslyInitialized");
@@ -321,6 +321,7 @@ namespace SRTS
             }
             else if(currentPage == SRTS.SettingsCategory.Settings)
             {
+                /*
                 if(!checkValidityBombs)
                 {
                     ///<summary>Only run once, ensure that removed ThingDefs do not show defNames inside inner list.</summary>
@@ -334,7 +335,7 @@ namespace SRTS
                     }
                     checkValidityBombs = true;
                 }
-
+                */
                 listing_Standard.Begin(group2);
 
                 listing_Standard.CheckboxLabeled("PassengerLimit".Translate(), ref settings.passengerLimits, "PassengerLimitTooltip".Translate());
@@ -343,12 +344,13 @@ namespace SRTS
 
                 listing_Standard.Gap(24f);
 
-                listing_Standard.CheckboxLabeled("ExpandBombPoints".Translate(), ref settings.expandBombPoints, "ExpandBombPointsTooltip".Translate());
+                //listing_Standard.CheckboxLabeled("ExpandBombPoints".Translate(), ref settings.expandBombPoints, "ExpandBombPointsTooltip".Translate());
 
                 listing_Standard.End();
 
                 int numBoxesBefore = 4;
                 float bufferFromGroup2 = 24f + (24 * numBoxesBefore);
+                /*
                 Rect bombLabel = new Rect(group2.x, group2.y + bufferFromGroup2, group2.width, group2.height / 3);
                 listing_Standard.Begin(bombLabel);
 
@@ -360,18 +362,18 @@ namespace SRTS
                 }
                 listing_Standard.End();
                 Rect group3 = new Rect(group2.x, bombLabel.y + 24f, group2.width, group2.height / 3);
+                */
+                /*
                 Rect viewRect = new Rect(group3.x, group3.y, group2.width - 24f, group3.height * ((float)mod.settings.allowedBombs.Count / 6f) + 24f);
-
                 Widgets.BeginScrollView(group3, ref scrollPosition, viewRect, true);
                 listing_Standard.Begin(viewRect);
-
                 foreach(string s in mod.settings.allowedBombs)
                 {
                     listing_Standard.Settings_Header(s, Color.clear, GameFont.Small);
                 }
-
                 listing_Standard.End();
                 Widgets.EndScrollView();
+                */
 
                 Rect transportGroupRect = new Rect(inRect.width - inRect.width / 3, group2.y, inRect.width / 3, group2.height);
 
@@ -429,14 +431,14 @@ namespace SRTS
             this.settings.allowEvenIfPrisonerUnsecured = false;
             this.settings.allowCapturablePawns = true;
             this.settings.disallowedBombs.Clear();
-            this.settings.allowedBombs.Clear();
+            //this.settings.allowedBombs.Clear();
             SRTSHelper.PopulateAllowedBombs();
         }
 
         internal void ResetBombList()
         {
             this.settings.disallowedBombs.Clear();
-            this.settings.allowedBombs.Clear();
+            //this.settings.allowedBombs.Clear();
             SRTSHelper.PopulateAllowedBombs();
         }
 
@@ -531,7 +533,7 @@ namespace SRTS
 
         public SRTS_DefProperties props;
 
-        private bool checkValidityBombs = false;
+        //private bool checkValidityBombs = false;
     }
 
     public class SRTS_DefProperties : IExposable
