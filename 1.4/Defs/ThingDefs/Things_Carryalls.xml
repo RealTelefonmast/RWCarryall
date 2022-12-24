@@ -28,21 +28,20 @@
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
-      <ticksToImpactRange>-20</ticksToImpactRange>
+      <ticksToImpactRange>-15~-10</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
           <li>(0,90)</li>
 		  <li>(0.2,90)</li>
-		  <li>(1,50)</li>
+		  <li>(1,60)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
           <li>(0,90)</li>
-		  <li>(0.95,90)</li>
-		  <li>(0.5,85)</li>
-		  <li>(1,85)</li>
+		  <li>(0.2,90)</li>
+		  <li>(1,80)</li>
         </points>
       </rotationCurve>
       <zPositionCurve>
@@ -54,7 +53,7 @@
       <speedCurve>
         <points>
           <li>(0,0)</li>
-		  <li>(0.2,0.003)</li>
+		  <li>(0.2,0.02)</li>
 		  <li>(1,0.25)</li>
         </points>
       </speedCurve>
@@ -77,7 +76,7 @@
       <ticksToImpactRange>950</ticksToImpactRange>
       <angleCurve>
         <points>
-          <li>(0,-40)</li>
+          <li>(0,-50)</li>
 		  <li>(1,-90)</li>
         </points>
       </angleCurve>
@@ -145,21 +144,20 @@
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
-      <ticksToImpactRange>-20</ticksToImpactRange>
+      <ticksToImpactRange>-15~-10</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
           <li>(0,-90)</li>
 		  <li>(0.2,-90)</li>
-		  <li>(1,-50)</li>
+		  <li>(1,-60)</li>
         </points>
       </angleCurve>
       <rotationCurve>
         <points>
           <li>(0,90)</li>
-		  <li>(0.95,90)</li>
-		  <li>(0.5,95)</li>
-		  <li>(1,95)</li>
+		  <li>(0.2,90)</li>
+		  <li>(1,100)</li>
         </points>
       </rotationCurve>
       <zPositionCurve>
@@ -171,7 +169,7 @@
       <speedCurve>
         <points>
           <li>(0,0)</li>
-		  <li>(0.2,0.003)</li>
+		  <li>(0.2,0.02)</li>
 		  <li>(1,0.25)</li>
         </points>
       </speedCurve>
@@ -194,7 +192,7 @@
       <ticksToImpactRange>950</ticksToImpactRange>
       <angleCurve>
         <points>
-          <li>(0,40)</li>
+          <li>(0,50)</li>
 		  <li>(1,90)</li>
         </points>
       </angleCurve>
@@ -262,7 +260,7 @@
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
-      <ticksToImpactRange>-20</ticksToImpactRange>
+      <ticksToImpactRange>-15~-10</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
@@ -377,7 +375,7 @@
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
-      <ticksToImpactRange>-20</ticksToImpactRange>
+      <ticksToImpactRange>-15~-10</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
@@ -491,7 +489,7 @@
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
-      <ticksToImpactRange>-20</ticksToImpactRange>
+      <ticksToImpactRange>-15~-10</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
@@ -605,7 +603,7 @@
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
-      <ticksToImpactRange>-20</ticksToImpactRange>
+      <ticksToImpactRange>-15~-10</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
@@ -720,7 +718,7 @@
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
-      <ticksToImpactRange>-20</ticksToImpactRange>
+      <ticksToImpactRange>-15~-10</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
@@ -834,7 +832,7 @@
       <reversed>true</reversed>
       <anticipationSound>Shuttle_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
-      <ticksToImpactRange>-20</ticksToImpactRange>
+      <ticksToImpactRange>-15~-10</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
       <angleCurve>
         <points>
