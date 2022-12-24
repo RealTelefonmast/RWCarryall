@@ -13,41 +13,41 @@
 
 <!-- for SRTS code-->
 
-  <SRTSExpanded>SRTS 확장</SRTSExpanded>
-  <SRTSDef>SRTS Def</SRTSDef>
+  <SRTSExpanded>캐리올</SRTSExpanded>
+  <SRTSDef>Carryalls Def</SRTSDef>
   <ResetDefault>초기화</ResetDefault>
   <ResetDefaultTooltip>기본값으로 초기화</ResetDefaultTooltip>
   <ResetThisSRTS>이것만 초기화</ResetThisSRTS>
   <ResetAll>전부 초기화</ResetAll>
   <DefaultValues>기본 값</DefaultValues>
-  <CustomValues>수정 값</CustomValues>
+  <CustomValues>수정된 값</CustomValues>
   <MainSettings>기본 설정</MainSettings>
-  <PassengerLimit>승객 숫자</PassengerLimit>
-  <PassengerLimitTooltip>SRTS에서 허용 가능한 최소 및 최대 승객</PassengerLimitTooltip>
+  <PassengerLimit>좌석 수</PassengerLimit>
+  <PassengerLimitTooltip>캐리올의 최소/최대 좌석</PassengerLimitTooltip>
   <DisplayHomeItems>모든 항목 표시</DisplayHomeItems>
-  <DisplayHomeItemsTooltip>정착지 지도가 아닌 SRTS를 로드할 때 지도에 모든 항목을 표시합니다.</DisplayHomeItemsTooltip>
-  <DefSettings>통계</DefSettings>
-  <DynamicWorldObjectSRTS>유동적인 세계 이미지들</DynamicWorldObjectSRTS>
-  <DynamicWorldObjectSRTSTooltip>SRTS 텍스처와 회전 모두에 맞게 SRTS 텍스처를 월드 맵에 동적으로 그립니다.</DynamicWorldObjectSRTSTooltip>
-  <ExpandBombPoints>폭격 대상 확장</ExpandBombPoints>
-  <ExpandBombPointsTooltip>타겟팅 라인을 따라 폭격 지점을 확장하여 라인 전체에 맞춥니다.</ExpandBombPointsTooltip>
-  <AllowedBombs>폭발음 허용(폭격)</AllowedBombs>
+  <DisplayHomeItemsTooltip>지도에 존재하는 모든 항목을 표시합니다.</DisplayHomeItemsTooltip>
+  <DefSettings>캐리올 성능 조절</DefSettings>
+  <DynamicWorldObjectSRTS>동적 이미지 처리</DynamicWorldObjectSRTS>
+  <DynamicWorldObjectSRTSTooltip>월드 맵의 텍스처를 동적으로 움직이도록 처리합니다.</DynamicWorldObjectSRTSTooltip>
+  <ExpandBombPoints>폭격</ExpandBombPoints>
+  <ExpandBombPointsTooltip>이 기능은 작동하지 않습니다.</ExpandBombPointsTooltip>
+  <AllowedBombs>폭격 허용</AllowedBombs>
   <ChangeItemSRTS>수정</ChangeItemSRTS>
   <SearchExplosive>항목 추가</SearchExplosive>
   <CurrentExplosives>폭발음 허용</CurrentExplosives>
   <SRTSBoardingOptions>탑승 설정</SRTSBoardingOptions>
-  <AllowDownedSRTS>쓰러진 폰 허용</AllowDownedSRTS>
-  <AllowUnsecurePrisonerSRTS>구금되지 않은 수감자 허용</AllowUnsecurePrisonerSRTS>
-  <AllowCapturablePawnSRTS>포획 가능한 림들 허용</AllowCapturablePawnSRTS>
+  <AllowDownedSRTS>쓰러진 환자 허용</AllowDownedSRTS>
+  <AllowUnsecurePrisonerSRTS>풀려난 수감자 허용</AllowUnsecurePrisonerSRTS>
+  <AllowCapturablePawnSRTS>포획 가능 대상 허용</AllowCapturablePawnSRTS>
   <SOS2Compatibility>SOS2 설정</SOS2Compatibility>
   <SpaceFaring>우주 이동</SpaceFaring>
   <ShuttleBayLanding>왕복선 항구 착륙</ShuttleBayLanding>
   <NonSpaceFaringSRTS>{0}(은)는 궤도에 도착할 수 없습니다.</NonSpaceFaringSRTS>
-  <SRTSSettings>SRTS 설정</SRTSSettings>
-  <FlightSpeed>비행 속도(세계 지도)</FlightSpeed>
+  <SRTSSettings>캐리올 설정</SRTSSettings>
+  <FlightSpeed>비행 속도</FlightSpeed>
   <Instant>즉시</Instant>
   <FuelEfficiency>연료 효율</FuelEfficiency>
-  <FuelEfficiencySymbol> 칸당</FuelEfficiencySymbol>
+  <FuelEfficiencySymbol>/타일</FuelEfficiencySymbol>
   <CargoCapacity>화물 용량</CargoCapacity>
   <MinPassengers>최소 승객</MinPassengers>
   <MaxPassengers>최대 승객</MaxPassengers>
