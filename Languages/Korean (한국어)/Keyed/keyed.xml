@@ -43,7 +43,7 @@
   <SpaceFaring>우주 이동</SpaceFaring>
   <ShuttleBayLanding>왕복선 항구 착륙</ShuttleBayLanding>
   <NonSpaceFaringSRTS>{0}(은)는 궤도에 도착할 수 없습니다.</NonSpaceFaringSRTS>
-  <SRTSSettings>캐리올 설정</SRTSSettings>
+  <SRTSSettings>캐리올 성능</SRTSSettings>
   <FlightSpeed>비행 속도</FlightSpeed>
   <Instant>즉시</Instant>
   <FuelEfficiency>연료 효율</FuelEfficiency>
