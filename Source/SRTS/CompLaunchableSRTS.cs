@@ -230,6 +230,7 @@ namespace SRTS
 		        yield return new Command_Action()
 		        {
 			        defaultLabel = "CA_SelfDestruct".Translate(),
+			        defaultDesc = "CA_SelfDestructDesc".Translate(),
 			        icon = ContentFinder<Texture2D>.Get("Misc/Detonate"),
 			        action = delegate
 			        {

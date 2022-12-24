@@ -6,6 +6,7 @@
  <CA_Rotate>Rotate</CA_Rotate>
  <CA_AddToCarryall>Select Cargo</CA_AddToCarryall>
  <CA_SelfDestruct>Self Destruct</CA_SelfDestruct>
+ <CA_SelfDestructDesc>Sets the carryall on fire to cause an unctontrolled self-destruct sequence, once it burns down, brace for explosion!</CA_SelfDestructDesc>
  
  <CA_ConfirmationScreen>Are you ready to launch?
 Once the flight starts, cannot be stopped.</CA_ConfirmationScreen>
