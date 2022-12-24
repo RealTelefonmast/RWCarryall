@@ -224,6 +224,9 @@ Fuel efficiency: 3 per tile</description>
 			<li Class="CompProperties_Transporter">
 				<restEffectiveness>0.8</restEffectiveness>
 				<massCapacity>1800</massCapacity>		
+				<max1PerGroup>false</max1PerGroup>
+				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
+				<showOverallStats>true</showOverallStats>
 				<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
 				<pawnExitSound>Shuttle_PawnExit</pawnExitSound>		
 			</li>	  
@@ -299,10 +302,11 @@ Fuel efficiency: 3 per tile</description>
 		<label>carryall turret gun</label>
 		<description>A simple automatic gun made to be mounted on a turret.</description>
 		<graphicData>
-			<texPath>Misc/Blank</texPath><!--Things/Building/Security/TurretMini_Top-->
+			<texPath>Misc/Blank</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(1,1)</drawSize>
 		</graphicData>
+		<uiIconPath>Things/Building/Security/TurretMini_Top</uiIconPath>
 		<statBases>
 			<AccuracyTouch>0.7</AccuracyTouch>
 			<AccuracyShort>0.6</AccuracyShort>
@@ -406,9 +410,12 @@ Fuel efficiency: 3 per tile</description>
 		<li Class="CompProperties_Transporter">
 			<restEffectiveness>0.8</restEffectiveness>
 			<massCapacity>900</massCapacity>
-			<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
-			<pawnExitSound>Shuttle_PawnExit</pawnExitSound>		
-		</li>	  
+				<max1PerGroup>false</max1PerGroup>
+				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
+				<showOverallStats>true</showOverallStats>
+				<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
+				<pawnExitSound>Shuttle_PawnExit</pawnExitSound>
+		</li>
 		<li Class="SRTS.CompProperties_LaunchableSRTS">
 			<eastSkyfaller>Carryall_Nod_Leaving</eastSkyfaller>
 			<westSkyfaller>Carryall_Nod_R_Leaving</westSkyfaller>
@@ -482,10 +489,11 @@ Fuel efficiency: 3 per tile</description>
 		<label>medium carryall turret gun</label>
 		<description>A automatic minigun made to be mounted on a turret.</description>
 		<graphicData>
-			<texPath>Misc/Blank</texPath><!--Things/Building/Security/TurretAutocannon_Top-->
+			<texPath>Misc/Blank</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(1,1)</drawSize>
 		</graphicData>
+		<uiIconPath>Things/Building/Security/TurretAutocannon_Top</uiIconPath>
 		<statBases>
 			<AccuracyTouch>0.3</AccuracyTouch>
 			<AccuracyShort>0.35</AccuracyShort>
@@ -525,9 +533,6 @@ Fuel efficiency: 3 per tile</description>
 			<damageDef>Bullet</damageDef>
 			<damageAmountBase>10</damageAmountBase>
 			<speed>70</speed>
-			<!--<arcHeightFactor>0.2</arcHeightFactor>
-			<shadowSize>0.6</shadowSize>
-			<screenShakeFactor>0.5</screenShakeFactor>-->
 		</projectile>
 	</ThingDef>
 
@@ -577,13 +582,13 @@ Fuel efficiency: 1 per tile</description>
 			<WorkToBuild>30000</WorkToBuild>
 			<Flammability>4</Flammability>
 			<Mass>1</Mass>
-			<Beauty>10</Beauty>
+			<Beauty>-10</Beauty>
 			<ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
 		</statBases>
 		<costList>
 			<Cloth>750</Cloth>
 			<Steel>750</Steel>
-			<ComponentIndustrial>12</ComponentIndustrial>
+			<ComponentIndustrial>10</ComponentIndustrial>
 		</costList>
 
 		<comps>		  
@@ -640,7 +645,7 @@ Fuel efficiency: 1 per tile</description>
 				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
 				<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
 				<chanceToStartFire>0.9</chanceToStartFire>
-				<startWickHitPointsPercent>0.5</startWickHitPointsPercent>
+				<startWickHitPointsPercent>0.4</startWickHitPointsPercent>
 				<explosionEffect>GiantExplosion</explosionEffect>
 			</li>
 		</comps>
@@ -671,10 +676,11 @@ Fuel efficiency: 1 per tile</description>
 		<label>steam nozzle</label>
 		<description>The kirov airship can small vapor explosion at nearby targets via external nozzles. It's not very effective in combat, but it's worth a try.</description>
 		<graphicData>
-			<texPath>Misc/Blank</texPath><!--Things/Building/Security/TurretAutocannon_Top-->
+			<texPath>Misc/Blank</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(1,1)</drawSize>
 		</graphicData>
+		<uiIconPath>Misc/CarryallGas</uiIconPath>
 		<statBases>
 			<AccuracyTouch>0.8</AccuracyTouch>
 			<AccuracyShort>0.8</AccuracyShort>
