@@ -128,7 +128,7 @@ Fuel efficiency: 1.5 per tile</description>
 			<li Class="CompProperties_Refuelable">
 				<fuelCapacity>150</fuelCapacity>
 				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-				<initialConfigurableTargetFuelLevel>0.3</initialConfigurableTargetFuelLevel>
+				<initialConfigurableTargetFuelLevel>50</initialConfigurableTargetFuelLevel>
 				<fuelFilter>
 					<thingDefs>
 						<li>Chemfuel</li>
@@ -246,7 +246,7 @@ Fuel efficiency: 3 per tile</description>
 			<li Class="CompProperties_Refuelable">
 				<fuelCapacity>600</fuelCapacity>
 				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-				<initialConfigurableTargetFuelLevel>0.3</initialConfigurableTargetFuelLevel>
+				<initialConfigurableTargetFuelLevel>200</initialConfigurableTargetFuelLevel>
 				<fuelFilter>
 					<thingDefs>
 						<li>Chemfuel</li>
@@ -432,7 +432,7 @@ Fuel efficiency: 3 per tile</description>
 		<li Class="CompProperties_Refuelable">
 			<fuelCapacity>450</fuelCapacity>
 			<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-			<initialConfigurableTargetFuelLevel>0.3</initialConfigurableTargetFuelLevel>
+			<initialConfigurableTargetFuelLevel>150</initialConfigurableTargetFuelLevel>
 				<fuelFilter>
 				<thingDefs>
 					<li>Chemfuel</li>
@@ -618,7 +618,7 @@ Fuel efficiency: 1 per tile</description>
 			<li Class="CompProperties_Refuelable">
 				<fuelCapacity>150</fuelCapacity>
 				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-				<initialConfigurableTargetFuelLevel>0.3</initialConfigurableTargetFuelLevel>
+				<initialConfigurableTargetFuelLevel>50</initialConfigurableTargetFuelLevel>
 				<fuelFilter>
 					<thingDefs>
 						<li>Chemfuel</li>
