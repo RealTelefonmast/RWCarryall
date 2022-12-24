@@ -5,9 +5,12 @@
  <CA_Storage>Cargo weight: {0}</CA_Storage>
  <CA_Rotate>Rotate</CA_Rotate>
  <CA_AddToCarryall>Select Cargo</CA_AddToCarryall>
+ <CA_SelfDestruct>Self Destruct</CA_SelfDestruct>
  
  <CA_ConfirmationScreen>Are you ready to launch?
 Once the flight starts, cannot be stopped.</CA_ConfirmationScreen>
+
+ <CA_ConfirmationScreenSD>This will set the carryall on fire!\nAre you sure?</CA_ConfirmationScreenSD>
 
 
   <!-- Labels and Titles -->

@@ -225,6 +225,30 @@ namespace SRTS
 				}
 	        };
 
+	        if (SRTSProps.hasSelfDestruct)
+	        {
+		        yield return new Command_Action()
+		        {
+			        defaultLabel = "CA_SelfDestruct".Translate(),
+			        icon = ContentFinder<Texture2D>.Get("Misc/Detonate"),
+			        action = delegate
+			        {
+				        var exp = parent.TryGetComp<CompExplosive>();
+				        if (exp != null)
+				        {
+					        Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation(
+						        "CA_ConfirmationScreenSD".Translate(),
+						        delegate
+						        {
+							        FleckMaker.ThrowMicroSparks(parent.DrawPos, parent.Map);
+							        parent.TryAttachFire(1);
+							        //exp.StartWick();
+						        }));
+				        }
+			        }
+		        };
+	        }
+
 	        if (this.LoadingInProgressOrReadyToLaunch)
 	        { Command_Action launch = new Command_Action();
 		        launch.defaultLabel = "CommandLaunchGroup".Translate();

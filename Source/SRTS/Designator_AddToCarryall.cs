@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -78,7 +79,14 @@ public class Designator_AddToCarryall : Designator
         {
             fobiddable.Forbidden = false;
         }
-        
+
+        var curMass = launchable?.Transporter?.leftToLoad?.Sum(tf => tf.things?.Sum(t => t.def.BaseMass));
+        if (curMass + t.def.BaseMass > launchable?.Transporter?.MassCapacity)
+        {
+            Messages.Message("TooBigTransportersMassUsage".Translate(), MessageTypeDefOf.RejectInput, false);
+            return;
+        }
+
         launchable.Transporter.AddToTheToLoadList(new TransferableOneWay()
         {
             things = new List<Thing>(){t}

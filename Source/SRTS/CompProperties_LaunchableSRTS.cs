@@ -19,6 +19,7 @@ namespace SRTS
         public ThingDef westSkyfallerActive;
 
         public bool needsConfirmation;
+        public bool hasSelfDestruct;
         
         public float travelSpeed = 25f;
         public int minPassengers = 1;

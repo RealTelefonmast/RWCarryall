@@ -604,6 +604,7 @@ Fuel efficiency: 1 per tile</description>
 				<eastSkyfallerActive>Airship_Kirov_Active</eastSkyfallerActive>
 				<westSkyfallerActive>Airship_Kirov_R_Active</westSkyfallerActive>
 				<needsConfirmation>false</needsConfirmation>
+				<hasSelfDestruct>true</hasSelfDestruct>
 				<travelSpeed>1.2</travelSpeed>
 				<fuelPerTile>1</fuelPerTile>
 				<minPassengers>1</minPassengers>
