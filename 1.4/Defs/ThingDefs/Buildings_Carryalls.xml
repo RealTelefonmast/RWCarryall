@@ -82,17 +82,17 @@ Fuel efficiency: 1.5 per tile</description>
 		
 		<statBases>
 			<MaxHitPoints>600</MaxHitPoints>
-			<WorkToBuild>60000</WorkToBuild>
+			<WorkToBuild>50000</WorkToBuild>
 			<Flammability>0.5</Flammability>
 			<Mass>1</Mass>
 			<Beauty>25</Beauty>
 		</statBases>		
 		<costList>
-			<Steel>1000</Steel>
-			<Plasteel>250</Plasteel>
+			<Steel>750</Steel>
+			<Plasteel>150</Plasteel>
 			<Gold>50</Gold>
-			<ComponentIndustrial>15</ComponentIndustrial>
-			<ComponentSpacer>4</ComponentSpacer>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
 		</costList>		
 		<building>
 			<claimable>false</claimable>
@@ -213,11 +213,11 @@ Fuel efficiency: 3 per tile</description>
 			<ShootingAccuracyTurret>0.96</ShootingAccuracyTurret><!-- like level 8 human shooter -->
 		</statBases>	
 		<costList>
-			<Steel>2000</Steel>
-			<Plasteel>300</Plasteel>
+			<Steel>1800</Steel>
+			<Plasteel>250</Plasteel>
 			<Gold>150</Gold>
-			<ComponentIndustrial>30</ComponentIndustrial>
-			<ComponentSpacer>8</ComponentSpacer>
+			<ComponentIndustrial>20</ComponentIndustrial>
+			<ComponentSpacer>5</ComponentSpacer>
 		</costList>
 	
 		<comps>	  
@@ -399,11 +399,11 @@ Fuel efficiency: 3 per tile</description>
 			<ShootingAccuracyTurret>0.96</ShootingAccuracyTurret><!-- like level 8 human shooter -->
 		</statBases>
 		<costList>
-			<Steel>1500</Steel>
-			<Plasteel>500</Plasteel>
-			<Uranium>250</Uranium>
-			<ComponentIndustrial>15</ComponentIndustrial>
-			<ComponentSpacer>12</ComponentSpacer>
+			<Steel>1200</Steel>
+			<Plasteel>450</Plasteel>
+			<Uranium>120</Uranium>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<ComponentSpacer>10</ComponentSpacer>
 		</costList>
 		
 		<comps>	  
@@ -586,9 +586,9 @@ Fuel efficiency: 1 per tile</description>
 			<ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
 		</statBases>
 		<costList>
-			<Cloth>750</Cloth>
-			<Steel>750</Steel>
-			<ComponentIndustrial>10</ComponentIndustrial>
+			<Cloth>600</Cloth>
+			<Steel>800</Steel>
+			<ComponentIndustrial>15</ComponentIndustrial>
 		</costList>
 
 		<comps>		  
@@ -658,7 +658,7 @@ Fuel efficiency: 1 per tile</description>
 			<ai_combatDangerous>true</ai_combatDangerous>
 			<combatPower>300</combatPower>
 			<turretGunDef>Gun_KirovTurret</turretGunDef>
-			<turretBurstCooldownTime>6</turretBurstCooldownTime>
+			<turretBurstCooldownTime>7</turretBurstCooldownTime>
 		</building>
 		<placeWorkers>
 			<li>PlaceWorker_TurretTop</li>
@@ -686,7 +686,7 @@ Fuel efficiency: 1 per tile</description>
 			<AccuracyShort>0.8</AccuracyShort>
 			<AccuracyMedium>0.8</AccuracyMedium>
 			<AccuracyLong>0.8</AccuracyLong>
-			<RangedWeapon_Cooldown>6</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>7</RangedWeapon_Cooldown>
 			<DeteriorationRate>0</DeteriorationRate>
 			<Mass>1</Mass>
 			<Flammability>0</Flammability>
@@ -696,7 +696,7 @@ Fuel efficiency: 1 per tile</description>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>Bullet_KirovTurret</defaultProjectile>
-				<warmupTime>6</warmupTime>
+				<warmupTime>7</warmupTime>
 				<range>2.9</range>
 				<forcedMissRadius>0.1</forcedMissRadius>
 				<soundCast>DropPod_Leaving</soundCast>
