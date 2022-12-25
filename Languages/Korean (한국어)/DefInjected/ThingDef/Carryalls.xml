@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <Research_Carryalls.label>캐리올</Research_Carryalls.label>
-  <Research_Carryalls.description>대륙간 이동이 가능한 VTOL 항공기에 대한 기본 연구입니다. 표준 캐리올을 만들 수 있습니다.</Research_Carryalls.description>
-  
-  <Research_Carryall_GDI.label>옥스 캐리올</Research_Carryall_GDI.label>
-  <Research_Carryall_GDI.description>대량 운송에 특화된 옥스 캐리올을 만들 수 있습니다.</Research_Carryall_GDI.description>
-
-  <Research_Carryall_Nod.label>버티고 캐리올</Research_Carryall_Nod.label>
-  <Research_Carryall_Nod.description>강습 작전에 특화된 버티고 캐리올을 만들 수 있습니다.</Research_Carryall_Nod.description>
-
-  <Research_Airships.label>비행선</Research_Airships.label>
-  <Research_Airships.description>공중 수송이 가능한 비행선에 대한 기본 연구입니다. 키로프 비행선을 만들 수 있습니다.</Research_Airships.description>
-
-
 
   <Carryall_standard.label>표준 캐리올</Carryall_standard.label>
   <Carryall_standard.description>성간 제국에서 사용되는 표준 셔틀의 열화 복제 모델입니다. 우주 항행 기능은 빠져 있지만 정착지를 고립에서 완전히 해방시키는 데는 충분한 성능입니다.\n\n좌석: 5\n속도: 4\n적재 용량: 550kg\n\n연료 용량: 200\n연료 효율: 타일당 1.5L</Carryall_standard.description>
@@ -38,7 +25,7 @@
   <Airship_Kirov.label>키로프 비행선</Airship_Kirov.label>
   <Airship_Kirov.description>고전적 디자인의 비행선으로, 먼 옛날 모든 것에 붉은 칠을 하던 이들이 사용했다고 합니다. 걷는 것보다 약간 빨리 이동하는 정도이지만 지형의 영향을 받지 않아 바다와 산을 쉽게 건널 수 있습니다.\n\n불완전한 기술 탓에 원래의 무장은 장착되어 있지 않습니다. 하지만 불타면 어마어마한 폭발을 일으킬 것입니다.\n\n좌석: 8\n속도: 1.2\n적재 용량: 1400kg\n\n연료 용량: 150\n연료 효율: 타일당 1L</Airship_Kirov.description>
 
-  <Gun_KirovTurret.label>증기 배출기</Gun_KirovTurret.label>
+  <Gun_KirovTurret.label>증기 배출구</Gun_KirovTurret.label>
   <Gun_KirovTurret.description>키로프 비행선은 선체를 둘러싼 배관을 통해 근접한 적에게 뜨거운 연료 증기를 분사할 수 있습니다. 전투에 그다지 효과적이지는 않지만, 시도할 가치는 있습니다.</Gun_KirovTurret.description>
 
   <Bullet_KirovTurret.label>증기 폭발</Bullet_KirovTurret.label>

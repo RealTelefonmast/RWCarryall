@@ -26,7 +26,7 @@
     <skyfaller>
       <shadowSize>(4,2)</shadowSize>
       <reversed>true</reversed>
-      <anticipationSound>Shuttle_Leaving</anticipationSound>
+      <anticipationSound>Carryall_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
       <ticksToImpactRange>-15~-10</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
@@ -71,7 +71,7 @@
     </graphicData>
     <skyfaller>
       <shadowSize>(4,2)</shadowSize>      
-      <anticipationSound>Shuttle_Landing</anticipationSound>
+      <anticipationSound>Carryall_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
       <ticksToImpactRange>950</ticksToImpactRange>
       <angleCurve>
@@ -142,7 +142,7 @@
     <skyfaller>      
       <shadowSize>(4,2)</shadowSize>      	
       <reversed>true</reversed>
-      <anticipationSound>Shuttle_Leaving</anticipationSound>
+      <anticipationSound>Carryall_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
       <ticksToImpactRange>-15~-10</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
@@ -187,7 +187,7 @@
     </graphicData>
     <skyfaller>      
       <shadowSize>(4,2)</shadowSize>      
-      <anticipationSound>Shuttle_Landing</anticipationSound>
+      <anticipationSound>Carryall_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
       <ticksToImpactRange>950</ticksToImpactRange>
       <angleCurve>
@@ -258,7 +258,7 @@
     <skyfaller>      
       <shadowSize>(3,1.5)</shadowSize>      	
       <reversed>true</reversed>
-      <anticipationSound>Shuttle_Leaving</anticipationSound>
+      <anticipationSound>Carryall_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
       <ticksToImpactRange>-15~-10</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
@@ -303,7 +303,7 @@
     </graphicData>
     <skyfaller>      
       <shadowSize>(3,1.5)</shadowSize>      
-      <anticipationSound>Shuttle_Landing</anticipationSound>
+      <anticipationSound>Carryall_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
       <ticksToImpactRange>600</ticksToImpactRange>
       <angleCurve>
@@ -373,7 +373,7 @@
     <skyfaller>      
       <shadowSize>(3,1.5)</shadowSize>      	
       <reversed>true</reversed>
-      <anticipationSound>Shuttle_Leaving</anticipationSound>
+      <anticipationSound>Carryall_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
       <ticksToImpactRange>-15~-10</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
@@ -418,7 +418,7 @@
     </graphicData>
     <skyfaller>      
       <shadowSize>(3,1.5)</shadowSize>      
-      <anticipationSound>Shuttle_Landing</anticipationSound>
+      <anticipationSound>Carryall_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
       <ticksToImpactRange>600</ticksToImpactRange>
       <angleCurve>
@@ -487,7 +487,7 @@
     <skyfaller>      
       <shadowSize>(4,2)</shadowSize>      	
       <reversed>true</reversed>
-      <anticipationSound>Shuttle_Leaving</anticipationSound>
+      <anticipationSound>Carryall_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
       <ticksToImpactRange>-15~-10</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
@@ -532,7 +532,7 @@
     </graphicData>	
     <skyfaller>      
       <shadowSize>(4,2)</shadowSize>      	
-      <anticipationSound>Shuttle_Landing</anticipationSound>
+      <anticipationSound>Carryall_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
       <ticksToImpactRange>600</ticksToImpactRange>
       <angleCurve>
@@ -601,7 +601,7 @@
     <skyfaller>      
       <shadowSize>(4,2)</shadowSize>      	
       <reversed>true</reversed>
-      <anticipationSound>Shuttle_Leaving</anticipationSound>
+      <anticipationSound>Carryall_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
       <ticksToImpactRange>-15~-10</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
@@ -646,7 +646,7 @@
     </graphicData>
     <skyfaller>      
       <shadowSize>(4,2)</shadowSize>      	
-      <anticipationSound>Shuttle_Landing</anticipationSound>
+      <anticipationSound>Carryall_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
       <ticksToImpactRange>600</ticksToImpactRange>
       <angleCurve>
@@ -716,7 +716,7 @@
     <skyfaller>      
       <shadowSize>(3.5,1.8)</shadowSize>      	
       <reversed>true</reversed>
-      <anticipationSound>Shuttle_Leaving</anticipationSound>
+      <anticipationSound>Carryall_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
       <ticksToImpactRange>-15~-10</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
@@ -761,7 +761,7 @@
     </graphicData>	
     <skyfaller>      
       <shadowSize>(3.5,1.8)</shadowSize>      	
-      <anticipationSound>Shuttle_Landing</anticipationSound>
+      <anticipationSound>Carryall_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
       <ticksToImpactRange>600</ticksToImpactRange>
       <angleCurve>
@@ -830,7 +830,7 @@
     <skyfaller>      
       <shadowSize>(3.5,1.8)</shadowSize>      	
       <reversed>true</reversed>
-      <anticipationSound>Shuttle_Leaving</anticipationSound>
+      <anticipationSound>Carryall_Leaving</anticipationSound>
       <anticipationSoundTicks>-20</anticipationSoundTicks>
       <ticksToImpactRange>-15~-10</ticksToImpactRange>
       <moteSpawnTime>0.05</moteSpawnTime>
@@ -875,7 +875,7 @@
     </graphicData>	
     <skyfaller>      
       <shadowSize>(3.5,1.8)</shadowSize>      	
-      <anticipationSound>Shuttle_Landing</anticipationSound>
+      <anticipationSound>Carryall_Landing</anticipationSound>
       <anticipationSoundTicks>250</anticipationSoundTicks>
       <ticksToImpactRange>600</ticksToImpactRange>
       <angleCurve>

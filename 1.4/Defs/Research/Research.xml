@@ -15,8 +15,8 @@
     <hiddenPrerequisites>
       <li>TransportPod</li>
     </hiddenPrerequisites>
-	<researchViewX>15.00</researchViewX>
-	<researchViewY>1.5</researchViewY>
+	<researchViewX>15</researchViewX>
+	<researchViewY>1.51</researchViewY>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>MultiAnalyzer</li>
@@ -37,7 +37,7 @@
       <li>AdvancedFabrication</li>
     </hiddenPrerequisites>
 	<researchViewX>16</researchViewX>
-	<researchViewY>1.5</researchViewY>
+	<researchViewY>1.51</researchViewY>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>MultiAnalyzer</li>
@@ -58,7 +58,7 @@
       <li>AdvancedFabrication</li>
     </hiddenPrerequisites>
 	<researchViewX>16</researchViewX>
-	<researchViewY>2.1</researchViewY>
+	<researchViewY>2.09</researchViewY>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>MultiAnalyzer</li>
@@ -79,6 +79,6 @@
       <li>BiofuelRefining</li>
     </hiddenPrerequisites>
     <researchViewX>10</researchViewX>
-    <researchViewY>4.1</researchViewY>
+    <researchViewY>4.11</researchViewY>
   </ResearchProjectDef>
 </Defs>

@@ -4,8 +4,11 @@
   <Research_Carryalls.description>대륙간 이동이 가능한 VTOL 항공기에 대한 기본 연구입니다. 표준 캐리올을 만들 수 있습니다.</Research_Carryalls.description>
   
   <Research_Carryall_GDI.label>옥스 캐리올</Research_Carryall_GDI.label>
-  <Research_Carryall_GDI.description>물자 대량 운송에 특화된 옥스 캐리올을 만들 수 있습니다.</Research_Carryall_GDI.description>
+  <Research_Carryall_GDI.description>대량 운송에 특화된 옥스 캐리올을 만들 수 있습니다.</Research_Carryall_GDI.description>
 
   <Research_Carryall_Nod.label>버티고 캐리올</Research_Carryall_Nod.label>
-  <Research_Carryall_Nod.description>신속 강습 작전에 특화된 버티고 캐리올을 만들 수 있습니다.</Research_Carryall_Nod.description>
+  <Research_Carryall_Nod.description>강습 작전에 특화된 버티고 캐리올을 만들 수 있습니다.</Research_Carryall_Nod.description>
+
+  <Research_Airships.label>비행선</Research_Airships.label>
+  <Research_Airships.description>공중 수송이 가능한 비행선에 대한 기본 연구입니다. 키로프 비행선을 만들 수 있습니다.</Research_Airships.description>
 </LanguageData>
