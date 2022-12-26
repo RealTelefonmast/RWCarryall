@@ -45,9 +45,9 @@
 	<ThingDef ParentName="CarryallBase">
 		<defName>Carryall_standard</defName>
 		<label>standard carryall</label>
-		<description>A minor replica model of the standard space shuttle from the stellar empire, but with no orbital navigation capabilities. It can completely free your settlement from isolation.
+		<description>A minor replica model of the standard space shuttle from the stellar empire, but with no orbital navigation capabilities. No longer are you bound to your settlement.
 
-Seat: 5
+Seats: 5
 Speed: 4
 Cargo capacity: 550kg
 
@@ -167,8 +167,8 @@ Fuel efficiency: 1.5 per tile</description>
 	<ThingDef ParentName="CarryallBase">
 		<defName>Carryall_GDI</defName>
 		<label>ox carryall</label>
-		<description>A rare model of the carryall used by the ancients who worshiped a turkey-like symbol. Optimized for mass transportation, with large storage capacity, but the cabin may get cramped.
-
+		<description>A rare model of the carryall used by the ancients who worshiped a turkey-like symbol. Optimized for mass transportation, it is rather cramped up due to the extra storage.
+		
 Ox carryall is equipped with a small turret. This is helpful in battle, but consumes a lot of fuel. Always remember that you need enough fuel to get back home.
 
 Seat: 4

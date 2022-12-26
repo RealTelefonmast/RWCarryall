@@ -4,7 +4,7 @@
   <DamageDef ParentName="Bomb">
     <defName>Lands_Carryall</defName>
     <label>crush</label>
-	<deathMessage>{0} has has been crushed by a carryall to death.</deathMessage>
+	<deathMessage>{0} has has been crushed to death by a carryall.</deathMessage>
     <externalViolence>true</externalViolence>
 	<armorCategory>Blunt</armorCategory>
     <defaultDamage>50</defaultDamage>

@@ -161,6 +161,7 @@ namespace SRTS
 
 	    private Designator_AddToCarryall AddToCarryallDesignator => designator ??= new Designator_AddToCarryall(this);
 
+	    /*
 	    private void TryLaunch()
 	    {
 		    if (SRTSProps.needsConfirmation)
@@ -172,7 +173,8 @@ namespace SRTS
 			    DoLaunchAction();
 		    }
 	    }
-
+		*/
+	    
 	    private void DoLaunchAction()
 	    {
 		    int num = 0;
@@ -198,9 +200,15 @@ namespace SRTS
 		    }
 
 		    if (this.AnyInGroupHasAnythingLeftToLoad)
-			    Find.WindowStack.Add((Window) Dialog_MessageBox.CreateConfirmation("ConfirmSendNotCompletelyLoadedPods".Translate(this.FirstThingLeftToLoadInGroup.LabelCapNoCount), StartChoosingDestination));
+		    {
+			    Find.WindowStack.Add((Window) Dialog_MessageBox.CreateConfirmation(
+				    "ConfirmSendNotCompletelyLoadedPods".Translate(this.FirstThingLeftToLoadInGroup.LabelCapNoCount),
+				    StartChoosingDestination));
+		    }
 		    else
-			    this.StartChoosingDestination();
+		    {
+			    StartChoosingDestination();
+		    }
 	    }
 	    
 	    public override IEnumerable<Gizmo> CompGetGizmosExtra()
@@ -247,12 +255,13 @@ namespace SRTS
 	        }
 
 	        if (this.LoadingInProgressOrReadyToLaunch)
-	        { Command_Action launch = new Command_Action();
+	        { 
+		        Command_Action launch = new Command_Action();
 		        launch.defaultLabel = "CommandLaunchGroup".Translate();
 		        launch.defaultDesc = "CommandLaunchGroupDesc".Translate();
 		        launch.icon = LaunchCommandTex;
 		        launch.alsoClickIfOtherInGroupClicked = false;
-		        launch.action = (Action) (TryLaunch);
+		        launch.action = DoLaunchAction;
 		        if (!this.AllInGroupConnectedToFuelingPort)
 		            launch.Disable("CommandLaunchGroupFailNotConnectedToFuelingPort".Translate());
 		        else if (!this.AllFuelingPortSourcesInGroupHaveAnyFuel)
@@ -467,12 +476,12 @@ namespace SRTS
                         Messages.Message("NeedOpenShuttleBay".Translate(), MessageTypeDefOf.RejectInput);
                         return false;
                     }
-                    this.TryLaunch(target.Tile, new TransportPodsArrivalAction_LandInSpecificCell((target.WorldObject as MapParent).Map.Parent, shuttleBayPos));
+                    ConfirmLaunch(target.Tile, new TransportPodsArrivalAction_LandInSpecificCell((target.WorldObject as MapParent).Map.Parent, shuttleBayPos));
                     return true;
                 }
             }
-            Find.WorldObjects.MapParentAt(target.Tile);
-	        IEnumerable<FloatMenuOption> floatMenuOptionsAt = this.GetTransportPodsFloatMenuOptionsAt(target.Tile, this.carr);
+            
+            IEnumerable<FloatMenuOption> floatMenuOptionsAt = this.GetTransportPodsFloatMenuOptionsAt(target.Tile, this.carr);
 	        if (!floatMenuOptionsAt.Any<FloatMenuOption>())
 	        {
 		        if(Find.WorldGrid[target.Tile].biome.impassable || Find.World.Impassable(target.Tile))
@@ -480,7 +489,7 @@ namespace SRTS
                     Messages.Message("MessageTransportPodsDestinationIsInvalid".Translate(), MessageTypeDefOf.RejectInput, false);
 		            return false;
 		        }
-		        this.TryLaunch(target.Tile, (TransportPodsArrivalAction) null, (Caravan) null);
+		        ConfirmLaunch(target.Tile, (TransportPodsArrivalAction) null, (Caravan) null);
 		        return true;
 	        }
 	        if (floatMenuOptionsAt.Count<FloatMenuOption>() == 1)
@@ -491,6 +500,20 @@ namespace SRTS
 	        }
 	        Find.WindowStack.Add((Window) new FloatMenu(floatMenuOptionsAt.ToList<FloatMenuOption>()));
 	        return false;
+	    }
+
+	    private void ConfirmLaunch(int destinationTile, TransportPodsArrivalAction arrivalAction, Caravan cafr = null)
+	    {
+		    var dist = Find.WorldGrid.TraversalDistanceBetween(parent.Map.Tile, destinationTile);
+		    if (dist >= SRTSMod.mod.settings.confirmDistance)
+		    {
+			    Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation("CA_ConfirmationScreen".Translate(),
+				    () => TryLaunch(destinationTile, arrivalAction, cafr)));
+		    }
+		    else
+		    {
+			    TryLaunch(destinationTile, arrivalAction, cafr);
+		    }
 	    }
 
 	    public void TryLaunch(int destinationTile, TransportPodsArrivalAction arrivalAction, Caravan cafr = null)
@@ -656,13 +679,13 @@ namespace SRTS
 			    if(TransportPodsArrivalAction_FormCaravan.CanFormCaravanAt(pods, tile) && !Find.WorldObjects.AnySettlementBaseAt(tile) && !Find.WorldObjects.AnySiteAt(tile))
 			    {
 				    anything = true;
-				    yield return new FloatMenuOption("FormCaravanHere".Translate(), (() => this.TryLaunch(tile, new TransportPodsArrivalAction_FormCaravan(), car)));
+				    yield return new FloatMenuOption("FormCaravanHere".Translate(), (() => this.ConfirmLaunch(tile, new TransportPodsArrivalAction_FormCaravan(), car)));
 			    }
 		    }
 		    else if (!Find.WorldObjects.AnySettlementBaseAt(tile) && !Find.WorldObjects.AnySiteAt(tile) && !Find.World.Impassable(tile))
 		    {
 			    anything = true;
-			    yield return new FloatMenuOption("FormCaravanHere".Translate(), (() => this.TryLaunch(tile, new TransportPodsArrivalAction_FormCaravan(), car)));
+			    yield return new FloatMenuOption("FormCaravanHere".Translate(), (() => this.ConfirmLaunch(tile, new TransportPodsArrivalAction_FormCaravan(), car)));
 		    }
 		    List<WorldObject> worldObjects = Find.WorldObjects.AllWorldObjects;
 		    for (int i = 0; i < worldObjects.Count; ++i)
@@ -672,7 +695,7 @@ namespace SRTS
 				    IEnumerable<FloatMenuOption> nowre = SRTSStatic.getFM(worldObjects[i], pods, this, car);
 				    if (nowre.ToList<FloatMenuOption>().Count < 1)
 				    {
-				        yield return new FloatMenuOption("FormCaravanHere".Translate(), (() => this.TryLaunch(tile, (TransportPodsArrivalAction) new TransportPodsArrivalAction_FormCaravan(), car)));
+				        yield return new FloatMenuOption("FormCaravanHere".Translate(), (() => this.ConfirmLaunch(tile, (TransportPodsArrivalAction) new TransportPodsArrivalAction_FormCaravan(), car)));
 				    }
 				    else
 				    {
@@ -690,7 +713,7 @@ namespace SRTS
 
             if (!anything && !Find.World.Impassable(tile))
                 yield return new FloatMenuOption("TransportPodsContentsWillBeLost".Translate(),
-                    (() => TryLaunch(tile, (TransportPodsArrivalAction) null)));
+                    (() => ConfirmLaunch(tile, (TransportPodsArrivalAction) null)));
         }
 
 		List<Thing> thingsInsideShip = new List<Thing>();

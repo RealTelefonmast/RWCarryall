@@ -53,11 +53,13 @@ namespace SRTS
         public List<string> disallowedBombs = new List<string>();
 
         internal bool CEPreviouslyInitialized;
+        public int confirmDistance = 30;
 
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Values.Look(ref passengerLimits, "passengerLimits", true);
+            Scribe_Values.Look(ref confirmDistance, "confirmDistance");
             Scribe_Values.Look(ref displayHomeItems, "displayHomeItems", true);
             Scribe_Values.Look(ref expandBombPoints, "expandBombPoints", true);
             Scribe_Values.Look(ref dynamicWorldDrawingSRTS, "dynamicWorldDrawingSRTS", true);
@@ -342,14 +344,14 @@ namespace SRTS
                 listing_Standard.CheckboxLabeled("DisplayHomeItems".Translate(), ref settings.displayHomeItems, "DisplayHomeItemsTooltip".Translate());
                 listing_Standard.CheckboxLabeled("DynamicWorldObjectSRTS".Translate(), ref settings.dynamicWorldDrawingSRTS, "DynamicWorldObjectSRTSTooltip".Translate());
 
-                listing_Standard.Gap(24f);
+                listing_Standard.Gap(12);
 
+                //listing_Standard.SliderLabeled("CA_ConfirmAtDistance".Translate(), ref settings.confirmDistance, "CA_ConfirmDistanceToolTip".Translate());
+                listing_Standard.Settings_SliderLabeled("CA_ConfirmAtDistance".Translate(), String.Empty, ref settings.confirmDistance,  1, 100);
                 //listing_Standard.CheckboxLabeled("ExpandBombPoints".Translate(), ref settings.expandBombPoints, "ExpandBombPointsTooltip".Translate());
 
                 listing_Standard.End();
-
-                int numBoxesBefore = 4;
-                float bufferFromGroup2 = 24f + (24 * numBoxesBefore);
+                
                 /*
                 Rect bombLabel = new Rect(group2.x, group2.y + bufferFromGroup2, group2.width, group2.height / 3);
                 listing_Standard.Begin(bombLabel);

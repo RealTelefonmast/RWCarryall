@@ -9,9 +9,11 @@
  <CA_SelfDestruct>Fireworks</CA_SelfDestruct>
  <CA_SelfDestructDesc>Sets the machine on fire to cause an unctontrolled self-destruct sequence. If the airship is 60% damaged will explode right away. but if not, can be canceled by turning off the fire.\n\nBrace for explosion!</CA_SelfDestructDesc>
  
- <CA_ConfirmationScreen>Are you ready to launch?
-Once the flight starts, cannot be stopped.</CA_ConfirmationScreen>
+ <CA_ConfirmationScreen>WARNING: A direct long-distance flight may be very risky. Flight orders cannot be canceled midway, and you may not have enough fuel to return.
+Would you like to continue?</CA_ConfirmationScreen>
 
+ <CA_ConfirmAtDistance>Min Confirmation Distance</CA_ConfirmAtDistance>
+ <CA_ConfirmDistanceToolTip>Set the minimal necessary tile-traversal distance, before warning you about the launch.</CA_ConfirmDistanceToolTip>
 
 	<!-- for SRTS code-->
 
