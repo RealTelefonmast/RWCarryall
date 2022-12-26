@@ -59,7 +59,7 @@ namespace SRTS
         {
             base.ExposeData();
             Scribe_Values.Look(ref passengerLimits, "passengerLimits", true);
-            Scribe_Values.Look(ref confirmDistance, "confirmDistance");
+            Scribe_Values.Look(ref confirmDistance, "confirmDistance", 30);
             Scribe_Values.Look(ref displayHomeItems, "displayHomeItems", true);
             Scribe_Values.Look(ref expandBombPoints, "expandBombPoints", true);
             Scribe_Values.Look(ref dynamicWorldDrawingSRTS, "dynamicWorldDrawingSRTS", true);
@@ -432,6 +432,7 @@ namespace SRTS
             this.settings.allowEvenIfDowned = true;
             this.settings.allowEvenIfPrisonerUnsecured = false;
             this.settings.allowCapturablePawns = true;
+            settings.confirmDistance = 30;
             this.settings.disallowedBombs.Clear();
             //this.settings.allowedBombs.Clear();
             SRTSHelper.PopulateAllowedBombs();
