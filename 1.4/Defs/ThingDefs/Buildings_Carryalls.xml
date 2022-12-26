@@ -119,7 +119,7 @@ Fuel efficiency: 1.5 per tile</description>
 				<westSkyfallerIncoming>Carryall_standard_R_Incoming</westSkyfallerIncoming>
 				<eastSkyfallerActive>Carryall_standard_Active</eastSkyfallerActive>
 				<westSkyfallerActive>Carryall_standard_R_Active</westSkyfallerActive>
-				<needsConfirmation>false</needsConfirmation>
+				<needsConfirmation>true</needsConfirmation>
 				<travelSpeed>4</travelSpeed>
 				<fuelPerTile>1.5</fuelPerTile>
 				<minPassengers>1</minPassengers>
@@ -237,7 +237,7 @@ Fuel efficiency: 3 per tile</description>
 				<westSkyfallerIncoming>Carryall_GDI_R_Incoming</westSkyfallerIncoming>
 				<eastSkyfallerActive>Carryall_GDI_Active</eastSkyfallerActive>
 				<westSkyfallerActive>Carryall_GDI_R_Active</westSkyfallerActive>
-				<needsConfirmation>false</needsConfirmation>
+				<needsConfirmation>true</needsConfirmation>
 				<travelSpeed>3.5</travelSpeed>
 				<fuelPerTile>3</fuelPerTile>
 				<minPassengers>1</minPassengers>
@@ -423,7 +423,7 @@ Fuel efficiency: 3 per tile</description>
 			<westSkyfallerIncoming>Carryall_Nod_R_Incoming</westSkyfallerIncoming>
 			<eastSkyfallerActive>Carryall_Nod_Active</eastSkyfallerActive>
 			<westSkyfallerActive>Carryall_Nod_R_Active</westSkyfallerActive>
-			<needsConfirmation>false</needsConfirmation>
+			<needsConfirmation>true</needsConfirmation>
 			<travelSpeed>8</travelSpeed>
 			<fuelPerTile>3</fuelPerTile>
 			<minPassengers>1</minPassengers>
@@ -608,7 +608,7 @@ Fuel efficiency: 1 per tile</description>
 				<westSkyfallerIncoming>Airship_Kirov_R_Incoming</westSkyfallerIncoming>
 				<eastSkyfallerActive>Airship_Kirov_Active</eastSkyfallerActive>
 				<westSkyfallerActive>Airship_Kirov_R_Active</westSkyfallerActive>
-				<needsConfirmation>false</needsConfirmation>
+				<needsConfirmation>true</needsConfirmation>
 				<hasSelfDestruct>true</hasSelfDestruct>
 				<travelSpeed>1.2</travelSpeed>
 				<fuelPerTile>1</fuelPerTile>

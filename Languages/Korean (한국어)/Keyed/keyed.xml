@@ -9,8 +9,10 @@
  <CA_SelfDestruct>과부하</CA_SelfDestruct>
  <CA_SelfDestructDesc>엔진을 과부하시켜 화재를 유도합니다. 비행선이 60% 이상 손상된 상태라면 곧바로 폭발하겠지만, 그렇지 않다면 불을 꺼서 수습할 수 있습니다.\n\n대폭발에 대비하세요!</CA_SelfDestructDesc>
 
- <CA_ConfirmationScreen>정말 출발하시겠습니까?
-일단 비행이 시작되면 목적지에 도달할 때까지 멈출 수 없습니다.</CA_ConfirmationScreen>
+ <CA_ConfirmationScreen>한 번에 너무 먼 거리를 비행하는 것은 위험할 수 있습니다. 비행 명령은 도중에 취소할 수 없으며, 귀환할 연료나 식량이 충분하지 않을 수도 있습니다.\n\n출발하시겠습니까?</CA_ConfirmationScreen>
+
+ <CA_ConfirmAtDistance>원거리 비행 확인 거리</CA_ConfirmAtDistance>
+ <CA_ConfirmDistanceToolTip>원거리 비행 확인 메시지가 출력될 거리를 설정합니다.</CA_ConfirmDistanceToolTip>
 
 <!-- for SRTS code-->
 
