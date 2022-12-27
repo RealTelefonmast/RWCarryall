@@ -140,13 +140,12 @@ Fuel efficiency: 1.5 per tile</description>
 				<showFuelGizmo>true</showFuelGizmo>
 				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
 				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
-			</li>		  
-			<li Class="CompProperties_Breakdownable" />		  
-			<li Class="CompProperties_Flickable" />		  
+			</li>
+			<li Class="CompProperties_Breakdownable" />
 			<!--<li Class="CompProperties_Glower">
 				<glowRadius>9</glowRadius>
 				<glowColor>(120,120,120,0)</glowColor>
-			</li>-->			
+			</li>-->
 			<li Class="CompProperties_Explosive">
 				<wickTicks>240</wickTicks>
 				<damageAmountBase>120</damageAmountBase>
@@ -258,9 +257,8 @@ Fuel efficiency: 3 per tile</description>
 				<showFuelGizmo>true</showFuelGizmo>
 				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
 				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
-			</li>	  
-			<li Class="CompProperties_Breakdownable" />	  
-			<li Class="CompProperties_Flickable" />
+			</li>
+			<li Class="CompProperties_Breakdownable" />
 			<!--<li Class="CompProperties_Glower">
 				<glowRadius>9</glowRadius>
 				<glowColor>(140,130,115,0)</glowColor>
@@ -445,9 +443,8 @@ Fuel efficiency: 3 per tile</description>
 			<showFuelGizmo>true</showFuelGizmo>
 			<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
 			<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
-		</li>	  
-		<li Class="CompProperties_Breakdownable" />	  
-		<li Class="CompProperties_Flickable" />	  
+		</li>
+		<li Class="CompProperties_Breakdownable" />
 			<!--<li Class="CompProperties_Glower">
 				<glowRadius>9</glowRadius>
 				<glowColor>(150,40,40,0)</glowColor>
@@ -630,9 +627,8 @@ Fuel efficiency: 1 per tile</description>
 				<showFuelGizmo>true</showFuelGizmo>
 				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
 				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
-			</li>		  
-			<li Class="CompProperties_Breakdownable" />		  
-			<li Class="CompProperties_Flickable" />		  
+			</li>
+			<li Class="CompProperties_Breakdownable" />
 			<!--<li Class="CompProperties_Glower">
 				<glowRadius>9</glowRadius>
 				<glowColor>(120,120,120,0)</glowColor>
