@@ -9,7 +9,7 @@
 		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 		<selectable>true</selectable>
 		<drawerType>MapMeshAndRealTime</drawerType>
-		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<repairEffect>Repair</repairEffect>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
@@ -58,7 +58,6 @@ Fuel efficiency: 1.5 per tile</description>
 		<pathCost>75</pathCost>
 		<blockWind>false</blockWind>
 		<rotatable>true</rotatable>
-		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 		<canOverlapZones>true</canOverlapZones>
 		<preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
 		<repairEffect>Repair</repairEffect>
@@ -181,7 +180,6 @@ Fuel efficiency: 3 per tile</description>
 		<pathCost>75</pathCost>
 		<blockWind>false</blockWind>
 		<rotatable>false</rotatable>
-		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 		<canOverlapZones>true</canOverlapZones>
 		<preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
 		<repairEffect>ConstructMetal</repairEffect>
@@ -366,7 +364,6 @@ Fuel efficiency: 3 per tile</description>
 		<pathCost>75</pathCost>
 		<blockWind>false</blockWind>
 		<rotatable>false</rotatable>
-		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<canOverlapZones>true</canOverlapZones>
 		<preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
 		<repairEffect>ConstructMetal</repairEffect>
@@ -552,7 +549,6 @@ Fuel efficiency: 1 per tile</description>
 		<pathCost>75</pathCost>
 		<blockWind>false</blockWind>
 		<rotatable>true</rotatable>
-		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<canOverlapZones>true</canOverlapZones>
 		<preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
 		<repairEffect>ConstructMetal</repairEffect>
