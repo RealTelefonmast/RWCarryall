@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using UnityEngine;
 using Verse;
@@ -504,16 +505,19 @@ namespace SRTS
 
 	    private void ConfirmLaunch(int destinationTile, TransportPodsArrivalAction arrivalAction, Caravan cafr = null)
 	    {
-		    var dist = Find.WorldGrid.TraversalDistanceBetween(parent.Map.Tile, destinationTile);
-		    if (dist >= SRTSMod.mod.settings.confirmDistance)
+		    var map = this.parent?.MapHeld;
+		    if (map != null)
 		    {
-			    Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation("CA_ConfirmationScreen".Translate(),
-				    () => TryLaunch(destinationTile, arrivalAction, cafr)));
+			    var dist = Find.WorldGrid.TraversalDistanceBetween(map.Tile, destinationTile);
+			    if (dist >= SRTSMod.mod.settings.confirmDistance)
+			    {
+				    Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation("CA_ConfirmationScreen".Translate(), () => TryLaunch(destinationTile, arrivalAction, cafr)));
+				    return;
+			    }
 		    }
-		    else
-		    {
-			    TryLaunch(destinationTile, arrivalAction, cafr);
-		    }
+		    
+		    //
+		    TryLaunch(destinationTile, arrivalAction, cafr);
 	    }
 
 	    public void TryLaunch(int destinationTile, TransportPodsArrivalAction arrivalAction, Caravan cafr = null)
