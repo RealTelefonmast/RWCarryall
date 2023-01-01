@@ -49,7 +49,7 @@
 
 Seats: 5
 Speed: 4
-Cargo capacity: 550kg
+Cargo capacity: 450kg
 
 Fuel capacity: 200
 Fuel efficiency: 1.5 per tile</description>
@@ -69,7 +69,7 @@ Fuel efficiency: 1.5 per tile</description>
 			<texPath>Carryall/CarryallBasic</texPath>
 			<shaderType>CutoutFlying</shaderType>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(4.2,4.2)</drawSize>
+			<drawSize>(4.3,4.3)</drawSize>
 			<drawRotated>false</drawRotated>
 			<shadowData>
 				<volume>(1.2, 1.2, 2.2)</volume><!--width, vertical, height-->
@@ -104,7 +104,7 @@ Fuel efficiency: 1.5 per tile</description>
 		<comps>		  
 			<li Class="CompProperties_Transporter">
 				<restEffectiveness>0.8</restEffectiveness>
-				<massCapacity>550</massCapacity>	
+				<massCapacity>450</massCapacity>
 				<max1PerGroup>false</max1PerGroup>
 				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
 				<showOverallStats>true</showOverallStats>
@@ -127,7 +127,7 @@ Fuel efficiency: 1.5 per tile</description>
 			<li Class="CompProperties_Refuelable">
 				<fuelCapacity>150</fuelCapacity>
 				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-				<initialConfigurableTargetFuelLevel>50</initialConfigurableTargetFuelLevel>
+				<initialConfigurableTargetFuelLevel>75</initialConfigurableTargetFuelLevel>
 				<fuelFilter>
 					<thingDefs>
 						<li>Chemfuel</li>
@@ -171,7 +171,7 @@ Ox carryall is equipped with a small turret. This is helpful in battle, but cons
 
 Seat: 4
 Speed: 3.5
-Cargo capacity: 1,800kg
+Cargo capacity: 1,500kg
 
 Fuel capacity: 600
 Fuel efficiency: 3 per tile</description>
@@ -220,7 +220,7 @@ Fuel efficiency: 3 per tile</description>
 		<comps>	  
 			<li Class="CompProperties_Transporter">
 				<restEffectiveness>0.8</restEffectiveness>
-				<massCapacity>1800</massCapacity>		
+				<massCapacity>1500</massCapacity>		
 				<max1PerGroup>false</max1PerGroup>
 				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
 				<showOverallStats>true</showOverallStats>
@@ -243,7 +243,7 @@ Fuel efficiency: 3 per tile</description>
 			<li Class="CompProperties_Refuelable">
 				<fuelCapacity>600</fuelCapacity>
 				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-				<initialConfigurableTargetFuelLevel>200</initialConfigurableTargetFuelLevel>
+				<initialConfigurableTargetFuelLevel>300</initialConfigurableTargetFuelLevel>
 				<fuelFilter>
 					<thingDefs>
 						<li>Chemfuel</li>
@@ -405,11 +405,11 @@ Fuel efficiency: 3 per tile</description>
 		<li Class="CompProperties_Transporter">
 			<restEffectiveness>0.8</restEffectiveness>
 			<massCapacity>900</massCapacity>
-				<max1PerGroup>false</max1PerGroup>
-				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
-				<showOverallStats>true</showOverallStats>
-				<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
-				<pawnExitSound>Shuttle_PawnExit</pawnExitSound>
+			<max1PerGroup>false</max1PerGroup>
+			<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
+			<showOverallStats>true</showOverallStats>
+			<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
+			<pawnExitSound>Shuttle_PawnExit</pawnExitSound>
 		</li>
 		<li Class="SRTS.CompProperties_LaunchableSRTS">
 			<eastSkyfaller>Carryall_Nod_Leaving</eastSkyfaller>
@@ -427,7 +427,7 @@ Fuel efficiency: 3 per tile</description>
 		<li Class="CompProperties_Refuelable">
 			<fuelCapacity>450</fuelCapacity>
 			<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-			<initialConfigurableTargetFuelLevel>150</initialConfigurableTargetFuelLevel>
+			<initialConfigurableTargetFuelLevel>225</initialConfigurableTargetFuelLevel>
 				<fuelFilter>
 				<thingDefs>
 					<li>Chemfuel</li>
@@ -529,17 +529,137 @@ Fuel efficiency: 3 per tile</description>
 			<speed>70</speed>
 		</projectile>
 	</ThingDef>
+	
+
+	<ThingDef ParentName="CarryallBase">
+		<defName>Airship_Standard</defName>
+		<label>standard airship</label>
+		<description>An airship with standard specifications. It's just slightly faster than walking speed, but unaffected by terrain so can easily cross sea and mountains.
+
+Seat: 3
+Speed: 1.2
+Cargo capacity: 200kg
+
+Fuel capacity: 100
+Fuel efficiency: 0.5 per tile</description>
+
+		<fillPercent>0.95</fillPercent>
+		<pathCost>75</pathCost>
+		<blockWind>false</blockWind>
+		<rotatable>true</rotatable>
+		<canOverlapZones>true</canOverlapZones>
+		<preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+		<repairEffect>ConstructMetal</repairEffect>
+		<forceDebugSpawnable>true</forceDebugSpawnable>
+		<minifiedDef />
+		<uiIconPath>Carryall/AirshipBasic</uiIconPath>
+
+		<graphicData>
+			<texPath>Carryall/AirshipBasic</texPath>
+			<shaderType>CutoutFlying</shaderType>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(5,5)</drawSize>
+			<drawRotated>false</drawRotated>
+			<shadowData>
+				<volume>(1.5, 1.5, 2.9)</volume><!--width, vertical, height-->
+				<offset>(0, 0, -0.1)</offset>
+			</shadowData>
+		</graphicData>
+		
+		<size>(3,3)</size>
+		
+		<statBases>
+			<MaxHitPoints>600</MaxHitPoints>
+			<WorkToBuild>15000</WorkToBuild>
+			<Flammability>3</Flammability>
+			<Mass>1</Mass>
+			<Beauty>-10</Beauty>
+		</statBases>
+		<costList>
+			<Cloth>500</Cloth>
+			<Steel>250</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+
+		<comps>		  
+			<li Class="CompProperties_Transporter">
+				<restEffectiveness>0.7</restEffectiveness>
+				<massCapacity>300</massCapacity>
+				<max1PerGroup>false</max1PerGroup>
+				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
+				<showOverallStats>true</showOverallStats>
+				<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
+				<pawnExitSound>Shuttle_PawnExit</pawnExitSound>
+			</li>		
+			<li Class="SRTS.CompProperties_LaunchableSRTS">
+				<eastSkyfaller>Airship_Standard_Leaving</eastSkyfaller>
+				<westSkyfaller>Airship_Standard_R_Leaving</westSkyfaller>
+				<eastSkyfallerIncoming>Airship_Standard_Incoming</eastSkyfallerIncoming>
+				<westSkyfallerIncoming>Airship_Standard_R_Incoming</westSkyfallerIncoming>
+				<eastSkyfallerActive>Airship_Standard_Active</eastSkyfallerActive>
+				<westSkyfallerActive>Airship_Standard_R_Active</westSkyfallerActive>
+				<needsConfirmation>true</needsConfirmation>
+				<hasSelfDestruct>false</hasSelfDestruct>
+				<travelSpeed>1.2</travelSpeed>
+				<fuelPerTile>0.5</fuelPerTile>
+				<minPassengers>1</minPassengers>
+				<maxPassengers>4</maxPassengers>
+			</li>		  
+			<li Class="CompProperties_Refuelable">
+				<fuelCapacity>100</fuelCapacity>
+				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+				<initialConfigurableTargetFuelLevel>50</initialConfigurableTargetFuelLevel>
+				<fuelFilter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</fuelFilter>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<initialFuelPercent>0</initialFuelPercent>
+				<autoRefuelPercent>0.9</autoRefuelPercent>
+				<showFuelGizmo>true</showFuelGizmo>
+				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+			</li>
+			<li Class="CompProperties_Breakdownable" />
+			<!--<li Class="CompProperties_Glower">
+				<glowRadius>9</glowRadius>
+				<glowColor>(120,120,120,0)</glowColor>
+			</li>-->
+			<li Class="CompProperties_Explosive">
+				<wickTicks>240</wickTicks>
+				<damageAmountBase>75</damageAmountBase>
+				<explosiveRadius>3.9</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+				<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+				<chanceToStartFire>0.9</chanceToStartFire>
+				<startWickHitPointsPercent>0.4</startWickHitPointsPercent>
+			</li>
+		</comps>
+
+		<building>
+			<claimable>false</claimable>
+			<soundAmbient>SpacedroneIdle_Ambience</soundAmbient>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+			<expandHomeArea>false</expandHomeArea>
+			<ai_combatDangerous>true</ai_combatDangerous>
+		</building>
+		<researchPrerequisites>
+			<li>Research_Airships</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+	</ThingDef>
+
 
 	<ThingDef ParentName="CarryallBase">
 		<defName>Airship_Kirov</defName>
 		<label>kirov airship</label>
-		<description>An airship model used by the ancients who liked to paint everything red. It's just slightly faster than walking speed, but unaffected by terrain so can easily cross sea and mountains.
+		<description>A huge airship model used by the ancients who liked to paint everything red. Its original bomb rack is not ready due to lost technology, but still easy to the explode. Beware the fire.
 
-Its original bomb rack is not ready due to lost technology, but still easy to the explode. Beware the fire.
-
-Seat: 8
+Seat: 6
 Speed: 1.2
-Cargo capacity: 1400kg
+Cargo capacity: 600kg
 
 Fuel capacity: 150
 Fuel efficiency: 1 per tile</description>
@@ -587,7 +707,7 @@ Fuel efficiency: 1 per tile</description>
 		<comps>		  
 			<li Class="CompProperties_Transporter">
 				<restEffectiveness>0.7</restEffectiveness>
-				<massCapacity>1400</massCapacity>
+				<massCapacity>600</massCapacity>
 				<max1PerGroup>false</max1PerGroup>
 				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
 				<showOverallStats>true</showOverallStats>
@@ -602,7 +722,7 @@ Fuel efficiency: 1 per tile</description>
 				<eastSkyfallerActive>Airship_Kirov_Active</eastSkyfallerActive>
 				<westSkyfallerActive>Airship_Kirov_R_Active</westSkyfallerActive>
 				<needsConfirmation>true</needsConfirmation>
-				<hasSelfDestruct>true</hasSelfDestruct>
+				<hasSelfDestruct>false</hasSelfDestruct>
 				<travelSpeed>1.2</travelSpeed>
 				<fuelPerTile>1</fuelPerTile>
 				<minPassengers>1</minPassengers>
@@ -611,7 +731,7 @@ Fuel efficiency: 1 per tile</description>
 			<li Class="CompProperties_Refuelable">
 				<fuelCapacity>150</fuelCapacity>
 				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-				<initialConfigurableTargetFuelLevel>50</initialConfigurableTargetFuelLevel>
+				<initialConfigurableTargetFuelLevel>75</initialConfigurableTargetFuelLevel>
 				<fuelFilter>
 					<thingDefs>
 						<li>Chemfuel</li>
@@ -657,9 +777,9 @@ Fuel efficiency: 1 per tile</description>
 			<li>PlaceWorker_ShowTurretRadius</li>
 		</placeWorkers>
 		<researchPrerequisites>
-			<li>Research_Airships</li>
+			<li>Research_Kirov</li>
 		</researchPrerequisites>
-		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
 		<specialDisplayRadius>10.9</specialDisplayRadius>
 	</ThingDef>
 

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <Carryall_standard.label>표준 캐리올</Carryall_standard.label>
-  <Carryall_standard.description>성간 제국에서 사용되는 표준 셔틀의 열화 복제 모델입니다. 우주 항행 기능은 빠져 있지만 정착지를 고립에서 완전히 해방시키는 데는 충분한 성능입니다.\n\n좌석: 5\n속도: 4\n적재 용량: 550kg\n\n연료 용량: 200\n연료 효율: 타일당 1.5L</Carryall_standard.description>
+  <Carryall_standard.label>캐리올</Carryall_standard.label>
+  <Carryall_standard.description>성간 제국에서 사용되는 표준 셔틀의 열화 복제 모델입니다. 우주 항행 기능은 빠져 있지만 정착지를 고립에서 완전히 해방시키는 데는 충분한 성능입니다.\n\n좌석: 5\n속도: 4\n적재 용량: 450kg\n\n연료 용량: 200\n연료 효율: 타일당 1.5L</Carryall_standard.description>
 
 
   <Carryall_GDI.label>옥스 캐리올</Carryall_GDI.label>
-  <Carryall_GDI.description>희귀한 캐리올 모델로, 먼 옛날 칠면조 비슷한 것을 숭배하던 이들이 사용했다고 합니다. 대량 운송에 최적화되어 화물 적재량이 매우 우수하지만 객실은 비좁습니다.\n\n옥스 캐리올에는 소형 포탑이 장착되어 있습니다. 이것은 전투에 도움이 되지만 많은 연료를 소모합니다. 집으로 돌아가려면 충분한 연료가 필요하다는 것을 항상 기억하세요.\n\n좌석: 4\n속도: 3.5\n적재 용량: 1,800kg\n\n연료 용량: 600\n연료 효율: 타일당 3L</Carryall_GDI.description>
+  <Carryall_GDI.description>희귀한 캐리올 모델로, 먼 옛날 칠면조 비슷한 것을 숭배하던 이들이 사용했다고 합니다. 대량 운송에 최적화되어 화물 적재량이 매우 우수하지만 객실은 비좁습니다.\n\n옥스 캐리올에는 소형 포탑이 장착되어 있습니다. 이것은 전투에 도움이 되지만 많은 연료를 소모합니다. 집으로 돌아가려면 충분한 연료가 필요하다는 것을 항상 기억하세요.\n\n좌석: 4\n속도: 3.5\n적재 용량: 1,500kg\n\n연료 용량: 600\n연료 효율: 타일당 3L</Carryall_GDI.description>
   
-  <Gun_MiniCarryallTurret.label>캐리올 포탑</Gun_MiniCarryallTurret.label>
+  <Gun_MiniCarryallTurret.label>포탑</Gun_MiniCarryallTurret.label>
   <Gun_MiniCarryallTurret.description>포탑에 장착할 수 있도록 만들어진 자율 무장입니다.</Gun_MiniCarryallTurret.description>
   
   <Bullet_MiniCarryallTurret.label>탄환</Bullet_MiniCarryallTurret.label>
@@ -17,13 +17,17 @@
   <Carryall_Nod.label>버티고 캐리올</Carryall_Nod.label>
   <Carryall_Nod.description>희귀한 캐리올 모델로, 먼 옛날 벌레 비슷한 것을 숭배하던 이들이 사용했다고 합니다. 강습 작전에 최적화되어 많은 인원을 빠르고 멀리 수송할 수 있지만 화물 용량은 작습니다.\n\n버티고 캐리올에는 미니건 포탑이 장착되어 있습니다. 이것은 전투에 큰 도움이 되지만 많은 연료를 소모합니다. 집으로 돌아가려면 충분한 연료가 필요하다는 것을 항상 기억하세요.\n\n좌석: 10\n속도: 8\n적재 용량: 900kg\n\n연료 용량: 450\n연료 효율: 타일당 3L</Carryall_Nod.description>
 
-  <Gun_MediumCarryallTurret.label>캐리올 기관포탑</Gun_MediumCarryallTurret.label>
+  <Gun_MediumCarryallTurret.label>기관포</Gun_MediumCarryallTurret.label>
   <Gun_MediumCarryallTurret.description>포탑에 장착할 수 있도록 만들어진 자율 무장입니다.</Gun_MediumCarryallTurret.description>
 
   <Bullet_MediumCarryallTurret.label>탄환</Bullet_MediumCarryallTurret.label>
 
+
+ <Airship_Standard.label>비행선</Airship_Standard.label>
+  <Airship_Standard.description>평범하고 기본적인 비행선입니다. 걷는 것보다 약간 빨리 이동하는 정도이지만 지형의 영향을 받지 않아 바다와 산을 쉽게 건널 수 있습니다.\n\n좌석: 3\n속도: 1.2\n적재 용량: 200kg\n\n연료 용량: 100\n연료 효율: 타일당 0.5L</Airship_Standard.description>
+
   <Airship_Kirov.label>키로프 비행선</Airship_Kirov.label>
-  <Airship_Kirov.description>고전적 디자인의 비행선으로, 먼 옛날 모든 것에 붉은 칠을 하던 이들이 사용했다고 합니다. 걷는 것보다 약간 빨리 이동하는 정도이지만 지형의 영향을 받지 않아 바다와 산을 쉽게 건널 수 있습니다.\n\n불완전한 기술 탓에 원래의 무장은 장착되어 있지 않습니다. 하지만 불타면 어마어마한 폭발을 일으킬 것입니다.\n\n좌석: 8\n속도: 1.2\n적재 용량: 1400kg\n\n연료 용량: 150\n연료 효율: 타일당 1L</Airship_Kirov.description>
+  <Airship_Kirov.description>거대한 비행선 모델로, 먼 옛날 모든 것에 붉은 칠을 하던 이들이 사용했다고 합니다. 불완전한 기술 탓에 원래의 무장은 장착되어 있지 않습니다. 하지만 불타면 어마어마한 폭발을 일으킬 것입니다.\n\n좌석: 6\n속도: 1.2\n적재 용량: 600kg\n\n연료 용량: 150\n연료 효율: 타일당 1L</Airship_Kirov.description>
 
   <Gun_KirovTurret.label>증기 배출구</Gun_KirovTurret.label>
   <Gun_KirovTurret.description>키로프 비행선은 선체를 둘러싼 배관을 통해 근접한 적에게 뜨거운 연료 증기를 분사할 수 있습니다. 전투에 그다지 효과적이지는 않지만, 시도할 가치는 있습니다.</Gun_KirovTurret.description>
@@ -32,13 +36,13 @@
 
 
 
-  <Carryall_standard_Incoming.label>표준 캐리올</Carryall_standard_Incoming.label>
-  <Carryall_standard_Leaving.label>표준 캐리올</Carryall_standard_Leaving.label>
-  <Carryall_standard_Active.label>표준 캐리올</Carryall_standard_Active.label>
+  <Carryall_standard_Incoming.label>캐리올</Carryall_standard_Incoming.label>
+  <Carryall_standard_Leaving.label>캐리올</Carryall_standard_Leaving.label>
+  <Carryall_standard_Active.label>캐리올</Carryall_standard_Active.label>
  
-  <Carryall_standard_R_Incoming.label>표준 캐리올</Carryall_standard_R_Incoming.label>
-  <Carryall_standard_R_Leaving.label>표준 캐리올</Carryall_standard_R_Leaving.label>
-  <Carryall_standard_R_Active.label>표준 캐리올</Carryall_standard_R_Active.label>
+  <Carryall_standard_R_Incoming.label>캐리올</Carryall_standard_R_Incoming.label>
+  <Carryall_standard_R_Leaving.label>캐리올</Carryall_standard_R_Leaving.label>
+  <Carryall_standard_R_Active.label>캐리올</Carryall_standard_R_Active.label>
 
   <Carryall_GDI_Incoming.label>옥스 캐리올</Carryall_GDI_Incoming.label>
   <Carryall_GDI_Leaving.label>옥스 캐리올</Carryall_GDI_Leaving.label>
@@ -55,6 +59,14 @@
   <Carryall_Nod_R_Incoming.label>버티고 캐리올</Carryall_Nod_R_Incoming.label>
   <Carryall_Nod_R_Leaving.label>버티고 캐리올</Carryall_Nod_R_Leaving.label>
   <Carryall_Nod_R_Active.label>버티고 캐리올</Carryall_Nod_R_Active.label>
+
+  <Airship_Standard_Incoming.label>비행선</Airship_Standard_Incoming.label>
+  <Airship_Standard_Leaving.label>비행선</Airship_Standard_Leaving.label>
+  <Airship_Standard_Active.label>비행선</Airship_Standard_Active.label>
+ 
+  <Airship_Standard_R_Incoming.label>비행선</Airship_Standard_R_Incoming.label>
+  <Airship_Standard_R_Leaving.label>비행선</Airship_Standard_R_Leaving.label>
+  <Airship_Standard_R_Active.label>비행선</Airship_Standard_R_Active.label>
   
   <Airship_Kirov_Incoming.label>키로프 비행선</Airship_Kirov_Incoming.label>
   <Airship_Kirov_Leaving.label>키로프 비행선</Airship_Kirov_Leaving.label>
