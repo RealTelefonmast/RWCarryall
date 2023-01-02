@@ -105,7 +105,7 @@ Fuel efficiency: 1.5 per tile</description>
 			<li Class="CompProperties_Transporter">
 				<restEffectiveness>0.8</restEffectiveness>
 				<massCapacity>450</massCapacity>
-				<max1PerGroup>false</max1PerGroup>
+				<max1PerGroup>true</max1PerGroup>
 				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
 				<showOverallStats>true</showOverallStats>
 				<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
@@ -135,7 +135,7 @@ Fuel efficiency: 1.5 per tile</description>
 				</fuelFilter>
 				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
 				<initialFuelPercent>0</initialFuelPercent>
-				<autoRefuelPercent>0.9</autoRefuelPercent>
+				<autoRefuelPercent>1</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
 				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
 				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
@@ -171,7 +171,7 @@ Ox carryall is equipped with a small turret. This is helpful in battle, but cons
 
 Seat: 4
 Speed: 3.5
-Cargo capacity: 1,500kg
+Cargo capacity: 1,400kg
 
 Fuel capacity: 600
 Fuel efficiency: 3 per tile</description>
@@ -220,8 +220,8 @@ Fuel efficiency: 3 per tile</description>
 		<comps>	  
 			<li Class="CompProperties_Transporter">
 				<restEffectiveness>0.8</restEffectiveness>
-				<massCapacity>1500</massCapacity>		
-				<max1PerGroup>false</max1PerGroup>
+				<massCapacity>1400</massCapacity>		
+				<max1PerGroup>true</max1PerGroup>
 				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
 				<showOverallStats>true</showOverallStats>
 				<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
@@ -251,7 +251,7 @@ Fuel efficiency: 3 per tile</description>
 				</fuelFilter>
 				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
 				<initialFuelPercent>0</initialFuelPercent>
-				<autoRefuelPercent>0.9</autoRefuelPercent>
+				<autoRefuelPercent>1</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
 				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
 				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
@@ -355,7 +355,7 @@ Vertigo carryall is equipped with a minigun turret. This is helpful in battle, b
 
 Seat: 10
 Speed: 5
-Cargo capacity: 900kg
+Cargo capacity: 800kg
 
 Fuel capacity: 450
 Fuel efficiency: 3 per tile</description>
@@ -404,8 +404,8 @@ Fuel efficiency: 3 per tile</description>
 		<comps>	  
 		<li Class="CompProperties_Transporter">
 			<restEffectiveness>0.8</restEffectiveness>
-			<massCapacity>900</massCapacity>
-			<max1PerGroup>false</max1PerGroup>
+			<massCapacity>800</massCapacity>
+			<max1PerGroup>true</max1PerGroup>
 			<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
 			<showOverallStats>true</showOverallStats>
 			<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
@@ -436,7 +436,7 @@ Fuel efficiency: 3 per tile</description>
 			<fuelConsumptionRate>3</fuelConsumptionRate>
 			<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
 			<initialFuelPercent>0</initialFuelPercent>
-			<autoRefuelPercent>0.9</autoRefuelPercent>
+			<autoRefuelPercent>1</autoRefuelPercent>
 			<showFuelGizmo>true</showFuelGizmo>
 			<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
 			<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
@@ -585,7 +585,7 @@ Fuel efficiency: 0.5 per tile</description>
 			<li Class="CompProperties_Transporter">
 				<restEffectiveness>0.7</restEffectiveness>
 				<massCapacity>300</massCapacity>
-				<max1PerGroup>false</max1PerGroup>
+				<max1PerGroup>true</max1PerGroup>
 				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
 				<showOverallStats>true</showOverallStats>
 				<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
@@ -616,7 +616,7 @@ Fuel efficiency: 0.5 per tile</description>
 				</fuelFilter>
 				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
 				<initialFuelPercent>0</initialFuelPercent>
-				<autoRefuelPercent>0.9</autoRefuelPercent>
+				<autoRefuelPercent>1</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
 				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
 				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
@@ -708,7 +708,7 @@ Fuel efficiency: 1 per tile</description>
 			<li Class="CompProperties_Transporter">
 				<restEffectiveness>0.7</restEffectiveness>
 				<massCapacity>600</massCapacity>
-				<max1PerGroup>false</max1PerGroup>
+				<max1PerGroup>true</max1PerGroup>
 				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
 				<showOverallStats>true</showOverallStats>
 				<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
@@ -739,7 +739,7 @@ Fuel efficiency: 1 per tile</description>
 				</fuelFilter>
 				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
 				<initialFuelPercent>0</initialFuelPercent>
-				<autoRefuelPercent>0.9</autoRefuelPercent>
+				<autoRefuelPercent>1</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
 				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
 				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
