@@ -20,6 +20,10 @@ namespace SRTS
         private static readonly Texture2D LaunchCommandTex = ContentFinder<Texture2D>.Get("UI/Commands/LaunchShip", true);
         private CompTransporter cachedCompTransporter;
         private Caravan carr;
+
+        readonly List<Thing> thingsInsideShip = new List<Thing>();
+	    readonly List<Pawn> tmpAllowedPawns = new List<Pawn>();
+        
         public float BaseFuelPerTile => SRTSMod.GetStatFor<float>(this.parent.def.defName, StatName.fuelPerTile);
 
         public CompProperties_LaunchableSRTS SRTSProps => (CompProperties_LaunchableSRTS)this.props;
@@ -290,6 +294,42 @@ namespace SRTS
                 }
             }
         }
+        
+        
+        public override IEnumerable<FloatMenuOption> CompMultiSelectFloatMenuOptions(List<Pawn> selPawns)
+        {
+	        for (int i = 0; i < selPawns.Count; i++)
+	        {
+		        if (selPawns[i].CanReach(this.parent, PathEndMode.Touch, Danger.Deadly, false, false, TraverseMode.ByPawn))
+		        {
+			        tmpAllowedPawns.Add(selPawns[i]);
+		        }
+	        }
+	        if (!tmpAllowedPawns.Any<Pawn>())
+	        {
+		        yield return new FloatMenuOption("BoardSRTS".Translate(this.parent.Label) + " (" + "NoPath".Translate() + ")", null, MenuOptionPriority.Default, null, null, 0f, null, null, true, 0);
+		        yield break;
+	        }
+
+	        yield return new FloatMenuOption("BoardSRTS".Translate(this.parent.Label), delegate()
+	        {
+		        if (!this.LoadingInProgressOrReadyToLaunch)
+		        {
+			        TransporterUtility.InitiateLoading(Gen.YieldSingle<CompTransporter>(this.Transporter));
+		        }
+		        for (int k = 0; k < tmpAllowedPawns.Count; k++)
+		        {
+			        Pawn pawn = tmpAllowedPawns[k];
+			        if (pawn.CanReach(this.parent, PathEndMode.Touch, Danger.Deadly, false, false, TraverseMode.ByPawn) && !pawn.Downed && !pawn.Dead && pawn.Spawned)
+			        {
+				        Job job = JobMaker.MakeJob(JobDefOf.EnterTransporter, this.parent);
+				        tmpAllowedPawns[k].jobs.TryTakeOrderedJob(job, new JobTag?(JobTag.Misc), false);
+			        }
+		        }
+	        }, MenuOptionPriority.Default, null, null, 0f, null, null, true, 0);
+	        yield break;
+        }
+        
 
         public override string CompInspectStringExtra()
         {
@@ -719,7 +759,6 @@ namespace SRTS
                 yield return new FloatMenuOption("TransportPodsContentsWillBeLost".Translate(),
                     (() => ConfirmLaunch(tile, (TransportPodsArrivalAction) null)));
         }
-
-		List<Thing> thingsInsideShip = new List<Thing>();
-	}
+	    
+    }
 }
