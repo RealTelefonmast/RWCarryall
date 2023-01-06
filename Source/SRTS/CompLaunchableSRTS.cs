@@ -281,17 +281,18 @@ namespace SRTS
         {
             if (!pawn.Dead && !pawn.InMentalState && pawn.Faction == Faction.OfPlayerSilentFail)
             {
-                if(pawn.CanReach(this.parent, PathEndMode.Touch, Danger.Deadly, false, mode: TraverseMode.ByPawn))
-                {
-                    if(this.LoadingInProgressOrReadyToLaunch)
-                    {
-                        yield return new FloatMenuOption("BoardSRTS".Translate(this.parent.Label), delegate ()
-                        {
-                            Job job = new Job(JobDefOf.EnterTransporter, this.parent);
-                            pawn.jobs.TryTakeOrderedJob(job);
-                        }, MenuOptionPriority.Default, null, null, 0f, null, null);
-                    }
-                }
+	            if (pawn.CanReach(this.parent, PathEndMode.Touch, Danger.Deadly, false, mode: TraverseMode.ByPawn))
+	            {
+		            yield return new FloatMenuOption("BoardSRTS".Translate(this.parent.Label), delegate()
+		            {
+			            if (!this.LoadingInProgressOrReadyToLaunch)
+			            {
+				            TransporterUtility.InitiateLoading(Gen.YieldSingle<CompTransporter>(this.Transporter));
+			            }
+			            Job job = new Job(JobDefOf.EnterTransporter, this.parent);
+			            pawn.jobs.TryTakeOrderedJob(job);
+		            }, MenuOptionPriority.Default, null, null, 0f, null, null);
+	            }
             }
         }
         
