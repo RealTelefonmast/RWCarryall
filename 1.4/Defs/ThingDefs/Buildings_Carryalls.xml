@@ -39,6 +39,13 @@
 				<multiplier>0</multiplier>
 			</li>			
 		</damageMultipliers>
+		<building>
+			<claimable>false</claimable>
+			<soundAmbient>ShuttleIdle_Ambience</soundAmbient>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+			<expandHomeArea>false</expandHomeArea>
+			<ai_combatDangerous>true</ai_combatDangerous>
+		</building>
 	</ThingDef>
 
 
@@ -92,14 +99,7 @@ Fuel efficiency: 1.5 per tile</description>
 			<Gold>50</Gold>
 			<ComponentIndustrial>10</ComponentIndustrial>
 			<ComponentSpacer>3</ComponentSpacer>
-		</costList>		
-		<building>
-			<claimable>false</claimable>
-			<soundAmbient>ShuttleIdle_Ambience</soundAmbient>
-			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
-			<expandHomeArea>false</expandHomeArea>
-			<ai_combatDangerous>true</ai_combatDangerous>
-		</building>
+		</costList>
 
 		<comps>		  
 			<li Class="CompProperties_Transporter">
@@ -274,11 +274,6 @@ Fuel efficiency: 3 per tile</description>
 		</comps>
 
 		<building>
-			<claimable>false</claimable>
-			<soundAmbient>SpacedroneIdle_Ambience</soundAmbient>
-			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
-			<expandHomeArea>false</expandHomeArea>
-			<ai_combatDangerous>true</ai_combatDangerous>
 			<combatPower>200</combatPower>
 			<turretGunDef>Gun_MiniCarryallTurret</turretGunDef>
 			<turretBurstCooldownTime>3.8</turretBurstCooldownTime>
@@ -459,11 +454,6 @@ Fuel efficiency: 3 per tile</description>
 		</comps>
 
 		<building>
-			<claimable>false</claimable>
-			<soundAmbient>SpacedroneIdle_Ambience</soundAmbient>
-			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
-			<expandHomeArea>false</expandHomeArea>
-			<ai_combatDangerous>true</ai_combatDangerous>
 			<combatPower>300</combatPower>
 			<turretGunDef>Gun_MediumCarryallTurret</turretGunDef>
 			<turretBurstCooldownTime>5</turretBurstCooldownTime>
@@ -638,13 +628,6 @@ Fuel efficiency: 0.5 per tile</description>
 			</li>
 		</comps>
 
-		<building>
-			<claimable>false</claimable>
-			<soundAmbient>SpacedroneIdle_Ambience</soundAmbient>
-			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
-			<expandHomeArea>false</expandHomeArea>
-			<ai_combatDangerous>true</ai_combatDangerous>
-		</building>
 		<researchPrerequisites>
 			<li>Research_Airships</li>
 		</researchPrerequisites>
@@ -722,7 +705,7 @@ Fuel efficiency: 1 per tile</description>
 				<eastSkyfallerActive>Airship_Kirov_Active</eastSkyfallerActive>
 				<westSkyfallerActive>Airship_Kirov_R_Active</westSkyfallerActive>
 				<needsConfirmation>true</needsConfirmation>
-				<hasSelfDestruct>false</hasSelfDestruct>
+				<hasSelfDestruct>true</hasSelfDestruct>
 				<travelSpeed>1.2</travelSpeed>
 				<fuelPerTile>1</fuelPerTile>
 				<minPassengers>1</minPassengers>
@@ -763,11 +746,6 @@ Fuel efficiency: 1 per tile</description>
 		</comps>
 
 		<building>
-			<claimable>false</claimable>
-			<soundAmbient>SpacedroneIdle_Ambience</soundAmbient>
-			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
-			<expandHomeArea>false</expandHomeArea>
-			<ai_combatDangerous>true</ai_combatDangerous>
 			<combatPower>300</combatPower>
 			<turretGunDef>Gun_KirovTurret</turretGunDef>
 			<turretBurstCooldownTime>7</turretBurstCooldownTime>
