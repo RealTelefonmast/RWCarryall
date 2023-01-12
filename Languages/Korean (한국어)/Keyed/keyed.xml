@@ -2,6 +2,8 @@
 <LanguageData>
 
  <CA_Storage>적재 중량: {0}</CA_Storage>
+ <CA_PassengerCapacity>좌석: {0}</CA_PassengerCapacity>
+ <CA_WarningSeatsFull>좌석 부족 또는 중량 초과로 인해 {0}(이)가 탑승할 수 없습니다.</CA_WarningSeatsFull>
  <CA_Rotate>방향 전환</CA_Rotate>
  <CA_RotateDesc>캐리올이 반대쪽 방향을 바라보게 합니다.</CA_RotateDesc>
  <CA_AddToCarryall>적재 대상 선택</CA_AddToCarryall>
