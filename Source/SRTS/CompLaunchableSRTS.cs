@@ -140,7 +140,7 @@ namespace SRTS
 		            return false;
 	          }
 	    }
-
+	    
 	    public override void PostSpawnSetup(bool respawningAfterLoad)
 	    {
 		    base.PostSpawnSetup(respawningAfterLoad);
@@ -277,18 +277,63 @@ namespace SRTS
 	        }
 	    }
 
-        public override IEnumerable<FloatMenuOption> CompFloatMenuOptions(Pawn pawn)
+	    private bool CanAcceptNewPawnToLoad(Pawn pawn)
+	    {
+		    var boardingPawnCount = Transporter.leftToLoad?.Sum(t => t.things?.Count(t => t is Pawn)) ?? 0;
+		    var currentlyLoadedPawnCount = Transporter.innerContainer?.Count(t => t is Pawn) ?? 0;
+
+		    //Weight condition
+		    if (pawn != null)
+		    {
+			    var leftLoadList = Transporter.leftToLoad;
+			    var innerContainerList = Transporter.innerContainer;
+			    float currentMass = 0;
+			    float extraMass = 0;
+			    if (!leftLoadList.NullOrEmpty())
+				    currentMass = CollectionsMassCalculator.MassUsage(leftLoadList.SelectMany(t => t.things).ToList(), IgnorePawnsInventoryMode.IgnoreIfAssignedToUnload, true);
+				    
+			    if (!innerContainerList.NullOrEmpty())
+				    extraMass = CollectionsMassCalculator.MassUsage(innerContainerList.ToList(), IgnorePawnsInventoryMode.IgnoreIfAssignedToUnload, true);
+
+			    if ((currentMass + extraMass + pawn.def.BaseMass) > Transporter?.MassCapacity)
+			    {
+				    return false;
+			    }
+		    }
+		    
+		    if ((boardingPawnCount + currentlyLoadedPawnCount) < SRTSProps.maxPassengers)
+		    {
+			    return true;
+		    }
+		    return false;
+	    }
+
+	    private void TryInitPawnLoadingCommand(Pawn pawn)
+	    {
+		    if (!LoadingInProgressOrReadyToLaunch)
+		    {
+			    TransporterUtility.InitiateLoading(Gen.YieldSingle<CompTransporter>(this.Transporter));
+		    }
+
+		    Transporter.AddToTheToLoadList(new TransferableOneWay()
+		    {
+			    things = new List<Thing>() {pawn}
+		    }, 1);
+	    }
+
+	    public override IEnumerable<FloatMenuOption> CompFloatMenuOptions(Pawn pawn)
         {
-            if (!pawn.Dead && !pawn.InMentalState && pawn.Faction == Faction.OfPlayerSilentFail)
+	        if (!pawn.Dead && !pawn.InMentalState && pawn.Faction == Faction.OfPlayerSilentFail)
             {
+	            if (!CanAcceptNewPawnToLoad(pawn))
+	            {
+		            yield break;
+	            }
 	            if (pawn.CanReach(this.parent, PathEndMode.Touch, Danger.Deadly, false, mode: TraverseMode.ByPawn))
 	            {
 		            yield return new FloatMenuOption("BoardSRTS".Translate(this.parent.Label), delegate()
 		            {
-			            if (!this.LoadingInProgressOrReadyToLaunch)
-			            {
-				            TransporterUtility.InitiateLoading(Gen.YieldSingle<CompTransporter>(this.Transporter));
-			            }
+			            TryInitPawnLoadingCommand(pawn);
 			            Job job = new Job(JobDefOf.EnterTransporter, this.parent);
 			            pawn.jobs.TryTakeOrderedJob(job);
 		            }, MenuOptionPriority.Default, null, null, 0f, null, null);
@@ -311,18 +356,28 @@ namespace SRTS
 		        yield return new FloatMenuOption("BoardSRTS".Translate(this.parent.Label) + " (" + "NoPath".Translate() + ")", null, MenuOptionPriority.Default, null, null, 0f, null, null, true, 0);
 		        yield break;
 	        }
+	        
+	        if (!CanAcceptNewPawnToLoad(null))
+	        {
+		        yield break;
+	        }
 
 	        yield return new FloatMenuOption("BoardSRTS".Translate(this.parent.Label), delegate()
 	        {
-		        if (!this.LoadingInProgressOrReadyToLaunch)
-		        {
-			        TransporterUtility.InitiateLoading(Gen.YieldSingle<CompTransporter>(this.Transporter));
-		        }
 		        for (int k = 0; k < tmpAllowedPawns.Count; k++)
 		        {
 			        Pawn pawn = tmpAllowedPawns[k];
+			        
 			        if (pawn.CanReach(this.parent, PathEndMode.Touch, Danger.Deadly, false, false, TraverseMode.ByPawn) && !pawn.Downed && !pawn.Dead && pawn.Spawned)
 			        {
+				        if (!CanAcceptNewPawnToLoad(pawn))
+				        {
+					        Messages.Message("CA_WarningSeatsFull".Translate(pawn.NameFullColored), MessageTypeDefOf.RejectInput, false);
+					        continue;
+				        }
+
+				        TryInitPawnLoadingCommand(pawn);
+				        
 				        Job job = JobMaker.MakeJob(JobDefOf.EnterTransporter, this.parent);
 				        tmpAllowedPawns[k].jobs.TryTakeOrderedJob(job, new JobTag?(JobTag.Misc), false);
 			        }
@@ -356,7 +411,10 @@ namespace SRTS
 	        }
 
 	        sb.AppendLine("ReadyForLaunch".Translate());
-	        var val = CollectionsMassCalculator.MassUsage(this.Transporter.innerContainer.ToList(), IgnorePawnsInventoryMode.IgnoreIfAssignedToUnload, true);
+	        var container = Transporter.innerContainer.ToList();
+	        var pawnCount = container.Count(t => t is Pawn);
+	        var val = CollectionsMassCalculator.MassUsage(container, IgnorePawnsInventoryMode.IgnoreIfAssignedToUnload, true);
+	        sb.AppendLine("CA_PassengerCapacity".Translate($"{pawnCount}/{SRTSProps.maxPassengers}"));
 	        sb.AppendLine("CA_Storage".Translate($"{Math.Round(val, 1)}/{Transporter.MassCapacity}"));
 	        return sb.ToString().TrimEndNewlines();
         }

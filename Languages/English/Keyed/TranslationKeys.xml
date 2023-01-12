@@ -3,6 +3,8 @@
 <LanguageData>
 
  <CA_Storage>Cargo weight: {0}</CA_Storage>
+ <CA_PassengerCapacity>Seats: {0}</CA_PassengerCapacity>
+ <CA_WarningSeatsFull>Could not add pawn in group selection because seats are full: {0}</CA_WarningSeatsFull>
  <CA_Rotate>Rotate</CA_Rotate>
  <CA_RotateDesc>Rotate the carryall in the opposite direction.</CA_RotateDesc>
  <CA_AddToCarryall>Select cargo</CA_AddToCarryall>
