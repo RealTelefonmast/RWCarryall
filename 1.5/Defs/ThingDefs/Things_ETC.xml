@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--
+	<ThingDef ParentName="BuildingBase">
+		<defName>Airship_Kirov_Burned</defName>
+		<label>kirov wreck</label>
+		<description>A burned wreck of the kirov carryall.</description>
+		<fillPercent>0.3</fillPercent>
+		<pathCost>75</pathCost>
+		<blockWind>false</blockWind>
+		<rotatable>true</rotatable>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<canOverlapZones>true</canOverlapZones>
+		<graphicData>
+		  <texPath>Carryall/AirshipKirov</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(6,6)</drawSize>
+		  <drawRotated>false</drawRotated>
+		  <shadowData>
+			<volume>(3.2, 1.1, 1.1)</volume>
+			<offset>(0, 0, 0)</offset>
+		  </shadowData>
+		</graphicData>
+		<size>(3,3)</size>
+		<statBases>
+		  <MaxHitPoints>500</MaxHitPoints>
+		  <Flammability>4</Flammability>
+		  <Beauty>-100</Beauty>
+		</statBases>
+		<holdsRoof>false</holdsRoof>
+  </ThingDef>
+  
+
+	<ThingDef ParentName="CarryallBase">
+		<defName>Missile_HE</defName>
+		<label>ballistic missile</label>
+		<description>A weapon that can unleash powerful firepower even at long distances. However, firing into an unobservable area will only incur the wrath of the enemy.
+
+Speed: 25
+Cargo capacity: 100kg
+
+Fuel capacity: 100
+Fuel efficiency: 0.5 per tile</description>
+
+		<altitudeLayer>Building</altitudeLayer>
+		<fillPercent>0.75</fillPercent>
+		<pathCost>75</pathCost>
+		<blockWind>false</blockWind>
+		<rotatable>true</rotatable>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<canOverlapZones>true</canOverlapZones>
+		<preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+		<repairEffect>Repair</repairEffect>
+		<forceDebugSpawnable>true</forceDebugSpawnable>
+		<uiIconPath>Things/Building/Linked/PowerConduit_MenuIcon</uiIconPath>
+		
+		<graphicData>
+		  <texPath>Missile/MissileBasic</texPath>
+		  <shaderType>CutoutFlying</shaderType>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(2,2)</drawSize>
+		  <drawRotated>false</drawRotated>
+		  <shadowData>
+			<volume>(0.5, 1.8, 0.5)</volume>
+			<offset>(0, 0, 0)</offset>
+		  </shadowData>
+		</graphicData>
+		
+		<size>(1,1)</size>
+		
+		<statBases>
+		  <MaxHitPoints>150</MaxHitPoints>
+		  <WorkToBuild>20000</WorkToBuild>
+		  <Flammability>1</Flammability>
+		  <Mass>250</Mass>
+		  <Beauty>-50</Beauty>
+		</statBases>
+		
+		<costList>
+		  <Steel>50</Steel>
+		  <Plasteel>25</Plasteel>
+		  <ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		
+		<building>
+		  <claimable>false</claimable>
+		  <soundAmbient>ShuttleIdle_Ambience</soundAmbient>
+		  <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+		  <expandHomeArea>false</expandHomeArea>
+		  <ai_combatDangerous>true</ai_combatDangerous>
+		</building>
+
+		<comps>
+		  
+			<li Class="CompProperties_Transporter">
+				<restEffectiveness>0.8</restEffectiveness>
+				<massCapacity>100</massCapacity>
+				<max1PerGroup>false</max1PerGroup>
+				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
+				<showOverallStats>false</showOverallStats>
+				<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
+				<pawnExitSound>Shuttle_PawnExit</pawnExitSound>
+			</li>
+		  
+		
+		  <li Class="SRTS.CompProperties_LaunchableSRTS">
+			<westSkyfaller>Missile_HE_Leaving</westSkyfaller>
+			<eastSkyfaller>Missile_HE_Leaving</eastSkyfaller>
+			<eastSkyfallerIncoming>Missile_HE_Incoming</eastSkyfallerIncoming>
+			<westSkyfallerIncoming>Missile_HE_Incoming</westSkyfallerIncoming>
+			<travelSpeed>20</travelSpeed>
+			<fuelPerTile>0.5</fuelPerTile>
+			<minPassengers>0</minPassengers>
+			<maxPassengers>1</maxPassengers>
+			<spaceFaring>false</spaceFaring>
+			<shuttleBayLanding>true</shuttleBayLanding>
+		  </li>
+		  
+		  <li Class="CompProperties_Refuelable">
+			<fuelCapacity>100</fuelCapacity>
+			<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+			<initialConfigurableTargetFuelLevel>0.5</initialConfigurableTargetFuelLevel>
+			<fuelFilter>
+			  <thingDefs>
+				<li>Chemfuel</li>
+			  </thingDefs>
+			</fuelFilter>
+			<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+			<initialFuelPercent>0</initialFuelPercent>
+			<autoRefuelPercent>1</autoRefuelPercent>
+			<showFuelGizmo>true</showFuelGizmo>
+			<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+			<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+		  </li>
+		  
+		  <li Class="CompProperties_Breakdownable" />
+		  
+		  <li Class="CompProperties_Flickable" />
+			
+		  <li Class="CompProperties_Explosive">
+			<wickTicks>240</wickTicks>
+			<damageAmountBase>150</damageAmountBase>
+			<explosiveRadius>5.9</explosiveRadius>
+			<explosiveDamageType>Flame</explosiveDamageType>
+			<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+			<chanceToStartFire>0.5</chanceToStartFire>
+		  </li>
+		  <li>
+			<compClass>CompDissolutionEffect_Goodwill</compClass>
+		  </li>
+		</comps>
+		<placeWorkers>
+		  <li>PlaceWorker_NotUnderRoof</li>
+		</placeWorkers>
+		<researchPrerequisites>
+		  <li>Research_Carryalls</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+	</ThingDef>
+-->
+
+</Defs>

@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 	<name>Carryalls | Intercontinental Transport</name>
-	<author>Nephlite</author>
+	<authors>
+		<li>Nephlite</li>
+		<li>Telefonmast</li>
+	</authors>
 	<supportedVersions>
 		<li>1.4</li>
+		<li>1.5</li>
 	</supportedVersions>
 	<description>Adds several aircrafts designed for intercontinental transportation.</description>
 	<packageId>Nephlite.Carryalls</packageId>

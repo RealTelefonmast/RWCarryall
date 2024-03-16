@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+
+  <ResearchProjectDef>
+    <tab>Main</tab>
+    <defName>Research_Carryalls</defName>
+    <label>carryall</label>
+    <description>Basic research on VTOL aircrafts designed for intercontinental transportation. Unlocks the standard carryall.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+	  <li>Fabrication</li>
+    </prerequisites>
+    <hiddenPrerequisites>
+      <li>TransportPod</li>
+    </hiddenPrerequisites>
+	<researchViewX>15</researchViewX><!--15-->
+	<researchViewY>1.51</researchViewY><!--1.51-->
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <tab>Main</tab>
+    <defName>Research_Carryall_GDI</defName>
+    <label>ox carryall</label>
+    <description>Unlocks the Ox carryall for mass transport.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+	  <li>Research_Carryalls</li>
+    </prerequisites>
+	<researchViewX>16</researchViewX><!--16-->
+	<researchViewY>1.51</researchViewY><!--1.51-->
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <techprintCount>2</techprintCount>
+    <techprintCommonality>3</techprintCommonality>
+    <techprintMarketValue>2000</techprintMarketValue>
+    <heldByFactionCategoryTags>
+      <li MayRequire="Ludeon.RimWorld.Royalty">Empire</li>
+      <li MayRequire="Ludeon.RimWorld.Royalty">Outlander</li>
+    </heldByFactionCategoryTags>
+  </ResearchProjectDef>
+  
+   <ResearchProjectDef>
+    <tab>Main</tab>
+    <defName>Research_Carryall_Nod</defName>
+    <label>vertigo carryall</label>
+    <description>Unlocks the Vertigo carryall for assault mission.</description>
+    <baseCost>6000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+	  <li>Research_Carryalls</li>
+    </prerequisites>
+	<researchViewX>16</researchViewX><!--16-->
+	<researchViewY>2.1</researchViewY><!--2.09-->
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>	
+    <techprintCount>2</techprintCount>
+    <techprintCommonality>3</techprintCommonality>
+    <techprintMarketValue>2000</techprintMarketValue>
+    <heldByFactionCategoryTags>
+      <li MayRequire="Ludeon.RimWorld.Royalty">Empire</li>
+      <li MayRequire="Ludeon.RimWorld.Royalty">Outlander</li>
+    </heldByFactionCategoryTags>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <tab>Main</tab>
+    <defName>Research_Airships</defName>
+    <label>airship</label>
+    <description>Basic research for airships designed for transportation. Unlocks the standard airship.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+	  <li>GasOperation</li>
+    </prerequisites>
+    <hiddenPrerequisites>
+      <li>BiofuelRefining</li>
+    </hiddenPrerequisites>
+    <researchViewX>12</researchViewX>
+    <researchViewY>5.1</researchViewY>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <tab>Main</tab>
+    <defName>Research_Kirov</defName>
+    <label>airship</label>
+    <description>Unlocks the kirov airship for mass transportation and suicide mission.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+	  <li>Research_Airships</li>
+    </prerequisites>
+    <researchViewX>13</researchViewX>
+    <researchViewY>5.1</researchViewY><!--4.1-->
+    <techprintCount>1</techprintCount>
+    <techprintCommonality>2</techprintCommonality>
+    <techprintMarketValue>1500</techprintMarketValue>
+    <heldByFactionCategoryTags>
+      <li MayRequire="Ludeon.RimWorld.Royalty">Empire</li>
+      <li MayRequire="Ludeon.RimWorld.Royalty">Outlander</li>
+    </heldByFactionCategoryTags>
+  </ResearchProjectDef>
+</Defs>

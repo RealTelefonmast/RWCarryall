@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<ThingDef Name="CarryallBase" ParentName="BuildingBase" Abstract="True">
+		<category>Building</category>
+		<thingClass>Building</thingClass>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
+		<statBases>
+			<SellPriceFactor>0.6</SellPriceFactor>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<stealable>false</stealable>
+		<inspectorTabs>
+			<li>ITab_ContentsTransporter</li>
+		</inspectorTabs>
+		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>false</castEdgeShadows>
+		<designationCategory>Ship</designationCategory>
+		<killedLeavings>
+			<ChunkSlagSteel>12</ChunkSlagSteel>
+		</killedLeavings>
+		<holdsRoof>true</holdsRoof>
+		<uiIconScale>1.2</uiIconScale>
+		<damageMultipliers>
+			<li>
+				<damageDef>Lands_Carryall</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+			<li>
+				<damageDef>Steam_Carryall</damageDef>
+				<multiplier>0</multiplier>
+			</li>			
+		</damageMultipliers>
+		<building>
+			<claimable>false</claimable>
+			<soundAmbient>ShuttleIdle_Ambience</soundAmbient>
+			<destroySound>BuildingDestroyed_Metal_Big</destroySound>
+			<expandHomeArea>false</expandHomeArea>
+			<ai_combatDangerous>true</ai_combatDangerous>
+		</building>
+	</ThingDef>
+
+
+	<ThingDef ParentName="CarryallBase">
+		<defName>Carryall_standard</defName>
+		<label>standard carryall</label>
+		<description>A minor replica model of the standard space shuttle from the stellar empire, but with no orbital navigation capabilities. No longer are you bound to your settlement.
+
+Seats: 5
+Speed: 4
+Cargo capacity: 450kg
+
+Fuel capacity: 200
+Fuel efficiency: 1.5 per tile</description>
+
+		<fillPercent>0.75</fillPercent>
+		<pathCost>75</pathCost>
+		<blockWind>false</blockWind>
+		<rotatable>true</rotatable>
+		<canOverlapZones>true</canOverlapZones>
+		<preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+		<repairEffect>Repair</repairEffect>
+		<forceDebugSpawnable>true</forceDebugSpawnable>
+		<minifiedDef />
+		<uiIconPath>Carryall/CarryallBasic</uiIconPath>
+		
+		<graphicData>
+			<texPath>Carryall/CarryallBasic</texPath>
+			<shaderType>CutoutFlying</shaderType>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(4.3,4.3)</drawSize>
+			<drawRotated>false</drawRotated>
+			<shadowData>
+				<volume>(1.2, 1.2, 2.2)</volume><!--width, vertical, height-->
+				<offset>(0, 0, 0.2)</offset>
+			</shadowData>
+		</graphicData>
+		
+		<size>(3,3)</size>
+		
+		<statBases>
+			<MaxHitPoints>600</MaxHitPoints>
+			<WorkToBuild>50000</WorkToBuild>
+			<Flammability>0.5</Flammability>
+			<Mass>1</Mass>
+			<Beauty>25</Beauty>
+		</statBases>		
+		<costList>
+			<Steel>750</Steel>
+			<Plasteel>150</Plasteel>
+			<Gold>50</Gold>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<ComponentSpacer>3</ComponentSpacer>
+		</costList>
+
+		<comps>		  
+			<li Class="CompProperties_Transporter">
+				<restEffectiveness>0.8</restEffectiveness>
+				<massCapacity>450</massCapacity>
+				<max1PerGroup>true</max1PerGroup>
+				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
+				<showOverallStats>true</showOverallStats>
+				<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
+				<pawnExitSound>Shuttle_PawnExit</pawnExitSound>
+			</li>		
+			<li Class="SRTS.CompProperties_LaunchableSRTS">
+				<eastSkyfaller>Carryall_standard_Leaving</eastSkyfaller>
+				<westSkyfaller>Carryall_standard_R_Leaving</westSkyfaller>
+				<eastSkyfallerIncoming>Carryall_standard_Incoming</eastSkyfallerIncoming>
+				<westSkyfallerIncoming>Carryall_standard_R_Incoming</westSkyfallerIncoming>
+				<eastSkyfallerActive>Carryall_standard_Active</eastSkyfallerActive>
+				<westSkyfallerActive>Carryall_standard_R_Active</westSkyfallerActive>
+				<needsConfirmation>true</needsConfirmation>
+				<travelSpeed>4</travelSpeed>
+				<fuelPerTile>1.5</fuelPerTile>
+				<minPassengers>1</minPassengers>
+				<maxPassengers>5</maxPassengers>
+			</li>		  
+			<li Class="CompProperties_Refuelable">
+				<fuelCapacity>150</fuelCapacity>
+				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+				<initialConfigurableTargetFuelLevel>75</initialConfigurableTargetFuelLevel>
+				<fuelFilter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</fuelFilter>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<initialFuelPercent>0</initialFuelPercent>
+				<autoRefuelPercent>1</autoRefuelPercent>
+				<showFuelGizmo>true</showFuelGizmo>
+				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+			</li>
+			<li Class="CompProperties_Breakdownable" />
+			<!--<li Class="CompProperties_Glower">
+				<glowRadius>9</glowRadius>
+				<glowColor>(120,120,120,0)</glowColor>
+			</li>-->
+			<li Class="CompProperties_Explosive">
+				<wickTicks>240</wickTicks>
+				<damageAmountBase>120</damageAmountBase>
+				<explosiveRadius>3.9</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+				<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+				<chanceToStartFire>0.5</chanceToStartFire>
+				<startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+			</li>
+		</comps>
+		<researchPrerequisites>
+		  <li>Research_Carryalls</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+	</ThingDef>
+
+	<ThingDef ParentName="CarryallBase">
+		<defName>Carryall_GDI</defName>
+		<label>ox carryall</label>
+		<description>A rare model of the carryall used by the ancients who worshiped a turkey-like symbol. Optimized for mass transportation, it is rather cramped up due to the extra storage.
+		
+Ox carryall is equipped with a small turret. This is helpful in battle, but consumes a lot of fuel. Always remember that you need enough fuel to get back home.
+
+Seat: 4
+Speed: 3.5
+Cargo capacity: 1,400kg
+
+Fuel capacity: 600
+Fuel efficiency: 3 per tile</description>
+
+		<thingClass>Building_TurretGun</thingClass>
+		<pathCost>75</pathCost>
+		<blockWind>false</blockWind>
+		<rotatable>false</rotatable>
+		<canOverlapZones>true</canOverlapZones>
+		<preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+		<repairEffect>ConstructMetal</repairEffect>
+		<forceDebugSpawnable>true</forceDebugSpawnable>
+		<minifiedDef />
+		<uiIconPath>Carryall/CarryallGDI</uiIconPath>
+	
+		<graphicData>
+			<texPath>Carryall/CarryallGDI</texPath>
+			<shaderType>CutoutFlying</shaderType>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(6,6)</drawSize>
+			<drawRotated>false</drawRotated>
+			<shadowData>
+				<volume>(1.6, 1.35, 3.9)</volume>
+				<offset>(0, 0, 0.2)</offset>
+			</shadowData>
+		</graphicData>
+	
+		<size>(3,3)</size>
+	
+		<statBases>
+			<MaxHitPoints>800</MaxHitPoints>
+			<WorkToBuild>90000</WorkToBuild>
+			<Flammability>0.5</Flammability>
+			<Mass>1</Mass>
+			<Beauty>50</Beauty>
+			<ShootingAccuracyTurret>0.96</ShootingAccuracyTurret><!-- like level 8 human shooter -->
+		</statBases>	
+		<costList>
+			<Steel>1800</Steel>
+			<Plasteel>250</Plasteel>
+			<Gold>150</Gold>
+			<ComponentIndustrial>20</ComponentIndustrial>
+			<ComponentSpacer>5</ComponentSpacer>
+		</costList>
+	
+		<comps>	  
+			<li Class="CompProperties_Transporter">
+				<restEffectiveness>0.8</restEffectiveness>
+				<massCapacity>1400</massCapacity>		
+				<max1PerGroup>true</max1PerGroup>
+				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
+				<showOverallStats>true</showOverallStats>
+				<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
+				<pawnExitSound>Shuttle_PawnExit</pawnExitSound>		
+			</li>	  
+			<li Class="SRTS.CompProperties_LaunchableSRTS">
+				<eastSkyfaller>Carryall_GDI_Leaving</eastSkyfaller>
+				<westSkyfaller>Carryall_GDI_R_Leaving</westSkyfaller>
+				<eastSkyfallerIncoming>Carryall_GDI_Incoming</eastSkyfallerIncoming>
+				<westSkyfallerIncoming>Carryall_GDI_R_Incoming</westSkyfallerIncoming>
+				<eastSkyfallerActive>Carryall_GDI_Active</eastSkyfallerActive>
+				<westSkyfallerActive>Carryall_GDI_R_Active</westSkyfallerActive>
+				<needsConfirmation>true</needsConfirmation>
+				<travelSpeed>3.5</travelSpeed>
+				<fuelPerTile>3</fuelPerTile>
+				<minPassengers>1</minPassengers>
+				<maxPassengers>4</maxPassengers>
+			</li>	  
+			<li Class="CompProperties_Refuelable">
+				<fuelCapacity>600</fuelCapacity>
+				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+				<initialConfigurableTargetFuelLevel>300</initialConfigurableTargetFuelLevel>
+				<fuelFilter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</fuelFilter>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<initialFuelPercent>0</initialFuelPercent>
+				<autoRefuelPercent>1</autoRefuelPercent>
+				<showFuelGizmo>true</showFuelGizmo>
+				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+			</li>
+			<li Class="CompProperties_Breakdownable" />
+			<!--<li Class="CompProperties_Glower">
+				<glowRadius>9</glowRadius>
+				<glowColor>(140,130,115,0)</glowColor>
+			</li>-->		
+			<li Class="CompProperties_Explosive">
+				<wickTicks>240</wickTicks>
+				<damageAmountBase>180</damageAmountBase>
+				<explosiveRadius>5.9</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+				<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+				<chanceToStartFire>0.5</chanceToStartFire>
+				<startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+			</li>
+		</comps>
+
+		<building>
+			<combatPower>200</combatPower>
+			<turretGunDef>Gun_MiniCarryallTurret</turretGunDef>
+			<turretBurstCooldownTime>3.8</turretBurstCooldownTime>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_TurretTop</li>
+			<li>PlaceWorker_ShowTurretRadius</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>Research_Carryall_GDI</li>
+		</researchPrerequisites>	
+		<constructionSkillPrerequisite>14</constructionSkillPrerequisite>
+	</ThingDef>
+  
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>Gun_MiniCarryallTurret</defName>
+		<label>carryall turret gun</label>
+		<description>A simple automatic gun made to be mounted on a turret.</description>
+		<graphicData>
+			<texPath>Misc/Blank</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<uiIconPath>Things/Building/Security/TurretMini_Top</uiIconPath>
+		<statBases>
+			<AccuracyTouch>0.7</AccuracyTouch>
+			<AccuracyShort>0.6</AccuracyShort>
+			<AccuracyMedium>0.5</AccuracyMedium>
+			<AccuracyLong>0.4</AccuracyLong>
+			<RangedWeapon_Cooldown>3.8</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_MiniCarryallTurret</defaultProjectile>
+				<warmupTime>0</warmupTime>
+				<range>22.9</range>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<burstShotCount>2</burstShotCount>
+				<soundCast>GunShotA</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>10</muzzleFlashScale>
+				<consumeFuelPerShot>2</consumeFuelPerShot>
+			</li>
+		</verbs>
+	</ThingDef>
+  
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_MiniCarryallTurret</defName>
+		<label>bullet</label>
+		<graphicData>
+			<texPath>Misc/Bullet_Base_GDI</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.2,1.2)</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>14</damageAmountBase>
+			<speed>70</speed>
+		</projectile>
+	</ThingDef>
+	
+
+	<ThingDef ParentName="CarryallBase">
+		<defName>Carryall_Nod</defName>
+		<label>vertigo carryall</label>
+		<description>A rare model of the carryall used by the ancients who worshiped an insect-like symbol. It was optimized for assault operations, can transport large numbers of people quickly and far, but at the cost of storage capacity.
+	
+Vertigo carryall is equipped with a minigun turret. This is helpful in battle, but consumes a lot of fuel. Always remember that you need enough fuel to get back home.
+
+Seat: 10
+Speed: 5
+Cargo capacity: 800kg
+
+Fuel capacity: 450
+Fuel efficiency: 3 per tile</description>
+
+		<thingClass>Building_TurretGun</thingClass>
+		<pathCost>75</pathCost>
+		<blockWind>false</blockWind>
+		<rotatable>false</rotatable>
+		<canOverlapZones>true</canOverlapZones>
+		<preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+		<repairEffect>ConstructMetal</repairEffect>
+		<forceDebugSpawnable>true</forceDebugSpawnable>
+		<minifiedDef />
+		<uiIconPath>Carryall/CarryallNod</uiIconPath>
+
+		<graphicData>
+			<texPath>Carryall/CarryallNod</texPath>
+			<shaderType>CutoutFlying</shaderType>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(5.5,5.5)</drawSize>
+			<drawRotated>false</drawRotated>
+			<shadowData>
+				<volume>(1.3, 1.2, 3.7)</volume>
+				<offset>(0, 0, 0.1)</offset>
+			</shadowData>
+		</graphicData>
+	
+		<size>(3,3)</size>
+	
+		<statBases>
+			<MaxHitPoints>900</MaxHitPoints>
+			<WorkToBuild>90000</WorkToBuild>
+			<Flammability>0.4</Flammability>
+			<Mass>1</Mass>
+			<Beauty>100</Beauty>
+			<ShootingAccuracyTurret>0.96</ShootingAccuracyTurret><!-- like level 8 human shooter -->
+		</statBases>
+		<costList>
+			<Steel>1200</Steel>
+			<Plasteel>450</Plasteel>
+			<Uranium>120</Uranium>
+			<ComponentIndustrial>10</ComponentIndustrial>
+			<ComponentSpacer>10</ComponentSpacer>
+		</costList>
+		
+		<comps>	  
+		<li Class="CompProperties_Transporter">
+			<restEffectiveness>0.8</restEffectiveness>
+			<massCapacity>800</massCapacity>
+			<max1PerGroup>true</max1PerGroup>
+			<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
+			<showOverallStats>true</showOverallStats>
+			<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
+			<pawnExitSound>Shuttle_PawnExit</pawnExitSound>
+		</li>
+		<li Class="SRTS.CompProperties_LaunchableSRTS">
+			<eastSkyfaller>Carryall_Nod_Leaving</eastSkyfaller>
+			<westSkyfaller>Carryall_Nod_R_Leaving</westSkyfaller>
+			<eastSkyfallerIncoming>Carryall_Nod_Incoming</eastSkyfallerIncoming>
+			<westSkyfallerIncoming>Carryall_Nod_R_Incoming</westSkyfallerIncoming>
+			<eastSkyfallerActive>Carryall_Nod_Active</eastSkyfallerActive>
+			<westSkyfallerActive>Carryall_Nod_R_Active</westSkyfallerActive>
+			<needsConfirmation>true</needsConfirmation>
+			<travelSpeed>8</travelSpeed>
+			<fuelPerTile>3</fuelPerTile>
+			<minPassengers>1</minPassengers>
+			<maxPassengers>10</maxPassengers>
+		</li>	  
+		<li Class="CompProperties_Refuelable">
+			<fuelCapacity>450</fuelCapacity>
+			<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+			<initialConfigurableTargetFuelLevel>225</initialConfigurableTargetFuelLevel>
+				<fuelFilter>
+				<thingDefs>
+					<li>Chemfuel</li>
+				</thingDefs>
+			</fuelFilter>
+			<fuelConsumptionRate>3</fuelConsumptionRate>
+			<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+			<initialFuelPercent>0</initialFuelPercent>
+			<autoRefuelPercent>1</autoRefuelPercent>
+			<showFuelGizmo>true</showFuelGizmo>
+			<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+			<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+		</li>
+		<li Class="CompProperties_Breakdownable" />
+			<!--<li Class="CompProperties_Glower">
+				<glowRadius>9</glowRadius>
+				<glowColor>(150,40,40,0)</glowColor>
+			</li>-->		
+			<li Class="CompProperties_Explosive">
+				<wickTicks>240</wickTicks>
+				<damageAmountBase>150</damageAmountBase>
+				<explosiveRadius>4.9</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+				<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+				<chanceToStartFire>0.4</chanceToStartFire>
+				<startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+			</li>
+		</comps>
+
+		<building>
+			<combatPower>300</combatPower>
+			<turretGunDef>Gun_MediumCarryallTurret</turretGunDef>
+			<turretBurstCooldownTime>5</turretBurstCooldownTime>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_TurretTop</li>
+			<li>PlaceWorker_ShowTurretRadius</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>Research_Carryall_Nod</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>14</constructionSkillPrerequisite>
+	</ThingDef>
+  
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>Gun_MediumCarryallTurret</defName>
+		<label>medium carryall turret gun</label>
+		<description>A automatic minigun made to be mounted on a turret.</description>
+		<graphicData>
+			<texPath>Misc/Blank</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<uiIconPath>Things/Building/Security/TurretAutocannon_Top</uiIconPath>
+		<statBases>
+			<AccuracyTouch>0.3</AccuracyTouch>
+			<AccuracyShort>0.35</AccuracyShort>
+			<AccuracyMedium>0.35</AccuracyMedium>
+			<AccuracyLong>0.25</AccuracyLong>
+			<RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_MediumCarryallTurret</defaultProjectile>
+				<warmupTime>4.5</warmupTime>
+				<range>24.9</range>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+				<burstShotCount>25</burstShotCount>
+				<soundCast>Shot_Minigun</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>10</muzzleFlashScale>
+				<consumeFuelPerShot>0.5</consumeFuelPerShot>
+			</li>
+		</verbs>
+	</ThingDef>
+  
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_MediumCarryallTurret</defName>
+		<label>bullet</label>
+		<graphicData>
+			<texPath>Misc/Bullet_Base_Nod</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.2,1.2)</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<speed>70</speed>
+		</projectile>
+	</ThingDef>
+	
+
+	<ThingDef ParentName="CarryallBase">
+		<defName>Airship_Standard</defName>
+		<label>standard airship</label>
+		<description>An airship with standard specifications. It's just slightly faster than walking speed, but unaffected by terrain so can easily cross sea and mountains.
+
+Seat: 3
+Speed: 1.2
+Cargo capacity: 200kg
+
+Fuel capacity: 100
+Fuel efficiency: 0.5 per tile</description>
+
+		<fillPercent>0.95</fillPercent>
+		<pathCost>75</pathCost>
+		<blockWind>false</blockWind>
+		<rotatable>true</rotatable>
+		<canOverlapZones>true</canOverlapZones>
+		<preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+		<repairEffect>ConstructMetal</repairEffect>
+		<forceDebugSpawnable>true</forceDebugSpawnable>
+		<minifiedDef />
+		<uiIconPath>Carryall/AirshipBasic</uiIconPath>
+
+		<graphicData>
+			<texPath>Carryall/AirshipBasic</texPath>
+			<shaderType>CutoutFlying</shaderType>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(5,5)</drawSize>
+			<drawRotated>false</drawRotated>
+			<shadowData>
+				<volume>(1.5, 1.5, 2.9)</volume><!--width, vertical, height-->
+				<offset>(0, 0, -0.1)</offset>
+			</shadowData>
+		</graphicData>
+		
+		<size>(3,3)</size>
+		
+		<statBases>
+			<MaxHitPoints>600</MaxHitPoints>
+			<WorkToBuild>15000</WorkToBuild>
+			<Flammability>3</Flammability>
+			<Mass>1</Mass>
+			<Beauty>-10</Beauty>
+		</statBases>
+		<costList>
+			<Cloth>500</Cloth>
+			<Steel>250</Steel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+
+		<comps>		  
+			<li Class="CompProperties_Transporter">
+				<restEffectiveness>0.7</restEffectiveness>
+				<massCapacity>300</massCapacity>
+				<max1PerGroup>true</max1PerGroup>
+				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
+				<showOverallStats>true</showOverallStats>
+				<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
+				<pawnExitSound>Shuttle_PawnExit</pawnExitSound>
+			</li>		
+			<li Class="SRTS.CompProperties_LaunchableSRTS">
+				<eastSkyfaller>Airship_Standard_Leaving</eastSkyfaller>
+				<westSkyfaller>Airship_Standard_R_Leaving</westSkyfaller>
+				<eastSkyfallerIncoming>Airship_Standard_Incoming</eastSkyfallerIncoming>
+				<westSkyfallerIncoming>Airship_Standard_R_Incoming</westSkyfallerIncoming>
+				<eastSkyfallerActive>Airship_Standard_Active</eastSkyfallerActive>
+				<westSkyfallerActive>Airship_Standard_R_Active</westSkyfallerActive>
+				<needsConfirmation>true</needsConfirmation>
+				<hasSelfDestruct>false</hasSelfDestruct>
+				<travelSpeed>1.2</travelSpeed>
+				<fuelPerTile>0.5</fuelPerTile>
+				<minPassengers>1</minPassengers>
+				<maxPassengers>4</maxPassengers>
+			</li>		  
+			<li Class="CompProperties_Refuelable">
+				<fuelCapacity>100</fuelCapacity>
+				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+				<initialConfigurableTargetFuelLevel>50</initialConfigurableTargetFuelLevel>
+				<fuelFilter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</fuelFilter>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<initialFuelPercent>0</initialFuelPercent>
+				<autoRefuelPercent>1</autoRefuelPercent>
+				<showFuelGizmo>true</showFuelGizmo>
+				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+			</li>
+			<li Class="CompProperties_Breakdownable" />
+			<!--<li Class="CompProperties_Glower">
+				<glowRadius>9</glowRadius>
+				<glowColor>(120,120,120,0)</glowColor>
+			</li>-->
+			<li Class="CompProperties_Explosive">
+				<wickTicks>240</wickTicks>
+				<damageAmountBase>75</damageAmountBase>
+				<explosiveRadius>3.9</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+				<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+				<chanceToStartFire>0.9</chanceToStartFire>
+				<startWickHitPointsPercent>0.4</startWickHitPointsPercent>
+			</li>
+		</comps>
+
+		<researchPrerequisites>
+			<li>Research_Airships</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+	</ThingDef>
+
+
+	<ThingDef ParentName="CarryallBase">
+		<defName>Airship_Kirov</defName>
+		<label>kirov airship</label>
+		<description>A huge airship model used by the ancients who liked to paint everything red. Its original bomb rack is not ready due to lost technology, but still easy to the explode. Beware the fire.
+
+Seat: 6
+Speed: 1.2
+Cargo capacity: 600kg
+
+Fuel capacity: 150
+Fuel efficiency: 1 per tile</description>
+
+		<thingClass>Building_TurretGun</thingClass>
+		<fillPercent>0.95</fillPercent>
+		<pathCost>75</pathCost>
+		<blockWind>false</blockWind>
+		<rotatable>true</rotatable>
+		<canOverlapZones>true</canOverlapZones>
+		<preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+		<repairEffect>ConstructMetal</repairEffect>
+		<forceDebugSpawnable>true</forceDebugSpawnable>
+		<minifiedDef />
+		<uiIconPath>Carryall/AirshipKirov</uiIconPath>
+
+		<graphicData>
+			<texPath>Carryall/AirshipKirov</texPath>
+			<shaderType>CutoutFlying</shaderType>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(6,6)</drawSize>
+			<drawRotated>false</drawRotated>
+			<shadowData>
+				<volume>(2.1, 2.1, 4.2)</volume><!--width, vertical, height-->
+				<offset>(0, 0, -0.2)</offset>
+			</shadowData>
+		</graphicData>
+		
+		<size>(3,3)</size>
+		
+		<statBases>
+			<MaxHitPoints>1200</MaxHitPoints>
+			<WorkToBuild>30000</WorkToBuild>
+			<Flammability>4</Flammability>
+			<Mass>1</Mass>
+			<Beauty>-10</Beauty>
+			<ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+		</statBases>
+		<costList>
+			<Cloth>600</Cloth>
+			<Steel>800</Steel>
+			<ComponentIndustrial>15</ComponentIndustrial>
+		</costList>
+
+		<comps>		  
+			<li Class="CompProperties_Transporter">
+				<restEffectiveness>0.7</restEffectiveness>
+				<massCapacity>600</massCapacity>
+				<max1PerGroup>true</max1PerGroup>
+				<canChangeAssignedThingsAfterStarting>true</canChangeAssignedThingsAfterStarting>
+				<showOverallStats>true</showOverallStats>
+				<pawnLoadedSound>Shuttle_PawnLoaded</pawnLoadedSound>
+				<pawnExitSound>Shuttle_PawnExit</pawnExitSound>
+			</li>		
+			<li Class="SRTS.CompProperties_LaunchableSRTS">
+				<eastSkyfaller>Airship_Kirov_Leaving</eastSkyfaller>
+				<westSkyfaller>Airship_Kirov_R_Leaving</westSkyfaller>
+				<eastSkyfallerIncoming>Airship_Kirov_Incoming</eastSkyfallerIncoming>
+				<westSkyfallerIncoming>Airship_Kirov_R_Incoming</westSkyfallerIncoming>
+				<eastSkyfallerActive>Airship_Kirov_Active</eastSkyfallerActive>
+				<westSkyfallerActive>Airship_Kirov_R_Active</westSkyfallerActive>
+				<needsConfirmation>true</needsConfirmation>
+				<hasSelfDestruct>true</hasSelfDestruct>
+				<travelSpeed>1.2</travelSpeed>
+				<fuelPerTile>1</fuelPerTile>
+				<minPassengers>1</minPassengers>
+				<maxPassengers>8</maxPassengers>
+			</li>		  
+			<li Class="CompProperties_Refuelable">
+				<fuelCapacity>150</fuelCapacity>
+				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+				<initialConfigurableTargetFuelLevel>75</initialConfigurableTargetFuelLevel>
+				<fuelFilter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</fuelFilter>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<initialFuelPercent>0</initialFuelPercent>
+				<autoRefuelPercent>1</autoRefuelPercent>
+				<showFuelGizmo>true</showFuelGizmo>
+				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+			</li>
+			<li Class="CompProperties_Breakdownable" />
+			<!--<li Class="CompProperties_Glower">
+				<glowRadius>9</glowRadius>
+				<glowColor>(120,120,120,0)</glowColor>
+			</li>-->
+			<li Class="CompProperties_Explosive">
+				<wickTicks>240</wickTicks>
+				<damageAmountBase>400</damageAmountBase>
+				<explosiveRadius>10.9</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+				<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+				<chanceToStartFire>0.9</chanceToStartFire>
+				<startWickHitPointsPercent>0.4</startWickHitPointsPercent>
+				<explosionEffect>GiantExplosion</explosionEffect>
+			</li>
+		</comps>
+
+		<building>
+			<combatPower>300</combatPower>
+			<turretGunDef>Gun_KirovTurret</turretGunDef>
+			<turretBurstCooldownTime>7</turretBurstCooldownTime>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_TurretTop</li>
+			<li>PlaceWorker_ShowTurretRadius</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>Research_Kirov</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+		<specialDisplayRadius>10.9</specialDisplayRadius>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseWeaponTurret">
+		<defName>Gun_KirovTurret</defName>
+		<label>steam nozzle</label>
+		<description>The kirov airship can small vapor explosion at nearby targets via external nozzles. It's not very effective in combat, but it's worth a try.</description>
+		<graphicData>
+			<texPath>Misc/Blank</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<uiIconPath>Misc/CarryallGas</uiIconPath>
+		<statBases>
+			<AccuracyTouch>0.8</AccuracyTouch>
+			<AccuracyShort>0.8</AccuracyShort>
+			<AccuracyMedium>0.8</AccuracyMedium>
+			<AccuracyLong>0.8</AccuracyLong>
+			<RangedWeapon_Cooldown>7</RangedWeapon_Cooldown>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>1</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_KirovTurret</defaultProjectile>
+				<warmupTime>7</warmupTime>
+				<range>2.9</range>
+				<forcedMissRadius>0.1</forcedMissRadius>
+				<soundCast>DropPod_Leaving</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>5</muzzleFlashScale>
+				<consumeFuelPerShot>3</consumeFuelPerShot>
+			</li>
+		</verbs>
+	</ThingDef>
+ 
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_KirovTurret</defName>
+		<label>vapor</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Misc/Blank</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<projectile>
+			<explosionRadius>1.9</explosionRadius>
+			<damageDef>Steam_Carryall</damageDef>
+			<damageAmountBase>20</damageAmountBase>
+			<speed>100</speed>
+			<!--<arcHeightFactor>0.2</arcHeightFactor>
+			<shadowSize>0.6</shadowSize>
+			<explosionDelay>0</explosionDelay>-->
+			<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+			<screenShakeFactor>0</screenShakeFactor>
+		</projectile>
+	</ThingDef>
+
+
+</Defs>

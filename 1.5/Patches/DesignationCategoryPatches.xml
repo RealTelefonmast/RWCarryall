@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationRemove">
+		<xpath>Defs/DesignationCategoryDef[defName="Ship"]/researchPrerequisites</xpath>
+    </Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/DesignationCategoryDef[defName="Ship"]</xpath>
+		<value>
+			<researchPrerequisites><li>Electricity</li></researchPrerequisites>
+		</value>
+	</Operation>
+	
+</Patch>

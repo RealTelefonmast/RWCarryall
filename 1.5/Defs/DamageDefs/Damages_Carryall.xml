@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef ParentName="Bomb">
+    <defName>Lands_Carryall</defName>
+    <label>crush</label>
+	<deathMessage>{0} has has been crushed to death by a carryall.</deathMessage>
+    <externalViolence>true</externalViolence>
+	<armorCategory>Blunt</armorCategory>
+    <defaultDamage>50</defaultDamage>
+	<defaultStoppingPower>2</defaultStoppingPower>
+	<defaultArmorPenetration>0.8</defaultArmorPenetration>
+    <explosionSnowMeltAmount>10</explosionSnowMeltAmount>
+    <explosionCellFleck>Smoke_Carryall</explosionCellFleck>
+	<explosionColorCenter>(0.9, 0.9, 0.9, 0.2)</explosionColorCenter>
+    <explosionColorEdge>(0.9, 0.9, 0.9, 0.2)</explosionColorEdge>
+    <explosionInteriorFleck>Smoke_Interior_Carryall</explosionInteriorFleck>
+    <soundExplosion>DropPod_Leaving</soundExplosion>
+  </DamageDef>
+  
+  <DamageDef ParentName="Bomb">
+    <defName>Steam_Carryall</defName>
+    <label>steam blast</label>
+    <externalViolence>true</externalViolence>
+	<hediff>Burn</hediff>
+	<armorCategory>Heat</armorCategory>
+    <defaultDamage>50</defaultDamage>
+	<defaultStoppingPower>1</defaultStoppingPower>
+	<defaultArmorPenetration>0.2</defaultArmorPenetration>
+    <explosionSnowMeltAmount>10</explosionSnowMeltAmount>
+    <explosionCellFleck>Smoke_Carryall</explosionCellFleck>
+	<explosionColorCenter>(0.9, 0.85, 0.6, 0.2)</explosionColorCenter>
+    <explosionColorEdge>(0.9, 0.85, 0.6, 0.2)</explosionColorEdge>
+	<explosionInteriorFleck>Smoke_Interior_Carryall</explosionInteriorFleck>
+    <soundExplosion>DropPod_Leaving</soundExplosion>
+  </DamageDef>
+
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>Smoke_Carryall</defName>
+    <graphicData>
+      <texPath>Misc/CarryallGas</texPath>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.5</fadeInTime>
+    <solidTime>0</solidTime>
+    <fadeOutTime>14</fadeOutTime>
+    <growthRate>0.005</growthRate>
+  </FleckDef>
+
+  <FleckDef ParentName="FleckBase">
+    <defName>Smoke_Interior_Carryall</defName>
+    <graphicData>
+      <texPath>Misc/CarryallGas</texPath>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.5</fadeInTime>
+    <solidTime>0</solidTime>
+    <fadeOutTime>9</fadeOutTime>
+    <growthRate>0.01</growthRate>
+  </FleckDef>
+
+</Defs>

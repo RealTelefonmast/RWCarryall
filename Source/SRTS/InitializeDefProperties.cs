@@ -18,9 +18,10 @@ namespace SRTS
             SRTSHelper.PopulateDictionary();
             SRTSHelper.PopulateAllowedBombs();
 
-            ModCompatibilityInitialized();
+            //ModCompatibilityInitialized();
         }
-
+        
+        [Obsolete]
         private static void ModCompatibilityInitialized()
         {
             List<ModMetaData> mods = ModLister.AllInstalledMods.ToList();
