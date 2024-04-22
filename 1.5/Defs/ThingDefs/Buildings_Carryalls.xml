@@ -527,7 +527,7 @@ Fuel efficiency: 3 per tile</description>
 		<description>An airship with standard specifications. It's just slightly faster than walking speed, but unaffected by terrain so can easily cross sea and mountains.
 
 Seat: 3
-Speed: 1.2
+Speed: 1
 Cargo capacity: 200kg
 
 Fuel capacity: 100
@@ -590,7 +590,7 @@ Fuel efficiency: 0.5 per tile</description>
 				<westSkyfallerActive>Airship_Standard_R_Active</westSkyfallerActive>
 				<needsConfirmation>true</needsConfirmation>
 				<hasSelfDestruct>false</hasSelfDestruct>
-				<travelSpeed>1.2</travelSpeed>
+				<travelSpeed>1</travelSpeed>
 				<fuelPerTile>0.5</fuelPerTile>
 				<minPassengers>1</minPassengers>
 				<maxPassengers>4</maxPassengers>
@@ -641,7 +641,7 @@ Fuel efficiency: 0.5 per tile</description>
 		<description>A huge airship model used by the ancients who liked to paint everything red. Its original bomb rack is not ready due to lost technology, but still easy to the explode. Beware the fire.
 
 Seat: 6
-Speed: 1.2
+Speed: 1
 Cargo capacity: 600kg
 
 Fuel capacity: 150
@@ -706,7 +706,7 @@ Fuel efficiency: 1 per tile</description>
 				<westSkyfallerActive>Airship_Kirov_R_Active</westSkyfallerActive>
 				<needsConfirmation>true</needsConfirmation>
 				<hasSelfDestruct>true</hasSelfDestruct>
-				<travelSpeed>1.2</travelSpeed>
+				<travelSpeed>1</travelSpeed>
 				<fuelPerTile>1</fuelPerTile>
 				<minPassengers>1</minPassengers>
 				<maxPassengers>8</maxPassengers>

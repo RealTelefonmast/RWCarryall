@@ -24,10 +24,10 @@
 
 
  <Airship_Standard.label>비행선</Airship_Standard.label>
-  <Airship_Standard.description>평범하고 기본적인 비행선입니다. 걷는 것보다 약간 빨리 이동하는 정도이지만 지형의 영향을 받지 않아 바다와 산을 쉽게 건널 수 있습니다.\n\n좌석: 3\n속도: 1.2\n적재 용량: 200kg\n\n연료 용량: 100\n연료 효율: 타일당 0.5L</Airship_Standard.description>
+  <Airship_Standard.description>평범하고 기본적인 비행선입니다. 걷는 것보다 약간 빨리 이동하는 정도이지만 지형의 영향을 받지 않아 바다와 산을 쉽게 건널 수 있습니다.\n\n좌석: 3\n속도: 1\n적재 용량: 200kg\n\n연료 용량: 100\n연료 효율: 타일당 0.5L</Airship_Standard.description>
 
   <Airship_Kirov.label>키로프 비행선</Airship_Kirov.label>
-  <Airship_Kirov.description>거대한 비행선 모델로, 먼 옛날 모든 것에 붉은 칠을 하던 이들이 사용했다고 합니다. 불완전한 기술 탓에 원래의 무장은 장착되어 있지 않습니다. 하지만 불타면 어마어마한 폭발을 일으킬 것입니다.\n\n좌석: 6\n속도: 1.2\n적재 용량: 600kg\n\n연료 용량: 150\n연료 효율: 타일당 1L</Airship_Kirov.description>
+  <Airship_Kirov.description>거대한 비행선 모델로, 먼 옛날 모든 것에 붉은 칠을 하던 이들이 사용했다고 합니다. 불완전한 기술 탓에 원래의 무장은 장착되어 있지 않습니다. 하지만 불타면 어마어마한 폭발을 일으킬 것입니다.\n\n좌석: 6\n속도: 1\n적재 용량: 600kg\n\n연료 용량: 150\n연료 효율: 타일당 1L</Airship_Kirov.description>
 
   <Gun_KirovTurret.label>증기 배출구</Gun_KirovTurret.label>
   <Gun_KirovTurret.description>키로프 비행선은 선체를 둘러싼 배관을 통해 근접한 적에게 뜨거운 연료 증기를 분사할 수 있습니다. 전투에 그다지 효과적이지는 않지만, 시도할 가치는 있습니다.</Gun_KirovTurret.description>
