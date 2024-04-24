@@ -16,8 +16,8 @@
     <hiddenPrerequisites>
       <li>TransportPod</li>
     </hiddenPrerequisites>
-	<researchViewX>15</researchViewX><!--15-->
-	<researchViewY>1.51</researchViewY><!--1.51-->
+	<researchViewX>16</researchViewX><!--15-->
+	<researchViewY>6</researchViewY><!--1.51-->
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>MultiAnalyzer</li>
@@ -34,8 +34,8 @@
     <prerequisites>
 	  <li>Research_Carryalls</li>
     </prerequisites>
-	<researchViewX>16</researchViewX><!--16-->
-	<researchViewY>1.51</researchViewY><!--1.51-->
+	<researchViewX>17</researchViewX><!--16-->
+	<researchViewY>5.75</researchViewY><!--1.51-->
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>MultiAnalyzer</li>
@@ -59,8 +59,8 @@
     <prerequisites>
 	  <li>Research_Carryalls</li>
     </prerequisites>
-	<researchViewX>16</researchViewX><!--16-->
-	<researchViewY>2.1</researchViewY><!--2.09-->
+	<researchViewX>17</researchViewX><!--16-->
+	<researchViewY>6.25</researchViewY><!--2.09-->
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>MultiAnalyzer</li>
@@ -73,6 +73,7 @@
       <li MayRequire="Ludeon.RimWorld.Royalty">Outlander</li>
     </heldByFactionCategoryTags>
   </ResearchProjectDef>
+  
   
   <ResearchProjectDef>
     <tab>Main</tab>
@@ -87,8 +88,8 @@
     <hiddenPrerequisites>
       <li>BiofuelRefining</li>
     </hiddenPrerequisites>
-    <researchViewX>12</researchViewX>
-    <researchViewY>5.1</researchViewY>
+    <researchViewX>11</researchViewX>
+    <researchViewY>6</researchViewY>
   </ResearchProjectDef>
   
   <ResearchProjectDef>
@@ -101,8 +102,8 @@
     <prerequisites>
 	  <li>Research_Airships</li>
     </prerequisites>
-    <researchViewX>13</researchViewX>
-    <researchViewY>5.1</researchViewY><!--4.1-->
+    <researchViewX>12</researchViewX>
+    <researchViewY>6</researchViewY><!--4.1-->
     <techprintCount>1</techprintCount>
     <techprintCommonality>2</techprintCommonality>
     <techprintMarketValue>1500</techprintMarketValue>
